@@ -17,13 +17,18 @@
 </head>
 <body>
 
-<header class="page-header">
-  <img src="banner.png" alt="College Project Vault – Final Year GitHub Projects for ₹99" class="banner" />
-  <h1><span class="emoji">🔥</span> Opencode Vault – Submit Your Final Year Project in 24 Hours</h1>
-  <p>Get instant access to 1000+ ready-to-use GitHub projects for just <span class="highlight">₹99</span></p>
-</header>
+  <!-- 🔥 Hero Banner -->
+  <header class="page-header">
+    <img src="banner-desktop.png" alt="College Project Vault" class="banner desktop-banner" />
+    <img src="banner-mobile.png" alt="College Project Vault" class="banner mobile-banner" />
+    <div class="banner-overlay">
+      <h1><span class="emoji">🔥</span> College Project Vault</h1>
+      <p>Submit Your Final Year Project in 24 Hours – Just <span class="highlight">₹99</span></p>
+    </div>
+  </header>
 
   <main>
+    <!-- ✅ Feature List -->
     <section class="features">
       <div class="feature-list-wrapper">
         <ul class="feature-list">
@@ -37,6 +42,7 @@
       <p class="note">*Secure payment via Razorpay or UPI</p>
     </section>
 
+    <!-- 💬 Testimonials -->
     <section class="testimonials">
       <h2>💬 What Students Say</h2>
       <div class="cards">
@@ -46,6 +52,7 @@
       </div>
     </section>
 
+    <!-- 🔐 Vault Reveal -->
     <section id="vault" class="vault hidden">
       <h2>🎉 Welcome to the Project Vault</h2>
       <p>Here are your unlocked GitHub projects:</p>
@@ -78,6 +85,7 @@
     </section>
   </main>
 
+  <!-- 💳 Razorpay Script -->
   <script>
     const options = {
       key: "rzp_test_1DP5mmOlF5G5ag", // Replace with live key when ready
