@@ -2,16 +2,20 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>opencode</title>
+  <title>College Project Vault</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 </head>
 <body class="bg-white text-gray-800 font-sans">
 
   <!-- 🎯 Hero Section -->
   <section class="text-center py-12 px-4 bg-orange-50">
     <h1 class="text-4xl font-bold mb-4">🚀 Submit Your College Project in 24 Hours</h1>
-    <p class="text-lg text-gray-600 mb-6">Get instant access to 10+ ready-to-use GitHub projects for just <span class="text-orange-600 font-semibold">₹99</span></p>
+    <p class="text-lg text-gray-600 mb-6">
+      Get instant access to 10+ ready-to-use GitHub projects for just
+      <span class="text-orange-600 font-semibold">₹99</span>
+    </p>
     <ul class="max-w-xl mx-auto text-left text-gray-700 space-y-2 mb-6">
       <li>✅ Full source code with README</li>
       <li>✅ Deployment-ready projects</li>
@@ -19,26 +23,35 @@
       <li>✅ Perfect for final-year submissions</li>
     </ul>
 
-    <!-- 💸 Payment Button Placeholder -->
+    <!-- 💸 Razorpay Payment Button -->
     <div class="mt-6">
-      <button class="bg-orange-600 text-white px-6 py-3 rounded-lg text-lg hover:bg-orange-700 transition">
+      <button id="rzp-button" class="bg-orange-600 text-white px-6 py-3 rounded-lg text-lg hover:bg-orange-700 transition">
         🔓 Unlock Projects for ₹99
       </button>
       <p class="text-xs text-gray-500 mt-2">*Secure payment via Razorpay or UPI</p>
     </div>
   </section>
 
-  <!-- 🧾 Testimonials (Optional) -->
+  <!-- 💬 Testimonials -->
   <section class="py-10 px-4 bg-white">
     <h2 class="text-2xl font-bold text-center mb-6">💬 What Students Say</h2>
     <div class="max-w-4xl mx-auto grid md:grid-cols-3 gap-6 text-sm text-gray-700">
-      <div class="bg-gray-50 p-4 rounded shadow">“Saved me during finals. Deployed in 10 minutes!”<br><span class="text-xs text-gray-500">— Anjali, B.Tech CS</span></div>
-      <div class="bg-gray-50 p-4 rounded shadow">“Clean code, easy to customize. Worth every rupee.”<br><span class="text-xs text-gray-500">— Rohan, MCA</span></div>
-      <div class="bg-gray-50 p-4 rounded shadow">“Got full marks in viva. Thanks for this!”<br><span class="text-xs text-gray-500">— Priya, BE IT</span></div>
+      <div class="bg-gray-50 p-4 rounded shadow">
+        “Saved me during finals. Deployed in 10 minutes!”<br>
+        <span class="text-xs text-gray-500">— Anjali, B.Tech CS</span>
+      </div>
+      <div class="bg-gray-50 p-4 rounded shadow">
+        “Clean code, easy to customize. Worth every rupee.”<br>
+        <span class="text-xs text-gray-500">— Rohan, MCA</span>
+      </div>
+      <div class="bg-gray-50 p-4 rounded shadow">
+        “Got full marks in viva. Thanks for this!”<br>
+        <span class="text-xs text-gray-500">— Priya, BE IT</span>
+      </div>
     </div>
   </section>
 
-  <!-- 🔐 Post-Payment Vault (Initially Hidden) -->
+  <!-- 🔐 Vault Section (Hidden by Default) -->
   <section id="vault" class="hidden py-12 px-4 bg-gray-100">
     <h2 class="text-3xl font-bold text-center mb-6">🎉 Welcome to the Project Vault</h2>
     <p class="text-center text-gray-600 mb-8">Here are your unlocked GitHub projects:</p>
@@ -58,17 +71,36 @@
         <p class="text-sm text-gray-600 mb-2">Login system, grade tracking, and charts.</p>
         <a href="https://github.com/yourusername/student-dashboard" target="_blank" class="text-orange-600 hover:underline text-sm">View on GitHub →</a>
       </div>
-      <!-- Add more cards as needed -->
     </div>
   </section>
 
-  <!-- 🧠 Script to simulate unlock (for demo/testing) -->
+  <!-- 🧠 Razorpay Script -->
   <script>
-    // Simulate unlock after payment
-    document.querySelector("button").addEventListener("click", () => {
-      document.getElementById("vault").classList.remove("hidden");
-      window.scrollTo({ top: document.getElementById("vault").offsetTop, behavior: "smooth" });
-    });
+    const options = {
+      key: "YOUR_RAZORPAY_KEY", // Replace with your Razorpay key
+      amount: 9900, // ₹99 in paise
+      currency: "INR",
+      name: "College Project Vault",
+      description: "Access to GitHub project bundle",
+      handler: function (response) {
+        document.getElementById("vault").classList.remove("hidden");
+        window.scrollTo({ top: document.getElementById("vault").offsetTop, behavior: "smooth" });
+      },
+      prefill: {
+        name: "",
+        email: "",
+        contact: ""
+      },
+      theme: {
+        color: "#f97316"
+      }
+    };
+
+    const rzp = new Razorpay(options);
+    document.getElementById("rzp-button").onclick = function (e) {
+      rzp.open();
+      e.preventDefault();
+    };
   </script>
 
 </body>
