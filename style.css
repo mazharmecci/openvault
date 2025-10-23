@@ -174,3 +174,8 @@ button:hover {
     width: 80%;
   }
 }
+
+.feature-list-wrapper {
+  display: flex;
+  justify-content: center;
+}
