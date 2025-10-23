@@ -1,0 +1,47 @@
+.hero {
+  @apply text-center py-12 px-4 bg-orange-50;
+}
+.hero-title {
+  @apply text-4xl font-bold mb-4;
+}
+.hero-subtext {
+  @apply text-lg text-gray-600 mb-6;
+}
+.hero-features {
+  @apply max-w-xl mx-auto text-left text-gray-700 space-y-2 mb-6;
+}
+.cta-button {
+  @apply bg-orange-600 text-white px-6 py-3 rounded-lg text-lg hover:bg-orange-700 transition;
+}
+
+.section-title {
+  @apply text-2xl font-bold text-center mb-6;
+}
+.testimonials {
+  @apply py-10 px-4 bg-white;
+}
+.testimonial-grid {
+  @apply max-w-4xl mx-auto grid md:grid-cols-3 gap-6 text-sm text-gray-700;
+}
+.testimonial-card {
+  @apply bg-gray-50 p-4 rounded shadow;
+}
+.testimonial-card span {
+  @apply text-xs text-gray-500;
+}
+
+.vault {
+  @apply py-12 px-4 bg-gray-100;
+}
+.vault-grid {
+  @apply max-w-5xl mx-auto grid md:grid-cols-3 gap-6;
+}
+.vault-card {
+  @apply bg-white p-4 rounded shadow text-sm text-gray-700;
+}
+.vault-card h3 {
+  @apply font-semibold text-lg mb-2;
+}
+.vault-card a {
+  @apply text-orange-600 hover:underline text-sm;
+}
