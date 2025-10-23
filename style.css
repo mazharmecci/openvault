@@ -1,47 +1,133 @@
-.hero {
-  @apply text-center py-12 px-4 bg-orange-50;
-}
-.hero-title {
-  @apply text-4xl font-bold mb-4;
-}
-.hero-subtext {
-  @apply text-lg text-gray-600 mb-6;
-}
-.hero-features {
-  @apply max-w-xl mx-auto text-left text-gray-700 space-y-2 mb-6;
-}
-.cta-button {
-  @apply bg-orange-600 text-white px-6 py-3 rounded-lg text-lg hover:bg-orange-700 transition;
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #fff;
+  color: #333;
+  line-height: 1.6;
 }
 
-.section-title {
-  @apply text-2xl font-bold text-center mb-6;
-}
-.testimonials {
-  @apply py-10 px-4 bg-white;
-}
-.testimonial-grid {
-  @apply max-w-4xl mx-auto grid md:grid-cols-3 gap-6 text-sm text-gray-700;
-}
-.testimonial-card {
-  @apply bg-gray-50 p-4 rounded shadow;
-}
-.testimonial-card span {
-  @apply text-xs text-gray-500;
+section {
+  padding: 2rem;
+  max-width: 960px;
+  margin: auto;
 }
 
-.vault {
-  @apply py-12 px-4 bg-gray-100;
+.hero h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
 }
-.vault-grid {
-  @apply max-w-5xl mx-auto grid md:grid-cols-3 gap-6;
+
+.hero p {
+  text-align: center;
+  font-size: 1.1rem;
 }
-.vault-card {
-  @apply bg-white p-4 rounded shadow text-sm text-gray-700;
+
+.hero ul {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
 }
-.vault-card h3 {
-  @apply font-semibold text-lg mb-2;
+
+.hero ul li {
+  margin: 0.5rem 0;
+  font-size: 1rem;
 }
-.vault-card a {
-  @apply text-orange-600 hover:underline text-sm;
+
+.highlight {
+  color: #ff6600;
+  font-weight: bold;
+}
+
+button {
+  background: #ff6600;
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  display: block;
+  margin: 1rem auto;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+.note {
+  text-align: center;
+  font-size: 0.8rem;
+  color: #777;
+}
+
+.testimonials h2,
+.vault h2 {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.cards > div {
+  background: #f9f9f9;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  width: 280px;
+}
+
+.cards span {
+  font-size: 0.8rem;
+  color: #555;
+}
+
+.vault p {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.vault a {
+  color: #ff6600;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.vault a:hover {
+  text-decoration: underline;
+}
+
+.hidden {
+  display: none;
+}
+
+.fade-in {
+  animation: fadeIn 0.6s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 600px) {
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero h1 {
+    font-size: 1.5rem;
+  }
+
+  button {
+    width: 80%;
+  }
 }
