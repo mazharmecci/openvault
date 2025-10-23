@@ -31,8 +31,8 @@ main, section {
   position: absolute;
   top: 0;
   left: 0;
-  filter: blur(6px);
-  opacity: 0.6;
+  filter: blur(3px);
+  opacity: 0.86;
   z-index: 1;
 }
 
