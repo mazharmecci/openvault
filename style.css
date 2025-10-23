@@ -1,4 +1,6 @@
-/* Base */
+/* ===========================
+   Base Layout & Typography
+=========================== */
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
@@ -13,7 +15,9 @@ main, section {
   margin: auto;
 }
 
-/* 🔥 Hero Text (Banner Hidden) */
+/* ===========================
+   Hero Section (Banner Hidden)
+=========================== */
 .page-header {
   display: none;
 }
@@ -48,14 +52,26 @@ main, section {
   50% { transform: translateY(-6px); }
 }
 
-/* 🛡️ Shield Integration */
-.shield-wrapper {
+/* ===========================
+   Shield & Flashy Badge
+=========================== */
+.shield-wrapper,
+.flashy-shield {
   position: relative;
   display: inline-block;
+  vertical-align: middle;
+  margin-left: 0.5rem;
+}
+
+.shield-wrapper {
   width: 48px;
   height: 48px;
-  margin-left: 0.5rem;
-  vertical-align: middle;
+}
+
+.flashy-shield {
+  width: 56px;
+  height: 56px;
+  animation: pulseGlow 1.5s infinite;
 }
 
 .shield {
@@ -72,10 +88,19 @@ main, section {
   font-size: 0.75rem;
   font-weight: bold;
   color: #000;
-  text-shadow: 0 0 4px rgba(255,255,255,0.8);
+  text-shadow: 0 0 6px rgba(255,255,255,0.9);
+  display: flex;
+  align-items: center;
+  gap: 2px;
 }
 
-/* Responsive Shield */
+.lightning {
+  color: #ff6600;
+  font-size: 0.85rem;
+  animation: flash 1s infinite;
+}
+
+/* Shield Responsive */
 @media (max-width: 600px) {
   .shield-wrapper {
     width: 40px;
@@ -87,7 +112,21 @@ main, section {
   }
 }
 
-/* ✅ Feature List */
+/* Glow & Flash Animations */
+@keyframes pulseGlow {
+  0% { box-shadow: 0 0 6px rgba(255, 204, 0, 0.4); }
+  50% { box-shadow: 0 0 12px rgba(255, 204, 0, 0.8); }
+  100% { box-shadow: 0 0 6px rgba(255, 204, 0, 0.4); }
+}
+
+@keyframes flash {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(1.2); }
+}
+
+/* ===========================
+   Feature List & CTA
+=========================== */
 .feature-list-wrapper {
   display: flex;
   justify-content: center;
@@ -106,7 +145,6 @@ main, section {
   margin: 0.5rem 0;
 }
 
-/* CTA Button */
 button {
   background: #ff6600;
   color: #fff;
@@ -130,7 +168,9 @@ button:hover {
   color: #777;
 }
 
-/* 💬 Testimonials (Brolly Theme) */
+/* ===========================
+   Testimonials (Brolly Theme)
+=========================== */
 .testimonials-brolly {
   background: #000;
   color: #fff;
@@ -176,7 +216,9 @@ button:hover {
   font-weight: bold;
 }
 
-/* ⚡ Vault Highlights (Yellow Cards) */
+/* ===========================
+   Vault Highlights (Yellow Cards)
+=========================== */
 .vault-highlights {
   background: #000;
   color: #fff;
@@ -223,61 +265,10 @@ button:hover {
 }
 
 .highlight-card p {
+  font-size: 0.95rem;
+  margin: 0;
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
-}
-
-/* Flashy Shield Wrapper */
-.flashy-shield {
-  position: relative;
-  display: inline-block;
-  width: 56px;
-  height: 56px;
-  margin-left: 0.5rem;
-  vertical-align: middle;
-  animation: pulseGlow 1.5s infinite;
-}
-
-/* Shield Image */
-.flashy-shield .shield {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* Centered Text + Lightning */
-.flashy-shield .shield-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 0.75rem;
-  font-weight: bold;
-  color: #000;
-  text-shadow: 0 0 6px rgba(255,255,255,0.9);
-  display: flex;
-  align-items: center;
-  gap: 2px;
-}
-
-/* Lightning Icon */
-.lightning {
-  color: #ff6600;
-  font-size: 0.85rem;
-  animation: flash 1s infinite;
-}
-
-/* Glow Animation */
-@keyframes pulseGlow {
-  0% { box-shadow: 0 0 6px rgba(255, 204, 0, 0.4); }
-  50% { box-shadow: 0 0 12px rgba(255, 204, 0, 0.8); }
-  100% { box-shadow: 0 0 6px rgba(255, 204, 0, 0.4); }
-}
-
-/* Flash Animation */
-@keyframes flash {
-  0%, 100% { opacity: 1; transform: scale(1); }
-  50% { opacity: 0.6; transform: scale(1.2); }
 }
