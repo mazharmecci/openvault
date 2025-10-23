@@ -57,28 +57,39 @@
   </section>
 
   <!-- 🧠 Razorpay Script -->
-  <script>
-    const options = {
-      key: "YOUR_RAZORPAY_KEY",
-      amount: 9900,
-      currency: "INR",
-      name: "College Project Vault",
-      description: "Access to GitHub project bundle",
-      handler: function () {
-        const vault = document.getElementById("vault");
-        vault.classList.remove("hidden");
-        vault.classList.add("fade-in");
-        window.scrollTo({ top: vault.offsetTop, behavior: "smooth" });
-      },
-      theme: { color: "#ff6600" }
-    };
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script>
+  const options = {
+    key: "rzp_test_1DP5mmOlF5G5ag", // ✅ Razorpay test key
+    amount: 99.00, // ₹99 in rupee
+    currency: "INR",
+    name: "College Project Vault",
+    description: "Access to GitHub project bundle",
+    image: "https://yourdomain.com/logo.png", // optional
+    handler: function (response) {
+      // Simulate vault unlock
+      const vault = document.getElementById("vault");
+      vault.classList.remove("hidden");
+      vault.classList.add("fade-in");
+      window.scrollTo({ top: vault.offsetTop, behavior: "smooth" });
+    },
+    prefill: {
+      name: "Test User",
+      email: "test@example.com",
+      contact: "9999999999"
+    },
+    theme: {
+      color: "#ff6600"
+    }
+  };
 
-    const rzp = new Razorpay(options);
-    document.getElementById("rzp-button").onclick = function (e) {
-      rzp.open();
-      e.preventDefault();
-    };
-  </script>
+  const rzp = new Razorpay(options);
+  document.getElementById("rzp-button").onclick = function (e) {
+    rzp.open();
+    e.preventDefault();
+  };
+</script>
+
 
 </body>
 </html>
