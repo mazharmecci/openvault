@@ -295,3 +295,15 @@ button:hover {
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
+
+.vault-image {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.vault-image img {
+  max-width: 240px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
