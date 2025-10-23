@@ -34,7 +34,7 @@
         <ul class="feature-list">
           <li>✅ Full source code with README</li>
           <li>✅ Deployment-ready projects</li>
-          <li>✅ Covers Web, App, ML, & AI</li>
+          <li>✅ Covers Web, App, ML, IoT & more</li>
           <li>✅ Perfect for final-year submissions</li>
         </ul>
       </div>
@@ -51,38 +51,6 @@
         <div>“Got full marks in viva. Thanks for this!”<br><span>— Priya, BE IT</span></div>
       </div>
     </section>
-
-    <!-- 🔐 Vault Reveal -->
-    <section id="vault" class="vault hidden">
-      <h2>🎉 Welcome to the Project Vault</h2>
-      <p>Here are your unlocked GitHub projects:</p>
-      <div class="cards">
-        <div class="project-card">
-          <h3>📝 To-Do App</h3>
-          <p>A responsive task manager built with React.</p>
-          <div class="tech-stack">
-            <span>React</span><span>JavaScript</span><span>LocalStorage</span>
-          </div>
-          <a href="https://github.com/yourusername/todo-app" target="_blank">View Source →</a>
-        </div>
-        <div class="project-card">
-          <h3>📦 E-commerce Store</h3>
-          <p>Simple cart logic, product grid, and checkout modal.</p>
-          <div class="tech-stack">
-            <span>HTML</span><span>CSS</span><span>JavaScript</span>
-          </div>
-          <a href="https://github.com/yourusername/ecom-store" target="_blank">View Source →</a>
-        </div>
-        <div class="project-card">
-          <h3>📊 Student Dashboard</h3>
-          <p>Login system, grade tracking, and charts using Flask.</p>
-          <div class="tech-stack">
-            <span>Python</span><span>Flask</span><span>Chart.js</span>
-          </div>
-          <a href="https://github.com/yourusername/student-dashboard" target="_blank">View Source →</a>
-        </div>
-      </div>
-    </section>
   </main>
 
   <!-- 💳 Razorpay Script -->
@@ -94,10 +62,7 @@
       name: "College Project Vault",
       description: "Access to GitHub project bundle",
       handler: function () {
-        const vault = document.getElementById("vault");
-        vault.classList.remove("hidden");
-        vault.classList.add("fade-in");
-        window.scrollTo({ top: vault.offsetTop, behavior: "smooth" });
+        window.location.href = "vault.html"; // Redirect after payment
       },
       theme: { color: "#ff6600" }
     };
