@@ -11,6 +11,15 @@
   }
 }
 
+.logo img {
+  box-shadow: none;
+  filter: none;
+}
+
+.logo {
+  background: none;
+  text-shadow: none;
+}
 
 /* ===========================
    Base Layout & Typography
