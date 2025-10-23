@@ -1,3 +1,9 @@
+@media (max-width: 600px) {
+  .highlight-card {
+    margin-bottom: 1rem; /* adds vertical gap between cards */
+  }
+}
+
 /* ===========================
    Base Layout & Typography
 =========================== */
@@ -259,7 +265,8 @@ button:hover {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1.5rem;
-  align-items: stretch;
+  justify-items: center;
+  padding-bottom: 1rem; /* adds breathing room at bottom */
 }
 
 .highlight-card {
