@@ -232,6 +232,23 @@ button:hover {
   margin-bottom: 2rem;
 }
 
+/* Vault Heading with Black Glow */
+.vault-heading {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #ff6600;
+  text-shadow: 0 0 6px rgba(0, 0, 0, 0.6); /* black glow */
+  margin-bottom: 0.5rem;
+}
+
+/* Price Flash Styling */
+.price-flash {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #000;
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.3); /* subtle black glow */
+}
+
 .highlight-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
