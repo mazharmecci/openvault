@@ -339,9 +339,21 @@ button:hover {
 }
 
 .logo-wrapper {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center;
+  width: 100%;
+}
+.logo-wrapper img {
+  display: block;
+  margin: 0 auto;
+}
+.logo {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 20px 0; /* optional spacing */
 }
+
+
+
 
