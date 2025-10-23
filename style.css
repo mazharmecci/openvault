@@ -56,9 +56,9 @@ main, section {
 
 .banner-overlay p {
   font-size: 1.2rem;
-  color: #000;
+  color: #000 !important; /* force black text */
   margin: 0;
-  text-shadow: 0 0 6px rgba(0, 0, 0, 0.3); /* soft black glow for contrast */
+  text-shadow: 0 0 6px rgba(0, 0, 0, 0.3); /* optional glow */
 }
 
 .highlight {
