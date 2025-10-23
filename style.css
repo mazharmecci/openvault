@@ -228,3 +228,56 @@ button:hover {
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
+
+/* Flashy Shield Wrapper */
+.flashy-shield {
+  position: relative;
+  display: inline-block;
+  width: 56px;
+  height: 56px;
+  margin-left: 0.5rem;
+  vertical-align: middle;
+  animation: pulseGlow 1.5s infinite;
+}
+
+/* Shield Image */
+.flashy-shield .shield {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Centered Text + Lightning */
+.flashy-shield .shield-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 0.75rem;
+  font-weight: bold;
+  color: #000;
+  text-shadow: 0 0 6px rgba(255,255,255,0.9);
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+/* Lightning Icon */
+.lightning {
+  color: #ff6600;
+  font-size: 0.85rem;
+  animation: flash 1s infinite;
+}
+
+/* Glow Animation */
+@keyframes pulseGlow {
+  0% { box-shadow: 0 0 6px rgba(255, 204, 0, 0.4); }
+  50% { box-shadow: 0 0 12px rgba(255, 204, 0, 0.8); }
+  100% { box-shadow: 0 0 6px rgba(255, 204, 0, 0.4); }
+}
+
+/* Flash Animation */
+@keyframes flash {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(1.2); }
+}
