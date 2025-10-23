@@ -337,3 +337,11 @@ button:hover {
   width: 64px; /* Default size for mobile */
   height: auto;
 }
+
+.logo-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0; /* optional spacing */
+}
+
