@@ -7,57 +7,48 @@
   <link rel="stylesheet" href="style.css" />
   <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 </head>
-<body class="bg-white text-gray-800 font-sans">
+<body>
 
   <!-- 🎯 Hero Section -->
   <section class="hero">
-    <h1 class="hero-title">🚀 Submit Your College Project in 24 Hours</h1>
-    <p class="hero-subtext">
-      Get instant access to 10+ ready-to-use GitHub projects for just
-      <span class="text-orange-600 font-semibold">₹99</span>
-    </p>
-    <ul class="hero-features">
+    <h1>🚀 Submit Your College Project in 24 Hours</h1>
+    <p>Get instant access to 10+ ready-to-use GitHub projects for just <span class="highlight">₹99</span></p>
+    <ul>
       <li>✅ Full source code with README</li>
       <li>✅ Deployment-ready projects</li>
       <li>✅ Covers Web, App, ML, IoT & more</li>
       <li>✅ Perfect for final-year submissions</li>
     </ul>
-
-    <!-- 💸 Razorpay Payment Button -->
-    <div class="mt-6">
-      <button id="rzp-button" class="cta-button">
-        🔓 Unlock Projects for ₹99
-      </button>
-      <p class="text-xs text-gray-500 mt-2">*Secure payment via Razorpay or UPI</p>
-    </div>
+    <button id="rzp-button">🔓 Unlock Projects for ₹99</button>
+    <p class="note">*Secure payment via Razorpay or UPI</p>
   </section>
 
   <!-- 💬 Testimonials -->
   <section class="testimonials">
-    <h2 class="section-title">💬 What Students Say</h2>
-    <div class="testimonial-grid">
-      <div class="testimonial-card">“Saved me during finals. Deployed in 10 minutes!”<br><span>— Anjali, B.Tech CS</span></div>
-      <div class="testimonial-card">“Clean code, easy to customize. Worth every rupee.”<br><span>— Rohan, MCA</span></div>
-      <div class="testimonial-card">“Got full marks in viva. Thanks for this!”<br><span>— Priya, BE IT</span></div>
+    <h2>💬 What Students Say</h2>
+    <div class="cards">
+      <div>“Saved me during finals. Deployed in 10 minutes!”<br><span>— Anjali, B.Tech CS</span></div>
+      <div>“Clean code, easy to customize. Worth every rupee.”<br><span>— Rohan, MCA</span></div>
+      <div>“Got full marks in viva. Thanks for this!”<br><span>— Priya, BE IT</span></div>
     </div>
   </section>
 
-  <!-- 🔐 Vault Section (Hidden by Default) -->
+  <!-- 🔐 Vault Section -->
   <section id="vault" class="vault hidden">
-    <h2 class="section-title">🎉 Welcome to the Project Vault</h2>
-    <p class="text-center text-gray-600 mb-8">Here are your unlocked GitHub projects:</p>
-    <div class="vault-grid">
-      <div class="vault-card">
+    <h2>🎉 Welcome to the Project Vault</h2>
+    <p>Here are your unlocked GitHub projects:</p>
+    <div class="cards">
+      <div>
         <h3>📝 To-Do App (React)</h3>
         <p>A clean, responsive task manager with localStorage.</p>
         <a href="https://github.com/yourusername/todo-app" target="_blank">View on GitHub →</a>
       </div>
-      <div class="vault-card">
+      <div>
         <h3>📦 E-commerce Store (HTML/CSS/JS)</h3>
         <p>Simple cart logic, product grid, and checkout modal.</p>
         <a href="https://github.com/yourusername/ecom-store" target="_blank">View on GitHub →</a>
       </div>
-      <div class="vault-card">
+      <div>
         <h3>📊 Student Dashboard (Python Flask)</h3>
         <p>Login system, grade tracking, and charts.</p>
         <a href="https://github.com/yourusername/student-dashboard" target="_blank">View on GitHub →</a>
@@ -74,10 +65,12 @@
       name: "College Project Vault",
       description: "Access to GitHub project bundle",
       handler: function () {
-        document.getElementById("vault").classList.remove("hidden");
-        window.scrollTo({ top: document.getElementById("vault").offsetTop, behavior: "smooth" });
+        const vault = document.getElementById("vault");
+        vault.classList.remove("hidden");
+        vault.classList.add("fade-in");
+        window.scrollTo({ top: vault.offsetTop, behavior: "smooth" });
       },
-      theme: { color: "#f97316" }
+      theme: { color: "#ff6600" }
     };
 
     const rzp = new Razorpay(options);
