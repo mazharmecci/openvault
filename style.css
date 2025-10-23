@@ -259,7 +259,7 @@ button:hover {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1.5rem;
-  justify-items: center;
+  align-items: stretch;
 }
 
 .highlight-card {
@@ -275,6 +275,7 @@ button:hover {
   justify-content: center;
   align-items: center;
   min-height: 180px;
+  height: 100%; /* ensures equal height in grid */
 }
 
 .highlight-card:hover {
