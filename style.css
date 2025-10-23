@@ -121,30 +121,47 @@ button:hover {
   margin-bottom: 1rem;
 }
 
-/* Shield Wrapper */
+.hero-text {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.hero-text h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ff6600;
+  text-shadow: 0 0 8px rgba(255, 102, 0, 0.6);
+  margin-bottom: 0.5rem;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  color: #000;
+  text-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Shield Integration */
 .shield-wrapper {
   position: relative;
   display: inline-block;
-  width: 84px;   /* reduced from 60px */
-  height: 84px;
+  width: 48px;
+  height: 48px;
   margin-left: 0.5rem;
   vertical-align: middle;
 }
 
-/* Shield Image */
 .shield {
   width: 100%;
   height: auto;
   display: block;
 }
 
-/* Centered Text on Shield */
 .shield-text {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 0.25rem; /* slightly smaller for tighter fit */
+  font-size: 0.75rem;
   font-weight: bold;
   color: #000;
   text-shadow: 0 0 4px rgba(255,255,255,0.8);
