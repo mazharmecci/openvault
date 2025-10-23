@@ -54,7 +54,7 @@ main, section {
 
 .banner-overlay p {
   font-size: 1.2rem;
-  color: #ffcc00;
+  color: #000; /* changed from yellow to black */
   margin: 0;
 }
 
