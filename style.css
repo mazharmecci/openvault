@@ -1,4 +1,4 @@
-/* Base styles */
+/* Base */
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
@@ -7,30 +7,74 @@ body {
   line-height: 1.6;
 }
 
-header, main, section {
+main, section {
   padding: 2rem;
   max-width: 960px;
   margin: auto;
 }
 
-/* Header */
-header h1 {
-  font-size: 2rem;
+/* 🔥 Hero Banner */
+.page-header {
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
+}
+
+.banner {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  filter: blur(6px);
+  opacity: 0.6;
+  z-index: 1;
+}
+
+.desktop-banner { display: block; }
+.mobile-banner { display: none; }
+
+.banner-overlay {
+  position: relative;
+  z-index: 2;
+  color: #ff6600;
+  padding: 1rem;
+}
+
+.banner-overlay h1 {
+  font-size: 2rem;
+  font-weight: 700;
   margin-bottom: 0.5rem;
 }
 
-header p {
-  text-align: center;
-  font-size: 1.1rem;
+.banner-overlay p {
+  font-size: 1.2rem;
+  color: #ffcc00;
+  margin: 0;
 }
 
 .highlight {
-  color: #ff6600;
   font-weight: bold;
+  color: #ffcc00;
 }
 
-/* Feature List */
+/* Emoji Animation */
+.emoji {
+  display: inline-block;
+  animation: bounce 1.2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+/* ✅ Feature List */
 .feature-list-wrapper {
   display: flex;
   justify-content: center;
@@ -73,7 +117,7 @@ button:hover {
   color: #777;
 }
 
-/* Testimonials */
+/* 💬 Testimonials */
 .testimonials h2 {
   text-align: center;
   font-size: 1.5rem;
@@ -91,151 +135,4 @@ button:hover {
   background: #f9f9f9;
   padding: 1rem;
   border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  width: 280px;
-}
-
-.cards span {
-  font-size: 0.8rem;
-  color: #555;
-}
-
-/* Vault Section */
-.vault h2 {
-  text-align: center;
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-}
-
-.vault p {
-  text-align: center;
-  margin-bottom: 1.5rem;
-}
-
-.project-card {
-  background: #fff;
-  padding: 1rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  margin-bottom: 1rem;
-  width: 280px;
-}
-
-.tech-stack {
-  margin: 0.5rem 0;
-}
-
-.tech-stack span {
-  display: inline-block;
-  background: #eee;
-  color: #333;
-  padding: 0.3rem 0.6rem;
-  margin: 0.2rem;
-  border-radius: 4px;
-  font-size: 0.8rem;
-}
-
-.vault a {
-  color: #ff6600;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.vault a:hover {
-  text-decoration: underline;
-}
-
-/* Reveal Animation */
-.hidden {
-  display: none;
-}
-
-.fade-in {
-  animation: fadeIn 0.6s ease forwards;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-/* Mobile Responsiveness */
-@media (max-width: 600px) {
-  .cards {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  header h1 {
-    font-size: 1.5rem;
-  }
-
-  button {
-    width: 80%;
-  }
-}
-
-.feature-list-wrapper {
-  display: flex;
-  justify-content: center;
-}
-
-.page-header {
-  text-align: center;
-  margin-bottom: 2rem;
-  animation: fadeIn 0.6s ease forwards;
-}
-
-.page-header h1 {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
-  font-weight: 600;
-  line-height: 1.3;
-}
-
-.page-header p {
-  font-size: 1.1rem;
-  margin: 0;
-  color: #444;
-}
-
-/* Banner Image */
-.banner {
-  display: block;
-  max-width: 100%;
-  height: auto;
-  margin: 0 auto 1rem;
-  border-radius: 8px;
-}
-
-/* Header Alignment */
-.page-header {
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-/* Header Text */
-.page-header h1 {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
-  font-weight: 600;
-  line-height: 1.3;
-}
-
-/* Subheading */
-.page-header p {
-  font-size: 1.1rem;
-  margin: 0;
-  color: #444;
-}
-
-/* Emoji Animation */
-.emoji {
-  display: inline-block;
-  animation: bounce 1.2s infinite;
-}
-
-@keyframes bounce {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-6px); }
-}
+  box-shadow: 0 2px 6px rgba(0
