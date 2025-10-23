@@ -15,13 +15,7 @@ main, section {
 
 /* 🔥 Hero Banner */
 .page-header {
-  position: relative;
-  height: 300px;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+  display: none;
 }
 
 .banner {
