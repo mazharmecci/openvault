@@ -265,8 +265,7 @@ button:hover {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1.5rem;
-  justify-items: center;
-  padding-bottom: 1rem; /* adds breathing room at bottom */
+  align-items: stretch;
 }
 
 .highlight-card {
