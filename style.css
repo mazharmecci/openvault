@@ -131,8 +131,8 @@ button:hover {
 .shield-wrapper {
   position: relative;
   display: inline-block;
-  width: 64px;   /* reduced from 60px */
-  height: 64px;
+  width: 84px;   /* reduced from 60px */
+  height: 84px;
   margin-left: 0.5rem;
   vertical-align: middle;
 }
@@ -150,7 +150,7 @@ button:hover {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 0.85rem; /* slightly smaller for tighter fit */
+  font-size: 0.25rem; /* slightly smaller for tighter fit */
   font-weight: bold;
   color: #000;
   text-shadow: 0 0 4px rgba(255,255,255,0.8);
