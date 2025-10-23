@@ -1,3 +1,4 @@
+/* Base styles */
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
@@ -6,32 +7,22 @@ body {
   line-height: 1.6;
 }
 
-section {
+header, main, section {
   padding: 2rem;
   max-width: 960px;
   margin: auto;
 }
 
-.hero h1 {
+/* Header */
+header h1 {
   font-size: 2rem;
-  margin-bottom: 0.5rem;
   text-align: center;
+  margin-bottom: 0.5rem;
 }
 
-.hero p {
+header p {
   text-align: center;
   font-size: 1.1rem;
-}
-
-.hero ul {
-  list-style: none;
-  padding: 0;
-  margin: 1rem 0;
-}
-
-.hero ul li {
-  margin: 0.5rem 0;
-  font-size: 1rem;
 }
 
 .highlight {
@@ -39,6 +30,26 @@ section {
   font-weight: bold;
 }
 
+/* Feature List */
+.feature-list-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.feature-list {
+  list-style: none;
+  padding: 0;
+  margin: 1rem auto;
+  text-align: left;
+  max-width: 320px;
+}
+
+.feature-list li {
+  font-size: 1rem;
+  margin: 0.5rem 0;
+}
+
+/* CTA Button */
 button {
   background: #ff6600;
   color: #fff;
@@ -62,8 +73,8 @@ button:hover {
   color: #777;
 }
 
-.testimonials h2,
-.vault h2 {
+/* Testimonials */
+.testimonials h2 {
   text-align: center;
   font-size: 1.5rem;
   margin-bottom: 1rem;
@@ -89,47 +100,16 @@ button:hover {
   color: #555;
 }
 
-.vault p {
+/* Vault Section */
+.vault h2 {
   text-align: center;
+  font-size: 1.5rem;
   margin-bottom: 1rem;
 }
 
-.vault a {
-  color: #ff6600;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.vault a:hover {
-  text-decoration: underline;
-}
-
-.hidden {
-  display: none;
-}
-
-.fade-in {
-  animation: fadeIn 0.6s ease forwards;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-@media (max-width: 600px) {
-  .cards {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .hero h1 {
-    font-size: 1.5rem;
-  }
-
-  button {
-    width: 80%;
-  }
+.vault p {
+  text-align: center;
+  margin-bottom: 1.5rem;
 }
 
 .project-card {
@@ -155,17 +135,6 @@ button:hover {
   font-size: 0.8rem;
 }
 
-.vault h1 {
-  text-align: center;
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
-}
-
-.vault p {
-  text-align: center;
-  margin-bottom: 1.5rem;
-}
-
 .vault a {
   color: #ff6600;
   text-decoration: none;
@@ -176,22 +145,32 @@ button:hover {
   text-decoration: underline;
 }
 
+/* Reveal Animation */
+.hidden {
+  display: none;
+}
+
+.fade-in {
+  animation: fadeIn 0.6s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Mobile Responsiveness */
 @media (max-width: 600px) {
   .cards {
     flex-direction: column;
     align-items: center;
   }
-}
 
-.feature-list {
-  list-style: none;
-  padding: 0;
-  margin: 1rem auto;
-  text-align: center;
-}
-.feature-list li {
-  margin: 0.5rem 0;
-  font-size: 1rem;
-}
+  header h1 {
+    font-size: 1.5rem;
+  }
 
-
+  button {
+    width: 80%;
+  }
+}
