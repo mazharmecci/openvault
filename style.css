@@ -248,10 +248,11 @@ button:hover {
 
 /* Price Flash Styling */
 .price-flash {
-  font-size: 1.4rem;
+  font-size: 2rem;
   font-weight: bold;
   color: #000;
-  text-shadow: 0 0 4px rgba(0, 0, 0, 0.3); /* subtle black glow */
+  text-shadow: 0 0 6px rgba(0, 0, 0, 0.4);
+  margin: 0.5rem 0;
 }
 
 .highlight-grid {
