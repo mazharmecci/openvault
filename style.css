@@ -220,6 +220,11 @@ button:hover {
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
   text-align: center;
   transition: transform 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 180px; /* consistent height */
 }
 
 .highlight-card:hover {
