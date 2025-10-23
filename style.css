@@ -1,6 +1,6 @@
 @media (max-width: 600px) {
   .highlight-card {
-    margin-bottom: 1rem; /* adds vertical gap between cards */
+    margin-bottom: 1.5rem; /* adds vertical gap between cards */
   }
 }
 
