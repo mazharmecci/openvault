@@ -408,6 +408,42 @@ button:hover {
   to { opacity: 1; }
 }
 
+@media (min-width: 768px) {
+  .themes-table {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    max-width: 960px;
+    margin: auto;
+  }
+
+  .theme-row {
+    flex-direction: column;
+    text-align: left;
+    padding: 1.2rem;
+    font-size: 0.95rem;
+    animation: fadeInUp 0.6s ease forwards;
+    opacity: 0;
+  }
+
+  .theme-row span:nth-child(1) {
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .theme-row span:nth-child(2),
+  .theme-row span:nth-child(3) {
+    color: #333;
+    font-size: 0.9rem;
+  }
+}
+
+@keyframes fadeInUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
 
 
 
