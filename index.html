@@ -2,32 +2,31 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Opencode Vault – Final Year Software Projects for ₹99</title>
+  <title>Opencode Vault – Final Year Software Projects for ₹199</title>
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Unlock 1000+ ready-to-use GitHub projects for just ₹99. Perfect for final-year students. Includes Web, App, ML, IoT & more.">
-  <meta name="keywords" content="GitHub projects, student projects, final year, web development, machine learning, IoT, college submission, ₹99 projects">
+  <meta name="description" content="Unlock 1000+ ready-to-use GitHub projects for just ₹199. Perfect for final-year students. Includes Web, App, ML, IoT & more.">
+  <meta name="keywords" content="GitHub projects, student projects, final year, web development, machine learning, IoT, college submission, ₹199 projects">
   <meta name="author" content="OpenCodeVault by ISTOS Medical">
-  <meta property="og:title" content="Opencode Vault – 1000+ GitHub Projects for ₹99">
+  <meta property="og:title" content="Opencode Vault – 1000+ GitHub Projects for ₹199">
   <meta property="og:description" content="Instant access to deployment-ready projects with full source code. Ideal for final-year students.">
-  <meta property="og:url" content="https://istosmedical.github.io/opencode/">
+  <meta property="og:url" content="https://mazharmecci.github.io/openvault/">
   <meta property="og:type" content="website">
-  
-  <link rel="canonical" href="https://istosmedical.github.io/opencode/" />
+  <link rel="canonical" href="https://mazharmecci.github.io/openvault/" />
   <link rel="stylesheet" href="style.css" />
   <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 </head>
 <body>
 
-    <div class="logo-wrapper">
+  <div class="logo-wrapper">
     <img src="vault.png" alt="Opencode Vault" />
-    </div>
-  
-    <!-- 🔥 Hero Banner -->
+  </div>
+
+  <!-- 🔥 Hero Banner -->
   <section class="hero-text">
     <h1 class="vault-heading"><span class="emoji">🔥</span> Opencode Vault</h1>
-    <p><h3>Submit Your College Project in 24 Hrs</h3> 
-    <h2 class="price-flash">@Just ₹<strong>199</strong>/-</h2></p>
+    <h3>Submit Your College Project in 24 Hrs</h3> 
+    <h2 class="price-flash">@Just ₹<strong>199</strong>/-</h2>
   </section>
 
   <main>
@@ -41,7 +40,10 @@
           <li>✅ Perfect for college submissions</li>
         </ul>
       </div>
-      <button id="rzp-button">🔓 Unlock Projects for ₹199</button>
+      <div class="unlock-wrapper">
+        <button id="rzp-button">🔓 Unlock Projects for ₹199</button>
+        <span class="global-badge">🌍 Global Access</span>
+      </div>
       <p class="note">*Secure payment via Razorpay or UPI</p>
     </section>
 
@@ -67,138 +69,58 @@
         </div>
       </div>
     </section>
-  </main>
 
-      <button id="rzp-button">🔓 Unlock Projects for ₹199</button>
-      <p class="note">*Secure payment via Razorpay or UPI</p>
-  
-  <!-- 💳 Razorpay Script -->
-  <script>
-    const options = {
-      key: "rzp_test_1DP5mmOlF5G5ag", // Replace with live key when ready
-      amount: 99,
-      currency: "INR",
-      name: "College Project Vault",
-      description: "Access to Software project bundle",
-      handler: function () {
-        window.location.href = "vault.html"; // Redirect after payment
-      },
-      theme: { color: "#ff6600" }
-    };
+    <!-- 📚 Course Showcase -->
+    <section class="course-showcase">
+      <h2 class="course-heading">📚 You’ll Explore Inside the Vault</h2>
+      <div class="course-grid">
+        <div class="course-card">⚛️ React JS<br><span>Front-end mastery</span></div>
+        <div class="course-card">🖼️ Front-End Dev<br><span>HTML, CSS, JS, UI/UX</span></div>
+        <div class="course-card">🧠 Node.js<br><span>Backend with JavaScript</span></div>
+        <div class="course-card">🗃️ SQL<br><span>Database management</span></div>
+        <div class="course-card">☁️ Azure DevOps<br><span>CI/CD pipelines</span></div>
+        <div class="course-card">🛠️ Azure Admin<br><span>Cloud infrastructure</span></div>
+        <div class="course-card">🔄 Azure Data Factory<br><span>ETL workflows</span></div>
+        <div class="course-card">☕ J2EE<br><span>Enterprise Java apps</span></div>
+        <div class="course-card">📈 PMP<br><span>Project management</span></div>
+        <div class="course-card">🧩 Scrum<br><span>Agile workflows</span></div>
+        <div class="course-card">📊 Business Analyst<br><span>Stakeholder insights</span></div>
+        <div class="course-card">🔗 Mulesoft<br><span>API integration</span></div>
+        <div class="course-card">🧪 Tosca<br><span>Automated testing</span></div>
+        <div class="course-card">📦 DBT<br><span>Analytics pipelines</span></div>
+        <div class="course-card">🌐 Dell Boomi<br><span>Cloud integrations</span></div>
+        <div class="course-card">📣 Digital Marketing<br><span>SEO, SEM, campaigns</span></div>
+        <div class="course-card">❄️ Snowflake<br><span>Cloud data warehousing</span></div>
+        <div class="course-card">🧬 Generative AI<br><span>AI model training</span></div>
+        <div class="course-card">📝 Prompt Engineering<br><span>Optimized AI prompts</span></div>
+        <div class="course-card">🔌 Embedded Systems<br><span>Hardware-software fusion</span></div>
+        <div class="course-card">🐍 Python for AI<br><span>ML-ready Python</span></div>
+        <div class="course-card">🚀 GCP<br><span>Google Cloud mastery</span></div>
+      </div>
+    </section>
 
-    const rzp = new Razorpay(options);
-    document.getElementById("rzp-button").onclick = function (e) {
-      rzp.open();
-      e.preventDefault();
-    };
-  </script>
+    <!-- 🎯 Project Themes -->
+    <section class="project-themes">
+      <h2 class="themes-heading">🎯 Explore Real-World Projects</h2>
+      <div class="themes-table">
+        <div class="theme-row"><span>👗 Fashion</span><span>Outfit recommender, virtual try-on</span><span>Style meets AI</span></div>
+        <div class="theme-row"><span>🏠 Home & Living</span><span>Smart home automation, IoT control</span><span>Perfect for IoT majors</span></div>
+        <div class="theme-row"><span>💸 Deals & Offers</span><span>Coupon engine, cashback logic</span><span>E-commerce meets data</span></div>
+        <div class="theme-row"><span>✈️ Travel</span><span>Trip planner, route optimizer</span><span>Real-world UX</span></div>
+        <div class="theme-row"><span>🎬 Entertainment</span><span>OTT dashboard, movie aggregator</span><span>React + ML combo</span></div>
+        <div class="theme-row"><span>🛒 Shopping</span><span>Cart system, wishlist animations</span><span>Frontend mastery</span></div>
+        <div class="theme-row"><span>📱 Mobile Apps</span><span>QR scanner, student task app</span><span>Android dev skills</span></div>
+        <div class="theme-row"><span>🤖 AI & ML</span><span>Chatbot, sentiment analysis</span><span>Final-year impact</span></div>
+      </div>
+    </section>
 
-  <section class="course-showcase">
-  <h2 class="course-heading">📚 You’ll Explore Inside the Vault</h2>
-  <div class="course-grid">
-    <div class="course-card">⚛️ React JS<br><span>Front-end mastery</span></div>
-    <div class="course-card">🖼️ Front-End Dev<br><span>HTML, CSS, JS, UI/UX</span></div>
-    <div class="course-card">🧠 Node.js<br><span>Backend with JavaScript</span></div>
-    <div class="course-card">🗃️ SQL<br><span>Database management</span></div>
-    <div class="course-card">☁️ Azure DevOps<br><span>CI/CD pipelines</span></div>
-    <div class="course-card">🛠️ Azure Admin<br><span>Cloud infrastructure</span></div>
-    <div class="course-card">🔄 Azure Data Factory<br><span>ETL workflows</span></div>
-    <div class="course-card">☕ J2EE<br><span>Enterprise Java apps</span></div>
-    <div class="course-card">📈 PMP<br><span>Project management</span></div>
-    <div class="course-card">🧩 Scrum<br><span>Agile workflows</span></div>
-    <div class="course-card">📊 Business Analyst<br><span>Stakeholder insights</span></div>
-    <div class="course-card">🔗 Mulesoft<br><span>API integration</span></div>
-    <div class="course-card">🧪 Tosca<br><span>Automated testing</span></div>
-    <div class="course-card">📦 DBT<br><span>Analytics pipelines</span></div>
-    <div class="course-card">🌐 Dell Boomi<br><span>Cloud integrations</span></div>
-    <div class="course-card">📣 Digital Marketing<br><span>SEO, SEM, campaigns</span></div>
-    <div class="course-card">❄️ Snowflake<br><span>Cloud data warehousing</span></div>
-    <div class="course-card">🧬 Generative AI<br><span>AI model training</span></div>
-    <div class="course-card">📝 Prompt Engineering<br><span>Optimized AI prompts</span></div>
-    <div class="course-card">🔌 Embedded Systems<br><span>Hardware-software fusion</span></div>
-    <div class="course-card">🐍 Python for AI<br><span>ML-ready Python</span></div>
-    <div class="course-card">🚀 GCP<br><span>Google Cloud mastery</span></div>
-  </div>
-</section>
-  
-  <section class="project-themes">
-  <h2 class="themes-heading">🎯 Explore Real-World Projects</h2>
-  <div class="themes-table">
-    <div class="theme-row">
-      <span>👗 Fashion</span>
-      <span>Outfit recommender, virtual try-on</span>
-      <span>Style meets AI</span>
-    </div>
-    <div class="theme-row">
-      <span>🏠 Home & Living</span>
-      <span>Smart home automation, IoT control</span>
-      <span>Perfect for IoT majors</span>
-    </div>
-    <div class="theme-row">
-      <span>💸 Deals & Offers</span>
-      <span>Coupon engine, cashback logic</span>
-      <span>E-commerce meets data</span>
-    </div>
-    <div class="theme-row">
-      <span>✈️ Travel</span>
-      <span>Trip planner, route optimizer</span>
-      <span>Real-world UX</span>
-    </div>
-    <div class="theme-row">
-      <span>🎬 Entertainment</span>
-      <span>OTT dashboard, movie aggregator</span>
-      <span>React + ML combo</span>
-    </div>
-    <div class="theme-row">
-      <span>🛒 Shopping</span>
-      <span>Cart system, wishlist animations</span>
-      <span>Frontend mastery</span>
-    </div>
-    <div class="theme-row">
-      <span>📱 Mobile Apps</span>
-      <span>QR scanner, student task app</span>
-      <span>Android dev skills</span>
-    </div>
-    <div class="theme-row">
-      <span>🤖 AI & ML</span>
-      <span>Chatbot, sentiment analysis</span>
-      <span>Final-year impact</span>
-    </div>
-  </div>
-</section>
-
-      <button id="rzp-button">🔓 Unlock Projects for ₹199</button>
-      <p class="note">*Secure payment via Razorpay or UPI</p>
-  
-  <section class="testimonials-brolly">
-  <h2>🔥 Why Students Love the Opencode Vault</h2>
-  <div class="testimonial-card">
-    <div class="testimonial-card">
-      <img src="icons/code.png" alt="Code Icon" />
-      <p><strong>1000+ Software Projects</strong><br>Ready-to-deploy code for final-year submissions</p>
-    </div>
-    <div class="testimonial-card">
-      <img src="icons/rocket.png" alt="Rocket Icon" />
-      <p><strong>Instant Access</strong><br>Unlock projects in 60 seconds after payment</p>
-    </div>
-    <div class="testimonial-card">
-      <img src="icons/stack.png" alt="Stack Icon" />
-      <p><strong>20+ Tech Stacks</strong><br>Web, App, ML, AI, IoT, Python, React & more</p>
-    </div>
-    <div class="testimonial-card">
-      <img src="icons/star.png" alt="Star Icon" />
-      <p><strong>Student Rated 4.9★</strong><br>Trusted by 4500+ students across India</p>
-    </div>
-    <div class="testimonial-card">
-      <img src="icons/Gshield.png" alt="Shield Icon" />
-      <p><strong>₹199/- Only</strong><br>One-time unlock with Razorpay or UPI</p>
-    </div>
-    <div class="testimonial-card">
-      <img src="icons/demo.png" alt="Demo Icon" />
-      <p><strong>Free Preview</strong><br>See sample projects before unlocking full vault</p>
-    </div>
-  </div>
-</section>
+    <!-- 🔥 Vault Highlights -->
+    <section class="testimonials-brolly">
+      <h2>🔥 Why Students Love the Opencode Vault</h2>
+      <div class="testimonial-card"><img src="icons/code.png" alt="Code Icon" /><p><strong>1000+ Software Projects</strong><br>Ready-to-deploy code for final-year submissions</p></div>
+      <div class="testimonial-card"><img src="icons/rocket.png" alt="Rocket Icon" /><p><strong>Instant Access</strong><br>Unlock projects in 60 seconds after payment</p></div>
+      <div class="testimonial-card"><img src="icons/stack.png" alt="Stack Icon" /><p><strong>20+ Tech Stacks</strong><br>Web, App, ML, AI, IoT, Python, React & more</p></div>
+      <div class="testimonial-card"><img src="icons/star.png" alt="
   
 </body>
 </html>
