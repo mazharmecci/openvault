@@ -544,7 +544,7 @@ button:hover {
   to { transform: translateY(0); opacity: 1; }
 }
 
-course-showcase { 
+.course-showcase { 
 background: #000; 
 color: #fff; 
 padding: 2rem 1rem; 
