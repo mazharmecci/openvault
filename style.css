@@ -289,9 +289,10 @@ button:hover {
 }
 
 .testimonials-brolly h2 {
+  text-align: center;
   font-size: 1.8rem;
   color: #ffcc00;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .testimonial-grid {
