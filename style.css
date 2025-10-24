@@ -533,4 +533,24 @@ button:hover {
   margin: 0.4rem 0;
 }
 
+.flag-icon {
+  width: 20px;
+  height: auto;
+  vertical-align: middle;
+  margin-left: 6px;
+}
+
+.vault-footer {
+  background-color: #0b1f4d;
+  color: #ffffff;
+  text-align: center;
+  padding: 1.5rem 0;
+  font-size: 0.9rem;
+  margin-top: 3rem;
+  border-top: 1px solid #333;
+}
+
+.vault-footer p {
+  margin: 0.4rem 0;
+}
 
