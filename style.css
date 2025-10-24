@@ -95,7 +95,6 @@
   }
 }
 
-
 .logo img {
   box-shadow: none;
   filter: none;
@@ -287,6 +286,11 @@ button:hover {
 /* ===========================
    Testimonials (Brolly Theme)
 =========================== */
+.testimonial-card strong,
+.testimonial-card p {
+  color: #000000; /* ensures headings and paragraph text are black */
+}
+
 .testimonials-brolly {
   background: #000;
   color: #fff;
@@ -310,10 +314,12 @@ button:hover {
 
 .testimonial-card {
   background-color: #ffcc00;
+  color: #000000; /* sets all text inside to black */
   padding: 1rem;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   text-align: left;
+  margin-bottom: 1.5rem;
 }
 
 .testimonial-card:hover {
