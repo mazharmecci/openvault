@@ -329,6 +329,7 @@ button:hover {
   margin: 0.5rem 0;
 }
 
+/* Highlight Grid Layout */
 .highlight-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -336,32 +337,35 @@ button:hover {
   align-items: stretch;
 }
 
+/* Highlight Card Styling */
 .highlight-card {
-  background: #ffcc00;
+  background-color: #ffcc00;
   color: #000;
   padding: 1rem;
   border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-  text-align: center;
-  transition: transform 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   min-height: 180px;
-  height: 100%; /* ensures equal height in grid */
+  height: 100%;
+  text-align: center;
+  transition: transform 0.2s ease;
 }
 
 .highlight-card:hover {
   transform: scale(1.05);
 }
 
+/* Icon Styling */
 .highlight-card img {
   width: 40px;
   height: 40px;
   margin-bottom: 0.5rem;
 }
 
+/* Text Styling */
 .highlight-card p {
   font-size: 0.95rem;
   margin: 0;
@@ -369,6 +373,19 @@ button:hover {
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
+  text-align: center;
+}
+
+/* Responsive Text Alignment */
+@media (max-width: 600px) {
+  .highlight-card p {
+    text-align: left;
+  }
+
+  .highlight-card p strong {
+    display: block;
+    text-align: center;
+  }
 }
 
 .vault-image {
