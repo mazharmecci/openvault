@@ -7,14 +7,20 @@
   margin: 0.5rem auto 1.5rem;
 }
 
+/* Default: center-align everything */
 .testimonial-card p {
   text-align: center;
 }
 
-/* Mobile override */
+/* Mobile override: left-align paragraph text only */
 @media (max-width: 600px) {
   .testimonial-card p {
     text-align: left;
+  }
+
+  .testimonial-card p strong {
+    display: block;
+    text-align: center; /* Keep headings centered */
   }
 }
 
