@@ -1,3 +1,12 @@
+.vault-divider {
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(to right, #ff6600, #ffc107);
+  border: none;
+  border-radius: 2px;
+  margin: 0.5rem auto 1.5rem;
+}
+
 .testimonial-card p {
   text-align: center;
 }
