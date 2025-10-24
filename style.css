@@ -63,16 +63,22 @@
     margin-bottom: 0.8rem;
   }
 
-  .vault-divider {
-    margin-top: 0.3rem;
-    margin-bottom: 1rem;
-  }
+.vault-divider {
+  width: 60px;
+  height: 4px;
+  background: #000;
+  border: none;
+  border-radius: 2px;
+  margin: 0.3rem 0 0.8rem;
+}
 
-  .testimonial-card p {
-    text-align: left;
-  }
+.testimonial-card p {
+  font-size: 0.95rem;
+  margin: 0;
+  text-align: left;
+}
 
-  .testimonial-card p strong {
+ .testimonial-card p strong {
     display: block;
     text-align: center;
   }
