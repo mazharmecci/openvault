@@ -571,14 +571,25 @@ button:hover {
   margin-bottom: 8px;
   transition: transform 0.3s ease;
 }
+
 .course-card:hover .company-logo {
   transform: scale(1.05);
 }
-.course-card span {
-  font-size: 0.75rem;
-  color: #555;
+
+.course-card {
+  color: white;
+  background-color: #1a1a1a; /* Optional: dark background for contrast */
+  border-radius: 8px;
+  padding: 12px;
   text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.course-card span {
+  color: white;
+  font-size: 0.75rem;
   display: block;
+  margin-top: 4px;
 }
 
 .course-card:nth-child(n) {
