@@ -544,12 +544,26 @@ button:hover {
   to { transform: translateY(0); opacity: 1; }
 }
 
-.course-showcase {
-  background: #f9f9f9; /* Optional: light section background */
-  color: #000;
+course-showcase { 
+background: #000; 
+color: #fff; 
+padding: 2rem 1rem; 
+text-align: center; 
 }
-.course-heading {
-  color: #333; /* Optional: darker heading for light background */
+
+.course-heading { 
+font-size: 1.8rem; 
+color: #ffcc00; 
+margin-bottom: 2rem; 
+animation: fadeIn 1s ease-in-out; 
+} 
+
+.course-grid { 
+display: grid; 
+grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); 
+gap: 1rem; 
+max-width: 960px; 
+margin: auto; 
 }
 
 .company-logo {
