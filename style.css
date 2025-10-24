@@ -56,11 +56,6 @@
   letter-spacing: 0.3rem;
 }
 
-/* Testimonial Card Text */
-.testimonial-card p {
-  text-align: center;
-}
-
 /* Responsive Overrides */
 @media (max-width: 600px) {
   .vault-highlights h2,
@@ -307,18 +302,11 @@ button:hover {
 }
 
 .testimonial-card {
-  background: #ffcc00;
-  color: #000;
+  background-color: #ffcc00;
   padding: 1rem;
   border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-  font-size: 0.95rem;
-  transition: transform 0.2s ease;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  min-height: 160px;
-  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  text-align: left;
 }
 
 .testimonial-card:hover {
@@ -331,6 +319,22 @@ button:hover {
   font-weight: bold;
 }
 
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.5rem;
+}
+
+.card-header img {
+  width: 32px;
+  height: 32px;
+}
+
+.card-header strong {
+  font-size: 1rem;
+  color: #000;
+}
 /* ===========================
    Vault Highlights (Yellow Cards)
 =========================== */
