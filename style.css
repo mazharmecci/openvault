@@ -545,25 +545,11 @@ button:hover {
 }
 
 .course-showcase {
-  background: #000;
-  color: #fff;
-  padding: 2rem 1rem;
-  text-align: center;
+  background: #f9f9f9; /* Optional: light section background */
+  color: #000;
 }
-
 .course-heading {
-  font-size: 1.8rem;
-  color: #ffcc00;
-  margin-bottom: 2rem;
-  animation: fadeIn 1s ease-in-out;
-}
-
-.course-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 1rem;
-  max-width: 960px;
-  margin: auto;
+  color: #333; /* Optional: darker heading for light background */
 }
 
 .company-logo {
@@ -578,19 +564,28 @@ button:hover {
 }
 
 .course-card {
-  background-color: #ffffff;
-  color: #000000;
+  background-color: #fff;
+  color: #000;
   border-radius: 8px;
-  padding: 12px;
+  padding: 16px;
   text-align: center;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-
+.course-card img {
+  max-height: 48px;
+  margin-bottom: 8px;
+}
+.course-card div {
+  font-weight: 600;
+  font-size: 0.875rem;
+}
 .course-card span {
-  color: #333333;
   font-size: 0.75rem;
-  display: block;
+  color: #555;
   margin-top: 4px;
 }
 
