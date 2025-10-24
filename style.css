@@ -1,3 +1,36 @@
+/* Highlight Card Text Styling */
+.highlight-card p {
+  font-size: 0.95rem;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-align: center; /* default for desktop */
+}
+
+/* Mobile Overrides */
+@media (max-width: 600px) {
+  .highlight-card p {
+    text-align: left; /* left-align body text */
+  }
+
+  .highlight-card p strong {
+    display: block;
+    text-align: center; /* keep headings centered */
+    margin-bottom: 0.4rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .highlight-card p {
+    -webkit-line-clamp: unset;
+    display: block;
+    overflow: visible;
+  }
+}
+
+
 /* Section Title Spacing */
 .vault-highlights h2,
 .testimonials-brolly h2 {
@@ -363,29 +396,6 @@ button:hover {
   width: 40px;
   height: 40px;
   margin-bottom: 0.5rem;
-}
-
-/* Text Styling */
-.highlight-card p {
-  font-size: 0.95rem;
-  margin: 0;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-align: center;
-}
-
-/* Responsive Text Alignment */
-@media (max-width: 600px) {
-  .highlight-card p {
-    text-align: left;
-  }
-
-  .highlight-card p strong {
-    display: block;
-    text-align: center;
-  }
 }
 
 .vault-image {
