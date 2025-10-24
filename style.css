@@ -527,7 +527,7 @@ button:hover {
 
 .vault-footer {
   background-color: #ffcc00;
-  color: #fff;
+  color: #000000;
   text-align: center;
   padding: 1rem 0; /* reduce from 1.5rem or more */
   font-size: 0.85rem;
@@ -538,5 +538,3 @@ button:hover {
 .vault-footer p {
   margin: 0.3rem 0;
 }
-
-
