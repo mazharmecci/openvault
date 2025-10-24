@@ -1,3 +1,10 @@
+/* Section Title Spacing */
+.vault-highlights h2,
+.testimonials-brolly h2 {
+  margin-bottom: 2rem;
+}
+
+/* Divider Styling */
 .vault-divider {
   width: 60px;
   height: 4px;
@@ -7,35 +14,53 @@
   margin: 0.5rem auto 1.5rem;
 }
 
-/* Default: center-align everything */
+/* Emoji Divider */
+.emoji-divider {
+  text-align: center;
+  font-size: 1.4rem;
+  color: #000000;
+  margin: 0.5rem 0 1.5rem;
+  letter-spacing: 0.3rem;
+}
+
+/* Testimonial Card Text */
 .testimonial-card p {
   text-align: center;
 }
 
-/* Mobile override: left-align paragraph text only */
+/* Responsive Overrides */
 @media (max-width: 600px) {
+  .vault-highlights h2,
+  .testimonials-brolly h2 {
+    margin-bottom: 0.8rem;
+  }
+
+  .vault-divider {
+    margin-top: 0.3rem;
+    margin-bottom: 1rem;
+  }
+
   .testimonial-card p {
     text-align: left;
   }
 
   .testimonial-card p strong {
     display: block;
-    text-align: center; /* Keep headings centered */
+    text-align: center;
   }
-}
 
-@media (max-width: 600px) {
   .highlight-card {
-    margin-bottom: 1.5rem; /* adds vertical gap between cards */
+    margin-bottom: 1.5rem;
   }
 }
 
-/* Desktop-specific override */
+/* Desktop-specific Overrides */
 @media (min-width: 768px) {
   .testimonial-card img {
-    width: 48px; /* Smaller size for desktop */
+    width: 48px;
   }
 }
+
 
 .logo img {
   box-shadow: none;
