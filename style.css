@@ -1,3 +1,14 @@
+.testimonial-card p {
+  text-align: center;
+}
+
+/* Mobile override */
+@media (max-width: 600px) {
+  .testimonial-card p {
+    text-align: left;
+  }
+}
+
 @media (max-width: 600px) {
   .highlight-card {
     margin-bottom: 1.5rem; /* adds vertical gap between cards */
