@@ -344,10 +344,14 @@ button:hover {
   align-items: center;
   width: 100%;
 }
+
 .logo-wrapper img {
   display: block;
   margin: 0 auto;
+  max-width: 180px; /* reduce from default size */
+  height: auto;
 }
+
 .logo {
   display: flex;
   justify-content: center;
