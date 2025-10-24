@@ -514,24 +514,6 @@ button:hover {
   margin-top: 1rem;
 }
 
-.global-badge {
-  background: #00c853;
-  color: #fff;
-  padding: 0.4rem 0.8rem;
-  border-radius: 6px;
-  font-size: 0.85rem;
-  font-weight: bold;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-  animation: pulseBadge 1.5s infinite;
-  display: none;
-}
-
-@keyframes pulseBadge {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.05); }
-  100% { transform: scale(1); }
-}
-
 
 
 
