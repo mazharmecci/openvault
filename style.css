@@ -661,6 +661,7 @@ button:hover {
   gap: 1.5rem;
   justify-items: stretch;
   align-items: stretch;
+  margin-bottom: 2rem; /* adds spacing below grid */
 }
 
 .testimonial-card {
@@ -675,6 +676,7 @@ button:hover {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   text-align: left;
   transition: transform 0.3s ease;
+  margin-bottom: 1rem; /* adds spacing between rows */
 }
 
 .testimonial-card:hover {
