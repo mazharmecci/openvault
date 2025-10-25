@@ -324,9 +324,8 @@ h1, h2, h3 {
 
 .highlight-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1.5rem;
-  align-items: stretch;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem; /* adds both row and column spacing */
   max-width: 960px;
   margin: 0 auto;
 }
