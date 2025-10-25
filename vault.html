@@ -8,29 +8,46 @@
 </head>
 <body>
 
-  <!-- 🎉 Welcome Message -->
-<script>
-  fetch('stacks.json')
-    .then(response => response.json())
-    .then(data => {
-      const tbody = document.querySelector('.vault-table tbody');
-      tbody.innerHTML = ''; // Clear any static rows
-      data.forEach(stack => {
-        const row = document.createElement('tr');
-        row.innerHTML = `
-          <td>${stack.name}</td>
-          <td>${stack.description}</td>
-          <td><a href="${stack.link}" target="_blank">View Project</a></td>
-        `;
-        tbody.appendChild(row);
+  <section class="course-showcase">
+    <h2 class="course-heading">🔗 Tech Stack Projects & Source Links</h2>
+    <div class="table-container">
+      <table class="vault-table">
+        <thead>
+          <tr>
+            <th>Tech Stack</th>
+            <th>Description</th>
+            <th>GitHub Source</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- JavaScript will inject rows here -->
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <script>
+    fetch('stacks.json')
+      .then(response => response.json())
+      .then(data => {
+        const tbody = document.querySelector('.vault-table tbody');
+        tbody.innerHTML = '';
+        data.forEach(stack => {
+          const row = document.createElement('tr');
+          row.innerHTML = `
+            <td>${stack.name}</td>
+            <td>${stack.description}</td>
+            <td><a href="${stack.link}" target="_blank">View Project</a></td>
+          `;
+          tbody.appendChild(row);
+        });
+      })
+      .catch(error => {
+        console.error('Error loading stack data:', error);
+        const tbody = document.querySelector('.vault-table tbody');
+        tbody.innerHTML = '<tr><td colspan="3">Failed to load project data.</td></tr>';
       });
-    })
-    .catch(error => {
-      console.error('Error loading stack data:', error);
-      const tbody = document.querySelector('.vault-table tbody');
-      tbody.innerHTML = '<tr><td colspan="3">Failed to load project data.</td></tr>';
-    });
-</script>
+  </script>
 
 </body>
 </html>
