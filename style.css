@@ -68,19 +68,6 @@ h1, h2, h3 {
   height: auto;
 }
 
-section,
-.course-showcase,
-.project-themes,
-.vault-highlights,
-.testimonials-brolly,
-.preview-section,
-.internship-dashboard,
-.certificate-section {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 2rem 1rem;
-}
-
 .testimonials-brolly {
   background: #000;
   color: #fff;
@@ -96,7 +83,7 @@ section,
 }
 
 .hero-text {
-  background-color: #fff8dc; /* pale yellow */
+  background-color: #4C4E52; /* darkGrey */
   text-align: center;
   padding: 2rem 1rem;
   max-width: 960px;
