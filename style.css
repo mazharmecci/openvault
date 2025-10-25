@@ -697,8 +697,8 @@ button:hover {
 }
 
 .testimonial-card {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   justify-content: space-between;
   height: 100%;
   background-color: #ffcc00;
@@ -708,7 +708,7 @@ button:hover {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   text-align: left;
   transition: transform 0.3s ease;
-  margin-bottom: 2rem; /* adds spacing between rows */
+  margin-bottom: 3rem; /* adds spacing between rows */
 }
 
 .testimonial-card:hover {
