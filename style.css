@@ -236,11 +236,14 @@ section,
 /* ===========================
    Highlight Cards
    =========================== */
+
 .highlight-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1.5rem;
   align-items: stretch;
+  max-width: 960px;
+  margin: 0 auto;
 }
 
 .highlight-card {
@@ -322,13 +325,15 @@ section,
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 16px;
+  padding: 1rem;
   border-radius: 8px;
   background: #fff;
   color: #000;
   text-align: center;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   transition: transform 0.3s ease;
+  min-height: 160px;
+  overflow: hidden;
 }
 
 .course-card:hover {
@@ -347,12 +352,11 @@ section,
 }
 
 .company-logo {
+  max-width: 100px;
   max-height: 50px;
-  margin-bottom: 8px;
+  object-fit: contain;
+  margin-bottom: 0.5rem;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
-  transition: transform 0.3s ease;
 }
 
 .course-card:hover .company-logo {
