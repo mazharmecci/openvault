@@ -1,1 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Internship Certificate – Opencode Vault</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <section class="certificate-section">
+    <h2>🎓 Internship Completion Certificate</h2>
+    <p>Enter your full name to generate your certificate:</p>
+
+    <input type="text" id="studentName" placeholder="Your Full Name" />
+    <button id="generateBtn">🖨️ Generate Certificate</button>
+
+    <div id="certificatePreview" class="certificate-card">
+      <h3>Certificate of Completion</h3>
+      <p>This certifies that</p>
+      <h2 id="nameOutput">[Your Name]</h2>
+      <p>has successfully completed the</p>
+      <strong>7-Day Frontend Internship Program</strong>
+      <p>under Opencode Vault</p>
+      <p class="date-line">Issued on: <span id="dateOutput"></span></p>
+    </div>
+  </section>
+
+  <script>
+    document.getElementById("generateBtn").addEventListener("click", () => {
+      const name = document.getElementById("studentName").value.trim();
+      if (!name) {
+        alert("Please enter your full name.");
+        return;
+      }
+
+      document.getElementById("nameOutput").textContent = name;
+      document.getElementById("dateOutput").textContent = new Date().toLocaleDateString();
+      document.getElementById("certificatePreview").style.display = "block";
+    });
+  </script>
+</body>
+</html>
 
