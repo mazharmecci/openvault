@@ -394,3 +394,27 @@
     font-size: 0.9rem;
   }
 }
+
+/* ===========================
+   .vault-footer
+   =========================== */
+.vault-footer {
+  background-color: #ffcc00;
+  color: #000000;
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 0.85rem;
+  margin-top: 2rem;
+  border-top: 1px solid #333;
+}
+
+.vault-footer p {
+  margin: 0.3rem 0;
+}
+
+.flag-icon {
+  width: 20px;
+  height: auto;
+  vertical-align: middle;
+  margin-left: 6px;
+}
