@@ -1,3 +1,10 @@
+.cert-id {
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  color: #333;
+  font-style: italic;
+}
+
 .certificate-section {
   text-align: center;
   padding: 2rem 1rem;
