@@ -10,7 +10,7 @@
 .logo-wrapper img {
   display: block;
   margin: 0 auto;
-  max-width: 180px;
+  max-width: 140px; /* reduced from 180px */
   height: auto;
 }
 
