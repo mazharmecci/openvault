@@ -108,9 +108,11 @@
 }
 
 @media (max-width: 768px) {
-  .internship-card {
-    flex-direction: column;
-    text-align: center;
+  .internship-card
+  .sample-card,
+  .testimonial-card {
+  flex-direction: column;
+  text-align: center;
   }
   
 .internship-card {
@@ -135,7 +137,6 @@
     max-width: 90%;
     margin: 0 auto;
   }
-}
 
 .internship-info h3 {
   color: #007bff;
