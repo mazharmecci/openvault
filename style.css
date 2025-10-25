@@ -1,3 +1,16 @@
+section,
+.course-showcase,
+.project-themes,
+.vault-highlights,
+.testimonials-brolly,
+.preview-section,
+.internship-dashboard,
+.certificate-section {
+  max-width: 990px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
 body {
   font-family: 'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
   font-weight: 400;
@@ -63,7 +76,7 @@ h1, h2, h3 {
 .logo-wrapper img {
   display: block;
   margin: 0 auto;
-  max-width: 160px; /* reduced from 180px */
+  max-width: 170px; /* reduced from 180px */
   height: auto;
 }
 
@@ -82,7 +95,7 @@ h1, h2, h3 {
 }
 
 .hero-text {
-  background-color: #4C4E52; /* darkGrey */
+  background-color: #2E3033; /* darkGrey */
   text-align: center;
   padding: 2rem 1rem;
   max-width: 960px;
