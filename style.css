@@ -11,6 +11,32 @@ section,
   padding: 2rem 1rem;
 }
 
+.hero-text {
+  background-color: #fff8dc; /* pale yellow */
+  text-align: center;
+  padding: 2rem 1rem;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.hero-text h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ff6600;
+  text-shadow: 0 0 8px rgba(255, 102, 0, 0.6);
+  margin-bottom: 0.5rem;
+}
+
+.hero-text h3 {
+  font-size: 1.2rem;
+  margin: 0.3rem 0;
+}
+
+.hero-text p {
+  margin: 0;
+  padding: 0;
+}
+
 /* ===========================
    Internship + Sample Cards
    =========================== */
