@@ -1133,3 +1133,41 @@ margin: auto;
 .vault-footer p {
   margin: 0.3rem 0;
 }
+
+@media (max-width: 600px) {
+  .internship-card,
+  .sample-card {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  .internship-info,
+  .internship-image,
+  .sample-info,
+  .sample-image {
+    flex: 1 1 100% !important;
+    max-width: 100% !important;
+  }
+
+  .internship-image img,
+  .sample-image img {
+    max-width: 90% !important;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  .testimonial-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1rem;
+  }
+
+  .testimonial-card {
+    width: 100% !important;
+    text-align: center !important;
+  }
+
+  .card-header {
+    justify-content: center !important;
+  }
+}
