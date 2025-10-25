@@ -83,32 +83,62 @@
   
 <!-- 💳 Razorpay Script -->
 <script>
-  const BASE_PRICE = 19900; // ₹199 in paise
-  const LATE_PRICE = 29900; // ₹299 in paise
-  const VAULT_URL = "vault.html";
+  const COUNTDOWN_KEY = "vaultCountdownTarget";
+  const HOURS_LIMIT = 48;
 
-  // Optional: Set this flag dynamically based on countdown expiry
+  // Check if countdown target exists in localStorage
+  let countdownTarget = localStorage.getItem(COUNTDOWN_KEY);
+
+  if (!countdownTarget) {
+    countdownTarget = new Date().getTime() + (HOURS_LIMIT * 60 * 60 * 1000);
+    localStorage.setItem(COUNTDOWN_KEY, countdownTarget);
+  } else {
+    countdownTarget = parseInt(countdownTarget);
+  }
+
   let isLateAccess = false;
 
-  const getFinalAmount = () => isLateAccess ? LATE_PRICE : BASE_PRICE;
+  const updateCountdown = () => {
+    const now = new Date().getTime();
+    const distance = countdownTarget - now;
 
-  const createRazorpayInstance = () => {
-    return new Razorpay({
-      key: "rzp_test_1DP5mmOlF5G5ag", // Replace with live key when ready
-      amount: getFinalAmount(),
-      currency: "INR",
-      name: "OPENVAULT",
-      description: isLateAccess ? "Late Access to Vault" : "Access to Software project bundle",
-      theme: { color: "#ff6600" },
-      handler: () => window.location.href = VAULT_URL
-    });
+    if (distance < 0) {
+      document.getElementById("countdown-timer").innerHTML = "Offer Expired";
+      document.querySelector(".price-flash").innerHTML = "@Now ₹<strong>299</strong>/-";
+      document.querySelector(".price-flash").classList.add("expired");
+      isLateAccess = true;
+      return;
+    }
+
+    const hours = Math.floor((distance / (1000 * 60 * 60)) % 48);
+    const minutes = Math.floor((distance / (1000 * 60)) % 60);
+    const seconds = Math.floor((distance / 1000) % 60);
+
+    document.getElementById("countdown-timer").innerHTML =
+      `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
   };
 
+  setInterval(updateCountdown, 1000);
+
+  // Razorpay logic with dynamic pricing
   const attachRazorpayHandler = () => {
     document.querySelectorAll(".rzp-button").forEach(button => {
       button.addEventListener("click", e => {
         e.preventDefault();
-        const rzp = createRazorpayInstance();
+
+        const finalAmount = isLateAccess ? 29900 : 19900;
+
+        const options = {
+          key: "rzp_test_1DP5mmOlF5G5ag",
+          amount: finalAmount,
+          currency: "INR",
+          name: "OPENVAULT",
+          description: isLateAccess ? "Late Access to Vault" : "Access to Software project bundle",
+          theme: { color: "#ff6600" },
+          handler: () => window.location.href = "vault.html"
+        };
+
+        const rzp = new Razorpay(options);
         rzp.open();
       });
     });
