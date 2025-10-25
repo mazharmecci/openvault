@@ -1,3 +1,29 @@
+.countdown-offer {
+  text-align: center;
+  background: #fff3cd;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ffeeba;
+  margin: 1.5rem auto;
+}
+
+#countdown-timer {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #d9534f;
+  margin-top: 0.5rem;
+}
+
+.price-flash {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #28a745;
+}
+
+.price-flash.expired {
+  color: #d9534f;
+}
+
 .filter-buttons {
   margin-bottom: 1.5rem;
   display: flex;
