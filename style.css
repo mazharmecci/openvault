@@ -392,7 +392,7 @@
 }
 
 /* Mobile Overrides */
-@media (max-width: 600px) {
+@media (max-width: 980px) {
   .highlight-card p {
     text-align: left; /* left-align body text */
   }
@@ -430,7 +430,7 @@
 }
 
 /* Responsive Overrides */
-@media (max-width: 600px) {
+@media (max-width: 980px) {
   .vault-highlights h2,
   .testimonials-brolly h2 {
     margin-bottom: 0.8rem;
@@ -462,7 +462,7 @@
 }
 
 /* Desktop-specific Overrides */
-@media (min-width: 768px) {
+@media (min-width: 980px) {
   .testimonial-card img {
     width: 48px;
   }
@@ -914,7 +914,7 @@ button:hover {
   to { opacity: 1; }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 980px) {
   .themes-table {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
