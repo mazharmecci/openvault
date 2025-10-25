@@ -9,40 +9,28 @@
 <body>
 
   <!-- 🎉 Welcome Message -->
-  <section class="vault">
-    <h1>🎉 Welcome to the Project Vault</h1>
-    <p>Your access is unlocked. Explore and download your projects below.</p>
-
-    <!-- 📦 Project Cards -->
-    <div class="cards">
-      <div class="project-card">
-        <h3>📝 To-Do App</h3>
-        <p>A responsive task manager built with React.</p>
-        <div class="tech-stack">
-          <span>React</span><span>JavaScript</span><span>LocalStorage</span>
-        </div>
-        <a href="https://github.com/yourusername/todo-app" target="_blank">View Source →</a>
-      </div>
-
-      <div class="project-card">
-        <h3>📦 E-commerce Store</h3>
-        <p>Simple cart logic, product grid, and checkout modal.</p>
-        <div class="tech-stack">
-          <span>HTML</span><span>CSS</span><span>JavaScript</span>
-        </div>
-        <a href="https://github.com/yourusername/ecom-store" target="_blank">View Source →</a>
-      </div>
-
-      <div class="project-card">
-        <h3>📊 Student Dashboard</h3>
-        <p>Login system, grade tracking, and charts using Flask.</p>
-        <div class="tech-stack">
-          <span>Python</span><span>Flask</span><span>Chart.js</span>
-        </div>
-        <a href="https://github.com/yourusername/student-dashboard" target="_blank">View Source →</a>
-      </div>
-    </div>
-  </section>
+<script>
+  fetch('stacks.json')
+    .then(response => response.json())
+    .then(data => {
+      const tbody = document.querySelector('.vault-table tbody');
+      tbody.innerHTML = ''; // Clear any static rows
+      data.forEach(stack => {
+        const row = document.createElement('tr');
+        row.innerHTML = `
+          <td>${stack.name}</td>
+          <td>${stack.description}</td>
+          <td><a href="${stack.link}" target="_blank">View Project</a></td>
+        `;
+        tbody.appendChild(row);
+      });
+    })
+    .catch(error => {
+      console.error('Error loading stack data:', error);
+      const tbody = document.querySelector('.vault-table tbody');
+      tbody.innerHTML = '<tr><td colspan="3">Failed to load project data.</td></tr>';
+    });
+</script>
 
 </body>
 </html>
