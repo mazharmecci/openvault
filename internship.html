@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Frontend Internship – Opencode Vault</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Complete a 7-day internship and earn a certificate. Includes daily tasks, demo unlock, and resume-ready experience.">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <section class="internship-dashboard">
+    <h2>🚀 7-Day Frontend Internship</h2>
+    <p class="internship-intro">Complete daily tasks, unlock demo projects, and earn your certificate. No coding stress—just real-world experience.</p>
+
+    <div class="progress-bar">
+      <div id="progress-fill"></div>
+      <span id="progress-text">0% Complete</span>
+    </div>
+
+    <div class="internship-track">
+      <div class="day-card" data-day="1">
+        <h3>Day 1</h3>
+        <p>Fork the sample repo and set up your local dev environment.</p>
+        <button class="task-btn">✅ Mark as Done</button>
+      </div>
+      <div class="day-card" data-day="2">
+        <h3>Day 2</h3>
+        <p>Style the homepage using Tailwind or plain CSS.</p>
+        <button class="task-btn">✅ Mark as Done</button>
+      </div>
+      <div class="day-card" data-day="3">
+        <h3>Day 3</h3>
+        <p>Add interactivity with JavaScript (e.g., toggle menu).</p>
+        <button class="task-btn">✅ Mark as Done</button>
+      </div>
+      <div class="day-card" data-day="4">
+        <h3>Day 4</h3>
+        <p>Make the layout responsive for mobile devices.</p>
+        <button class="task-btn">✅ Mark as Done</button>
+      </div>
+      <div class="day-card" data-day="5">
+        <h3>Day 5</h3>
+        <p>Write a clean README with screenshots and setup steps.</p>
+        <button class="task-btn">✅ Mark as Done</button>
+      </div>
+      <div class="day-card" data-day="6">
+        <h3>Day 6</h3>
+        <p>Submit your GitHub repo link via Google Form.</p>
+        <button class="task-btn">📤 Submit</button>
+      </div>
+      <div class="day-card" data-day="7">
+        <h3>Day 7</h3>
+        <p>🎉 Unlock demo project + download your certificate.</p>
+        <a href="https://www.youtube.com/watch?v=kAiX0itnonM" target="_blank" class="demo-btn">🎥 View Demo</a>
+        <a href="certificate.html" class="cert-btn">🎓 Get Certificate</a>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const totalDays = 7;
+    const progressFill = document.getElementById("progress-fill");
+    const progressText = document.getElementById("progress-text");
+    const day7Card = document.querySelector('[data-day="7"]');
+    const demoBtn = day7Card.querySelector(".demo-btn");
+    const certBtn = day7Card.querySelector(".cert-btn");
+
+    const updateProgress = () => {
+      const completed = JSON.parse(localStorage.getItem("internshipProgress")) || [];
+      const percent = Math.floor((completed.length / totalDays) * 100);
+      progressFill.style.width = `${percent}%`;
+      progressText.textContent = `${percent}% Complete`;
+
+      if (completed.length === totalDays) {
+        demoBtn.style.display = "inline-block";
+        certBtn.style.display = "inline-block";
+      } else {
+        demoBtn.style.display = "none";
+        certBtn.style.display = "none";
+      }
+    };
+
+    const markAsDone = (day) => {
+      let progress = JSON.parse(localStorage.getItem("internshipProgress")) || [];
+      if (!progress.includes(day)) {
+        progress.push(day);
+        localStorage.setItem("internshipProgress", JSON.stringify(progress));
+        updateProgress();
+      }
+    };
+
+    document.querySelectorAll(".task-btn").forEach(btn => {
+      const day = parseInt(btn.closest(".day-card").dataset.day);
+      btn.addEventListener("click", () => markAsDone(day));
+    });
+
+    document.addEventListener("DOMContentLoaded", updateProgress);
+  </script>
+</body>
+</html>
