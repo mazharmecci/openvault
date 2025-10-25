@@ -97,40 +97,35 @@
 }
 
 .internship-preview {
+  background: #f9f9f9;
   padding: 2rem 1rem;
-  background: #fffbe6;
-  text-align: center;
+  border-top: 2px solid #ff6600;
+  margin-top: 2rem;
 }
 
 .internship-preview h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
 }
 
-@media (max-width: 768px) {
-  .internship-card
-  .sample-card,
-  .testimonial-card {
-  flex-direction: column;
-  text-align: center;
-  }
-  
 .internship-card {
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: center;
+  gap: 1.5rem;
   align-items: center;
+  justify-content: center;
+  max-width: 960px;
+  margin: 0 auto;
   background: #fff;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
   padding: 1.5rem;
-  flex-direction: row;
 }
 
   .internship-info,
   .internship-image {
-    min-width: 100%;
+    flex: 1 1 300px;
   }
 
   .internship-image img {
@@ -139,17 +134,19 @@
   }
 
 .internship-info h3 {
-  color: #007bff;
   margin-bottom: 0.5rem;
+  color: #333;
 }
 
 .internship-info ul {
-  padding-left: 1rem;
-  margin: 1rem 0;
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1rem;
 }
 
 .internship-info li {
   margin-bottom: 0.5rem;
+  font-size: 0.9rem;
 }
 
 .yellow-btn {
