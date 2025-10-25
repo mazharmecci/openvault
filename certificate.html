@@ -5,6 +5,7 @@
   <title>Internship Certificate – Opencode Vault</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 </head>
 <body>
   <section class="certificate-section">
@@ -13,6 +14,7 @@
 
     <input type="text" id="studentName" placeholder="Your Full Name" />
     <button id="generateBtn">🖨️ Generate Certificate</button>
+    <button id="downloadBtn" style="display:none;">⬇️ Download PDF</button>
 
     <div id="certificatePreview" class="certificate-card">
       <h3>Certificate of Completion</h3>
@@ -22,22 +24,41 @@
       <strong>7-Day Frontend Internship Program</strong>
       <p>under Opencode Vault</p>
       <p class="date-line">Issued on: <span id="dateOutput"></span></p>
+      <p class="cert-id">Certificate ID: <span id="certId"></span></p>
     </div>
   </section>
 
   <script>
-    document.getElementById("generateBtn").addEventListener("click", () => {
+    const generateBtn = document.getElementById("generateBtn");
+    const downloadBtn = document.getElementById("downloadBtn");
+
+    generateBtn.addEventListener("click", () => {
       const name = document.getElementById("studentName").value.trim();
       if (!name) {
         alert("Please enter your full name.");
         return;
       }
 
+      const date = new Date().toLocaleDateString();
+      const certId = "CV-" + Math.floor(Math.random() * 1000000);
+
       document.getElementById("nameOutput").textContent = name;
-      document.getElementById("dateOutput").textContent = new Date().toLocaleDateString();
+      document.getElementById("dateOutput").textContent = date;
+      document.getElementById("certId").textContent = certId;
       document.getElementById("certificatePreview").style.display = "block";
+      downloadBtn.style.display = "inline-block";
+    });
+
+    downloadBtn.addEventListener("click", () => {
+      const element = document.getElementById("certificatePreview");
+      html2pdf().set({
+        margin: 0.5,
+        filename: 'OpencodeVault_Certificate.pdf',
+        image: { type: 'jpeg', quality: 0.98 },
+        html2canvas: { scale: 2 },
+        jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+      }).from(element).save();
     });
   </script>
 </body>
 </html>
-
