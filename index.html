@@ -41,8 +41,14 @@
           <li>✅ Perfect for college submissions</li>
         </ul>
       </div>
-      <button id="rzp-button">🔓 Unlock Projects for ₹199</button>
-      <p class="note">*Secure payment via Razorpay or UPI</p>
+      
+    <button class="rzp-button">🔓 Unlock Projects for ₹199</button>
+    <p class="note">*Secure payment via Razorpay or UPI</p>
+    
+    <!-- Repeat as needed -->
+    <button class="rzp-button">🔓 Unlock Projects for ₹199</button>
+    <p class="note">*Secure payment via Razorpay or UPI</p>
+
     </section>
 
     <!-- 💬 Testimonials -->
@@ -74,23 +80,27 @@
   
   <!-- 💳 Razorpay Script -->
   <script>
-    const options = {
+    const razorpayOptions = {
       key: "rzp_test_1DP5mmOlF5G5ag", // Replace with live key when ready
-      amount: 99,
+      amount: 9900, // ₹99 in paise
       currency: "INR",
       name: "OPENVAULT",
       description: "Access to Software project bundle",
-      handler: function () {
-        window.location.href = "vault.html"; // Redirect after payment
-      },
-      theme: { color: "#ff6600" }
+      theme: { color: "#ff6600" },
+      handler: () => window.location.href = "vault.html"
     };
-
-    const rzp = new Razorpay(options);
-    document.getElementById("rzp-button").onclick = function (e) {
-      rzp.open();
-      e.preventDefault();
+  
+    const attachRazorpayHandler = () => {
+      const rzp = new Razorpay(razorpayOptions);
+      document.querySelectorAll(".rzp-button").forEach(button => {
+        button.addEventListener("click", e => {
+          rzp.open();
+          e.preventDefault();
+        });
+      });
     };
+  
+    document.addEventListener("DOMContentLoaded", attachRazorpayHandler);
   </script>
 
   <section class="course-showcase">
