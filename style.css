@@ -1,3 +1,31 @@
+@media (max-width: 600px) {
+  .preview-card {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    padding: 1rem !important;
+  }
+
+  .preview-info,
+  .preview-image {
+    flex: 1 1 100% !important;
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+
+  .preview-image img {
+    max-width: 90% !important;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  .preview-info h3,
+  .preview-info p,
+  .preview-info li {
+    font-size: 0.95rem !important;
+  }
+}
+
 .day-details {
   margin-top: 1rem;
   font-size: 0.9rem;
