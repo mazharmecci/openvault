@@ -37,7 +37,7 @@
 .logo-wrapper img {
   display: block;
   margin: 0 auto;
-  max-width: 140px; /* reduced from 180px */
+  max-width: 160px; /* reduced from 180px */
   height: auto;
 }
 
@@ -85,7 +85,7 @@ section,
    =========================== */
 
 .preview-section {
-  background: #f9f9f9;
+  background: #e0e0e0;
   padding: 2rem 1rem;
   border-top: 2px solid #ff6600;
   margin-top: 2rem;
