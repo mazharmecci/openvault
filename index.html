@@ -46,9 +46,12 @@
         </ul>
       </div>
       
-    <button class="rzp-button">🔓 Unlock Projects for ₹199</button>
-    <p class="note">*Secure payment via Razorpay or UPI</p>
-    </section>
+<section class="purchase-options">
+  <button class="rzp-unlock-btn">🔓 Unlock Projects for ₹199</button>
+  <button class="rzp-internship-btn">🎓 Join Internship for ₹399</button>
+  <p class="note">*Secure payment via Razorpay or UPI</p>
+</section>
+
 
 <section class="sample-preview">
   <h2>🎁 Sample Project</h2>
@@ -101,9 +104,7 @@
   const COUNTDOWN_KEY = "vaultCountdownTarget";
   const HOURS_LIMIT = 48;
 
-  // Check if countdown target exists in localStorage
   let countdownTarget = localStorage.getItem(COUNTDOWN_KEY);
-
   if (!countdownTarget) {
     countdownTarget = new Date().getTime() + (HOURS_LIMIT * 60 * 60 * 1000);
     localStorage.setItem(COUNTDOWN_KEY, countdownTarget);
@@ -135,31 +136,52 @@
 
   setInterval(updateCountdown, 1000);
 
-  // Razorpay logic with dynamic pricing
-  const attachRazorpayHandler = () => {
-    document.querySelectorAll(".rzp-button").forEach(button => {
-      button.addEventListener("click", e => {
-        e.preventDefault();
+  // 🔓 Unlock Projects Button
+  const attachUnlockHandler = () => {
+    document.querySelector(".rzp-unlock-btn").addEventListener("click", e => {
+      e.preventDefault();
+      const finalAmount = isLateAccess ? 29900 : 19900;
 
-        const finalAmount = isLateAccess ? 29900 : 19900;
+      const options = {
+        key: "rzp_test_1DP5mmOlF5G5ag",
+        amount: finalAmount,
+        currency: "INR",
+        name: "OPENVAULT",
+        description: isLateAccess ? "Late Access to Vault" : "Access to Software project bundle",
+        theme: { color: "#ff6600" },
+        handler: () => window.location.href = "vault.html"
+      };
 
-        const options = {
-          key: "rzp_test_1DP5mmOlF5G5ag",
-          amount: finalAmount,
-          currency: "INR",
-          name: "OPENVAULT",
-          description: isLateAccess ? "Late Access to Vault" : "Access to Software project bundle",
-          theme: { color: "#ff6600" },
-          handler: () => window.location.href = "vault.html"
-        };
-
-        const rzp = new Razorpay(options);
-        rzp.open();
-      });
+      const rzp = new Razorpay(options);
+      rzp.open();
     });
   };
 
-  document.addEventListener("DOMContentLoaded", attachRazorpayHandler);
+  // 🎓 Internship Button
+  const attachInternshipHandler = () => {
+    document.querySelector(".rzp-internship-btn").addEventListener("click", e => {
+      e.preventDefault();
+
+      const options = {
+        key: "rzp_test_1DP5mmOlF5G5ag",
+        amount: 39900,
+        currency: "INR",
+        name: "OPENVAULT",
+        description: "7-Day Frontend Internship Program",
+        theme: { color: "#007bff" },
+        handler: () => window.location.href = "internship.html"
+      };
+
+      const rzp = new Razorpay(options);
+      rzp.open();
+    });
+  };
+
+  document.addEventListener("DOMContentLoaded", () => {
+    attachUnlockHandler();
+    attachInternshipHandler();
+    updateCountdown();
+  });
 </script>
 
 
