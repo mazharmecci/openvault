@@ -16,7 +16,7 @@
   background-color: #ffaa00;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 980px) {
   .preview-card {
     flex-direction: column !important;
     align-items: center !important;
@@ -214,7 +214,7 @@
 /* ===========================
    Mobile Responsiveness
 =========================== */
-@media (max-width: 768px) {
+@media (max-width: 980px) {
   .preview-card {
     flex-direction: column;
     text-align: center;
@@ -731,7 +731,7 @@ button:hover {
 }
 
 /* ✅ Mobile responsiveness */
-@media (max-width: 600px) {
+@media (max-width: 980px) {
   .testimonial-grid {
     grid-template-columns: 1fr;
     gap: 1rem;
