@@ -1,3 +1,75 @@
+.internship-dashboard {
+  padding: 2rem 1rem;
+  background: #f0f8ff;
+  text-align: center;
+}
+
+.internship-intro {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  color: #555;
+}
+
+.progress-bar {
+  position: relative;
+  height: 20px;
+  background: #ddd;
+  border-radius: 10px;
+  margin: 1rem auto 2rem;
+  max-width: 600px;
+}
+
+#progress-fill {
+  height: 100%;
+  background: #28a745;
+  width: 0%;
+  border-radius: 10px;
+  transition: width 0.3s ease;
+}
+
+#progress-text {
+  position: absolute;
+  top: -28px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: bold;
+  color: #333;
+}
+
+.internship-track {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.day-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  padding: 1rem;
+  width: 280px;
+  text-align: left;
+}
+
+.task-btn, .demo-btn, .cert-btn {
+  display: inline-block;
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+  background: #28a745;
+  margin-top: 0.5rem;
+}
+
+.demo-btn { background: #007bff; display: none; }
+.cert-btn { background: #6f42c1; display: none; }
+
+.task-btn:hover, .demo-btn:hover, .cert-btn:hover {
+  opacity: 0.9;
+}
+
 .sample-preview {
   background: #f9f9f9;
   padding: 2rem 1rem;
