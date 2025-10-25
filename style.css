@@ -536,3 +536,45 @@ section,
   vertical-align: middle;
   margin-left: 6px;
 }
+
+/* ===========================
+   .features
+   =========================== */
+
+.features {
+  background-color: #fffbe6; /* soft yellow backdrop */
+  padding: 2rem 1rem;
+  text-align: center;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.feature-list-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.feature-list {
+  list-style: none;
+  padding: 0;
+  margin: 1rem auto;
+  text-align: left;
+  max-width: 320px;
+}
+
+.feature-list li {
+  font-size: 1rem;
+  margin: 0.5rem 0;
+  padding-left: 1.2rem;
+  position: relative;
+}
+
+.feature-list li::before {
+  content: "✅";
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 1rem;
+  color: #28a745;
+}
+
