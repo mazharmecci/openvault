@@ -253,3 +253,144 @@
   color: #d9534f;
   margin-top: 0.5rem;
 }
+
+/* ===========================
+   .course-showcase and .course-grid
+   =========================== */
+.course-showcase {
+  background: #000;
+  color: #fff;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.course-heading {
+  font-size: 1.8rem;
+  color: #ffcc00;
+  margin-bottom: 2rem;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.course-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+  max-width: 960px;
+  margin: auto;
+}
+
+.course-card {
+  overflow: hidden;
+  padding: 16px;
+  border-radius: 8px;
+  background: #fff;
+  color: #000;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.course-card:hover {
+  transform: scale(1.05);
+}
+
+.course-card div {
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+.course-card span {
+  font-size: 0.75rem;
+  color: #555;
+  margin-top: 4px;
+}
+
+.company-logo {
+  max-height: 50px;
+  margin-bottom: 8px;
+  transition: transform 0.3s ease;
+}
+
+.course-card:hover .company-logo {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+
+/* ===========================
+   .project-themes and .themes-table
+   =========================== */
+.project-themes {
+  background: #000;
+  color: #fff;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.themes-heading {
+  font-size: 1.8rem;
+  color: #ffcc00;
+  margin-bottom: 1.5rem;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.themes-table {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  max-width: 600px;
+  margin: auto;
+}
+
+.theme-row {
+  background: #ffcc00;
+  color: #000;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  animation: slideUp 0.6s ease forwards;
+  opacity: 0;
+}
+
+.theme-row:nth-child(n) {
+  animation-delay: calc(0.1s * var(--i));
+}
+
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@media (min-width: 980px) {
+  .themes-table {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    max-width: 960px;
+  }
+
+  .theme-row {
+    text-align: left;
+    padding: 1.2rem;
+    font-size: 0.95rem;
+  }
+
+  .theme-row span:nth-child(1) {
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .theme-row span:nth-child(2),
+  .theme-row span:nth-child(3) {
+    color: #333;
+    font-size: 0.9rem;
+  }
+}
