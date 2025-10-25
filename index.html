@@ -81,30 +81,42 @@
     <button class="rzp-button">🔓 Unlock Projects for ₹199</button>
     <p class="note">*Secure payment via Razorpay or UPI</p>
   
-  <!-- 💳 Razorpay Script -->
-  <script>
-    const razorpayOptions = {
+<!-- 💳 Razorpay Script -->
+<script>
+  const BASE_PRICE = 19900; // ₹199 in paise
+  const LATE_PRICE = 29900; // ₹299 in paise
+  const VAULT_URL = "vault.html";
+
+  // Optional: Set this flag dynamically based on countdown expiry
+  let isLateAccess = false;
+
+  const getFinalAmount = () => isLateAccess ? LATE_PRICE : BASE_PRICE;
+
+  const createRazorpayInstance = () => {
+    return new Razorpay({
       key: "rzp_test_1DP5mmOlF5G5ag", // Replace with live key when ready
-      amount: 19900, // ₹199 in rupees
+      amount: getFinalAmount(),
       currency: "INR",
       name: "OPENVAULT",
-      description: "Access to Software project bundle",
+      description: isLateAccess ? "Late Access to Vault" : "Access to Software project bundle",
       theme: { color: "#ff6600" },
-      handler: () => window.location.href = "vault.html"
-    };
-  
-    const attachRazorpayHandler = () => {
-      const rzp = new Razorpay(razorpayOptions);
-      document.querySelectorAll(".rzp-button").forEach(button => {
-        button.addEventListener("click", e => {
-          rzp.open();
-          e.preventDefault();
-        });
+      handler: () => window.location.href = VAULT_URL
+    });
+  };
+
+  const attachRazorpayHandler = () => {
+    document.querySelectorAll(".rzp-button").forEach(button => {
+      button.addEventListener("click", e => {
+        e.preventDefault();
+        const rzp = createRazorpayInstance();
+        rzp.open();
       });
-    };
-  
-    document.addEventListener("DOMContentLoaded", attachRazorpayHandler);
-  </script>
+    });
+  };
+
+  document.addEventListener("DOMContentLoaded", attachRazorpayHandler);
+</script>
+
 
   <section class="course-showcase">
   <h2 class="course-heading">📚 Explore Inside the Vault</h2>
