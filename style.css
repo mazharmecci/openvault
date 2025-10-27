@@ -11,6 +11,50 @@ section,
   padding: 2rem 1rem;
 }
 
+.hire-me, .tariff-section, .contact-cta {
+  background: #000;
+  color: #fff;
+  text-align: center;
+  padding: 2rem 1rem;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.tariff-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.tariff-card {
+  background: #ffcc00;
+  color: #000;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+.tariff-card:hover {
+  transform: scale(1.05);
+}
+
+.tariff-card h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.tariff-card p {
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+}
+
+.tariff-card strong {
+  font-size: 1.2rem;
+  color: #d9534f;
+}
+
 @media (max-width: 768px) {
   .preview-section .preview-info {
     text-align: left !important;
