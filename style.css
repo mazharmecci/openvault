@@ -22,46 +22,26 @@ h1, h2, h3 {
   letter-spacing: -0.5px;
 }
 
-.unlock-section {
-  max-width: 960px;
-  margin: 0 auto;
-  text-align: center;
-  padding: 2rem 1rem;
-}
-
-.rzp-unlock-btn {
+.rzp-button {
   display: inline-block;
   margin-top: 1rem;
-  background-color: #ff6600;
+  background: linear-gradient(135deg, #ff6600, #ff3300);
   color: #fff;
-  padding: 0.8rem 1.5rem;
-  font-size: 1rem;
-  font-weight: bold;
-  border-radius: 8px;
+  padding: 0.9rem 1.8rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+  border-radius: 10px;
   border: none;
   cursor: pointer;
   text-align: center;
-  transition: background 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 12px rgba(255, 102, 0, 0.4);
+  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
 }
 
-.rzp-unlock-btn:hover {
-  background-color: #e65c00;
-  transform: scale(1.05);
-}
-
-.rzp-button
-  display: inline-block;
-  margin-top: 1rem;
-  background-color: #ff6600;
-  color: #fff;
-  padding: 0.8rem 1.5rem;
-  font-size: 1rem;
-  font-weight: bold;
-  border-radius: 8px;
-  border: none;
-  cursor: pointer;
-  text-align: center;
-  transition: background 0.3s ease, transform 0.2s ease;
+.rzp-button:hover {
+  background: linear-gradient(135deg, #ff3300, #ff6600);
+  transform: scale(1.06);
+  box-shadow: 0 6px 16px rgba(255, 51, 0, 0.5);
 }
 
 .logo-wrapper {
