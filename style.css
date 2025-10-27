@@ -11,6 +11,13 @@ section,
   padding: 2rem 1rem;
 }
 
+.tariff-button-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0;
+}
+
 .course-showcase {
   margin-bottom: 3rem; /* adds breathing room before next section */
 }
