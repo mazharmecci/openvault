@@ -122,84 +122,84 @@
 <script>
   const COUNTDOWN_KEY = "vaultCountdownTarget";
   const HOURS_LIMIT = 48;
-
-  let countdownTarget = localStorage.getItem(COUNTDOWN_KEY);
-  if (!countdownTarget) {
-    countdownTarget = new Date().getTime() + (HOURS_LIMIT * 60 * 60 * 1000);
-    localStorage.setItem(COUNTDOWN_KEY, countdownTarget);
-  } else {
-    countdownTarget = parseInt(countdownTarget);
-  }
-
   let isLateAccess = false;
 
-  const updateCountdown = () => {
-    const now = new Date().getTime();
-    const distance = countdownTarget - now;
-
-    if (distance < 0) {
-      document.getElementById("countdown-timer").innerHTML = "Offer Expired";
-      document.querySelector(".price-flash").innerHTML = "@Now ₹<strong>299</strong>/-";
-      document.querySelector(".price-flash").classList.add("expired");
-      isLateAccess = true;
-      return;
+  // ⏳ Initialize Countdown
+  function initCountdown() {
+    let countdownTarget = localStorage.getItem(COUNTDOWN_KEY);
+    if (!countdownTarget) {
+      countdownTarget = Date.now() + HOURS_LIMIT * 60 * 60 * 1000;
+      localStorage.setItem(COUNTDOWN_KEY, countdownTarget);
+    } else {
+      countdownTarget = parseInt(countdownTarget);
     }
 
-    const hours = Math.floor((distance / (1000 * 60 * 60)) % 48);
-    const minutes = Math.floor((distance / (1000 * 60)) % 60);
-    const seconds = Math.floor((distance / 1000) % 60);
+    const updateCountdown = () => {
+      const now = Date.now();
+      const distance = countdownTarget - now;
 
-    document.getElementById("countdown-timer").innerHTML =
-      `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
-  };
+      if (distance < 0) {
+        document.getElementById("countdown-timer").textContent = "Offer Expired";
+        const flash = document.querySelector(".price-flash");
+        flash.innerHTML = "@Now ₹<strong>299</strong>/-";
+        flash.classList.add("expired");
+        isLateAccess = true;
+        return;
+      }
 
-  setInterval(updateCountdown, 1000);
+      const hours = Math.floor((distance / (1000 * 60 * 60)) % 48);
+      const minutes = Math.floor((distance / (1000 * 60)) % 60);
+      const seconds = Math.floor((distance / 1000) % 60);
 
-  // 🔓 Unlock Projects Button
-  const attachUnlockHandler = () => {
-    document.querySelector(".rzp-unlock-btn").addEventListener("click", e => {
-      e.preventDefault();
-      const finalAmount = isLateAccess ? 29900 : 19900;
+      document.getElementById("countdown-timer").textContent =
+        `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+    };
 
-      const options = {
-        key: "rzp_test_1DP5mmOlF5G5ag",
-        amount: finalAmount,
-        currency: "INR",
-        name: "OPENVAULT",
-        description: isLateAccess ? "Late Access to Vault" : "Access to Software project bundle",
-        theme: { color: "#ff6600" },
-        handler: () => window.location.href = "vault.html"
-      };
-
-      const rzp = new Razorpay(options);
-      rzp.open();
-    });
-  };
-
-  // 🎓 Internship Button
-  const attachInternshipHandler = () => {
-    document.querySelector(".rzp-internship-btn").addEventListener("click", e => {
-      e.preventDefault();
-
-      const options = {
-        key: "rzp_test_1DP5mmOlF5G5ag",
-        amount: 39900,
-        currency: "INR",
-        name: "OPENVAULT",
-        description: "7-Day Frontend Internship Program",
-        theme: { color: "#007bff" },
-        handler: () => window.location.href = "internship.html"
-      };
-
-      const rzp = new Razorpay(options);
-      rzp.open();
-    });
-  };
-
-  document.addEventListener("DOMContentLoaded", () => {
-    attachUnlockHandler();
-    attachInternshipHandler();
+    setInterval(updateCountdown, 1000);
     updateCountdown();
+  }
+
+  // 💳 Razorpay Payment Handler
+  function launchRazorpay(amount, description, redirectUrl, themeColor = "#ff6600") {
+    const options = {
+      key: "rzp_test_1DP5mmOlF5G5ag", // Replace with live key when ready
+      amount: amount,
+      currency: "INR",
+      name: "OPENVAULT",
+      description: description,
+      theme: { color: themeColor },
+      handler: () => window.location.href = redirectUrl
+    };
+    new Razorpay(options).open();
+  }
+
+  // 🔓 Attach Unlock Button Handlers
+  function attachUnlockHandlers() {
+    document.querySelectorAll(".rzp-unlock-btn").forEach(button => {
+      button.addEventListener("click", e => {
+        e.preventDefault();
+        const amount = isLateAccess ? 29900 : 19900;
+        const description = isLateAccess ? "Late Access to Vault" : "Access to Software Project Bundle";
+        launchRazorpay(amount, description, "vault.html", "#ff6600");
+      });
+    });
+  }
+
+  // 🎓 Attach Internship Button Handlers
+  function attachInternshipHandlers() {
+    document.querySelectorAll(".rzp-internship-btn").forEach(button => {
+      button.addEventListener("click", e => {
+        e.preventDefault();
+        launchRazorpay(39900, "7-Day Frontend Internship Program", "internship.html", "#007bff");
+      });
+    });
+  }
+
+  // 🚀 Initialize All
+  document.addEventListener("DOMContentLoaded", () => {
+    initCountdown();
+    attachUnlockHandlers();
+    attachInternshipHandlers();
   });
 </script>
 
