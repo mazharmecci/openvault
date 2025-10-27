@@ -11,6 +11,22 @@ section,
   padding: 2rem 1rem;
 }
 
+@media (max-width: 768px) {
+  .preview-section .preview-info {
+    text-align: left !important;
+  }
+
+  .preview-section .preview-info h3,
+  .preview-section .preview-info p,
+  .preview-section .preview-info ul,
+  .preview-section .preview-info li,
+  .preview-section .preview-info a,
+  {
+    text-align: left !important;
+    margin-left: 0;
+  }
+}
+
 body {
   font-family: 'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
   font-weight: 400;
