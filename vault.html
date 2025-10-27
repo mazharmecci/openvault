@@ -2,158 +2,117 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Openvault</title>
+  <title>Opencode Vault – Explore & Unlock</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <header class="vault-header">
+    <h1>🎓 Welcome to Your Vault</h1>
+    <p>Explore curated final-year projects across tech domains</p>
+  </header>
 
-<div class="filter-buttons">
-  <button class="filter-btn active" data-filter="all">All</button>
-  <button class="filter-btn" data-filter="frontend">Frontend</button>
-  <button class="filter-btn" data-filter="backend">Backend</button>
-  <button class="filter-btn" data-filter="cloud">Cloud</button>
-  <button class="filter-btn" data-filter="ai">AI</button>
-  <button class="filter-btn" data-filter="testing">Testing</button>
-  <button class="filter-btn" data-filter="management">Management</button>
-</div>
+  <!-- 🔹 Frontend Section -->
+  <section class="vault-category" id="frontend">
+    <h2>🎨 Frontend Projects</h2>
+    <div class="project-grid">
+      <div class="project-card">
+        <h3>React Portfolio Builder</h3>
+        <p>Tailwind + React + Animations</p>
+        <div class="tech-tags">
+          <span>React</span><span>Tailwind</span><span>Vite</span>
+        </div>
+        <a href="demo/react-portfolio.html" class="demo-button">🔍 Preview</a>
+      </div>
+      <!-- Add more cards -->
+    </div>
+  </section>
 
-<section class="course-showcase">
-  <h2 class="course-heading">📚 Explore Inside the Vault</h2>
+  <!-- 🔹 Backend Section -->
+  <section class="vault-category" id="backend">
+    <h2>🔧 Backend Projects</h2>
+    <div class="project-grid">
+      <div class="project-card">
+        <h3>RESTful API for Student Vault</h3>
+        <p>Node.js + Express + MongoDB</p>
+        <div class="tech-tags">
+          <span>Node.js</span><span>MongoDB</span><span>Express</span>
+        </div>
+        <a href="demo/api-vault.html" class="demo-button">🔍 Preview</a>
+      </div>
+    </div>
+  </section>
 
-  <div class="filter-buttons">
-    <button class="filter-btn active" data-filter="all">All</button>
-    <button class="filter-btn" data-filter="frontend">Frontend</button>
-    <button class="filter-btn" data-filter="backend">Backend</button>
-    <button class="filter-btn" data-filter="cloud">Cloud</button>
-    <button class="filter-btn" data-filter="ai">AI</button>
-    <button class="filter-btn" data-filter="testing">Testing</button>
-    <button class="filter-btn" data-filter="management">Management</button>
-  </div>
+  <!-- 🔹 Cloud Section -->
+  <section class="vault-category" id="cloud">
+    <h2>☁️ Cloud & DevOps</h2>
+    <div class="project-grid">
+      <div class="project-card">
+        <h3>CI/CD with GitHub Actions</h3>
+        <p>Auto-deploy React apps to Azure</p>
+        <div class="tech-tags">
+          <span>Azure</span><span>GitHub Actions</span><span>CI/CD</span>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <div class="course-grid">
-    <a href="https://github.com/mazharmecci/react-todo" target="_blank" class="course-card" data-category="frontend">
-      ⚛️ React JS<br><span>Front-end mastery</span>
-      <div class="badge badge-popular">Popular</div>
-    </a>
+  <!-- 🔹 AI/ML Section -->
+  <section class="vault-category" id="ai">
+    <h2>🧠 AI & ML Projects</h2>
+    <div class="project-grid">
+      <div class="project-card">
+        <h3>Fake News Detector</h3>
+        <p>Python + NLP + Deep Learning</p>
+        <div class="tech-tags">
+          <span>Python</span><span>NLP</span><span>TensorFlow</span>
+        </div>
+        <a href="demo/fake-news.html" class="demo-button">🔍 Preview</a>
+      </div>
+    </div>
+  </section>
 
-    <a href="https://github.com/mazharmecci/frontend-basics" target="_blank" class="course-card" data-category="frontend">
-      🖼️ Front-End Dev<br><span>HTML, CSS, JS, UI/UX</span>
-    </a>
+  <!-- 🔹 Testing Section -->
+  <section class="vault-category" id="testing">
+    <h2>🧪 Testing & QA</h2>
+    <div class="project-grid">
+      <div class="project-card">
+        <h3>React App Testing Suite</h3>
+        <p>Jest + Cypress + Postman</p>
+        <div class="tech-tags">
+          <span>Jest</span><span>Cypress</span><span>Postman</span>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <a href="https://github.com/mazharmecci/node-api" target="_blank" class="course-card" data-category="backend">
-      🧠 Node.js<br><span>Backend with JavaScript</span>
-    </a>
+  <!-- 🔹 Management Section -->
+  <section class="vault-category" id="management">
+    <h2>📊 Project Management Tools</h2>
+    <div class="project-grid">
+      <div class="project-card">
+        <h3>Kanban Board with Drag & Drop</h3>
+        <p>React + LocalStorage</p>
+        <div class="tech-tags">
+          <span>React</span><span>UX</span><span>State Management</span>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <a href="https://github.com/mazharmecci/sql-dashboard" target="_blank" class="course-card" data-category="backend">
-      🗃️ SQL<br><span>Database management</span>
-    </a>
+  <!-- 🔐 Certificate Unlock Logic -->
+  <section class="certificate-unlock">
+    <h2>🎓 Unlock Your Certificate</h2>
+    <ul class="checklist">
+      <li>✅ Viewed Demo</li>
+      <li>✅ Downloaded README</li>
+      <li>✅ Completed Quiz</li>
+      <li>➡️ <a href="certificate.html">Download Certificate</a></li>
+    </ul>
+  </section>
 
-    <a href="https://github.com/mazharmecci/azure-pipeline-demo" target="_blank" class="course-card" data-category="cloud">
-      ☁️ Azure DevOps<br><span>CI/CD pipelines</span>
-    </a>
-
-    <a href="https://github.com/mazharmecci/azure-admin-basics" target="_blank" class="course-card" data-category="cloud">
-      🛠️ Azure Admin<br><span>Cloud infrastructure</span>
-    </a>
-
-    <a href="https://github.com/mazharmecci/data-factory-etl" target="_blank" class="course-card" data-category="cloud">
-      🔄 Azure Data Factory<br><span>ETL workflows</span>
-    </a>
-
-    <a href="https://github.com/mazharmecci/j2ee-starter" target="_blank" class="course-card" data-category="backend">
-      ☕ J2EE<br><span>Enterprise Java apps</span>
-    </a>
-
-    <a href="https://github.com/mazharmecci/pmp-template" target="_blank" class="course-card" data-category="management">
-      📈 PMP<br><span>Project management</span>
-    </a>
-
-    <a href="https://github.com/mazharmecci/scrum-board" target="_blank" class="course-card" data-category="management">
-      🧩 Scrum<br><span>Agile workflows</span>
-    </a>
-
-    <a href="https://github.com/mazharmecci/ba-dashboard" target="_blank" class="course-card" data-category="management">
-      📊 Business Analyst<br><span>Stakeholder insights</span>
-    </a>
-
-    <a href="https://github.com/mazharmecci/mulesoft-api" target="_blank" class="course-card" data-category="backend">
-      🔗 Mulesoft<br><span>API integration</span>
-    </a>
-
-    <a href="https://github.com/mazharmecci/tosca-tests" target="_blank" class="course-card" data-category="testing">
-      🧪 Tosca<br><span>Automated testing</span>
-    </a>
-
-    <a href="https://github.com/mazharmecci/dbt-models" target="_blank" class="course-card" data-category="backend">
-      📦 DBT<br><span>Analytics pipelines</span>
-    </a>
-
-    <a href="https://github.com/mazharmecci/boomi-flows" target="_blank" class="course-card" data-category="cloud">
-      🌐 Dell Boomi<br><span>Cloud integrations</span>
-    </a>
-
-    <a href="https://github.com/mazharmecci/digital-marketing-kit" target="_blank" class="course-card" data-category="management">
-      📣 Digital Marketing<br><span>SEO, SEM, campaigns</span>
-    </a>
-
-    <a href="https://github.com/mazharmecci/snowflake-demo" target="_blank" class="course-card" data-category="cloud backend">
-      ❄️ Snowflake<br><span>Cloud data warehousing</span>
-    </a>
-
-    <a href="https://github.com/mazharmecci/generative-ai-lab" target="_blank" class="course-card" data-category="ai">
-      🧬 Generative AI<br><span>AI model training</span>
-      <div class="badge badge-new">New</div>
-    </a>
-
-    <a href="https://github.com/mazharmecci/prompt-engineering" target="_blank" class="course-card" data-category="ai">
-      📝 Prompt Engineering<br><span>Optimized AI prompts</span>
-    </a>
-
-    <a href="https://github.com/mazharmecci/embedded-starter" target="_blank" class="course-card" data-category="backend">
-      🔌 Embedded Systems<br><span>Hardware-software fusion</span>
-    </a>
-
-    <a href="https://github.com/mazharmecci/python-ai-starter" target="_blank" class="course-card" data-category="ai backend">
-      🐍 Python for AI<br><span>ML-ready Python</span>
-      <div class="badge badge-popular">Popular</div>
-    </a>
-
-    <a href="https://github.com/mazharmecci/gcp-lab" target="_blank" class="course-card" data-category="cloud">
-      🚀 GCP<br><span>Google Cloud mastery</span>
-    </a>
-  </div>
-</section>
-
-<section class="course-showcase">
-  <h2 class="course-heading">📚 Explore Inside the Vault</h2>
-  <div class="course-grid">
-
-    <a href="https://github.com/mazharmecci/react-todo" target="_blank" class="course-card">⚛️ React JS<br><span>Front-end mastery</span></a>
-    <a href="https://github.com/mazharmecci/frontend-basics" target="_blank" class="course-card">🖼️ Front-End Dev<br><span>HTML, CSS, JS, UI/UX</span></a>
-    <a href="https://github.com/mazharmecci/node-api" target="_blank" class="course-card">🧠 Node.js<br><span>Backend with JavaScript</span></a>
-    <a href="https://github.com/mazharmecci/sql-dashboard" target="_blank" class="course-card">🗃️ SQL<br><span>Database management</span></a>
-    <a href="https://github.com/mazharmecci/azure-pipeline-demo" target="_blank" class="course-card">☁️ Azure DevOps<br><span>CI/CD pipelines</span></a>
-    <a href="https://github.com/mazharmecci/azure-admin-basics" target="_blank" class="course-card">🛠️ Azure Admin<br><span>Cloud infrastructure</span></a>
-    <a href="https://github.com/mazharmecci/data-factory-etl" target="_blank" class="course-card">🔄 Azure Data Factory<br><span>ETL workflows</span></a>
-    <a href="https://github.com/mazharmecci/j2ee-starter" target="_blank" class="course-card">☕ J2EE<br><span>Enterprise Java apps</span></a>
-    <a href="https://github.com/mazharmecci/pmp-template" target="_blank" class="course-card">📈 PMP<br><span>Project management</span></a>
-    <a href="https://github.com/mazharmecci/scrum-board" target="_blank" class="course-card">🧩 Scrum<br><span>Agile workflows</span></a>
-    <a href="https://github.com/mazharmecci/ba-dashboard" target="_blank" class="course-card">📊 Business Analyst<br><span>Stakeholder insights</span></a>
-    <a href="https://github.com/mazharmecci/mulesoft-api" target="_blank" class="course-card">🔗 Mulesoft<br><span>API integration</span></a>
-    <a href="https://github.com/mazharmecci/tosca-tests" target="_blank" class="course-card">🧪 Tosca<br><span>Automated testing</span></a>
-    <a href="https://github.com/mazharmecci/dbt-models" target="_blank" class="course-card">📦 DBT<br><span>Analytics pipelines</span></a>
-    <a href="https://github.com/mazharmecci/boomi-flows" target="_blank" class="course-card">🌐 Dell Boomi<br><span>Cloud integrations</span></a>
-    <a href="https://github.com/mazharmecci/digital-marketing-kit" target="_blank" class="course-card">📣 Digital Marketing<br><span>SEO, SEM, campaigns</span></a>
-    <a href="https://github.com/mazharmecci/snowflake-demo" target="_blank" class="course-card">❄️ Snowflake<br><span>Cloud data warehousing</span></a>
-    <a href="https://github.com/mazharmecci/generative-ai-lab" target="_blank" class="course-card">🧬 Generative AI<br><span>AI model training</span></a>
-    <a href="https://github.com/mazharmecci/prompt-engineering" target="_blank" class="course-card">📝 Prompt Engineering<br><span>Optimized AI prompts</span></a>
-    <a href="https://github.com/mazharmecci/embedded-starter" target="_blank" class="course-card">🔌 Embedded Systems<br><span>Hardware-software fusion</span></a>
-    <a href="https://github.com/mazharmecci/python-ai-starter" target="_blank" class="course-card">🐍 Python for AI<br><span>ML-ready Python</span></a>
-    <a href="https://github.com/mazharmecci/gcp-lab" target="_blank" class="course-card">🚀 GCP<br><span>Google Cloud mastery</span></a>
-
-  </div>
-</section>
-
+  <footer class="vault-footer">
+    <p>© 2021–2025 | openvault.in | All rights reserved</p>
+  </footer>
 </body>
 </html>
