@@ -11,6 +11,18 @@ section,
   padding: 2rem 1rem;
 }
 
+.course-showcase {
+  margin-bottom: 3rem; /* adds breathing room before next section */
+}
+
+.hire-me {
+  padding: 2rem 1rem;
+  background-color: #000;
+  color: #fff;
+  position: relative;
+  z-index: 1;
+}
+
 .hire-me, .tariff-section, .contact-cta {
   background: #000;
   color: #fff;
