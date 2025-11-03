@@ -6,10 +6,31 @@ body {
 }
 
 .vault-header {
-  background: #000;
-  color: #fff;
-  text-align: center;
-  padding: 2rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 1rem 2rem;
+  background-color: #f0f4fc;
+  border-bottom: 1px solid #ddd;
+  border-radius: 0 0 12px 12px;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.user-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.welcome-label {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #0078d4;
 }
 
 .filter-buttons {
