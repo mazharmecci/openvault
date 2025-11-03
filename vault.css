@@ -259,10 +259,16 @@ h1 {
   margin: 0.2rem 0;
 }
 
-.degree-icons {
-  display: flex;
-  gap: 0.4rem;
-  margin: 0.4rem 0;
+.degree-icons img {
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  object-fit: cover;
+  transition: transform 0.2s ease;
+}
+
+.degree-icons img:hover {
+  transform: scale(1.1);
 }
 
 .degree-icons img {
