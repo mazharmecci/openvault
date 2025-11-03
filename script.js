@@ -30,3 +30,16 @@ courseCards.forEach(card => {
     badge.textContent = "✅ Viewed";
   });
 });
+
+// unlock badges
+
+@keyframes unlockBadge {
+  0% { transform: scale(0.5); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.badge.unlocked {
+  animation: unlockBadge 0.4s ease-out forwards;
+  background-color: #28a745;
+  color: white;
+}
