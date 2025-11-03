@@ -251,6 +251,15 @@ h1 {
   color: #555;
 }
 
+.badge-wrapper {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
 .badge {
   background-color: #28a745;
   color: white;
@@ -259,19 +268,6 @@ h1 {
   font-size: 0.75rem;
   font-weight: 500;
   white-space: nowrap;
-}
-
-.badge.beginner {
-  background-color: #28a745;
-}
-
-.badge-wrapper {
-  position: absolute;
-  bottom: 12px;
-  right: 12px;
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
 }
 
 .badge.mca {
