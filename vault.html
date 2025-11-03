@@ -31,6 +31,77 @@
       </ul>
     </fieldset>
 
+ <style>
+.faq-section {
+  margin-top: 20px;
+}
+.faq-item {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+.faq-question {
+  background-color: #f9f9f9;
+  padding: 12px 16px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.faq-answer {
+  display: none;
+  padding: 12px 16px;
+  background-color: #fff;
+}
+</style>
+
+<div class="faq-section">
+  <h2>🧠 GitHub Getting Started FAQ</h2>
+
+  <div class="faq-item">
+    <div class="faq-question">✅ How do I create a GitHub account?</div>
+    <div class="faq-answer">
+      Visit <a href="https://github.com/signup" target="_blank">github.com/signup</a>, enter your email, choose a username and password, and verify your email. You can also sign up using Google or Apple.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">✅ What is a repository?</div>
+    <div class="faq-answer">
+      A repository is like a folder for your project. It stores your code, documentation, and version history. You can create one by clicking “New” after logging in.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">✅ How do I explore projects on GitHub?</div>
+    <div class="faq-answer">
+      Use the search bar to find topics like “React projects” or “Node.js API”. You can star, fork, or clone repositories to try them out.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">✅ What does ‘forking’ a repo mean?</div>
+    <div class="faq-answer">
+      Forking creates a copy of someone else’s project under your account. You can modify it freely and even contribute back via pull requests.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">✅ How do I contribute to a project?</div>
+    <div class="faq-answer">
+      After forking and making changes, you can submit a pull request to suggest your edits. The project owner can review and merge your contribution.
+    </div>
+  </div>
+</div>
+
+<script>
+document.querySelectorAll('.faq-question').forEach(q => {
+  q.addEventListener('click', () => {
+    const answer = q.nextElementSibling;
+    answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+  });
+});
+</script>
+
     <!-- Vault Title -->
     <h1>🔓 Skill Vault</h1>
 
