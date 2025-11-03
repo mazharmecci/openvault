@@ -195,28 +195,36 @@ document.querySelectorAll('.faq-question').forEach(q => {
 </div>
 
 
-  <div class="vault-card">
-    <h3>🖼️ Front-End Dev</h3>
-    <p>HTML, CSS, JS, UI/UX</p>
-    <div class="tech-tags">
+<div class="vault-card">
+  <h3>🖼️ Front-End Dev</h3>
+  <p>HTML, CSS, JS, UI/UX</p>
+
+  <div class="tech-tags">
       <span>HTML</span><span>UI</span><span>JavaScript</span>
-    </div>
+  </div>
+
     <a href="https://github.com/smthari/Frontend-Projects"
-       target="_blank"
-       rel="noopener noreferrer"
-       class="preview-btn"
-       data-title="Front-End Dev">🔍 Preview</a>
-    <div class="card-meta">
-      <p><strong>Level:</strong> Beginner</p>
-      <p><strong>Relevant Degrees:</strong></p>
-      <div class="degree-icons">
+     target="_blank"
+     rel="noopener noreferrer"
+     class="preview-btn"
+     data-title="Front-End Dev">🔍 Preview</a>
+
+  <div class="card-meta">
+    <p><strong>Level:</strong> Beginner</p>
+    <p><strong>Relevant Degrees:</strong></p>
+    <div class="degree-icons">
         <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="BCA" title="Diploma in Web Dev" />
         <img src="https://cdn-icons-png.flaticon.com/512/3135/3135789.png" alt="BSc CS" title="BSc CS" />
-      </div>
-      <span class="badge beginner">Beginner Friendly</span>
-      <span class="badge unlocked-badge" style="display:none;">✅ Unlocked</span>
     </div>
   </div>
+
+  <!-- ✅ Badge moved outside card-meta -->
+  <div class="badge-wrapper">
+    <span class="badge beginner">Beginner Friendly</span>
+    <span class="badge unlocked-badge" style="display:none;">✅ Unlocked</span>
+  </div>
+</div>
+  
 
   <!-- Add more .vault-card blocks here -->
 
