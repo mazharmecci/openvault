@@ -164,31 +164,36 @@ document.querySelectorAll('.faq-question').forEach(q => {
     <h1>🔓 Skill Vault</h1>
 
    <!-- Vault Grid Refactored -->
-<div class="vault-container">
-  <!-- vault-card elements directly inside this container -->
-  
-  <div class="vault-card">
-    <h3>⚛️ React JS</h3>
-    <p>Frontend Projects & UI Builders</p>
-    <div class="tech-tags">
-      <span>React</span><span>UI</span><span>Hooks</span>
-    </div>
-    <a href="https://github.com/Vaibhav-kesarwani/100-reactjs-projects"
-       target="_blank"
-       rel="noopener noreferrer"
-       class="preview-btn"
-       data-title="React JS">🔍 Preview</a>
-    <div class="card-meta">
-      <p><strong>Level:</strong> Beginner</p>
-      <p><strong>Relevant Degrees:</strong></p>
-      <div class="degree-icons">
-        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="BCA" title="BCA" />
-        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135789.png" alt="BSc CS" title="BSc CS" />
-      </div>
-      <span class="badge beginner">Beginner Friendly</span>
-      <span class="badge unlocked-badge" style="display:none;">✅ Unlocked</span>
+<div class="vault-card">
+  <h3>⚛️ React JS</h3>
+  <p>Frontend Projects & UI Builders</p>
+
+  <div class="tech-tags">
+    <span>React</span><span>UI</span><span>Hooks</span>
+  </div>
+
+  <a href="https://github.com/Vaibhav-kesarwani/100-reactjs-projects"
+     target="_blank"
+     rel="noopener noreferrer"
+     class="preview-btn"
+     data-title="React JS">🔍 Preview</a>
+
+  <div class="card-meta">
+    <p><strong>Level:</strong> Beginner</p>
+    <p><strong>Relevant Degrees:</strong></p>
+    <div class="degree-icons">
+      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="BCA" title="BCA" />
+      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135789.png" alt="BSc CS" title="BSc CS" />
     </div>
   </div>
+
+  <!-- ✅ Badge moved outside card-meta -->
+  <div class="badge-wrapper">
+    <span class="badge beginner">Beginner Friendly</span>
+    <span class="badge unlocked-badge" style="display:none;">✅ Unlocked</span>
+  </div>
+</div>
+
 
   <div class="vault-card">
     <h3>🖼️ Front-End Dev</h3>
