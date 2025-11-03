@@ -159,7 +159,6 @@ document.querySelectorAll('.faq-question').forEach(q => {
 });
 </script>
 
-
     <!-- Vault Title -->
     <h1>🔓 Skill Vault</h1>
 
@@ -194,7 +193,8 @@ document.querySelectorAll('.faq-question').forEach(q => {
   </div>
 </div>
 
-<hr class="card-divider" />
+       <hr class="card-divider" />
+  <!-- Add more .vault-card blocks here -->
       
 <div class="vault-card">
   <h3>🖼️ Front-End Dev</h3>
@@ -226,113 +226,241 @@ document.querySelectorAll('.faq-question').forEach(q => {
   </div>
 </div>
   
-<hr class="card-divider" />
+       <hr class="card-divider" />
   <!-- Add more .vault-card blocks here -->
+   
+<div class="Node.js">
+  <h3>🧠 Node.js</h3>
+  <p>Backend APIs & Auth Workflows</p>
 
+  <div class="tech-tags">
+    <span>Node.js</span><span>Express</span><span>MongoDB</span>
+  </div>
 
+    <a href="https://github.com/bytesleo/nodetomic-api"
+     target="_blank"
+     rel="noopener noreferrer"
+     class="preview-btn"
+     data-title="Node.js">🔍 Preview</a>
+
+  <div class="card-meta">
+    <p><strong>Level:</strong> Intermediate</p>
+    <p><strong>Relevant Degrees:</strong></p>
+    <div class="degree-icons">
+      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135768.png" alt="BTech" title="BTech IT" />
+      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135789.png" alt="MCA" title="MCA" />
+    </div>
+  </div>
+
+  <!-- ✅ Badge moved outside card-meta -->
+  <div class="badge-wrapper">
+    <span class="badge mca">Recommended for MCA</span>
+    <span class="badge unlocked-badge" style="display:none;">✅ Unlocked</span>
+  </div>
+</div>
+  
+       <hr class="card-divider" />
+  <!-- Add more .vault-card blocks here -->
 
 
 <!-- SQL -->
 <div class="vault-card">
   <h3>🗃️ SQL</h3>
-  <p>Database Management & Queries</p>
+  <p>Database Queries & Relational Models</p>
+
   <div class="tech-tags">
-    <span>SQL</span><span>PostgreSQL</span><span>MySQL</span>
+    <span>SQL</span><span>Database</span><span>Joins</span>
   </div>
-  <a href="https://github.com/rishabhnmishra/SQL_Music_Store_Analysis" target="_blank" rel="noopener noreferrer" class="preview-btn">🔍 Preview</a>
+
+  <a href="https://github.com/mazharmecci/sql-vault"
+     target="_blank"
+     rel="noopener noreferrer"
+     class="preview-btn"
+     data-title="SQL">🔍 Preview</a>
+
   <div class="card-meta">
-    <p><strong>Level:</strong> Intermediate</p>
+    <p><strong>Level:</strong> Beginner</p>
+    <p><strong>Relevant Degrees:</strong></p>
     <div class="degree-icons">
+      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="BCA" title="BCA" />
       <img src="https://cdn-icons-png.flaticon.com/512/3135/3135789.png" alt="BSc CS" title="BSc CS" />
     </div>
+  </div>
+
+  <div class="badge-wrapper">
     <span class="badge beginner">Beginner Friendly</span>
-  </div>
-</div>
-
-<!-- Azure DevOps -->
-<div class="vault-card">
-  <h3>☁️ Azure DevOps</h3>
-  <p>CI/CD Pipelines with GitHub Actions</p>
-  <div class="tech-tags">
-    <span>Azure</span><span>CI/CD</span><span>GitHub Actions</span>
-  </div>
-  <a href="https://github.com/Mohitmatte/Complete-CI-CD-Pipeline-with-Azure-DevOps-ArgoCD" target="_blank" rel="noopener noreferrer" class="preview-btn">🔍 Preview</a>
-  <div class="card-meta">
-    <p><strong>Level:</strong> Advanced</p>
-    <div class="degree-icons">
-      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135768.png" alt="BTech" title="BTech CSE" />
-    </div>
-    <span class="badge mca">Recommended for DevOps Engineers</span>
-  </div>
-</div>
-
-<!-- Azure Admin -->
-<div class="vault-card">
-  <h3>🛠️ Azure Admin</h3>
-  <p>Cloud Infrastructure & IAM</p>
-  <div class="tech-tags">
-    <span>Azure</span><span>AD</span><span>IAM</span>
-  </div>
-  <a href="https://github.com/adrianco12/Cloud-Administration-Projects" target="_blank" rel="noopener noreferrer" class="preview-btn">🔍 Preview</a>
-  <div class="card-meta">
-    <p><strong>Level:</strong> Intermediate</p>
-    <div class="degree-icons">
-      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135768.png" alt="BTech" title="BTech CSE" />
-    </div>
-    <span class="badge mca">Recommended for Cloud Admins</span>
-  </div>
-</div>
-
-<!-- Azure Data Factory -->
-<div class="vault-card">
-  <h3>🔄 Azure Data Factory</h3>
-  <p>ETL Pipelines & REST Integration</p>
-  <div class="tech-tags">
-    <span>ADF</span><span>ETL</span><span>CI/CD</span>
-  </div>
-  <a href="https://github.com/firewind25/Azure-DataFactory-Project-with-Azure-Devops" target="_blank" rel="noopener noreferrer" class="preview-btn">🔍 Preview</a>
-  <div class="card-meta">
-    <p><strong>Level:</strong> Advanced</p>
-    <div class="degree-icons">
-      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135768.png" alt="BTech" title="BTech DS" />
-    </div>
-    <span class="badge mca">Recommended for Data Engineers</span>
-  </div>
-</div>
-
-<!-- J2EE -->
-<div class="vault-card">
-  <h3>☕ J2EE</h3>
-  <p>Enterprise Java Apps</p>
-  <div class="tech-tags">
-    <span>Java</span><span>Hibernate</span><span>Spring</span>
-  </div>
-  <a href="https://github.com/chamikathereal/J2EE-Example-Project" target="_blank" rel="noopener noreferrer" class="preview-btn">🔍 Preview</a>
-  <div class="card-meta">
-    <p><strong>Level:</strong> Intermediate</p>
-    <div class="degree-icons">
-      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135789.png" alt="MCA" title="MCA" />
-    </div>
     <span class="badge mca">Recommended for MCA</span>
   </div>
 </div>
 
-<!-- PMP -->
+      <hr class="card-divider" />
+  <!-- Add more .vault-card blocks here -->
+
+<!-- Azure DevOps -->
 <div class="vault-card">
-  <h3>📈 PMP</h3>
-  <p>Project Management Templates</p>
+  <h3>🔧 Azure DevOps</h3>
+  <p>CI/CD Pipelines & Project Automation</p>
+
   <div class="tech-tags">
-    <span>Charter</span><span>RTM</span><span>Stakeholders</span>
+    <span>Azure</span><span>DevOps</span><span>CI/CD</span>
   </div>
-  <a href="https://github.com/PacktPublishing/The-Simplest-Guide-to-Project-Management-and-PMI-PMP-Certification-Exam" target="_blank" rel="noopener noreferrer" class="preview-btn">🔍 Preview</a>
+
+  <a href="https://github.com/mazharmecci/azure-devops-vault"
+     target="_blank"
+     rel="noopener noreferrer"
+     class="preview-btn"
+     data-title="Azure DevOps">🔍 Preview</a>
+
   <div class="card-meta">
     <p><strong>Level:</strong> Beginner</p>
+    <p><strong>Relevant Degrees:</strong></p>
     <div class="degree-icons">
-      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135773.png" alt="MBA" title="MBA" />
+      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="BCA" title="BCA" />
+      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135789.png" alt="BSc CS" title="BSc CS" />
     </div>
+  </div>
+
+  <div class="badge-wrapper">
     <span class="badge beginner">Beginner Friendly</span>
+    <span class="badge devops">Recommended for DevOps Engineers</span>
   </div>
 </div>
+
+      <hr class="card-divider" />
+  <!-- Add more .vault-card blocks here -->
+      
+<!-- Azure Admin -->
+<div class="vault-card">
+  <h3>☁️ Azure Admin</h3>
+  <p>Cloud Infrastructure & Resource Management</p>
+
+  <div class="tech-tags">
+    <span>Azure</span><span>Cloud</span><span>Admin</span>
+  </div>
+
+  <a href="https://github.com/mazharmecci/azure-admin-vault"
+     target="_blank"
+     rel="noopener noreferrer"
+     class="preview-btn"
+     data-title="Azure Admin">🔍 Preview</a>
+
+  <div class="card-meta">
+    <p><strong>Level:</strong> Beginner</p>
+    <p><strong>Relevant Degrees:</strong></p>
+    <div class="degree-icons">
+      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="BCA" title="BCA" />
+      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135789.png" alt="BSc CS" title="BSc CS" />
+    </div>
+  </div>
+
+  <div class="badge-wrapper">
+    <span class="badge beginner">Beginner Friendly</span>
+    <span class="badge cloud">Recommended for Cloud Admins</span>
+  </div>
+</div>
+
+       <hr class="card-divider" />
+  <!-- Add more .vault-card blocks here -->
+
+<!-- Azure Data Factory -->
+<div class="vault-card">
+  <h3>🧪 Azure Data Factory</h3>
+  <p>ETL Pipelines & Data Integration</p>
+
+  <div class="tech-tags">
+    <span>Azure</span><span>Data Factory</span><span>ETL</span>
+  </div>
+
+  <a href="https://github.com/mazharmecci/azure-datafactory-vault"
+     target="_blank"
+     rel="noopener noreferrer"
+     class="preview-btn"
+     data-title="Azure Data Factory">🔍 Preview</a>
+
+  <div class="card-meta">
+    <p><strong>Level:</strong> Beginner</p>
+    <p><strong>Relevant Degrees:</strong></p>
+    <div class="degree-icons">
+      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="BCA" title="BCA" />
+      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135789.png" alt="BSc CS" title="BSc CS" />
+    </div>
+  </div>
+
+  <div class="badge-wrapper">
+    <span class="badge beginner">Beginner Friendly</span>
+    <span class="badge data">Recommended for Data Engineers</span>
+  </div>
+</div>
+
+       <hr class="card-divider" />
+  <!-- Add more .vault-card blocks here -->
+
+<!-- J2EE -->
+
+<div class="vault-card">
+  <h3>☕ J2EE</h3>
+  <p>Enterprise Applications & Java Frameworks</p>
+
+  <div class="tech-tags">
+    <span>Java</span><span>J2EE</span><span>Servlets</span>
+  </div>
+
+  <a href="https://github.com/mazharmecci/j2ee-vault"
+     target="_blank"
+     rel="noopener noreferrer"
+     class="preview-btn"
+     data-title="J2EE">🔍 Preview</a>
+
+  <div class="card-meta">
+    <p><strong>Level:</strong> Beginner</p>
+    <p><strong>Relevant Degrees:</strong></p>
+    <div class="degree-icons">
+      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="BCA" title="BCA" />
+      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135789.png" alt="BSc CS" title="BSc CS" />
+    </div>
+  </div>
+
+  <div class="badge-wrapper">
+    <span class="badge beginner">Beginner Friendly</span>
+    <span class="badge mca">Recommended for MCA</span>
+  </div>
+</div>
+
+       <hr class="card-divider" />
+  <!-- Add more .vault-card blocks here -->
+
+<!-- PMP -->
+
+<div class="vault-card">
+  <h3>📊 PMP</h3>
+  <p>Project Planning & Stakeholder Management</p>
+
+  <div class="tech-tags">
+    <span>PMP</span><span>Project Management</span><span>Agile</span>
+  </div>
+
+  <a href="https://github.com/mazharmecci/pmp-vault"
+     target="_blank"
+     rel="noopener noreferrer"
+     class="preview-btn"
+     data-title="PMP">🔍 Preview</a>
+
+  <div class="card-meta">
+    <p><strong>Level:</strong> Beginner</p>
+    <p><strong>Relevant Degrees:</strong></p>
+    <div class="degree-icons">
+      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="MBA" title="MBA" />
+      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135789.png" alt="BBA" title="BBA" />
+    </div>
+  </div>
+
+  <div class="badge-wrapper">
+    <span class="badge beginner">Beginner Friendly</span>
+    <span class="badge analyst">Recommended for Analysts</span>
+  </div>
+</div>
+
+
 
 <!-- Scrum -->
 <div class="vault-card">
