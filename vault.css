@@ -152,8 +152,8 @@ body {
 .vault-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 32px; /* Increased from 20px to add 1–2 line gap */
-  padding: 20px;
+  gap: 38px; /* Increased from 20px to add 1–2 line gap */
+  padding: 40px;
 }
 
 h1 {
