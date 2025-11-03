@@ -31,31 +31,28 @@
       </ul>
     </fieldset>
 
- <style>
-.faq-section {
-  margin-top: 20px;
-}
-.faq-item {
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  margin-bottom: 10px;
-  overflow: hidden;
-}
-.faq-question {
-  background-color: #f9f9f9;
-  padding: 12px 16px;
-  cursor: pointer;
-  font-weight: bold;
-}
-.faq-answer {
-  display: none;
-  padding: 12px 16px;
-  background-color: #fff;
-}
-</style>
+<!-- 📹 Recommended Video Snippet -->
+<div class="github-intro-section">
+  <h2>🚀 Getting Started with GitHub</h2>
+  <p>Watch this short video to learn how to create a GitHub account and explore projects:</p>
 
+  <div class="video-wrapper">
+    <iframe width="100%" height="315" src="https://www.youtube.com/embed/h5cKAd94QNo" 
+      title="How to Create a GitHub Account" frameborder="0" allowfullscreen></iframe>
+  </div>
+
+  <p>More helpful videos:</p>
+  <ul class="video-links">
+    <li><a href="https://www.youtube.com/watch?v=ohqfCGMP_zk" target="_blank">🔗 GitHub Account + Git Basics</a></li>
+    <li><a href="https://www.youtube.com/watch?v=ldPuFlquiRk" target="_blank">🔗 Create GitHub Account & First Repo</a></li>
+    <li><a href="https://www.youtube.com/watch?v=a9u2yZvsqHA" target="_blank">🔗 How to Use GitHub for Beginners</a></li>
+    <li><a href="https://www.youtube.com/watch?v=iv8rSLsi1xo" target="_blank">🔗 GitHub Tutorial – Beginner’s Guide</a></li>
+  </ul>
+</div>
+
+<!-- 📚 Collapsible FAQ Section -->
 <div class="faq-section">
-  <h2>🧠 GitHub Getting Started FAQ</h2>
+  <h3>🧠 GitHub FAQ for Beginners</h3>
 
   <div class="faq-item">
     <div class="faq-question">✅ How do I create a GitHub account?</div>
@@ -93,6 +90,52 @@
   </div>
 </div>
 
+<!-- 💅 Styling -->
+<style>
+.github-intro-section {
+  margin: 40px 0;
+  padding: 20px;
+  background: #fefefe;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.05);
+}
+.github-intro-section h2 {
+  margin-bottom: 10px;
+}
+.video-wrapper {
+  margin: 16px 0;
+}
+.video-links {
+  list-style-type: none;
+  padding-left: 0;
+}
+.video-links li {
+  margin-bottom: 6px;
+}
+
+.faq-section {
+  margin-top: 30px;
+}
+.faq-item {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+.faq-question {
+  background-color: #f9f9f9;
+  padding: 12px 16px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.faq-answer {
+  display: none;
+  padding: 12px 16px;
+  background-color: #fff;
+}
+</style>
+
+<!-- 🧠 FAQ Toggle Script -->
 <script>
 document.querySelectorAll('.faq-question').forEach(q => {
   q.addEventListener('click', () => {
@@ -101,6 +144,7 @@ document.querySelectorAll('.faq-question').forEach(q => {
   });
 });
 </script>
+
 
     <!-- Vault Title -->
     <h1>🔓 Skill Vault</h1>
