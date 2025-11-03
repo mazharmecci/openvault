@@ -2,108 +2,128 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Opencode Vault – Explore & Unlock</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OpenVault – Skill Explorer</title>
   <link rel="stylesheet" href="vault.css" />
 </head>
 <body>
-  <header class="vault-header">
-    <h1>🎓 Welcome to Your Vault</h1>
-    <p>Explore curated final-year projects across tech domains</p>
-  </header>
 
-<!-- 🔹 Frontend Section -->
-<section class="vault-section" id="frontend">
-  <h2>🎨 Frontend Projects</h2>
-  <div class="vault-grid">
-    <div class="vault-card">
-      <h3>React Portfolio Builder</h3>
-      <p>Tailwind + React + Animations</p>
-      <div class="tech-tags">
-        <span>React</span><span>Tailwind</span><span>Vite</span>
-      </div>
-      <a href="https://github.com/smthari/Frontend-Projects" class="demo-button">🔍 Preview</a>
+  <!-- Onboarding Animation -->
+  <div class="onboarding-overlay" id="onboardingOverlay">
+    <div class="onboarding-content">
+      <h2>🚀 Welcome to OpenVault!</h2>
+      <p>Your learning journey begins now. Explore real-world projects and unlock your potential.</p>
+      <button id="startExploringBtn">Start Exploring</button>
     </div>
   </div>
-</section>
 
-<!-- 🔹 Backend Section -->
-<section class="vault-section" id="backend">
-  <h2>🔧 Backend Projects</h2>
-  <div class="vault-grid">
-    <div class="vault-card">
-      <h3>RESTful API for Student Vault</h3>
-      <p>Node.js + Express + MongoDB</p>
-      <div class="tech-tags">
-        <span>Node.js</span><span>Express</span><span>MongoDB</span>
-      </div>
-      <a href="https://github.com/bytesleo/nodetomic-api" class="demo-button">🔍 Preview</a>
-    </div>
-  </div>
-</section>
+  <!-- Vault Grid -->
+  <main class="vault-container">
+    <h1>🔓 Skill Vault</h1>
+    <div class="vault-grid">
 
-<!-- 🔹 Cloud Section -->
-<section class="vault-section" id="cloud">
-  <h2>☁️ Cloud & DevOps</h2>
-  <div class="vault-grid">
-    <div class="vault-card">
-      <h3>CI/CD with GitHub Actions</h3>
-      <p>Auto-deploy React apps to Azure</p>
-      <div class="tech-tags">
-        <span>Azure</span><span>GitHub Actions</span><span>CI/CD</span>
+      <!-- Example Card -->
+      <div class="vault-card">
+        <h4>⚛️ React JS</h4>
+        <p>Frontend Projects & UI Builders</p>
+        <a href="https://github.com/Vaibhav-kesarwani/100-reactjs-projects" target="_blank" rel="noopener noreferrer" class="preview-btn">🔍 Preview</a>
       </div>
-      <a href="https://github.com/Mohitmatte/Complete-CI-CD-Pipeline-with-Azure-DevOps-ArgoCD" class="demo-button">🔍 Preview</a>
-    </div>
-  </div>
-</section>
 
-<!-- 🔹 AI/ML Section -->
-<section class="vault-section" id="ai">
-  <h2>🧠 AI & ML Projects</h2>
-  <div class="vault-grid">
-    <div class="vault-card">
-      <h3>Fake News Detector</h3>
-      <p>Python + NLP + Deep Learning</p>
-      <div class="tech-tags">
-        <span>Python</span><span>NLP</span><span>TensorFlow</span>
+      <div class="vault-card">
+        <h4>🧠 Node.js</h4>
+        <p>Backend APIs & Auth Workflows</p>
+        <a href="https://github.com/bytesleo/nodetomic-api" target="_blank" rel="noopener noreferrer" class="preview-btn">🔍 Preview</a>
       </div>
-      <a href="https://github.com/KalyanM45/AI-Project-Gallery" class="demo-button">🔍 Preview</a>
-    </div>
-  </div>
-</section>
 
-<!-- 🔹 Testing Section -->
-<section class="vault-section" id="testing">
-  <h2>🧪 Testing & QA</h2>
-  <div class="vault-grid">
-    <div class="vault-card">
-      <h3>React App Testing Suite</h3>
-      <p>Jest + Cypress + Postman</p>
-      <div class="tech-tags">
-        <span>Jest</span><span>Cypress</span><span>Postman</span>
+  <!-- 🔧 Backend Projects -->
+  <section class="vault-section" id="backend">
+    <h2>🔧 Backend Projects</h2>
+    <div class="vault-grid">
+      <div class="vault-card">
+        <h3>RESTful API for Student Vault</h3>
+        <p>Node.js + Express + MongoDB</p>
+        <div class="tech-tags">
+          <span>Node.js</span><span>Express</span><span>MongoDB</span>
+        </div>
+        <a href="https://github.com/bytesleo/nodetomic-api" target="_blank" rel="noopener noreferrer" class="preview-btn">🔍 Preview</a>
       </div>
-      <a href="https://github.com/Vaibhav-kesarwani/100-reactjs-projects" class="demo-button">🔍 Preview</a>
     </div>
-  </div>
-</section>
+  </section>
+  
+  <!-- ☁️ Cloud & DevOps -->
+  <section class="vault-section" id="cloud">
+    <h2>☁️ Cloud & DevOps</h2>
+    <div class="vault-grid">
+      <div class="vault-card">
+        <h3>CI/CD with GitHub Actions</h3>
+        <p>Auto-deploy React apps to Azure</p>
+        <div class="tech-tags">
+          <span>Azure</span><span>GitHub Actions</span><span>CI/CD</span>
+        </div>
+        <a href="https://github.com/Mohitmatte/Complete-CI-CD-Pipeline-with-Azure-DevOps-ArgoCD" target="_blank" rel="noopener noreferrer" class="preview-btn">🔍 Preview</a>
+      </div>
+    </div>
+  </section>
+  
+  <!-- 🧠 AI & ML Projects -->
+  <section class="vault-section" id="ai">
+    <h2>🧠 AI & ML Projects</h2>
+    <div class="vault-grid">
+      <div class="vault-card">
+        <h3>Fake News Detector</h3>
+        <p>Python + NLP + Deep Learning</p>
+        <div class="tech-tags">
+          <span>Python</span><span>NLP</span><span>TensorFlow</span>
+        </div>
+        <a href="https://github.com/KalyanM45/AI-Project-Gallery" target="_blank" rel="noopener noreferrer" class="preview-btn">🔍 Preview</a>
+      </div>
+    </div>
+  </section>
+  
+  <!-- 🧪 Testing & QA -->
+  <section class="vault-section" id="testing">
+    <h2>🧪 Testing & QA</h2>
+    <div class="vault-grid">
+      <div class="vault-card">
+        <h3>React App Testing Suite</h3>
+        <p>Jest + Cypress + Postman</p>
+        <div class="tech-tags">
+          <span>Jest</span><span>Cypress</span><span>Postman</span>
+        </div>
+        <a href="https://github.com/Vaibhav-kesarwani/100-reactjs-projects" target="_blank" rel="noopener noreferrer" class="preview-btn">🔍 Preview</a>
+      </div>
+    </div>
+  </section>
+  
+  <!-- 📊 Project Management Tools -->
+  <section class="vault-section" id="management">
+    <h2>📊 Project Management Tools</h2>
+    <div class="vault-grid">
+      <div class="vault-card">
+        <h3>Kanban Board with Drag & Drop</h3>
+        <p>React + LocalStorage</p>
+        <div class="tech-tags">
+          <span>React</span><span>UX</span><span>State Management</span>
+        </div>
+        <a href="https://github.com/PacktPublishing/The-Simplest-Guide-to-Project-Management-and-PMI-PMP-Certification-Exam" target="_blank" rel="noopener noreferrer" class="preview-btn">🔍 Preview</a>
+      </div>
+    </div>
+  </section>
 
-<!-- 🔹 Management Section -->
-<section class="vault-section" id="management">
-  <h2>📊 Project Management Tools</h2>
-  <div class="vault-grid">
-    <div class="vault-card">
-      <h3>Kanban Board with Drag & Drop</h3>
-      <p>React + LocalStorage</p>
-      <div class="tech-tags">
-        <span>React</span><span>UX</span><span>State Management</span>
-      </div>
-      <a href="https://github.com/PacktPublishing/The-Simplest-Guide-to-Project-Management-and-PMI-PMP-Certification-Exam" class="demo-button">🔍 Preview</a>
     </div>
-  </div>
-</section>
- 
-  <footer class="vault-footer">
-    <p>© 2021–2025 | openvault.in | All rights reserved</p>
-  </footer>
+  </main>
+
+  <script>
+    // Onboarding animation logic
+    const overlay = document.getElementById("onboardingOverlay");
+    const startBtn = document.getElementById("startExploringBtn");
+
+    startBtn.addEventListener("click", () => {
+      overlay.classList.add("fade-out");
+      setTimeout(() => overlay.style.display = "none", 600);
+    });
+  </script>
 </body>
 </html>
+
+
