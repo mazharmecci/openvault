@@ -5,6 +5,11 @@ body {
   color: #333;
 }
 
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
 /* Header */
 .vault-header {
   padding: 1rem 2rem;
