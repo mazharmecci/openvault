@@ -200,6 +200,7 @@ h1 {
 }
 
 .vault-card {
+  position: relative;
   background-color: #fff;
   border-radius: 12px;
   padding: 16px;
@@ -210,7 +211,7 @@ h1 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 12px; /* Adds spacing between child elements */
+  gap: 12px;
 }
 
 /* Optional: Add hover effect for interactivity */
@@ -233,18 +234,29 @@ h1 {
 }
 
 .badge {
-  display: inline-block;
   position: absolute;
-  top: 12px;
+  bottom: 12px;
   right: 12px;
-  padding: 0.2rem 0.6rem;
-  font-size: 0.7rem;
-  border-radius: 999px;
+  background-color: #28a745;
   color: white;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 0.85em;
+  font-weight: 500;
+  z-index: 1;
 }
 
 .badge.beginner {
   background-color: #28a745;
+}
+
+.badge-wrapper {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
 }
 
 .badge.mca {
