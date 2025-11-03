@@ -199,27 +199,28 @@ h1 {
   padding: 2rem;
 }
 
-/* Card */
 .vault-card {
-  background: #fff;
+  background-color: #fff;
   border-radius: 12px;
-  padding: 1rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-  transition: transform 0.2s ease;
+  padding: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
   text-align: center;
   min-height: 260px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  gap: 12px; /* Adds spacing between child elements */
 }
 
+/* Optional: Add hover effect for interactivity */
 .vault-card:hover {
-  transform: scale(1.03);
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
 }
 
 .vault-card h3 {
-  font-size: 1.1rem;
-  margin-bottom: 0.5rem;
+  margin-top: 32px; /* Ensures title doesn't collide with badge */
 }
 
 .vault-card h3 {
@@ -229,6 +230,47 @@ h1 {
 .vault-card p {
   font-size: 0.9rem;
   color: #555;
+}
+
+.badge {
+  display: inline-block;
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  padding: 0.2rem 0.6rem;
+  font-size: 0.7rem;
+  border-radius: 999px;
+  color: white;
+}
+
+.badge.beginner {
+  background-color: #28a745;
+}
+
+.badge.mca {
+  background-color: #6f42c1;
+}
+
+.vault-columns {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 2rem;
+}
+
+.vault-column {
+  flex: 1 1 45%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .vault-columns {
+    flex-direction: column;
+  }
 }
 
 .tech-tags {
@@ -303,50 +345,6 @@ h1 {
   animation: unlockBadge 0.4s ease-out forwards;
   background-color: #28a745;
   color: white;
-}
-
-.badge {
-  display: inline-block;
-  margin-top: 0.3rem;
-  margin-right: 0.4rem;
-  padding: 0.2rem 0.6rem;
-  font-size: 0.7rem;
-  border-radius: 999px;
-  color: white;
-}
-
-.badge.beginner {
-  background-color: #28a745;
-}
-
-.badge.mca {
-  background-color: #6f42c1;
-}
-
-.vault-columns {
-  display: flex;
-  gap: 2rem;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: flex-start;
-  margin-top: 2rem;
-}
-
-.vault-column {
-  flex: 1 1 45%;
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-@media (max-width: 768px) {
-  .vault-columns {
-    flex-direction: column;
-  }
-}
-
-.vault-card {
-  position: relative;
 }
 
 .view-count {
