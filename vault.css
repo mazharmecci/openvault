@@ -223,10 +223,19 @@ h1 {
   margin: auto;
 }
 
-/* Optional: Add hover effect for interactivity */
+.vault-card {
+  position: relative;
+  background-color: #fff;
+  border: 1px solid #e0e0e0; /* Light border like Google cards */
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06); /* Soft glow */
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
 .vault-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12); /* Elevated glow on hover */
 }
 
 .vault-card h3 {
