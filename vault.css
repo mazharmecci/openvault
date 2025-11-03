@@ -266,9 +266,12 @@ h1 {
 }
 
 .badge-wrapper {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
   display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
+  flex-direction: column;
+  gap: 6px;
 }
 
 .badge.mca {
