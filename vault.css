@@ -219,14 +219,13 @@ h1 {
 }
 
 .vault-card {
-  max-width: 400px;
-  margin: auto;
+  max-width: 600px;
 }
 
 .vault-card {
   position: relative;
-  background-color: #fff;
-  border: 1px solid #e0e0e0; /* Light border like Google cards */
+  background: linear-gradient(to bottom right, #ffffff, #f9f9fb); /* Optional gradient */
+  border: 1px solid #e0e0e0; /* Subtle border */
   border-radius: 12px;
   padding: 20px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06); /* Soft glow */
