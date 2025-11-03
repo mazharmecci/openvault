@@ -338,6 +338,11 @@ h1 {
   transition: transform 0.2s ease;
 }
 
+.degree-icons-inline img {
+  width: 20px;
+  height: 20px;
+}
+
 .degree-icons img:hover {
   transform: scale(1.1);
 }
