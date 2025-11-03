@@ -107,6 +107,11 @@ body {
   font-weight: bold;
 }
 
+.badge {
+  display: inline-block;
+  margin-bottom: 8px; /* Adds space below the badge */
+}
+
 .video-wrapper {
   margin-top: 1rem;
 }
