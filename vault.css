@@ -222,6 +222,10 @@ h1 {
   margin-bottom: 0.5rem;
 }
 
+.vault-card h3 {
+  margin-top: 12px; /* Pushes the title down from the top */
+}
+
 .vault-card p {
   font-size: 0.9rem;
   color: #555;
