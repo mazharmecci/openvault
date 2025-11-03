@@ -210,10 +210,11 @@ h1 {
 /* Grid and Cards */
 
 /* Vault Grid */
+
 .vault-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  gap: 32px;
   padding: 2rem;
 }
 
