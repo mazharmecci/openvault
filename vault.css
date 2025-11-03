@@ -219,6 +219,7 @@ h1 {
 }
 
 .vault-card {
+  width: 100%; /* fills grid cell */
   position: relative;
   background: linear-gradient(to bottom right, #ffffff, #f9f9fb); /* Optional gradient */
   border: 1px solid #e0e0e0; /* Subtle border */
