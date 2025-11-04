@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const cards = document.querySelectorAll('.vault-card');
 
   cards.forEach((card, index) => {
-    const demoBtn = card.querySelector('.demo-button');
+    const demoBtn = card.querySelector('.preview-btn');
     const viewKey = `vaultViews_${index}`;
 
     // Create view count element
