@@ -221,7 +221,7 @@ document.querySelectorAll('.faq-question').forEach(q => {
     <span>Node.js</span><span>Express</span><span>MongoDB</span>
   </div>
 
-    <a href="https://github.com/bytesleo/nodetomic-api"
+  <a href="https://github.com/bytesleo/nodetomic-api"
      target="_blank"
      rel="noopener noreferrer"
      class="preview-btn"
@@ -229,17 +229,17 @@ document.querySelectorAll('.faq-question').forEach(q => {
 
   <div class="card-meta">
     <p><strong>Level:</strong> Intermediate</p>
-    <p class="degree-label">
     <p><strong>Relevant Degrees:</strong></p>
- <span class="degree-icons-inline">
+
+    <div class="degree-icons-inline">
       <img src="https://cdn-icons-png.flaticon.com/512/3135/3135768.png" alt="BTech" title="BTech IT" />
       <img src="https://cdn-icons-png.flaticon.com/512/3135/3135789.png" alt="MCA" title="MCA" />
     </div>
-  </div>
 
-  <!-- ✅ Badge moved outside card-meta -->
-  <div class="badge-wrapper">
-    <span class="badge mca">Recommended for MCA</span>    
+    <!-- ✅ Badge now correctly scoped inside card-meta -->
+    <div class="badge-wrapper">
+      <span class="badge mca">Recommended for MCA</span>    
+    </div>
   </div>
 </div>
   
@@ -265,15 +265,17 @@ document.querySelectorAll('.faq-question').forEach(q => {
   <div class="card-meta">
     <p><strong>Level:</strong> Beginner</p>
     <p><strong>Relevant Degrees:</strong></p>
- <span class="degree-icons-inline">
+
+    <div class="degree-icons-inline">
       <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="BCA" title="BCA" />
       <img src="https://cdn-icons-png.flaticon.com/512/3135/3135789.png" alt="BSc CS" title="BSc CS" />
     </div>
-  </div>
 
-  <div class="badge-wrapper">
-    <span class="badge beginner">Beginner Friendly</span>
-    <span class="badge mca">Recommended for MCA</span>
+    <!-- ✅ Badges now correctly scoped inside card-meta -->
+    <div class="badge-wrapper">
+      <span class="badge beginner">Beginner Friendly</span>
+      <span class="badge mca">Recommended for MCA</span>
+    </div>
   </div>
 </div>
 
@@ -281,6 +283,7 @@ document.querySelectorAll('.faq-question').forEach(q => {
   <!-- Add more .vault-card blocks here -->
 
 <!-- Azure DevOps -->
+      
 <div class="vault-card">
   <h3>🔧 Azure DevOps</h3>
   <p>CI/CD Pipelines & Project Automation</p>
@@ -297,24 +300,27 @@ document.querySelectorAll('.faq-question').forEach(q => {
 
   <div class="card-meta">
     <p><strong>Level:</strong> Beginner</p>
-    <p class="degree-label">
     <p><strong>Relevant Degrees:</strong></p>
- <span class="degree-icons-inline">
-       <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="BCA" title="BCA" />
+
+    <div class="degree-icons-inline">
+      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="BCA" title="BCA" />
       <img src="https://cdn-icons-png.flaticon.com/512/3135/3135789.png" alt="BSc CS" title="BSc CS" />
     </div>
-  </div>
 
-  <div class="badge-wrapper">
-    <span class="badge beginner">Beginner Friendly</span>
-    <span class="badge devops">Recommended for DevOps Engineers</span>
+    <!-- ✅ Badges now correctly scoped inside card-meta -->
+    <div class="badge-wrapper">
+      <span class="badge beginner">Beginner Friendly</span>
+      <span class="badge devops">Recommended for DevOps Engineers</span>
+    </div>
   </div>
 </div>
+
 
       <hr class="card-divider" />
   <!-- Add more .vault-card blocks here -->
       
 <!-- Azure Admin -->
+      
 <div class="vault-card">
   <h3>☁️ Azure Admin</h3>
   <p>Cloud Infrastructure & Resource Management</p>
@@ -332,17 +338,19 @@ document.querySelectorAll('.faq-question').forEach(q => {
   <div class="card-meta">
     <p><strong>Level:</strong> Beginner</p>
     <p><strong>Relevant Degrees:</strong></p>
-    <p class="degree-label">
- <span class="degree-icons-inline">
+
+    <div class="degree-icons-inline">
       <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="BCA" title="BCA" />
       <img src="https://cdn-icons-png.flaticon.com/512/3135/3135789.png" alt="BSc CS" title="BSc CS" />
     </div>
-  </div>
 
-  <div class="badge-wrapper">
-    <span class="badge beginner">Beginner Friendly</span>    
+    <!-- ✅ Badge now correctly scoped inside card-meta -->
+    <div class="badge-wrapper">
+      <span class="badge beginner">Beginner Friendly</span>    
+    </div>
   </div>
 </div>
+
 
        <hr class="card-divider" />
   <!-- Add more .vault-card blocks here -->
