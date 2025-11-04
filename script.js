@@ -81,3 +81,30 @@ document.addEventListener('DOMContentLoaded', () => {
   // Initial total view display
   document.getElementById('totalViews').textContent = `Total Views: ${totalViews > 1000 ? '1000+' : totalViews}`;
 });
+
+// Modal for view History / Trends
+
+document.addEventListener('DOMContentLoaded', () => {
+  const cards = document.querySelectorAll('.vault-card');
+  const leaderboardData = [];
+
+  cards.forEach(card => {
+    const previewBtn = card.querySelector('.preview-btn');
+    const title = previewBtn?.dataset.title;
+    const viewKey = `vaultViews_${title}`;
+    const views = parseInt(localStorage.getItem(viewKey) || '0', 10);
+
+    leaderboardData.push({ title, views });
+  });
+
+  // Sort by views descending
+  leaderboardData.sort((a, b) => b.views - a.views);
+
+  // Render top 5
+  const leaderboardList = document.getElementById('leaderboard-list');
+  leaderboardData.slice(0, 5).forEach(entry => {
+    const li = document.createElement('li');
+    li.textContent = `${entry.title}: ${entry.views} views`;
+    leaderboardList.appendChild(li);
+  });
+});
