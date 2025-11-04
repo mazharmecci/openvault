@@ -475,3 +475,11 @@ h1 {
   0% { transform: translateX(0); }
   100% { transform: translateX(-100%); }
 }
+
+.bookmark-caption {
+  text-align: center;
+  font-size: 0.85rem;
+  color: #555;
+  margin-top: 1rem;
+  font-style: italic;
+}
