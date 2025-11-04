@@ -421,3 +421,32 @@ h1 {
   margin-bottom: 0.4rem;
   font-size: 0.9rem;
 }
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 1rem;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 500px;
+}
+
+.close-btn {
+  float: right;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+#view-history-list {
+  list-style: none;
+  padding-left: 0;
+}
