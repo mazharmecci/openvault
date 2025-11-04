@@ -397,3 +397,27 @@ h1 {
   color: #0078d4;
   margin-bottom: 1rem;
 }
+
+.leaderboard-section {
+  background: #f9f9ff;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  margin-bottom: 2rem;
+}
+
+.leaderboard-section h2 {
+  font-size: 1.2rem;
+  margin-bottom: 0.6rem;
+  color: #0078d4;
+}
+
+#leaderboard-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+#leaderboard-list li {
+  margin-bottom: 0.4rem;
+  font-size: 0.9rem;
+}
