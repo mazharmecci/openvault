@@ -50,9 +50,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const cards = document.querySelectorAll('.vault-card');
   let totalViews = 0;
 
-  cards.forEach((card, index) => {
+  cards.forEach(card => {
     const previewBtn = card.querySelector('.preview-btn');
-    const viewKey = `vaultViews_${index}`;
+    const title = previewBtn?.dataset.title;
+    const viewKey = `vaultViews_${title}`;
 
     // Create view count element
     const viewEl = document.createElement('div');
@@ -71,7 +72,6 @@ document.addEventListener('DOMContentLoaded', () => {
         localStorage.setItem(viewKey, views);
         viewEl.textContent = `Views: ${views > 1000 ? '1000+' : views}`;
 
-        // Update total views
         totalViews += 1;
         document.getElementById('totalViews').textContent = `Total Views: ${totalViews > 1000 ? '1000+' : totalViews}`;
       });
@@ -81,5 +81,3 @@ document.addEventListener('DOMContentLoaded', () => {
   // Initial total view display
   document.getElementById('totalViews').textContent = `Total Views: ${totalViews > 1000 ? '1000+' : totalViews}`;
 });
-
-
