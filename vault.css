@@ -456,13 +456,13 @@ h1 {
   white-space: nowrap;
   box-sizing: border-box;
   width: 100%;
-  background: #f0f8ff;
+  background: #faf0e6;
   border-top: 2px solid #e0e0e0;
   border-bottom: 2px solid #e0e0e0;
   padding: 0.5rem 0;
   font-weight: bold;
   font-size: 0.9rem;
-  color: #0078d4;
+  color: #836953;
 }
 
 .marquee-track {
