@@ -385,21 +385,15 @@ h1 {
   margin: 24px 0;
 }
 
-.total-views {
-  font-weight: 600;
-  font-size: 0.95rem;
-  color: #0078d4;
-  margin: 1rem 0;
+.view-count {
+  font-size: 0.75rem;
+  color: #555;
+  margin-top: 0.4rem;
 }
 
-.view-count {
-  position: absolute;
-  bottom: 8px;
-  right: 12px;
-  font-size: 0.85em;
-  color: #444;
-  background: rgba(255, 255, 255, 0.85);
-  padding: 2px 6px;
-  border-radius: 4px;
-  font-weight: 500;
+.total-views {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #0078d4;
+  margin-bottom: 1rem;
 }
