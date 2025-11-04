@@ -48,25 +48,38 @@ courseCards.forEach(card => {
 
 document.addEventListener('DOMContentLoaded', () => {
   const cards = document.querySelectorAll('.vault-card');
+  let totalViews = 0;
 
   cards.forEach((card, index) => {
     const previewBtn = card.querySelector('.preview-btn');
     const viewKey = `vaultViews_${index}`;
 
+    // Create view count element
     const viewEl = document.createElement('div');
     viewEl.className = 'view-count';
     card.appendChild(viewEl);
 
+    // Load initial count
     let views = parseInt(localStorage.getItem(viewKey) || '0', 10);
+    totalViews += views;
     viewEl.textContent = `Views: ${views > 1000 ? '1000+' : views}`;
 
+    // Track clicks
     if (previewBtn) {
       previewBtn.addEventListener('click', () => {
         views += 1;
         localStorage.setItem(viewKey, views);
         viewEl.textContent = `Views: ${views > 1000 ? '1000+' : views}`;
+
+        // Update total views
+        totalViews += 1;
+        document.getElementById('totalViews').textContent = `Total Views: ${totalViews > 1000 ? '1000+' : totalViews}`;
       });
     }
   });
+
+  // Initial total view display
+  document.getElementById('totalViews').textContent = `Total Views: ${totalViews > 1000 ? '1000+' : totalViews}`;
 });
+
 
