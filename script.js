@@ -108,3 +108,35 @@ document.addEventListener('DOMContentLoaded', () => {
     leaderboardList.appendChild(li);
   });
 });
+
+
+document.getElementById('openModalBtn').addEventListener('click', () => {
+  const modal = document.getElementById('viewModal');
+  const historyList = document.getElementById('view-history-list');
+  historyList.innerHTML = ''; // Clear previous
+
+  const cards = document.querySelectorAll('.vault-card');
+  const historyData = [];
+
+  cards.forEach(card => {
+    const previewBtn = card.querySelector('.preview-btn');
+    const title = previewBtn?.dataset.title;
+    const viewKey = `vaultViews_${title}`;
+    const views = parseInt(localStorage.getItem(viewKey) || '0', 10);
+
+    historyData.push({ title, views });
+  });
+
+  historyData.sort((a, b) => b.views - a.views);
+  historyData.forEach(entry => {
+    const li = document.createElement('li');
+    li.textContent = `${entry.title}: ${entry.views} views`;
+    historyList.appendChild(li);
+  });
+
+  modal.style.display = 'block';
+});
+
+document.querySelector('.close-btn').addEventListener('click', () => {
+  document.getElementById('viewModal').style.display = 'none';
+});
