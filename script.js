@@ -44,15 +44,15 @@ courseCards.forEach(card => {
   color: white;
 }
 
-// Viewership count logic
-
 document.addEventListener('DOMContentLoaded', () => {
   const cards = document.querySelectorAll('.vault-card');
   let totalViews = 0;
+  const leaderboardData = [];
 
   cards.forEach(card => {
     const previewBtn = card.querySelector('.preview-btn');
-    const title = previewBtn?.dataset.title;
+    const titleEl = card.querySelector('h3');
+    const title = titleEl ? titleEl.textContent.trim() : 'Untitled';
     const viewKey = `vaultViews_${title}`;
 
     // Create view count element
@@ -73,70 +73,55 @@ document.addEventListener('DOMContentLoaded', () => {
         viewEl.textContent = `Views: ${views > 1000 ? '1000+' : views}`;
 
         totalViews += 1;
-        document.getElementById('totalViews').textContent = `Total Views: ${totalViews > 1000 ? '1000+' : totalViews}`;
+        const totalViewsEl = document.getElementById('totalViews');
+        if (totalViewsEl) {
+          totalViewsEl.textContent = `Total Views: ${totalViews > 1000 ? '1000+' : totalViews}`;
+        }
       });
     }
-  });
-
-  // Initial total view display
-  document.getElementById('totalViews').textContent = `Total Views: ${totalViews > 1000 ? '1000+' : totalViews}`;
-});
-
-// Modal for view History / Trends
-
-document.addEventListener('DOMContentLoaded', () => {
-  const cards = document.querySelectorAll('.vault-card');
-  const leaderboardData = [];
-
-  cards.forEach(card => {
-    const previewBtn = card.querySelector('.preview-btn');
-    const title = previewBtn?.dataset.title;
-    const viewKey = `vaultViews_${title}`;
-    const views = parseInt(localStorage.getItem(viewKey) || '0', 10);
 
     leaderboardData.push({ title, views });
   });
 
-  // Sort by views descending
+  // Initial total view display
+  const totalViewsEl = document.getElementById('totalViews');
+  if (totalViewsEl) {
+    totalViewsEl.textContent = `Total Views: ${totalViews > 1000 ? '1000+' : totalViews}`;
+  }
+
+  // Sort and render leaderboard
   leaderboardData.sort((a, b) => b.views - a.views);
-
-  // Render top 5
   const leaderboardList = document.getElementById('leaderboard-list');
-  leaderboardData.slice(0, 5).forEach(entry => {
-    const li = document.createElement('li');
-    li.textContent = `${entry.title}: ${entry.views} views`;
-    leaderboardList.appendChild(li);
-  });
-});
+  if (leaderboardList) {
+    leaderboardData.slice(0, 5).forEach(entry => {
+      const li = document.createElement('li');
+      li.textContent = `${entry.title}: ${entry.views} views`;
+      leaderboardList.appendChild(li);
+    });
+  }
 
-
-document.getElementById('openModalBtn').addEventListener('click', () => {
+  // Modal logic
+  const openModalBtn = document.getElementById('openModalBtn');
+  const closeModalBtn = document.querySelector('.close-btn');
   const modal = document.getElementById('viewModal');
   const historyList = document.getElementById('view-history-list');
-  historyList.innerHTML = ''; // Clear previous
 
-  const cards = document.querySelectorAll('.vault-card');
-  const historyData = [];
+  if (openModalBtn && modal && historyList) {
+    openModalBtn.addEventListener('click', () => {
+      historyList.innerHTML = '';
+      leaderboardData.forEach(entry => {
+        const li = document.createElement('li');
+        li.textContent = `${entry.title}: ${entry.views} views`;
+        historyList.appendChild(li);
+      });
+      modal.style.display = 'block';
+    });
+  }
 
-  cards.forEach(card => {
-    const previewBtn = card.querySelector('.preview-btn');
-    const title = previewBtn?.dataset.title;
-    const viewKey = `vaultViews_${title}`;
-    const views = parseInt(localStorage.getItem(viewKey) || '0', 10);
-
-    historyData.push({ title, views });
-  });
-
-  historyData.sort((a, b) => b.views - a.views);
-  historyData.forEach(entry => {
-    const li = document.createElement('li');
-    li.textContent = `${entry.title}: ${entry.views} views`;
-    historyList.appendChild(li);
-  });
-
-  modal.style.display = 'block';
+  if (closeModalBtn && modal) {
+    closeModalBtn.addEventListener('click', () => {
+      modal.style.display = 'none';
+    });
+  }
 });
 
-document.querySelector('.close-btn').addEventListener('click', () => {
-  document.getElementById('viewModal').style.display = 'none';
-});
