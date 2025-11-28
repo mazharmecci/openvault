@@ -421,3 +421,18 @@ h1 {
     font-size: 0.7rem;
   }
 }
+
+/* Ensure tariff & custom project text is black */
+.tariff-section h2,
+.tariff-section h3,
+.tariff-section p,
+.hire-me h2,
+.hire-me p {
+  color: #000;
+}
+
+/* Also make sure the WhatsApp CTA text is white only inside the button */
+.hire-me .contact-whatsapp {
+  color: #fff;
+}
+
