@@ -1,8 +1,3 @@
-/* Base */
-* {
-  box-sizing: border-box;
-}
-
 body {
   font-family: 'Segoe UI', sans-serif;
   margin: 0;
@@ -13,16 +8,11 @@ body {
 ul {
   list-style-type: none;
   padding-left: 0;
-  margin: 0;
-}
-
-h1, h2, h3 {
-  margin: 0 0 0.5rem;
 }
 
 /* Header */
 .vault-header {
-  padding: 1rem 1.5rem;
+  padding: 1rem 2rem;
   background-color: #f0f4fc;
   border-bottom: 1px solid #ddd;
   border-radius: 0 0 12px 12px;
@@ -32,6 +22,7 @@ h1, h2, h3 {
   display: flex;
   align-items: center;
   gap: 0.6rem;
+  margin-bottom: 0.5rem;
 }
 
 .user-icon {
@@ -46,30 +37,341 @@ h1, h2, h3 {
   color: #0078d4;
 }
 
-.bookmark-caption {
-  text-align: center;
+.info-bullets {
+  list-style: none;
+  padding-left: 1.5rem;
   font-size: 0.85rem;
-  color: #555;
-  margin: 1rem 1rem 0;
-  font-style: italic;
+  color: #444;
 }
 
-/* Layout */
+.info-bullets li {
+  margin: 0.2rem 0;
+}
+.filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.filter-btn {
+  background: #006400;
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.filter-btn.active {
+  background: #228B22;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.course-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+.course-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.course-card:hover {
+  transform: scale(1.02);
+}
+
+.course-card h3 {
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
+}
+
+.course-card span {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #ffcc00;
+  color: #000;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+.badge {
+  display: inline-block;
+  margin-bottom: 8px; /* Adds space below the badge */
+}
+
+.badge-section {
+  margin-bottom: 20px;
+}
+
+.video-wrapper {
+  margin-top: 1rem;
+}
+
+.video-wrapper iframe {
+  width: 100%;
+  height: 180px;
+  border-radius: 8px;
+  border: none;
+}
+
+.progress-badge {
+  background: #28a745;
+  color: #fff;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+  display: inline-block;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  background-color: #d2b48c;
+  color: #333;
+}
+
 .vault-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 1.5rem 1rem 2.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  gap: 38px; /* Increased from 20px to add 1–2 line gap */
+  padding: 40px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* Form Styling */
+
+.vault-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+  gap: 0.5rem;
+}
+
+.vault-form {
+  padding: 20px;
+  background-color: #fefefe;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.vault-header {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.vault-form input {
+  padding: 0.5rem;
+  width: 100%;
+  max-width: 400px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.vault-form button {
+  padding: 0.4rem 1rem;
+  background-color: #0078d4;
+  color: white;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.vault-form button:hover {
+  background-color: #005fa3;
+}
+
+/* Grid and Cards */
+
+/* Vault Grid */
+
+.vault-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* consistent width */
+  gap: 32px;
+  padding: 2rem;
+}
+
+.vault-card {
+  width: 65%; /* fills grid cell */
+  position: relative;
+  background: #d1bea8;
+  border: 2.5px solid #e0e0e0; /* Subtle border */
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06); /* Soft glow */
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.vault-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12); /* Elevated glow on hover */
+}
+
+.vault-card h3 {
+  margin-top: 32px; /* Ensures title doesn't collide with badge */
+}
+
+.vault-card h3 {
+  margin-top: 12px; /* Pushes the title down from the top */
+}
+
+.vault-card p {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.badge-wrapper {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.badge {
+  background-color: #28a745;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.badge.mca {
+  background-color: #6f42c1;
+}
+
+.vault-columns {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 2rem;
+}
+
+.vault-column {
+  flex: 1 1 45%;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
 }
 
-/* Onboarding */
+@media (max-width: 768px) {
+  .vault-columns {
+    flex-direction: column;
+  }
+}
+
+.tech-tags {
+  display: flex;
+  justify-content: center;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+  margin: 0.5rem 0;
+}
+
+.tech-tags span {
+  background-color: #eef2f6;
+  padding: 0.3rem 0.6rem;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  color: #333;
+}
+
+.preview-btn {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.4rem 0.8rem;
+  background-color: #0078d4;
+  color: white;
+  border-radius: 999px;
+  text-decoration: none;
+  font-size: 0.85rem;
+}
+
+.preview-btn:hover {
+  background-color: #005fa3;
+}
+
+/* Meta Info */
+.card-meta {
+  margin-top: 0.6rem;
+  font-size: 0.8rem;
+  color: #444;
+  text-align: left;
+}
+
+.card-meta p {
+  margin: 0.2rem 0;
+}
+
+.degree-icons-inline img {
+  width: 20px;
+  height: 20px;
+}
+
+.degree-icons img:hover {
+  transform: scale(1.1);
+}
+
+.degree-icons img {
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+}
+
+/* Badges */
+
+@keyframes unlockBadge {
+  0% { transform: scale(0.5); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.badge.unlocked {
+  animation: unlockBadge 0.4s ease-out forwards;
+  background-color: #28a745;
+  color: white;
+}
+
 .onboarding-highlights {
   border: 1px solid #ddd;
   border-radius: 8px;
   padding: 16px;
-  background: #fff;
+}
+
+.highlight-list {
+  list-style-type: none;
+  padding-left: 0;
 }
 
 .highlight-list li {
@@ -77,7 +379,78 @@ h1, h2, h3 {
   font-size: 0.95rem;
 }
 
-/* Marquee */
+.card-divider {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 24px 0;
+}
+
+.view-count {
+  font-size: 0.75rem;
+  color: #555;
+  margin-top: 0.4rem;
+}
+
+.total-views {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #0078d4;
+  margin-bottom: 1rem;
+}
+
+.leaderboard-section {
+  background: #f9f9ff;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  margin-bottom: 2rem;
+}
+
+.leaderboard-section h2 {
+  font-size: 1.2rem;
+  margin-bottom: 0.6rem;
+  color: #0078d4;
+}
+
+#leaderboard-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+#leaderboard-list li {
+  margin-bottom: 0.4rem;
+  font-size: 0.9rem;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 1rem;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 500px;
+}
+
+.close-btn {
+  float: right;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+#view-history-list {
+  list-style: none;
+  padding-left: 0;
+}
+
 .marquee-container {
   overflow: hidden;
   white-space: nowrap;
@@ -103,336 +476,10 @@ h1, h2, h3 {
   100% { transform: translateX(-100%); }
 }
 
-/* GitHub intro and FAQ */
-.github-intro-section {
-  margin: 1.5rem 0;
-  padding: 20px;
-  background: #fefefe;
-  border-radius: 8px;
-  box-shadow: 0 0 8px rgba(0,0,0,0.05);
-}
-
-.github-intro-section h2 {
-  margin-bottom: 10px;
-}
-
-.video-wrapper {
-  margin: 16px 0;
-}
-
-.video-wrapper iframe {
-  width: 100%;
-  max-width: 100%;
-  height: 260px;
-  border-radius: 8px;
-  border: none;
-}
-
-.video-links li {
-  margin-bottom: 6px;
-}
-
-.faq-section {
-  margin-top: 20px;
-}
-
-.faq-item {
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  margin-bottom: 10px;
-  overflow: hidden;
-}
-
-.faq-question {
-  width: 100%;
-  text-align: left;
-  background-color: #f9f9f9;
-  padding: 12px 16px;
-  cursor: pointer;
-  font-weight: bold;
-  border: none;
-  font-size: 0.95rem;
-}
-
-.faq-answer {
-  display: none;
-  padding: 12px 16px;
-  background-color: #fff;
-  font-size: 0.9rem;
-}
-
-/* Vault title */
-h1 {
+.bookmark-caption {
   text-align: center;
-  font-size: 2rem;
-  margin: 1.5rem 0 0.5rem;
-}
-
-/* Filters (if used on this page) */
-.filter-buttons {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 0.75rem;
-  margin: 1.5rem 0 0.5rem;
-}
-
-.filter-btn {
-  background: #006400;
-  color: #fff;
-  border: none;
-  padding: 0.5rem 1.1rem;
-  border-radius: 999px;
-  cursor: pointer;
-  font-weight: 600;
   font-size: 0.85rem;
-}
-
-.filter-btn.active {
-  background: #228B22;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
-}
-
-/* Vault grid and cards */
-.vault-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 24px;
-  padding: 1.5rem 0;
-}
-
-.vault-card {
-  position: relative;
-  background: #d1bea8;
-  border: 2px solid #e0e0e0;
-  border-radius: 12px;
-  padding: 18px 16px 40px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
-  transition: box-shadow 0.3s ease, transform 0.3s ease;
-}
-
-.vault-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
-}
-
-.vault-card h3 {
-  margin-top: 0.25rem;
-  margin-bottom: 0.25rem;
-  font-size: 1.05rem;
-}
-
-.vault-card p {
-  font-size: 0.9rem;
   color: #555;
-  margin: 0.25rem 0;
+  margin-top: 1rem;
+  font-style: italic;
 }
-
-/* Tech tags */
-.tech-tags {
-  display: flex;
-  justify-content: flex-start;
-  gap: 0.4rem;
-  flex-wrap: wrap;
-  margin: 0.5rem 0;
-}
-
-.tech-tags span {
-  background-color: #eef2f6;
-  padding: 0.25rem 0.55rem;
-  border-radius: 6px;
-  font-size: 0.75rem;
-  color: #333;
-}
-
-/* Preview button */
-.preview-btn {
-  display: inline-block;
-  margin-top: 0.4rem;
-  padding: 0.4rem 0.9rem;
-  background-color: #0078d4;
-  color: white;
-  border-radius: 999px;
-  text-decoration: none;
-  font-size: 0.85rem;
-}
-
-.preview-btn:hover {
-  background-color: #005fa3;
-}
-
-/* Meta info */
-.card-meta {
-  margin-top: 0.6rem;
-  font-size: 0.8rem;
-  color: #444;
-  text-align: left;
-}
-
-.card-meta p {
-  margin: 0.2rem 0;
-}
-
-/* Degree icons */
-.degree-icons-inline img,
-.degree-icons img {
-  width: 22px;
-  height: 22px;
-  border-radius: 4px;
-}
-
-.degree-icons img:hover,
-.degree-icons-inline img:hover {
-  transform: scale(1.05);
-}
-
-/* Badges */
-.badge-wrapper {
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  text-align: right;
-}
-
-.badge {
-  background-color: #28a745;
-  color: white;
-  padding: 4px 10px;
-  border-radius: 6px;
-  font-size: 0.75rem;
-  font-weight: 500;
-  white-space: nowrap;
-}
-
-.badge.mca {
-  background-color: #6f42c1;
-}
-
-.badge.intermediate,
-.badge.devops,
-.badge.data,
-.badge.qa,
-.badge.integration,
-.badge.analyst,
-.badge.marketing,
-.badge.ai,
-.badge.hardware,
-.badge.cloud {
-  background-color: #005fa3;
-}
-
-@keyframes unlockBadge {
-  0% { transform: scale(0.5); opacity: 0; }
-  100% { transform: scale(1); opacity: 1; }
-}
-
-.badge.unlocked {
-  animation: unlockBadge 0.4s ease-out forwards;
-}
-
-/* Progress badge (if used) */
-.progress-badge {
-  background: #28a745;
-  color: #fff;
-  padding: 0.35rem 0.75rem;
-  border-radius: 6px;
-  font-size: 0.8rem;
-  margin-top: 0.5rem;
-  display: inline-block;
-}
-
-/* Modal (if used later) */
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 100;
-  left: 0; top: 0;
-  width: 100%; height: 100%;
-  background-color: rgba(0,0,0,0.5);
-}
-
-.modal-content {
-  background-color: #fff;
-  margin: 10% auto;
-  padding: 1rem;
-  border-radius: 8px;
-  width: 90%;
-  max-width: 500px;
-}
-
-.close-btn {
-  float: right;
-  font-size: 1.2rem;
-  cursor: pointer;
-}
-
-/* Responsive tweaks */
-@media (max-width: 768px) {
-  .vault-container {
-    padding: 1rem 0.75rem 2rem;
-  }
-
-  .vault-header {
-    padding: 0.75rem 1rem;
-  }
-
-  .github-intro-section {
-    margin: 1rem 0;
-    padding: 16px;
-  }
-
-  .video-wrapper iframe {
-    height: 220px;
-  }
-
-  .vault-grid {
-    gap: 16px;
-    padding: 1rem 0;
-  }
-
-  .vault-card {
-    padding: 16px 14px 44px;
-  }
-
-  h1 {
-    font-size: 1.6rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .user-info {
-    flex-direction: row;
-    justify-content: flex-start;
-  }
-
-  .video-wrapper iframe {
-    height: 200px;
-  }
-
-  .badge-wrapper {
-    bottom: 8px;
-    right: 8px;
-  }
-
-  .badge {
-    font-size: 0.7rem;
-  }
-}
-
-/* Ensure tariff & custom project text is black */
-.tariff-section h2,
-.tariff-section h3,
-.tariff-section p,
-.hire-me h2,
-.hire-me p {
-  color: #000;
-}
-
-/* Also make sure the WhatsApp CTA text is white only inside the button */
-.hire-me .contact-whatsapp {
-  color: #fff;
-}
-
