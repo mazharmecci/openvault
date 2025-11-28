@@ -22,21 +22,31 @@ section,
   margin-bottom: 3rem; /* adds breathing room before next section */
 }
 
+/* Hire-me / tariff / contact sections: white background, black text */
 .hire-me {
   padding: 2rem 1rem;
-  background-color: white;
-  color: #fff;
+  background-color: #fff;
+  color: #000;
   position: relative;
   z-index: 1;
 }
 
-.hire-me, .tariff-section, .contact-cta {
-  background: white;
-  color: #fff;
+.hire-me,
+.tariff-section,
+.contact-cta {
+  background: #fff;
+  color: #000;
   text-align: center;
   padding: 2rem 1rem;
   max-width: 960px;
   margin: 0 auto;
+}
+
+/* Keep CTA text white */
+.hire-me .rzp-button,
+.contact-cta .rzp-button,
+.hire-me .contact-whatsapp {
+  color: #fff;
 }
 
 .tariff-grid {
@@ -74,6 +84,7 @@ section,
   color: #d9534f;
 }
 
+/* Fix mobile text alignment selector (removed stray comma) */
 @media (max-width: 768px) {
   .preview-section .preview-info {
     text-align: left !important;
@@ -83,8 +94,7 @@ section,
   .preview-section .preview-info p,
   .preview-section .preview-info ul,
   .preview-section .preview-info li,
-  .preview-section .preview-info a,
-  {
+  .preview-section .preview-info a {
     text-align: left !important;
     margin-left: 0;
   }
@@ -108,6 +118,7 @@ h1, h2, h3 {
   padding: 2rem 1rem;
 }
 
+/* Buttons */
 .rzp-unlock-btn {
   display: inline-block;
   margin-top: 1rem;
@@ -172,6 +183,7 @@ h1, h2, h3 {
   box-shadow: 0 6px 16px rgba(255, 51, 0, 0.5);
 }
 
+/* Logo */
 .logo-wrapper {
   display: flex;
   justify-content: center;
@@ -184,10 +196,11 @@ h1, h2, h3 {
 .logo-wrapper img {
   display: block;
   margin: 0 auto;
-  max-width: 170px; /* reduced from 180px */
+  max-width: 170px;
   height: auto;
 }
 
+/* Testimonials section */
 .testimonials-brolly {
   background: #000;
   color: #fff;
@@ -202,6 +215,7 @@ h1, h2, h3 {
   text-align: center;
 }
 
+/* Hero */
 .hero-text {
   text-align: center;
   padding: 2rem 1rem;
@@ -232,7 +246,6 @@ h1, h2, h3 {
 /* ===========================
    Internship + Sample Cards
    =========================== */
-
 .preview-section {
   text-align: left;
   background: #4C4E52;
@@ -251,7 +264,7 @@ h1, h2, h3 {
   display: flex;
   flex-wrap: wrap;
   gap: 1.5rem;
-  align-items: left;
+  align-items: flex-start;
   justify-content: space-between;
   max-width: 960px;
   margin: 0 auto;
@@ -293,10 +306,7 @@ h1, h2, h3 {
   border-radius: 8px;
 }
 
-/* ===========================
-   Mobile Fixes (Unified)
-   =========================== */
-
+/* Mobile fixes */
 @media (max-width: 768px) {
   .preview-card {
     flex-direction: column;
@@ -324,10 +334,7 @@ h1, h2, h3 {
   }
 }
 
-/* ===========================
-   Testimonials Fix
-   =========================== */
-
+/* Testimonials grid */
 .testimonial-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -339,7 +346,7 @@ h1, h2, h3 {
 .testimonial-card {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem; /* consistent spacing */
+  gap: 0.5rem;
   background-color: #ffcc00;
   color: #000;
   padding: 1rem;
@@ -371,9 +378,6 @@ h1, h2, h3 {
   color: #000;
 }
 
-/* ===========================
-   Mobile Fixes for Testimonials
-   =========================== */
 @media (max-width: 768px) {
   .testimonial-grid {
     grid-template-columns: 1fr;
@@ -393,10 +397,7 @@ h1, h2, h3 {
   }
 }
 
-/* ===========================
-   Vault Highlights & 
-   real-World Projects
-   =========================== */
+/* Vault highlights & real-world projects */
 .vault-highlights {
   background: #000;
   color: #fff;
@@ -426,277 +427,7 @@ h1, h2, h3 {
   margin: 0.5rem auto 1.5rem;
 }
 
-/* ===========================
-   Highlight Cards
-   =========================== */
-
+/* Highlight cards */
 .highlight-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 1.5rem; /* adds both row and column spacing */
-  max-width: 960px;
-  margin: 0 auto;
-}
-
-.highlight-card {
-  background-color: #ffcc00;
-  color: #000;
-  padding: 1rem;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-height: 180px;
-  height: 100%;
-  text-align: center;
-  transition: transform 0.2s ease;
-}
-
-.highlight-card:hover {
-  transform: scale(1.05);
-}
-
-/* ===========================
-   Price Flash & Countdown
-   =========================== */
-.price-flash {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #28a745;
-}
-
-.price-flash.expired {
-  color: #d9534f;
-}
-
-.countdown-offer {
-  text-align: center;
-  background: #fff3cd;
-  padding: 1rem;
-  border-radius: 8px;
-  border: 1px solid #ffeeba;
-  margin: 1.5rem auto;
-}
-
-#countdown-timer {
-  font-size: 2rem;
-  font-weight: bold;
-  color: #d9534f;
-  margin-top: 0.5rem;
-}
-
-/* ===========================
-   .course-showcase and .course-grid
-   =========================== */
-.course-showcase {
-  background: #000;
-  color: #fff;
-  padding: 2rem 1rem;
-  text-align: center;
-}
-
-.course-heading {
-  font-size: 1.8rem;
-  color: #ffcc00;
-  margin-bottom: 2rem;
-  animation: fadeIn 1s ease-in-out;
-}
-
-.course-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 1rem;
-  max-width: 960px;
-  margin: auto;
-}
-
-.course-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 1rem;
-  border-radius: 8px;
-  background: #fff;
-  color: #000;
-  text-align: center;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
-  min-height: 160px;
-  overflow: hidden;
-}
-
-.course-card:hover {
-  transform: scale(1.05);
-}
-
-.course-card div {
-  font-weight: 600;
-  font-size: 0.875rem;
-}
-
-.course-card span {
-  font-size: 0.75rem;
-  color: #555;
-  margin-top: 4px;
-}
-
-.company-logo {
-  max-width: 100px;
-  max-height: 50px;
-  object-fit: contain;
-  margin-bottom: 0.5rem;
-  display: block;
-}
-
-.course-card:hover .company-logo {
-  transform: scale(1.05);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
-
-
-/* ===========================
-   .project-themes and .themes-table
-   =========================== */
-.project-themes {
-  background: #000;
-  color: #fff;
-  padding: 2rem 1rem;
-  text-align: center;
-}
-
-.themes-heading {
-  font-size: 1.8rem;
-  color: #ffcc00;
-  margin-bottom: 1.5rem;
-  animation: fadeIn 1s ease-in-out;
-}
-
-.themes-table {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1rem;
-  max-width: 600px;
-  margin: auto;
-}
-
-.theme-row {
-  background: #ffcc00;
-  color: #000;
-  padding: 1rem;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  animation: slideUp 0.6s ease forwards;
-  opacity: 0;
-}
-
-.theme-row:nth-child(n) {
-  animation-delay: calc(0.1s * var(--i));
-}
-
-@keyframes slideUp {
-  from { transform: translateY(20px); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-@media (min-width: 980px) {
-  .themes-table {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-    max-width: 960px;
-  }
-
-  .theme-row {
-    text-align: left;
-    padding: 1.2rem;
-    font-size: 0.95rem;
-  }
-
-  .theme-row span:nth-child(1) {
-    font-weight: bold;
-    font-size: 1.1rem;
-    margin-bottom: 0.5rem;
-  }
-
-  .theme-row span:nth-child(2),
-  .theme-row span:nth-child(3) {
-    color: #333;
-    font-size: 0.9rem;
-  }
-}
-
-/* ===========================
-   .vault-footer
-   =========================== */
-.vault-footer {
-  background-color: #ffcc00;
-  color: #000000;
-  text-align: center;
-  padding: 1rem 0;
-  font-size: 0.85rem;
-  margin-top: 2rem;
-  border-top: 1px solid #333;
-}
-
-.vault-footer p {
-  margin: 0.3rem 0;
-}
-
-.flag-icon {
-  width: 20px;
-  height: auto;
-  vertical-align: middle;
-  margin-left: 6px;
-}
-
-/* ===========================
-   .features
-   =========================== */
-
-.features {
-  background-color: #fffbe6; /* soft yellow backdrop */
-  padding: 2rem 1rem;
-  text-align: center;
-  max-width: 960px;
-  margin: 0 auto;
-}
-
-.feature-list-wrapper {
-  display: flex;
-  justify-content: center;
-}
-
-.feature-list {
-  list-style: none;
-  padding: 0;
-  margin: 1rem auto;
-  text-align: left;
-  max-width: 320px;
-}
-
-.feature-list li {
-  font-size: 1rem;
-  margin: 0.5rem 0;
-  padding-left: 1.2rem;
-  position: relative;
-}
-
-.feature-list li::before {
-  content: "✅ ";
-  position: absolute;
-  left: 0;
-  top: 0;
-  font-size: 1rem;
-  color: #28a745;
-}
-
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr
