@@ -4,9 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>OpenVault – Skill Explorer</title>
-  <link rel="stylesheet" href="vault.css" />  
+  <link rel="stylesheet" href="vault.css" />
 
-    <!-- ✅ Google tag (gtag.js) -->
+  <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-TH2GX1JSLY"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -14,936 +14,767 @@
     gtag('js', new Date());
     gtag('config', 'G-TH2GX1JSLY');
   </script>
-  
 </head>
 <body>
   <main class="vault-container">
-    <form class="vault-form">
 
-      <!-- Vault Header -->
-      <header class="vault-header">
-        <div class="user-info">
-          <img src="user-icon.png" alt="User Icon" class="user-icon" />
-          <span class="welcome-label">Welcome, New Student!</span>
-        </div>
-      </header>
+    <!-- Vault Header -->
+    <header class="vault-header">
+      <div class="user-info">
+        <img src="user-icon.png" alt="User Icon" class="user-icon" />
+        <span class="welcome-label">Welcome to your Skill Vault 👋</span>
+      </div>
+    </header>
 
-      <p class="bookmark-caption">
-  “📌 Save this vault to your bookmarks — your future self will thank you.”
-      </p>
-    
-      <!-- Onboarding Highlights -->
-      <fieldset class="onboarding-highlights">
-        <legend>🎓 Skill Vault Onboarding</legend>
-        <ul class="highlight-list">
-          <li>✅ Boosts confidence before diving into code</li>
-          <li>✅ Connects learning to career paths and academic backgrounds</li>
-          <li>✅ The Vault will now guide students toward projects that match their skill level</li>
-          <li>✅ Hover over the cards for the recommendations and skill level needed to proceed</li>
-        </ul>
-      </fieldset>
+    <p class="bookmark-caption">
+      📌 Save this vault to your bookmarks — you can come back anytime to explore more stacks and projects.
+    </p>
 
+    <!-- Onboarding Highlights -->
+    <section class="onboarding-highlights">
+      <h2>🎓 Skill Vault Onboarding</h2>
+      <ul class="highlight-list">
+        <li>✅ Quickly see which skills connect to real project ideas.</li>
+        <li>✅ Match skills to degrees like B.Tech, MCA, BSc (CS/IT), MBA and more.</li>
+        <li>✅ Use the cards to pick a stack that fits your level and goals.</li>
+        <li>✅ Hover over cards and click Preview to inspect live GitHub projects.</li>
+      </ul>
+    </section>
+
+    <!-- Marquee -->
     <div class="marquee-container">
       <div class="marquee-track">
         🚀 Learn ⚛️ React • 🧠 Node.js • 🗃️ SQL • 🔧 Azure DevOps • ☁️ Cloud Admin • 🧪 Data Factory • ☕ J2EE • 📊 Scrum • 📣 Digital Marketing • ❄️ Snowflake • 🧠 Generative AI • 📝 Prompt Engineering • 🔧 Embedded Systems • 🐍 Python • ☁️ Google Cloud
       </div>
     </div>
 
-<!-- 📹 Recommended Video Snippet -->
-<div class="github-intro-section">
-  <h2>🚀 Getting Started with GitHub</h2>
-  <p>Watch this short video to learn how to create a GitHub account and explore projects:</p>
+    <!-- GitHub Intro + FAQ -->
+    <section class="github-intro-section">
+      <h2>🚀 Getting Started with GitHub</h2>
+      <p>New to GitHub? Start with this short intro and FAQ, then use the vault cards below to explore project ideas.</p>
 
-  <div class="video-wrapper">
-    <iframe width="100%" height="315" src="https://www.youtube.com/embed/h5cKAd94QNo" 
-      title="How to Create a GitHub Account" frameborder="0" allowfullscreen></iframe>
-  </div>
+      <div class="video-wrapper">
+        <iframe width="100%" height="315"
+          src="https://www.youtube.com/embed/h5cKAd94QNo"
+          title="How to Create a GitHub Account"
+          frameborder="0"
+          allowfullscreen>
+        </iframe>
+      </div>
 
-  <p>More helpful videos:</p>
-  <ul class="video-links">
-    <li><a href="https://www.youtube.com/watch?v=ohqfCGMP_zk" target="_blank">🔗 GitHub Account + Git Basics</a></li>
-    <li><a href="https://www.youtube.com/watch?v=ldPuFlquiRk" target="_blank">🔗 Create GitHub Account & First Repo</a></li>
-    <li><a href="https://www.youtube.com/watch?v=a9u2yZvsqHA" target="_blank">🔗 How to Use GitHub for Beginners</a></li>
-    <li><a href="https://www.youtube.com/watch?v=iv8rSLsi1xo" target="_blank">🔗 GitHub Tutorial – Beginner’s Guide</a></li>
-  </ul>
-</div>
+      <p>More helpful videos:</p>
+      <ul class="video-links">
+        <li><a href="https://www.youtube.com/watch?v=ohqfCGMP_zk" target="_blank">🔗 GitHub Account + Git Basics</a></li>
+        <li><a href="https://www.youtube.com/watch?v=ldPuFlquiRk" target="_blank">🔗 Create GitHub Account & First Repo</a></li>
+        <li><a href="https://www.youtube.com/watch?v=a9u2yZvsqHA" target="_blank">🔗 How to Use GitHub for Beginners</a></li>
+        <li><a href="https://www.youtube.com/watch?v=iv8rSLsi1xo" target="_blank">🔗 GitHub Tutorial – Beginner’s Guide</a></li>
+      </ul>
 
-<!-- 📚 Collapsible FAQ Section -->
-<div class="faq-section">
-  <h3>🧠 GitHub FAQ for Beginners</h3>
+      <section class="faq-section">
+        <h3>🧠 GitHub FAQ for Beginners</h3>
 
-  <div class="faq-item">
-    <div class="faq-question">✅ How do I create a GitHub account?</div>
-    <div class="faq-answer">
-      Visit <a href="https://github.com/signup" target="_blank">github.com/signup</a>, enter your email, choose a username and password, and verify your email. You can also sign up using Google or Apple.
-    </div>
-  </div>
+        <div class="faq-item">
+          <button type="button" class="faq-question">✅ How do I create a GitHub account?</button>
+          <div class="faq-answer">
+            Visit <a href="https://github.com/signup" target="_blank" rel="noopener">github.com/signup</a>, enter your email, choose a username and password, and verify your email. You can also sign up using Google or Apple.
+          </div>
+        </div>
 
-  <div class="faq-item">
-    <div class="faq-question">✅ What is a repository?</div>
-    <div class="faq-answer">
-      A repository is like a folder for your project. It stores your code, documentation, and version history. You can create one by clicking “New” after logging in.
-    </div>
-  </div>
+        <div class="faq-item">
+          <button type="button" class="faq-question">✅ What is a repository?</button>
+          <div class="faq-answer">
+            A repository is like a folder for your project. It stores your code, documentation, and version history. You can create one by clicking “New” after logging in.
+          </div>
+        </div>
 
-  <div class="faq-item">
-    <div class="faq-question">✅ How do I explore projects on GitHub?</div>
-    <div class="faq-answer">
-      Use the search bar to find topics like “React projects” or “Node.js API”. You can star, fork, or clone repositories to try them out.
-    </div>
-  </div>
+        <div class="faq-item">
+          <button type="button" class="faq-question">✅ How do I explore projects on GitHub?</button>
+          <div class="faq-answer">
+            Use the search bar to find topics like “React projects” or “Node.js API”. You can star, fork, or clone repositories to try them out.
+          </div>
+        </div>
 
-  <div class="faq-item">
-    <div class="faq-question">✅ What does ‘forking’ a repo mean?</div>
-    <div class="faq-answer">
-      Forking creates a copy of someone else’s project under your account. You can modify it freely and even contribute back via pull requests.
-    </div>
-  </div>
+        <div class="faq-item">
+          <button type="button" class="faq-question">✅ What does ‘forking’ a repo mean?</button>
+          <div class="faq-answer">
+            Forking creates a copy of someone else’s project under your account. You can modify it freely and even contribute back via pull requests.
+          </div>
+        </div>
 
-  <div class="faq-item">
-    <div class="faq-question">✅ How do I contribute to a project?</div>
-    <div class="faq-answer">
-      After forking and making changes, you can submit a pull request to suggest your edits. The project owner can review and merge your contribution.
-    </div>
-  </div>
-</div>
-
-<!-- 💅 Styling -->
-<style>
-.github-intro-section {
-  margin: 40px 0;
-  padding: 20px;
-  background: #fefefe;
-  border-radius: 8px;
-  box-shadow: 0 0 8px rgba(0,0,0,0.05);
-}
-.github-intro-section h2 {
-  margin-bottom: 10px;
-}
-.video-wrapper {
-  margin: 16px 0;
-}
-.video-links {
-  list-style-type: none;
-  padding-left: 0;
-}
-.video-links li {
-  margin-bottom: 6px;
-}
-.faq-section {
-  margin-top: 30px;
-}
-.faq-item {
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  margin-bottom: 10px;
-  overflow: hidden;
-}
-.faq-question {
-  background-color: #f9f9f9;
-  padding: 12px 16px;
-  cursor: pointer;
-  font-weight: bold;
-}
-.faq-answer {
-  display: none;
-  padding: 12px 16px;
-  background-color: #fff;
-}
-</style>
-
-<!-- 🧠 FAQ Toggle Script -->
-<script>
-document.querySelectorAll('.faq-question').forEach(q => {
-  q.addEventListener('click', () => {
-    const answer = q.nextElementSibling;
-    answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
-  });
-});
-</script>
+        <div class="faq-item">
+          <button type="button" class="faq-question">✅ How do I contribute to a project?</button>
+          <div class="faq-answer">
+            After forking and making changes, you can submit a pull request to suggest your edits. The project owner can review and merge your contribution.
+          </div>
+        </div>
+      </section>
+    </section>
 
     <!-- Vault Title -->
     <h1>🔓 Skill Vault</h1>
 
-   <!-- Vault Grid Refactored -->
-      
-<div class="vault-card">
-  <h3>⚛️ React JS</h3>
-  <p>Frontend Projects & UI Builders</p>
+    <!-- Vault Grid -->
+    <section class="vault-grid">
 
-  <div class="tech-tags">
-    <span>React</span><span>UI</span><span>Hooks</span>
-  </div>
+      <!-- React JS -->
+      <article class="vault-card">
+        <h3>⚛️ React JS</h3>
+        <p>Frontend Projects & UI Builders</p>
 
-  <a href="https://github.com/Vaibhav-kesarwani/100-reactjs-projects"
-     target="_blank"
-     rel="noopener noreferrer"
-     class="preview-btn"
-     data-title="React JS">🔍 Preview</a>
+        <div class="tech-tags">
+          <span>React</span><span>UI</span><span>Hooks</span>
+        </div>
 
-  <div class="card-meta">
-    <p><strong>Level:</strong> Beginner</p>
-    <p><strong>Relevant Degrees:</strong></p>
-    <div class="degree-icons-inline">
-      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="BCA" title="BCA" />
-      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135789.png" alt="BSc CS" title="BSc CS" />
+        <a href="https://github.com/Vaibhav-kesarwani/100-reactjs-projects"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="preview-btn"
+           data-title="React JS">🔍 Preview</a>
+
+        <div class="card-meta">
+          <p><strong>Level:</strong> Beginner</p>
+          <p><strong>Relevant Degrees:</strong></p>
+          <div class="degree-icons-inline">
+            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="BCA" title="BCA" />
+            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135789.png" alt="BSc CS" title="BSc CS" />
+          </div>
+          <div class="badge-wrapper">
+            <span class="badge beginner">Beginner Friendly</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Front-End Dev -->
+      <article class="vault-card">
+        <h3>🖼️ Front-End Dev</h3>
+        <p>HTML, CSS, JS, UI/UX</p>
+
+        <div class="tech-tags">
+          <span>HTML</span><span>UI</span><span>JavaScript</span>
+        </div>
+
+        <a href="https://github.com/smthari/Frontend-Projects"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="preview-btn"
+           data-title="Front-End Dev">🔍 Preview</a>
+
+        <div class="card-meta">
+          <p><strong>Level:</strong> Beginner</p>
+          <p><strong>Relevant Degrees:</strong></p>
+          <div class="degree-icons-inline">
+            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="BCA" title="Diploma / BCA" />
+            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135789.png" alt="BSc CS" title="BSc CS" />
+          </div>
+          <div class="badge-wrapper">
+            <span class="badge beginner">Beginner Friendly</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Node.js -->
+      <article class="vault-card">
+        <h3>🧠 Node.js</h3>
+        <p>Backend APIs & Auth Workflows</p>
+
+        <div class="tech-tags">
+          <span>Node.js</span><span>Express</span><span>MongoDB</span>
+        </div>
+
+        <a href="https://github.com/bytesleo/nodetomic-api"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="preview-btn"
+           data-title="Node.js">🔍 Preview</a>
+
+        <div class="card-meta">
+          <p><strong>Level:</strong> Intermediate</p>
+          <p><strong>Relevant Degrees:</strong></p>
+          <div class="degree-icons-inline">
+            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135768.png" alt="BTech" title="BTech IT" />
+            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135789.png" alt="MCA" title="MCA" />
+          </div>
+          <div class="badge-wrapper">
+            <span class="badge mca">Recommended for MCA</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- SQL -->
+      <article class="vault-card">
+        <h3>🗃️ SQL</h3>
+        <p>Database Queries & Relational Models</p>
+
+        <div class="tech-tags">
+          <span>SQL</span><span>Database</span><span>Joins</span>
+        </div>
+
+        <a href="https://github.com/topics/sql-project"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="preview-btn"
+           data-title="SQL">🔍 Preview</a>
+
+        <div class="card-meta">
+          <p><strong>Level:</strong> Beginner</p>
+          <p><strong>Relevant Degrees:</strong></p>
+          <div class="degree-icons-inline">
+            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="BCA" title="BCA" />
+            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135789.png" alt="BSc CS" title="BSc CS" />
+          </div>
+          <div class="badge-wrapper">
+            <span class="badge beginner">Beginner Friendly</span>
+            <span class="badge mca">Recommended for MCA</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Azure DevOps -->
+      <article class="vault-card">
+        <h3>🔧 Azure DevOps</h3>
+        <p>CI/CD Pipelines & Project Automation</p>
+
+        <div class="tech-tags">
+          <span>Azure</span><span>DevOps</span><span>CI/CD</span>
+        </div>
+
+        <a href="https://github.com/Mohitmatte/Complete-CI-CD-Pipeline-with-Azure-DevOps-ArgoCD"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="preview-btn"
+           data-title="Azure DevOps">🔍 Preview</a>
+
+        <div class="card-meta">
+          <p><strong>Level:</strong> Beginner</p>
+          <p><strong>Relevant Degrees:</strong></p>
+          <div class="degree-icons-inline">
+            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="BCA" title="BCA" />
+            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135789.png" alt="BSc CS" title="BSc CS" />
+          </div>
+          <div class="badge-wrapper">
+            <span class="badge beginner">Beginner Friendly</span>
+            <span class="badge devops">Recommended for DevOps Engineers</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Azure Admin -->
+      <article class="vault-card">
+        <h3>☁️ Azure Admin</h3>
+        <p>Cloud Infrastructure & Resource Management</p>
+
+        <div class="tech-tags">
+          <span>Azure</span><span>Cloud</span><span>Admin</span>
+        </div>
+
+        <a href="https://github.com/adrianco12/Cloud-Administration-Projects"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="preview-btn"
+           data-title="Azure Admin">🔍 Preview</a>
+
+        <div class="card-meta">
+          <p><strong>Level:</strong> Beginner</p>
+          <p><strong>Relevant Degrees:</strong></p>
+          <div class="degree-icons-inline">
+            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="BCA" title="BCA" />
+            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135789.png" alt="BSc CS" title="BSc CS" />
+          </div>
+          <div class="badge-wrapper">
+            <span class="badge beginner">Beginner Friendly</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Azure Data Factory -->
+      <article class="vault-card">
+        <h3>🧪 Azure Data Factory</h3>
+        <p>ETL Pipelines & Data Integration</p>
+
+        <div class="tech-tags">
+          <span>Azure</span><span>Data Factory</span><span>ETL</span>
+        </div>
+
+        <a href="https://github.com/firewind25/Azure-DataFactory-Project-with-Azure-Devops"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="preview-btn"
+           data-title="Azure Data Factory">🔍 Preview</a>
+
+        <div class="card-meta">
+          <p><strong>Level:</strong> Beginner</p>
+          <p><strong>Relevant Degrees:</strong></p>
+          <div class="degree-icons-inline">
+            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="BCA" title="BCA" />
+            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135789.png" alt="BSc CS" title="BSc CS" />
+          </div>
+          <div class="badge-wrapper">
+            <span class="badge beginner">Beginner Friendly</span>
+            <span class="badge data">Recommended for Data Engineers</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- J2EE -->
+      <article class="vault-card">
+        <h3>☕ J2EE</h3>
+        <p>Enterprise Applications & Java Frameworks</p>
+
+        <div class="tech-tags">
+          <span>Java</span><span>J2EE</span><span>Servlets</span>
+        </div>
+
+        <a href="https://github.com/chamikathereal/J2EE-Example-Project"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="preview-btn"
+           data-title="J2EE">🔍 Preview</a>
+
+        <div class="card-meta">
+          <p><strong>Level:</strong> Beginner</p>
+          <p><strong>Relevant Degrees:</strong></p>
+          <div class="degree-icons-inline">
+            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="BCA" title="BCA" />
+            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135789.png" alt="BSc CS" title="BSc CS" />
+          </div>
+          <div class="badge-wrapper">
+            <span class="badge beginner">Beginner Friendly</span>
+            <span class="badge mca">Recommended for MCA</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- PMP -->
+      <article class="vault-card">
+        <h3>📊 PMP</h3>
+        <p>Project Planning & Stakeholder Management</p>
+
+        <div class="tech-tags">
+          <span>PMP</span><span>Project Management</span><span>Agile</span>
+        </div>
+
+        <a href="https://github.com/PacktPublishing/The-Simplest-Guide-to-Project-Management-and-PMI-PMP-Certification-Exam"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="preview-btn"
+           data-title="PMP">🔍 Preview</a>
+
+        <div class="card-meta">
+          <p><strong>Level:</strong> Beginner</p>
+          <p><strong>Relevant Degrees:</strong></p>
+          <div class="degree-icons-inline">
+            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="MBA" title="MBA" />
+            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135789.png" alt="BBA" title="BBA" />
+          </div>
+          <div class="badge-wrapper">
+            <span class="badge beginner">Beginner Friendly</span>
+            <span class="badge analyst">Recommended for Analysts</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Scrum -->
+      <article class="vault-card">
+        <h3>🧪 Scrum</h3>
+        <p>Agile Workflow Simulators</p>
+
+        <div class="tech-tags">
+          <span>Scrum</span><span>Sprint</span><span>Backlog</span>
+        </div>
+
+        <a href="https://github.com/jmrashed/agile-project-management"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="preview-btn"
+           data-title="Scrum">🔍 Preview</a>
+
+        <div class="card-meta">
+          <p><strong>Level:</strong> Beginner–Intermediate</p>
+          <p><strong>Relevant Degrees:</strong></p>
+          <div class="degree-icons-inline">
+            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135773.png" alt="MBA" title="MBA" />
+          </div>
+          <div class="badge-wrapper">
+            <span class="badge beginner">Beginner Friendly</span>
+            <span class="badge intermediate">Intermediate Level</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Business Analyst -->
+      <article class="vault-card">
+        <h3>📊 Business Analyst</h3>
+        <p>Stakeholder Dashboards & KPIs</p>
+
+        <div class="tech-tags">
+          <span>BA</span><span>KPIs</span><span>Insights</span>
+        </div>
+
+        <a href="https://github.com/topics/business-analyst"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="preview-btn"
+           data-title="Business Analyst">🔍 Preview</a>
+
+        <div class="card-meta">
+          <p><strong>Level:</strong> Intermediate</p>
+          <p><strong>Relevant Degrees:</strong></p>
+          <div class="degree-icons-inline">
+            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135773.png" alt="MBA" title="MBA" />
+          </div>
+          <div class="badge-wrapper">
+            <span class="badge intermediate">Intermediate Level</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Mulesoft -->
+      <article class="vault-card">
+        <h3>🔗 Mulesoft</h3>
+        <p>API Integration & Data Transformation</p>
+
+        <div class="tech-tags">
+          <span>Mulesoft</span><span>API</span><span>Integration</span>
+        </div>
+
+        <a href="https://github.com/stn1slv/awesome-integration"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="preview-btn"
+           data-title="Mulesoft">🔍 Preview</a>
+
+        <div class="card-meta">
+          <p><strong>Level:</strong> Intermediate</p>
+          <p><strong>Relevant Degrees:</strong></p>
+          <div class="degree-icons-inline">
+            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="BCA" title="BCA" />
+            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135789.png" alt="BSc CS" title="BSc CS" />
+          </div>
+          <div class="badge-wrapper">
+            <span class="badge intermediate">Intermediate Level</span>
+            <span class="badge integration">Good for Integration Roles</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Tosca -->
+      <article class="vault-card">
+        <h3>🧪 Tosca</h3>
+        <p>Model-Based Test Automation</p>
+
+        <div class="tech-tags">
+          <span>Tosca</span><span>Automation</span><span>Testing</span>
+        </div>
+
+        <a href="https://github.com/AnushaTrainer/Tosca-Automation"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="preview-btn"
+           data-title="Tosca">🔍 Preview</a>
+
+        <div class="card-meta">
+          <p><strong>Level:</strong> Intermediate</p>
+          <p><strong>Relevant Degrees:</strong></p>
+          <div class="degree-icons-inline">
+            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="BCA" title="BCA" />
+            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135789.png" alt="BSc CS" title="BSc CS" />
+          </div>
+          <div class="badge-wrapper">
+            <span class="badge intermediate">Intermediate Level</span>
+            <span class="badge qa">Recommended for QA Engineers</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- DBT -->
+      <article class="vault-card">
+        <h3>🧮 DBT</h3>
+        <p>Transforming Data in the Warehouse</p>
+
+        <div class="tech-tags">
+          <span>DBT</span><span>Data Modeling</span><span>SQL</span>
+        </div>
+
+        <a href="https://github.com/BrunoChiconato/dbt-analytics-pipeline"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="preview-btn"
+           data-title="DBT">🔍 Preview</a>
+
+        <div class="card-meta">
+          <p><strong>Level:</strong> Intermediate</p>
+          <p><strong>Relevant Degrees:</strong></p>
+          <div class="degree-icons-inline">
+            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="BCA" title="BCA" />
+            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135789.png" alt="BSc CS" title="BSc CS" />
+            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135773.png" alt="MBA" title="MBA" />
+          </div>
+          <div class="badge-wrapper">
+            <span class="badge intermediate">Intermediate Level</span>
+            <span class="badge analyst">Good for Data Analysts</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Dell Boomi -->
+      <article class="vault-card">
+        <h3>🔌 Dell Boomi</h3>
+        <p>Cloud-Based Integration Platform</p>
+
+        <div class="tech-tags">
+          <span>Dell Boomi</span><span>Integration</span><span>ETL</span>
+        </div>
+
+        <a href="https://github.com/andrewburnet/boomi-dev"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="preview-btn"
+           data-title="Dell Boomi">🔍 Preview</a>
+
+        <div class="card-meta">
+          <p><strong>Level:</strong> Intermediate</p>
+          <p><strong>Relevant Degrees:</strong></p>
+          <div class="degree-icons-inline">
+            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="BCA" title="BCA" />
+            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135789.png" alt="BSc CS" title="BSc CS" />
+            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135773.png" alt="MBA" title="MBA" />
+          </div>
+          <div class="badge-wrapper">
+            <span class="badge intermediate">Intermediate Level</span>
+            <span class="badge integration">Integration Engineer Track</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Digital Marketing -->
+      <article class="vault-card">
+        <h3>📣 Digital Marketing</h3>
+        <p>SEO, Campaign Strategy & Analytics</p>
+
+        <div class="tech-tags">
+          <span>SEO</span><span>Google Ads</span><span>Social Media</span>
+        </div>
+
+        <a href="https://github.com/Sunny125802/SEO-Analysis-Tool"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="preview-btn"
+           data-title="Digital Marketing">🔍 Preview</a>
+
+        <div class="card-meta">
+          <p><strong>Level:</strong> Beginner</p>
+          <p><strong>Relevant Degrees:</strong></p>
+          <div class="degree-icons-inline">
+            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="MBA" title="MBA" />
+            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135789.png" alt="BBA" title="BBA" />
+          </div>
+          <div class="badge-wrapper">
+            <span class="badge beginner">Beginner Friendly</span>
+            <span class="badge marketing">Marketing Careers</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Snowflake -->
+      <article class="vault-card">
+        <h3>❄️ Snowflake</h3>
+        <p>Cloud Data Warehousing & Analytics</p>
+
+        <div class="tech-tags">
+          <span>Snowflake</span><span>Data Warehouse</span><span>SQL</span>
+        </div>
+
+        <a href="https://github.com/Biplavkp/SQL_DATA_WAREHOUSE_PROJECT"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="preview-btn"
+           data-title="Snowflake">🔍 Preview</a>
+
+        <div class="card-meta">
+          <p><strong>Level:</strong> Intermediate</p>
+          <p><strong>Relevant Degrees:</strong></p>
+          <div class="degree-icons-inline">
+            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="BCA" title="BCA" />
+            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135789.png" alt="BSc CS" title="BSc CS" />
+            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135773.png" alt="MBA" title="MBA" />
+          </div>
+          <div class="badge-wrapper">
+            <span class="badge intermediate">Intermediate Level</span>
+            <span class="badge analyst">Data Analyst Track</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Generative AI -->
+      <article class="vault-card">
+        <h3>🧠 Generative AI</h3>
+        <p>Text, Image & Code Generation Models</p>
+
+        <div class="tech-tags">
+          <span>Generative AI</span><span>LLMs</span><span>Prompting</span>
+        </div>
+
+        <a href="https://github.com/AI-Training-Projects/generative-ai-for-beginners-Microsoft"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="preview-btn"
+           data-title="Generative AI">🔍 Preview</a>
+
+        <div class="card-meta">
+          <p><strong>Level:</strong> Intermediate</p>
+          <p><strong>Relevant Degrees:</strong></p>
+          <div class="degree-icons-inline">
+            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="BCA" title="BCA" />
+            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135789.png" alt="BSc CS" title="BSc CS" />
+            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135773.png" alt="MBA" title="MBA" />
+          </div>
+          <div class="badge-wrapper">
+            <span class="badge intermediate">Intermediate Level</span>
+            <span class="badge ai">AI Enthusiast Track</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Prompt Engineering -->
+      <article class="vault-card">
+        <h3>📝 Prompt Engineering</h3>
+        <p>Designing Effective Inputs for AI Models</p>
+
+        <div class="tech-tags">
+          <span>Prompting</span><span>LLMs</span><span>AI</span>
+        </div>
+
+        <a href="https://github.com/dair-ai/Prompt-Engineering-Guide"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="preview-btn"
+           data-title="Prompt Engineering">🔍 Preview</a>
+
+        <div class="card-meta">
+          <p><strong>Level:</strong> Beginner</p>
+          <p><strong>Relevant Degrees:</strong></p>
+          <div class="degree-icons-inline">
+            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="BCA" title="BCA" />
+            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135789.png" alt="BSc CS" title="BSc CS" />
+            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135773.png" alt="MBA" title="MBA" />
+          </div>
+          <div class="badge-wrapper">
+            <span class="badge beginner">Beginner Friendly</span>
+            <span class="badge ai">AI Enthusiast Track</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Embedded Systems -->
+      <article class="vault-card">
+        <h3>🔧 Embedded Systems</h3>
+        <p>Microcontroller Programming & Real-Time Applications</p>
+
+        <div class="tech-tags">
+          <span>Embedded C</span><span>Microcontrollers</span><span>RTOS</span>
+        </div>
+
+        <a href="https://github.com/JobinBiju/Home-Fi"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="preview-btn"
+           data-title="Embedded Systems">🔍 Preview</a>
+
+        <div class="card-meta">
+          <p><strong>Level:</strong> Intermediate</p>
+          <p><strong>Relevant Degrees:</strong></p>
+          <div class="degree-icons-inline">
+            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="BCA" title="BCA" />
+            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135789.png" alt="BSc CS" title="BSc CS" />
+            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135773.png" alt="BTech" title="BTech" />
+          </div>
+          <div class="badge-wrapper">
+            <span class="badge intermediate">Intermediate Level</span>
+            <span class="badge hardware">Hardware Engineer Track</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Python for AI -->
+      <article class="vault-card">
+        <h3>🐍 Python for AI</h3>
+        <p>Machine Learning, NLP & Deep Learning with Python</p>
+
+        <div class="tech-tags">
+          <span>Python</span><span>AI</span><span>Machine Learning</span>
+        </div>
+
+        <a href="https://github.com/KalyanM45/AI-Project-Gallery"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="preview-btn"
+           data-title="Python for AI">🔍 Preview</a>
+
+        <div class="card-meta">
+          <p><strong>Level:</strong> Beginner</p>
+          <p><strong>Relevant Degrees:</strong></p>
+          <div class="degree-icons-inline">
+            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="BCA" title="BCA" />
+            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135789.png" alt="BSc CS" title="BSc CS" />
+            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135773.png" alt="MBA" title="MBA" />
+          </div>
+          <div class="badge-wrapper">
+            <span class="badge beginner">Beginner Friendly</span>
+            <span class="badge ai">AI Learner Track</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Google Cloud -->
+      <article class="vault-card">
+        <h3>☁️ Google Cloud Mastery</h3>
+        <p>Deploy, Scale & Analyze with GCP</p>
+
+        <div class="tech-tags">
+          <span>Google Cloud</span><span>GCP</span><span>Cloud Functions</span>
+        </div>
+
+        <a href="https://dev.to/ivanchiou/cicd-pipeline-using-github-actions-to-deploy-to-google-cloud-platform-gcp-3105"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="preview-btn"
+           data-title="Google Cloud Mastery">🔍 Preview</a>
+
+        <div class="card-meta">
+          <p><strong>Level:</strong> Intermediate</p>
+          <p><strong>Relevant Degrees:</strong></p>
+          <div class="degree-icons-inline">
+            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="BCA" title="BCA" />
+            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135789.png" alt="BSc CS" title="BSc CS" />
+            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135773.png" alt="MBA" title="MBA" />
+          </div>
+          <div class="badge-wrapper">
+            <span class="badge intermediate">Intermediate Level</span>
+            <span class="badge cloud">Cloud Engineer Track</span>
+          </div>
+        </div>
+      </article>
+
+    </section>
+
+    <!-- Bottom marquee -->
+    <div class="marquee-container">
+      <div class="marquee-track">
+        💡 Technologies Covered: HTML • CSS • JavaScript • MongoDB • Express • CI/CD • ETL • Agile • API Integration • AI • NLP • RTOS • Cloud Functions • SEO • Campaign Strategy • Data Modeling • Microcontrollers 🔧
+      </div>
     </div>
-
-    <!-- ✅ Badge now correctly scoped inside card-meta -->
-    <div class="badge-wrapper">
-      <span class="badge beginner">Beginner Friendly</span>    
-    </div>
-  </div>
-</div>
-
-       <hr class="card-divider" />
-  <!-- Add more .vault-card blocks here -->
-      
-<div class="vault-card">
-  <h3>🖼️ Front-End Dev</h3>
-  <p>HTML, CSS, JS, UI/UX</p>
-
-  <div class="tech-tags">
-    <span>HTML</span><span>UI</span><span>JavaScript</span>
-  </div>
-
-  <a href="https://github.com/smthari/Frontend-Projects"
-     target="_blank"
-     rel="noopener noreferrer"
-     class="preview-btn"
-     data-title="Front-End Dev">🔍 Preview</a>
-
-  <div class="card-meta">
-    <p><strong>Level:</strong> Beginner</p>
-    <p><strong>Relevant Degrees:</strong></p>
-
-    <div class="degree-icons-inline">
-      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="BCA" title="Diploma in Web Dev" />
-      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135789.png" alt="BSc CS" title="BSc CS" />
-    </div>
-
-    <!-- ✅ Badge now correctly scoped inside card-meta -->
-    <div class="badge-wrapper">
-      <span class="badge beginner">Beginner Friendly</span>    
-    </div>
-  </div>
-</div>
-  
-       <hr class="card-divider" />
-  <!-- Add more .vault-card blocks here -->
-   
-<div class="vault-card">
-  <h3>🧠 Node.js</h3>
-  <p>Backend APIs & Auth Workflows</p>
-
-  <div class="tech-tags">
-    <span>Node.js</span><span>Express</span><span>MongoDB</span>
-  </div>
-
-  <a href="https://github.com/bytesleo/nodetomic-api"
-     target="_blank"
-     rel="noopener noreferrer"
-     class="preview-btn"
-     data-title="Node.js">🔍 Preview</a>
-
-  <div class="card-meta">
-    <p><strong>Level:</strong> Intermediate</p>
-    <p><strong>Relevant Degrees:</strong></p>
-
-    <div class="degree-icons-inline">
-      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135768.png" alt="BTech" title="BTech IT" />
-      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135789.png" alt="MCA" title="MCA" />
-    </div>
-
-    <!-- ✅ Badge now correctly scoped inside card-meta -->
-    <div class="badge-wrapper">
-      <span class="badge mca">Recommended for MCA</span>    
-    </div>
-  </div>
-</div>
-  
-       <hr class="card-divider" />
-  <!-- Add more .vault-card blocks here -->
-
-
-<!-- SQL -->
-<div class="vault-card">
-  <h3>🗃️ SQL</h3>
-  <p>Database Queries & Relational Models</p>
-
-  <div class="tech-tags">
-    <span>SQL</span><span>Database</span><span>Joins</span>
-  </div>
-
-  <a href="https://github.com/topics/sql-project"
-     target="_blank"
-     rel="noopener noreferrer"
-     class="preview-btn"
-     data-title="SQL">🔍 Preview</a>
-
-  <div class="card-meta">
-    <p><strong>Level:</strong> Beginner</p>
-    <p><strong>Relevant Degrees:</strong></p>
-
-    <div class="degree-icons-inline">
-      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="BCA" title="BCA" />
-      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135789.png" alt="BSc CS" title="BSc CS" />
-    </div>
-
-    <!-- ✅ Badges now correctly scoped inside card-meta -->
-    <div class="badge-wrapper">
-      <span class="badge beginner">Beginner Friendly</span>
-      <span class="badge mca">Recommended for MCA</span>
-    </div>
-  </div>
-</div>
-
-      <hr class="card-divider" />
-  <!-- Add more .vault-card blocks here -->
-
-<!-- Azure DevOps -->
-      
-<div class="vault-card">
-  <h3>🔧 Azure DevOps</h3>
-  <p>CI/CD Pipelines & Project Automation</p>
-
-  <div class="tech-tags">
-    <span>Azure</span><span>DevOps</span><span>CI/CD</span>
-  </div>
-
-  <a href="https://github.com/Mohitmatte/Complete-CI-CD-Pipeline-with-Azure-DevOps-ArgoCD"
-     target="_blank"
-     rel="noopener noreferrer"
-     class="preview-btn"
-     data-title="Azure DevOps">🔍 Preview</a>
-
-  <div class="card-meta">
-    <p><strong>Level:</strong> Beginner</p>
-    <p><strong>Relevant Degrees:</strong></p>
-
-    <div class="degree-icons-inline">
-      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="BCA" title="BCA" />
-      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135789.png" alt="BSc CS" title="BSc CS" />
-    </div>
-
-    <!-- ✅ Badges now correctly scoped inside card-meta -->
-    <div class="badge-wrapper">
-      <span class="badge beginner">Beginner Friendly</span>
-      <span class="badge devops">Recommended for DevOps Engineers</span>
-    </div>
-  </div>
-</div>
-
-
-      <hr class="card-divider" />
-  <!-- Add more .vault-card blocks here -->
-      
-<!-- Azure Admin -->
-      
-<div class="vault-card">
-  <h3>☁️ Azure Admin</h3>
-  <p>Cloud Infrastructure & Resource Management</p>
-
-  <div class="tech-tags">
-    <span>Azure</span><span>Cloud</span><span>Admin</span>
-  </div>
-
-  <a href="https://github.com/adrianco12/Cloud-Administration-Projects"
-     target="_blank"
-     rel="noopener noreferrer"
-     class="preview-btn"
-     data-title="Azure Admin">🔍 Preview</a>
-
-  <div class="card-meta">
-    <p><strong>Level:</strong> Beginner</p>
-    <p><strong>Relevant Degrees:</strong></p>
-
-    <div class="degree-icons-inline">
-      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="BCA" title="BCA" />
-      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135789.png" alt="BSc CS" title="BSc CS" />
-    </div>
-
-    <!-- ✅ Badge now correctly scoped inside card-meta -->
-    <div class="badge-wrapper">
-      <span class="badge beginner">Beginner Friendly</span>    
-    </div>
-  </div>
-</div>
-
-
-       <hr class="card-divider" />
-  <!-- Add more .vault-card blocks here -->
-
-<!-- Azure Data Factory -->
-<div class="vault-card">
-  <h3>🧪 Azure Data Factory</h3>
-  <p>ETL Pipelines & Data Integration</p>
-
-  <div class="tech-tags">
-    <span>Azure</span><span>Data Factory</span><span>ETL</span>
-  </div>
-
-  <a href="https://github.com/firewind25/Azure-DataFactory-Project-with-Azure-Devops"
-     target="_blank"
-     rel="noopener noreferrer"
-     class="preview-btn"
-     data-title="Azure Data Factory">🔍 Preview</a>
-
-  <div class="card-meta">
-    <p><strong>Level:</strong> Beginner</p>
-    <p class="degree-label">
-    <p><strong>Relevant Degrees:</strong></p>
-    <div class="degree-icons">
-      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="BCA" title="BCA" />
-      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135789.png" alt="BSc CS" title="BSc CS" />
-    </div>
-  </div>
-
-  <div class="badge-wrapper">
-    <span class="badge beginner">Beginner Friendly</span>
-    <span class="badge data">Recommended for Data Engineers</span>
-  </div>
-</div>
-
-       <hr class="card-divider" />
-  <!-- Add more .vault-card blocks here -->
-
-<!-- J2EE -->
-
-<div class="vault-card">
-  <h3>☕ J2EE</h3>
-  <p>Enterprise Applications & Java Frameworks</p>
-
-  <div class="tech-tags">
-    <span>Java</span><span>J2EE</span><span>Servlets</span>
-  </div>
-
-  <a href="https://github.com/chamikathereal/J2EE-Example-Project"
-     target="_blank"
-     rel="noopener noreferrer"
-     class="preview-btn"
-     data-title="J2EE">🔍 Preview</a>
-
-  <div class="card-meta">
-    <p><strong>Level:</strong> Beginner</p>
-    <p class="degree-label">
-    <p><strong>Relevant Degrees:</strong></p>
-    <div class="degree-icons">
-      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="BCA" title="BCA" />
-      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135789.png" alt="BSc CS" title="BSc CS" />
-    </div>
-  </div>
-
-  <div class="badge-wrapper">
-    <span class="badge beginner">Beginner Friendly</span>
-    <span class="badge mca">Recommended for MCA</span>
-  </div>
-</div>
-
-       <hr class="card-divider" />
-  <!-- Add more .vault-card blocks here -->
-
-<!-- PMP -->
-
-<div class="vault-card">
-  <h3>📊 PMP</h3>
-  <p>Project Planning & Stakeholder Management</p>
-
-  <div class="tech-tags">
-    <span>PMP</span><span>Project Management</span><span>Agile</span>
-  </div>
-
-  <a href="https://github.com/PacktPublishing/The-Simplest-Guide-to-Project-Management-and-PMI-PMP-Certification-Exam"
-     target="_blank"
-     rel="noopener noreferrer"
-     class="preview-btn"
-     data-title="PMP">🔍 Preview</a>
-
-  <div class="card-meta">
-    <p><strong>Level:</strong> Beginner</p>
-    <p class="degree-label">
-    <p><strong>Relevant Degrees:</strong></p>
-    <div class="degree-icons">
-      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="MBA" title="MBA" />
-      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135789.png" alt="BBA" title="BBA" />
-    </div>
-  </div>
-
-  <div class="badge-wrapper">
-    <span class="badge beginner">Beginner Friendly</span>
-    <span class="badge analyst">Recommended for Analysts</span>
-  </div>
-</div>
-
-       <hr class="card-divider" />
-  <!-- Add more .vault-card blocks here -->
-
-<!-- Scrum -->
-      
-<div class="vault-card">
-  <h3>🧪 Scrum</h3>
-  <p>Agile Workflow Simulators</p>
-
-  <div class="tech-tags">
-    <span>Scrum</span><span>Sprint</span><span>Backlog</span>
-  </div>
-
-  <a href="https://github.com/jmrashed/agile-project-management"
-     target="_blank"
-     rel="noopener noreferrer"
-     class="preview-btn"
-     data-title="Scrum">🔍 Preview</a>
-
-  <div class="card-meta">
-    <p><strong>Level:</strong> Beginner</p>
-    <p class="degree-label">
-    <p><strong>Relevant Degrees:</strong></p>
-    <div class="degree-icons">
-      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135773.png" alt="MBA" title="MBA" />
-    </div>
-  </div>
-
-  <div class="badge-wrapper">
-    <span class="badge beginner">Beginner Friendly</span>
-    <span class="badge intermediate">Intermediate Level</span>
-  </div>
-</div>
-
-       <hr class="card-divider" />
-  <!-- Add more .vault-card blocks here -->
-
-<!-- Business Analyst -->
-      
-<div class="vault-card">
-  <h3>📊 Business Analyst</h3>
-  <p>Stakeholder Dashboards & KPIs</p>
-
-  <div class="tech-tags">
-    <span>BA</span><span>KPIs</span><span>Insights</span>
-  </div>
-
-  <a href="https://github.com/topics/business-analyst"
-     target="_blank"
-     rel="noopener noreferrer"
-     class="preview-btn"
-     data-title="Business Analyst">🔍 Preview</a>
-
-  <div class="card-meta">
-    <p><strong>Level:</strong> Intermediate</p>
-    <p class="degree-label">
-    <p><strong>Relevant Degrees:</strong></p>
-    <div class="degree-icons">
-      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135773.png" alt="MBA" title="MBA" />
-    </div>
-  </div>
-
-  <div class="badge-wrapper">
-    <span class="badge beginner">Beginner Friendly</span>
-    <span class="badge intermediate">Intermediate Level</span>
-  </div>
-</div>
-
-       <hr class="card-divider" />
-  <!-- Add more .vault-card blocks here -->
-      
-<!-- Mulesoft -->
-      
-<div class="vault-card">
-  <h3>🔗 Mulesoft</h3>
-  <p>API Integration & Data Transformation</p>
-
-  <div class="tech-tags">
-    <span>Mulesoft</span><span>API</span><span>Integration</span>
-  </div>
-
-  <a href="https://github.com/stn1slv/awesome-integration"
-     target="_blank"
-     rel="noopener noreferrer"
-     class="preview-btn"
-     data-title="Mulesoft">🔍 Preview</a>
-
-  <div class="card-meta">
-    <p><strong>Level:</strong> Intermediate</p>
-    <p class="degree-label">
-    <p><strong>Relevant Degrees:</strong></p>
-    <div class="degree-icons">
-      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="BCA" title="BCA" />
-      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135789.png" alt="BSc CS" title="BSc CS" />
-    </div>
-  </div>
-
-  <div class="badge-wrapper">
-    <span class="badge intermediate">Intermediate Level</span>
-    <span class="badge integration">Great for Integration Roles</span>
-  </div>
-</div>
-
-       <hr class="card-divider" />
-  <!-- Add more .vault-card blocks here -->
-      
-  <!-- Right Column: 12 cards -->
-      
-<div class="vault-card">
-  <h3>🧪 Tosca</h3>
-  <p>Model-Based Test Automation</p>
-
-  <div class="tech-tags">
-    <span>Tosca</span><span>Automation</span><span>Testing</span>
-  </div>
-
-  <a href="https://github.com/AnushaTrainer/Tosca-Automation"
-     target="_blank"
-     rel="noopener noreferrer"
-     class="preview-btn"
-     data-title="Tosca">🔍 Preview</a>
-
-  <div class="card-meta">
-    <p><strong>Level:</strong> Intermediate</p>
-    <p class="degree-label">
-    <p><strong>Relevant Degrees:</strong></p>
-    <div class="degree-icons">
-      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="BCA" title="BCA" />
-      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135789.png" alt="BSc CS" title="BSc CS" />
-    </div>
-  </div>
-
-  <div class="badge-wrapper">
-    <span class="badge intermediate">Intermediate Level</span>
-    <span class="badge qa">Recommended for QA Engineers</span>
-  </div>
-</div>
-
-       <hr class="card-divider" />
-  <!-- Add more .vault-card blocks here -->
-      
-<!-- DBT -->
-      
-<div class="vault-card">
-  <h3>🧮 DBT</h3>
-  <p>Transforming Data in the Warehouse</p>
-
-  <div class="tech-tags">
-    <span>DBT</span><span>Data Modeling</span><span>SQL</span>
-  </div>
-
-  <a href="https://github.com/BrunoChiconato/dbt-analytics-pipeline"
-     target="_blank"
-     rel="noopener noreferrer"
-     class="preview-btn"
-     data-title="DBT">🔍 Preview</a>
-
-  <div class="card-meta">
-    <p><strong>Level:</strong> Intermediate</p>
-    <p class="degree-label">
-    <p><strong>Relevant Degrees:</strong></p>
-    <div class="degree-icons">
-      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="BCA" title="BCA" />
-      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135789.png" alt="BSc CS" title="BSc CS" />
-      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135773.png" alt="MBA" title="MBA" />
-    </div>
-  </div>
-
-  <div class="badge-wrapper">
-    <span class="badge intermediate">Intermediate Level</span>
-    <span class="badge analyst">Recommended for Data Analysts</span>
-  </div>
-</div>
-
-       <hr class="card-divider" />
-  <!-- Add more .vault-card blocks here -->
-      
-<!-- Dell Boomi -->
-      
-<div class="vault-card">
-  <h3>🔌 Dell Boomi</h3>
-  <p>Cloud-Based Integration Platform</p>
-
-  <div class="tech-tags">
-    <span>Dell Boomi</span><span>Integration</span><span>ETL</span>
-  </div>
-
-  <a href="https://github.com/andrewburnet/boomi-dev"
-     target="_blank"
-     rel="noopener noreferrer"
-     class="preview-btn"
-     data-title="Dell Boomi">🔍 Preview</a>
-
-  <div class="card-meta">
-    <p><strong>Level:</strong> Intermediate</p>
-    <p class="degree-label">
-    <p><strong>Relevant Degrees:</strong></p>
-    <div class="degree-icons">
-      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="BCA" title="BCA" />
-      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135789.png" alt="BSc CS" title="BSc CS" />
-      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135773.png" alt="MBA" title="MBA" />
-    </div>
-  </div>
-
-  <div class="badge-wrapper">
-    <span class="badge intermediate">Intermediate Level</span>
-    <span class="badge integration">Recommended for Integration Engineers</span>
-  </div>
-</div>
-
-       <hr class="card-divider" />
-  <!-- Add more .vault-card blocks here -->
-      
-<!-- Digital Marketing -->
-      
-<div class="vault-card">
-  <h3>📣 Digital Marketing</h3>
-  <p>SEO, Campaign Strategy & Analytics</p>
-
-  <div class="tech-tags">
-    <span>SEO</span><span>Google Ads</span><span>Social Media</span>
-  </div>
-
-  <a href="https://github.com/Sunny125802/SEO-Analysis-Tool"
-     target="_blank"
-     rel="noopener noreferrer"
-     class="preview-btn"
-     data-title="Digital Marketing">🔍 Preview</a>
-
-  <div class="card-meta">
-    <p><strong>Level:</strong> Beginner</p>
-    <p class="degree-label">
-    <p><strong>Relevant Degrees:</strong></p>
-    <div class="degree-icons">
-      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="MBA" title="MBA" />
-      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135789.png" alt="BBA" title="BBA" />
-    </div>
-  </div>
-
-  <div class="badge-wrapper">
-    <span class="badge beginner">Beginner Friendly</span>
-    <span class="badge marketing">Recommended for Marketing Roles</span>
-  </div>
-</div>
-
-       <hr class="card-divider" />
-  <!-- Add more .vault-card blocks here -->
-      
-<!-- Snowflake -->
-      
-<div class="vault-card">
-  <h3>❄️ Snowflake</h3>
-  <p>Cloud Data Warehousing & Analytics</p>
-
-  <div class="tech-tags">
-    <span>Snowflake</span><span>Data Warehouse</span><span>SQL</span>
-  </div>
-
-  <a href="https://github.com/Biplavkp/SQL_DATA_WAREHOUSE_PROJECT"
-     target="_blank"
-     rel="noopener noreferrer"
-     class="preview-btn"
-     data-title="Snowflake">🔍 Preview</a>
-
-  <div class="card-meta">
-    <p><strong>Level:</strong> Intermediate</p>
-    <p class="degree-label">
-    <p><strong>Relevant Degrees:</strong></p>
-    <div class="degree-icons">
-      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="BCA" title="BCA" />
-      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135789.png" alt="BSc CS" title="BSc CS" />
-      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135773.png" alt="MBA" title="MBA" />
-    </div>
-  </div>
-
-  <div class="badge-wrapper">
-    <span class="badge intermediate">Intermediate Level</span>
-    <span class="badge analyst">Recommended for Data Analysts</span>
-  </div>
-</div>
-
-       <hr class="card-divider" />
-  <!-- Add more .vault-card blocks here -->
-      
-<!-- Generative AI -->
-      
-<div class="vault-card">
-  <h3>🧠 Generative AI</h3>
-  <p>Text, Image & Code Generation Models</p>
-
-  <div class="tech-tags">
-    <span>Generative AI</span><span>LLMs</span><span>Prompt Engineering</span>
-  </div>
-
-  <a href="https://github.com/AI-Training-Projects/generative-ai-for-beginners-Microsoft"
-     target="_blank"
-     rel="noopener noreferrer"
-     class="preview-btn"
-     data-title="Generative AI">🔍 Preview</a>
-
-  <div class="card-meta">
-    <p><strong>Level:</strong> Intermediate</p>
-    <p class="degree-label">
-    <p><strong>Relevant Degrees:</strong></p>
-    <div class="degree-icons">
-      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="BCA" title="BCA" />
-      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135789.png" alt="BSc CS" title="BSc CS" />
-      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135773.png" alt="MBA" title="MBA" />
-    </div>
-  </div>
-
-  <div class="badge-wrapper">
-    <span class="badge intermediate">Intermediate Level</span>
-    <span class="badge ai">Recommended for AI Enthusiasts</span>
-  </div>
-</div>
-
-       <hr class="card-divider" />
-  <!-- Add more .vault-card blocks here -->
-      
-<!-- Prompt Engineering -->
-      
-<div class="vault-card">
-  <h3>📝 Prompt Engineering</h3>
-  <p>Designing Effective Inputs for AI Models</p>
-
-  <div class="tech-tags">
-    <span>Prompt Engineering</span><span>LLMs</span><span>AI</span>
-  </div>
-
-  <a href="https://github.com/dair-ai/Prompt-Engineering-Guide"
-     target="_blank"
-     rel="noopener noreferrer"
-     class="preview-btn"
-     data-title="Prompt Engineering">🔍 Preview</a>
-
-  <div class="card-meta">
-    <p><strong>Level:</strong> Beginner</p>
-    <p class="degree-label">
-    <p><strong>Relevant Degrees:</strong></p>
-    <div class="degree-icons">
-      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="BCA" title="BCA" />
-      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135789.png" alt="BSc CS" title="BSc CS" />
-      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135773.png" alt="MBA" title="MBA" />
-    </div>
-  </div>
-
-  <div class="badge-wrapper">
-    <span class="badge beginner">Beginner Friendly</span>
-    <span class="badge ai">Recommended for AI Enthusiasts</span>
-  </div>
-</div>
-
-       <hr class="card-divider" />
-  <!-- Add more .vault-card blocks here -->
-      
-<!-- Embedded Systems -->
-      
-<div class="vault-card">
-  <h3>🔧 Embedded Systems</h3>
-  <p>Microcontroller Programming & Real-Time Applications</p>
-
-  <div class="tech-tags">
-    <span>Embedded C</span><span>Microcontrollers</span><span>RTOS</span>
-  </div>
-
-  <a href="https://github.com/JobinBiju/Home-Fi"
-     target="_blank"
-     rel="noopener noreferrer"
-     class="preview-btn"
-     data-title="Embedded Systems">🔍 Preview</a>
-
-  <div class="card-meta">
-    <p><strong>Level:</strong> Intermediate</p>
-    <p class="degree-label">
-    <p><strong>Relevant Degrees:</strong></p>
-    <div class="degree-icons">
-      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="BCA" title="BCA" />
-      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135789.png" alt="BSc CS" title="BSc CS" />
-      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135773.png" alt="BTech" title="BTech" />
-    </div>
-  </div>
-
-  <div class="badge-wrapper">
-    <span class="badge intermediate">Intermediate Level</span>
-    <span class="badge hardware">Recommended for Hardware Engineers</span>
-  </div>
-</div>
-
-       <hr class="card-divider" />
-  <!-- Add more .vault-card blocks here -->
-      
-<!-- Python for AI -->
-      
-<div class="vault-card">
-  <h3>🐍 Python for AI</h3>
-  <p>Machine Learning, NLP & Deep Learning with Python</p>
-
-  <div class="tech-tags">
-    <span>Python</span><span>AI</span><span>Machine Learning</span>
-  </div>
-
-  <a href="https://github.com/KalyanM45/AI-Project-Gallery"
-     target="_blank"
-     rel="noopener noreferrer"
-     class="preview-btn"
-     data-title="Python for AI">🔍 Preview</a>
-
-  <div class="card-meta">
-    <p><strong>Level:</strong> Beginner</p>
-    <p class="degree-label">
-    <p><strong>Relevant Degrees:</strong></p>
-    <div class="degree-icons">
-      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="BCA" title="BCA" />
-      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135789.png" alt="BSc CS" title="BSc CS" />
-      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135773.png" alt="MBA" title="MBA" />
-    </div>
-  </div>
-
-  <div class="badge-wrapper">
-    <span class="badge beginner">Beginner Friendly</span>
-    <span class="badge ai">Recommended for AI Learners</span>
-  </div>
-</div>
-
-       <hr class="card-divider" />
-  <!-- Add more .vault-card blocks here -->
-      
-<!-- GCP - Google Cloud Mastery -->
-      
-<div class="vault-card">
-  <h3>☁️ Google Cloud Mastery</h3>
-  <p>Deploy, Scale & Analyze with GCP</p>
-
-  <div class="tech-tags">
-    <span>Google Cloud</span><span>GCP</span><span>Cloud Functions</span>
-  </div>
-
-  <a href="https://dev.to/ivanchiou/cicd-pipeline-using-github-actions-to-deploy-to-google-cloud-platform-gcp-3105"
-     target="_blank"
-     rel="noopener noreferrer"
-     class="preview-btn"
-     data-title="Google Cloud Mastery">🔍 Preview</a>
-
-  <div class="card-meta">
-    <p><strong>Level:</strong> Intermediate</p>
-    <p class="degree-label">
-    <p><strong>Relevant Degrees:</strong></p>
-    <div class="degree-icons">
-      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="BCA" title="BCA" />
-      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135789.png" alt="BSc CS" title="BSc CS" />
-      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135773.png" alt="MBA" title="MBA" />
-    </div>
-  </div>
-
-  <div class="badge-wrapper">
-    <span class="badge intermediate">Intermediate Level</span>
-    <span class="badge mca">Recommended for IoT Engineers</span>
-  </div>
-</div>
-
-<hr class="card-divider" />
-
-<div class="marquee-container">
-  <div class="marquee-track">
-    💡 Technologies Covered: HTML • CSS • JavaScript • MongoDB • Express • CI/CD • ETL • Agile • API Integration • AI • NLP • RTOS • Cloud Functions • SEO • Campaign Strategy • Data Modeling • Microcontrollers 🔧
-  </div>
-</div>
 
   </main>
+
+  <!-- FAQ Toggle Script -->
+  <script>
+    document.querySelectorAll('.faq-question').forEach(q => {
+      q.addEventListener('click', () => {
+        const answer = q.nextElementSibling;
+        const isOpen = answer.style.display === 'block';
+        answer.style.display = isOpen ? 'none' : 'block';
+      });
+    });
+  </script>
 </body>
 </html>
