@@ -2,19 +2,19 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>OpenVault – Final Year Projects for ₹199</title>
+  <title>OpenVault – Refund & Cancellation Policy</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Unlock 1000+ ready-to-use projects for just ₹199. Perfect for final-year students. Includes Web, App, AI, ML, IoT & more.">
-  <meta name="keywords" content="final year projects, student vault, openvault.in, React, ML, AI, IoT">
+  <meta name="description" content="Refund and cancellation policy for OpenVault digital products and services.">
+  <meta name="keywords" content="refund policy, cancellation policy, OpenVault, digital products">
   <meta name="author" content="OpenVault by Mazhar Mecci">
-  <meta property="og:title" content="OpenVault – 1000+ Ready Projects for ₹199">
-  <meta property="og:description" content="Instant access to deployment-ready projects with full source code.">
-  <meta property="og:url" content="https://openvault.in/">
+  <meta property="og:title" content="OpenVault – Refund & Cancellation Policy">
+  <meta property="og:description" content="Understand how refunds and cancellations are handled for your purchases on OpenVault.">
+  <meta property="og:url" content="https://openvault.in/forms/refund.html">
   <meta property="og:type" content="website">
-  <link rel="canonical" href="https://openvault.in/" />
+  <link rel="canonical" href="https://openvault.in/forms/refund.html" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../styles/style.css" />  
-  <!-- Razorpay Checkout -->
+  <link rel="stylesheet" href="../styles/style.css" />
+  <!-- Razorpay Checkout (not strictly needed here, but kept for consistency) -->
   <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 
   <!-- Google tag (gtag.js) -->
@@ -27,94 +27,106 @@
   </script>
 </head>
 <body>
-<section class="page-section refund-section">
-  <div class="form-card refund-card">
-    <header class="form-header">
-      <h1>Refund &amp; Cancellation Policy</h1>
-      <p class="form-subtitle">
-        We work hard to deliver high-quality digital products and services. Please review the policy below to understand how refunds and cancellations are handled for your purchases on OpenVault.
-      </p>
-    </header>
+  <!-- Injected Navbar (if you use it on forms pages) -->
+  <div id="navbar-placeholder"></div>
+  <script src="../scripts/navbar.js" defer></script>
 
-    <form class="refund-form" aria-label="OpenVault Refund and Cancellation Policy">
-      <div class="terms-scrollable">
-        <h2>1. Digital Products</h2>
-        <p>
-          As our offerings are primarily digital in nature, access is granted immediately after a successful payment.
-          Accordingly, once a digital product has been delivered, activated, or downloaded, we are unable to provide refunds, exchanges, or credits.
+  <section class="page-section refund-section">
+    <div class="form-card refund-card">
+      <header class="form-header">
+        <h1>Refund &amp; Cancellation Policy</h1>
+        <p class="form-subtitle">
+          We work hard to deliver high-quality digital products and services. Please review the policy below to understand how refunds and cancellations are handled for your purchases on OpenVault.
         </p>
-        <p>
-          Please review the product details, demo information, and any available previews carefully before completing your purchase.
-        </p>
+      </header>
 
-        <h2>2. Service Cancellations</h2>
-        <p>
-          For services and subscription-based offerings, cancellation requests must be raised within 24 hours of purchase or activation.
-          Requests submitted after this window will not be eligible for a refund.
-        </p>
-        <p>
-          In certain cases, OpenVault may allow rescheduling or adjustments instead of a full refund, at our discretion and subject to service type and usage.
-        </p>
+      <form
+        id="refund-form"
+        class="refund-form"
+        aria-label="OpenVault Refund and Cancellation Policy"
+      >
+        <div class="terms-scrollable">
+          <h2>1. Digital Products</h2>
+          <p>
+            As our offerings are primarily digital in nature, access is granted immediately after a successful payment.
+            Accordingly, once a digital product has been delivered, activated, or downloaded, we are unable to provide refunds, exchanges, or credits.
+          </p>
+          <p>
+            Please review the product details, demo information, and any available previews carefully before completing your purchase.
+          </p>
 
-        <h2>3. Payment Disputes &amp; Support</h2>
-        <p>
-          If you believe a payment has been made in error, or you notice an unexpected charge, please contact our billing team as soon as possible so that we can review the transaction details.
-        </p>
-        <p>
-          You can reach us at
-          <a href="mailto:billing@openvault.in">billing@openvault.in</a>
-          with your registered email address, transaction ID, and a short description of the issue.
-        </p>
+          <h2>2. Service Cancellations</h2>
+          <p>
+            For services and subscription-based offerings, cancellation requests must be raised within 24 hours of purchase or activation.
+            Requests submitted after this window will not be eligible for a refund.
+          </p>
+          <p>
+            In certain cases, OpenVault may allow rescheduling or adjustments instead of a full refund, at our discretion and subject to service type and usage.
+          </p>
 
-        <h2>4. Razorpay Transactions</h2>
-        <p>
-          All online payments on OpenVault are processed securely through Razorpay or other approved payment gateways.
-          If a refund is approved under this policy or as an exception, it will be initiated only via the original payment method used for the transaction, subject to the gateway’s timelines and processes.
-        </p>
-        <p>
-          OpenVault is not responsible for delays caused by banking partners or payment gateways, but we will provide reasonable support and status updates where possible.
-        </p>
+          <h2>3. Payment Disputes &amp; Support</h2>
+          <p>
+            If you believe a payment has been made in error, or you notice an unexpected charge, please contact our billing team as soon as possible so that we can review the transaction details.
+          </p>
+          <p>
+            You can reach us at
+            <a href="mailto:billing@openvault.in">billing@openvault.in</a>
+            with your registered email address, transaction ID, and a short description of the issue.
+          </p>
 
-        <h2>5. Policy Updates</h2>
-        <p>
-          OpenVault may update this Refund &amp; Cancellation Policy from time to time to reflect changes in our services, payment partners, or regulatory requirements.
-          Any updates will be effective from the date they are published on this page.
-        </p>
-      </div>
+          <h2>4. Razorpay Transactions</h2>
+          <p>
+            All online payments on OpenVault are processed securely through Razorpay or other approved payment gateways.
+            If a refund is approved under this policy or as an exception, it will be initiated only via the original payment method used for the transaction, subject to the gateway’s timelines and processes.
+          </p>
+          <p>
+            OpenVault is not responsible for delays caused by banking partners or payment gateways, but we will provide reasonable support and status updates where possible.
+          </p>
 
-      <div class="terms-acknowledge">
-        <label class="checkbox-label">
-          <input type="checkbox" id="refund-checkbox" required>
-          <span>I have read and understand the OpenVault Refund Policy.</span>
-        </label>
-        <button type="submit" class="primary-button">
-          Continue to OpenVault
-        </button>
-      </div>
-    </form>
-  </div>
-</section>
+          <h2>5. Policy Updates</h2>
+          <p>
+            OpenVault may update this Refund &amp; Cancellation Policy from time to time to reflect changes in our services, payment partners, or regulatory requirements.
+            Any updates will be effective from the date they are published on this page.
+          </p>
+        </div>
 
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const form = document.getElementById("refund-form");
-    const checkbox = document.getElementById("refund-checkbox");
+        <div class="terms-acknowledge">
+          <label class="checkbox-label">
+            <input type="checkbox" id="refund-checkbox" required>
+            <span>I have read and understand the OpenVault Refund Policy.</span>
+          </label>
+          <button type="submit" class="primary-button">
+            Continue to OpenVault
+          </button>
+        </div>
+      </form>
+    </div>
+  </section>
 
-    if (!form || !checkbox) return;
+  <footer class="vault-footer">
+    <p>© 2021–2025 | openvault.in | All rights reserved</p>
+  </footer>
 
-    form.addEventListener("submit", function (e) {
-      e.preventDefault();
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const form = document.getElementById("refund-form");
+      const checkbox = document.getElementById("refund-checkbox");
 
-      if (!checkbox.checked) {
-        if (checkbox.reportValidity) {
-          checkbox.reportValidity();
+      if (!form || !checkbox) return;
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        if (!checkbox.checked) {
+          if (checkbox.reportValidity) {
+            checkbox.reportValidity();
+          }
+          return;
         }
-        return;
-      }
 
-      window.location.href = "https://openvault.in/";
+        window.location.href = "https://openvault.in/";
+      });
     });
-  });
-</script>
+  </script>
 </body>
 </html>
