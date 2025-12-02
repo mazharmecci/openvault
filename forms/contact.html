@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Us – OpenVault</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+  <!-- Injected Navbar -->
+  <div id="navbar-placeholder"></div>
+  <script src="scripts/navbar.js" defer></script>
+
+  <main class="page-container">
+    <h1>📩 Contact Us</h1>
+    <p>We’d love to hear from you! Fill out the form below and we’ll get back to you soon.</p>
+
+    <form action="mailto:rabbanimecci@gmail.com" method="post" enctype="text/plain" class="contact-form">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+  </main>
+
+  <footer class="vault-footer">
+    <p>© 2021–2025 | openvault.in | All rights reserved</p>
+  </footer>
+</body>
+</html>
