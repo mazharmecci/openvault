@@ -999,3 +999,14 @@ h3 {
   color: #fff;
   font-weight: 600;
 }
+
+.refund-section {
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.form-card.refund-card {
+  max-width: 900px;
+  width: 100%;
+}
