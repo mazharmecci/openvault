@@ -16,25 +16,3 @@ filterButtons.forEach(btn => {
     });
   });
 });
-
-// 📈 Progress Tracking
-courseCards.forEach(card => {
-  const titleElement = card.querySelector("h3");
-  if (!titleElement) return;
-
-  const title = titleElement.textContent.trim().toLowerCase();
-  const key = `viewed-${title}`;
-
-  const badge = document.createElement("div");
-  badge.className = "progress-badge";
-
-  const isViewed = localStorage.getItem(key);
-  badge.textContent = isViewed ? "✅ Viewed" : "🔓 Not Viewed";
-  card.appendChild(badge);
-
-  card.addEventListener("click", () => {
-    localStorage.setItem(key, "true");
-    badge.textContent = "✅ Viewed";
-    badge.classList.add("unlocked");
-  });
-});
