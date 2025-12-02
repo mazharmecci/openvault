@@ -51,8 +51,24 @@
     <p class="trust-note">Secure UPI / Card payments via Razorpay. Instant access, no login.</p>
   </section>
 
+  <!-- Hero -->
+  <section class="hero-text">
+    <h1 class="vault-heading"><span class="emoji">🔥</span> Opencode Vault</h1>
+    <h2 class="hero-subtitle">1000+ Final Year Software Projects. Submit in 24 Hours.</h2>
+    <h2 class="price-flash">@Just ₹<strong>199</strong>/-</h2>
+
+    <h3 class="offer-title">⚡ Limited-Time Offer: ₹199 Unlock Ends In</h3>
+    <div id="countdown-timer">00:00:00</div>
+    <p class="note">*Price increases to ₹299 after timer ends</p>
+
+    <div class="hero-cta-group">
+      <button class="rzp-unlock-btn primary-cta">🔓 Unlock All Projects for ₹199</button>
+      <p class="trust-note">Secure UPI / Card payments via Razorpay. Instant access, no login.</p>
+    </div>
+  </section>
+
   <main>
-    <!-- Key benefits -->
+    <!-- Key benefits right under hero -->
     <section class="features">
       <h2>Why Opencode Vault?</h2>
       <ul class="feature-list">
@@ -82,7 +98,7 @@
       </div>
     </section>
 
-    <!-- Testimonials (short) -->
+    <!-- Testimonials -->
     <section class="testimonials-brolly">
       <h2>💬 What Students Say</h2>
       <div class="testimonial-grid">
@@ -108,10 +124,11 @@
       <p class="note">*Secure payment via Razorpay or UPI</p>
     </section>
 
-    <!-- Explore inside the Vault -->
+    <!-- Explore inside the Vault (with filters + progress badges) -->
     <section class="course-showcase" id="vault-explore">
       <h2 class="course-heading">📚 Explore Inside the Vault</h2>
 
+      <!-- Filter buttons -->
       <div class="filter-buttons">
         <button class="filter-btn active" data-filter="all">All</button>
         <button class="filter-btn" data-filter="web">Web / Frontend</button>
@@ -121,9 +138,96 @@
         <button class="filter-btn" data-filter="other">Other Stacks</button>
       </div>
 
+      <!-- Cards (each must have data-category and one h3 for progress tracking) -->
       <div class="course-grid">
-        <!-- … all your course-card divs unchanged … -->
-        <!-- Keep the same markup you already have for course cards -->
+        <div class="course-card" data-category="web">
+          <h3>React JS</h3>
+          <span>Front-end mastery</span>
+        </div>
+        <div class="course-card" data-category="web">
+          <h3>Front-End Dev</h3>
+          <span>HTML, CSS, JS, UI/UX</span>
+        </div>
+        <div class="course-card" data-category="backend">
+          <h3>Node.js</h3>
+          <span>Backend with JavaScript</span>
+        </div>
+        <div class="course-card" data-category="backend">
+          <h3>SQL</h3>
+          <span>Database management</span>
+        </div>
+        <div class="course-card" data-category="cloud">
+          <h3>Azure DevOps</h3>
+          <span>CI/CD pipelines</span>
+        </div>
+        <div class="course-card" data-category="cloud">
+          <h3>Azure Admin</h3>
+          <span>Cloud infrastructure</span>
+        </div>
+        <div class="course-card" data-category="cloud">
+          <h3>Azure Data Factory</h3>
+          <span>ETL workflows</span>
+        </div>
+        <div class="course-card" data-category="backend">
+          <h3>J2EE</h3>
+          <span>Enterprise Java apps</span>
+        </div>
+        <div class="course-card" data-category="other">
+          <h3>PMP</h3>
+          <span>Project management</span>
+        </div>
+        <div class="course-card" data-category="other">
+          <h3>Scrum</h3>
+          <span>Agile workflows</span>
+        </div>
+        <div class="course-card" data-category="other">
+          <h3>Business Analyst</h3>
+          <span>Stakeholder insights</span>
+        </div>
+        <div class="course-card" data-category="backend">
+          <h3>Mulesoft</h3>
+          <span>API integration</span>
+        </div>
+        <div class="course-card" data-category="backend">
+          <h3>Tosca</h3>
+          <span>Automated testing</span>
+        </div>
+        <div class="course-card" data-category="backend">
+          <h3>DBT</h3>
+          <span>Analytics pipelines</span>
+        </div>
+        <div class="course-card" data-category="backend">
+          <h3>Dell Boomi</h3>
+          <span>Cloud integrations</span>
+        </div>
+        <div class="course-card" data-category="other">
+          <h3>Digital Marketing</h3>
+          <span>SEO, SEM, campaigns</span>
+        </div>
+        <div class="course-card" data-category="ml">
+          <h3>Snowflake</h3>
+          <span>Cloud data warehousing</span>
+        </div>
+        <div class="course-card" data-category="ml">
+          <h3>Generative AI</h3>
+          <span>AI model training</span>
+        </div>
+        <div class="course-card" data-category="ml">
+          <h3>Prompt Engineering</h3>
+          <span>Optimized AI prompts</span>
+        </div>
+        <div class="course-card" data-category="backend">
+          <h3>Embedded Systems</h3>
+          <span>Hardware-software fusion</span>
+        </div>
+        <div class="course-card" data-category="ml">
+          <h3>Python for AI</h3>
+          <span>ML-ready Python</span>
+        </div>
+        <div class="course-card" data-category="cloud">
+          <h3>GCP</h3>
+          <span>Google Cloud mastery</span>
+        </div>
       </div>
 
       <button class="rzp-unlock-btn">🔓 Unlock Projects for ₹199</button>
@@ -134,14 +238,116 @@
     <section class="project-themes">
       <h2 class="themes-heading">🎯 Real-World Projects</h2>
       <div class="themes-table">
-        <!-- … theme-row items unchanged … -->
+        <div class="theme-row">
+          <span><strong>👗 Fashion</strong></span>
+          <span>Outfit recommender, virtual try-on</span>
+          <span>Style meets AI</span>
+        </div>
+        <div class="theme-row">
+          <span><strong>🏠 Home & Living</strong></span>
+          <span>Smart home automation, IoT control</span>
+          <span>Perfect for IoT majors</span>
+        </div>
+        <div class="theme-row">
+          <span><strong>💸 Deals & Offers</strong></span>
+          <span>Coupon engine, cashback logic</span>
+          <span>E-commerce meets data</span>
+        </div>
+        <div class="theme-row">
+          <span><strong>✈️ Travel</strong></span>
+          <span>Trip planner, route optimizer</span>
+          <span>Real-world UX</span>
+        </div>
+        <div class="theme-row">
+          <span><strong>🎬 Entertainment</strong></span>
+          <span>OTT dashboard, movie aggregator</span>
+          <span>React + ML combo</span>
+        </div>
+        <div class="theme-row">
+          <span><strong>🛒 Shopping</strong></span>
+          <span>Cart system, wishlist animations</span>
+          <span>Frontend mastery</span>
+        </div>
+        <div class="theme-row">
+          <span><strong>📱 Mobile Apps</strong></span>
+          <span>QR scanner, student task app</span>
+          <span>Android dev skills</span>
+        </div>
+        <div class="theme-row">
+          <span><strong>🤖 AI & ML</strong></span>
+          <span>Chatbot, sentiment analysis</span>
+          <span>Final-year impact</span>
+        </div>
       </div>
     </section>
 
     <!-- Why students love -->
     <section class="testimonials-brolly">
       <h2>🔥 Why Students Love the Opencode Vault</h2>
-      <!-- … testimonial-card blocks unchanged … -->
+
+      <div class="testimonial-card">
+        <div class="card-header">
+          <img src="icons/code.png" alt="Code Icon" />
+          <strong>1000+ Software Projects</strong>
+        </div>
+        <hr class="vault-divider" />
+        <p>
+          Ready-to-deploy code for final-year submissions.<br>
+          Includes full README and download links.<br>
+          Ideal for MCA, B.Tech and BSc students.
+        </p>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="card-header">
+          <img src="icons/rocket.png" alt="Rocket Icon" />
+          <strong>Instant Access</strong>
+        </div>
+        <hr class="vault-divider" />
+        <p>
+          Unlock projects in 60 seconds after payment.<br>
+          No login required—instant redirect to the vault.<br>
+          Works on mobile and desktop.
+        </p>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="card-header">
+          <img src="icons/stack.png" alt="Stack Icon" />
+          <strong>20+ Tech Stacks</strong>
+        </div>
+        <hr class="vault-divider" />
+        <p>
+          Web, App, ML, AI, IoT, Python, React and more.<br>
+          Covers full-stack, cloud, and data domains.<br>
+          Great for resume and viva prep.
+        </p>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="card-header">
+          <img src="icons/star.png" alt="Star Icon" />
+          <strong>Student Rated 4.9★</strong>
+        </div>
+        <hr class="vault-divider" />
+        <p>
+          Trusted by thousands of students.<br>
+          Rated for clarity, speed and real-world impact.
+        </p>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="card-header">
+          <img src="icons/demo.png" alt="Demo Icon" />
+          <strong>Free Preview</strong>
+        </div>
+        <hr class="vault-divider" />
+        <p>
+          See sample projects before unlocking the full vault.<br>
+          Preview includes screenshots, tech stack and README.
+        </p>
+      </div>
+
       <button class="rzp-unlock-btn">🔓 Unlock Projects for ₹199</button>
       <p class="note">*Secure payment via Razorpay or UPI</p>
     </section>
@@ -150,7 +356,46 @@
     <section class="course-showcase">
       <h2 class="course-heading">🏢 Companies Hiring Your Stack</h2>
       <div class="course-grid">
-        <!-- … company course-card blocks unchanged … -->
+        <div class="course-card">
+          <img src="icons/Microsoft.png" alt="Microsoft" class="company-logo" />
+          <span>React & Azure</span>
+        </div>
+        <div class="course-card">
+          <img src="icons/Infosys.png" alt="Infosys" class="company-logo" />
+          <span>React & Node.js</span>
+        </div>
+        <div class="course-card">
+          <img src="icons/IBM.png" alt="IBM" class="company-logo" />
+          <span>Full-stack JS</span>
+        </div>
+        <div class="course-card">
+          <img src="icons/tcs.jpg" alt="TCS" class="company-logo" />
+          <span>React & DevOps</span>
+        </div>
+        <div class="course-card">
+          <img src="icons/wipro.jpg" alt="Wipro" class="company-logo" />
+          <span>React & Node.js</span>
+        </div>
+        <div class="course-card">
+          <img src="icons/HCLTech.png" alt="HCLTech" class="company-logo" />
+          <span>React & Tailwind</span>
+        </div>
+        <div class="course-card">
+          <img src="icons/Deloitte.png" alt="Deloitte" class="company-logo" />
+          <span>JS frameworks</span>
+        </div>
+        <div class="course-card">
+          <img src="icons/capgemini.png" alt="Capgemini" class="company-logo" />
+          <span>React & GitHub workflows</span>
+        </div>
+        <div class="course-card">
+          <img src="icons/Cognizant.jpeg" alt="Cognizant" class="company-logo" />
+          <span>React & UI optimization</span>
+        </div>
+        <div class="course-card">
+          <img src="icons/genpact.jpg" alt="Genpact" class="company-logo" />
+          <span>JS & analytics</span>
+        </div>
       </div>
 
       <button class="rzp-unlock-btn">🔓 Unlock Projects for ₹199</button>
@@ -161,7 +406,26 @@
     <section id="tariff-card" class="tariff-section">
       <h2>📋 Freelance Tariff Card</h2>
       <div class="tariff-grid">
-        <!-- … tariff-card blocks unchanged … -->
+        <div class="tariff-card">
+          <h3>Frontend Essentials</h3>
+          <p>HTML, Tailwind, React, UI/UX</p>
+          <strong>₹2,999+</strong>
+        </div>
+        <div class="tariff-card">
+          <h3>Full-Stack Web App</h3>
+          <p>React + Node.js + MongoDB</p>
+          <strong>₹6,499+</strong>
+        </div>
+        <div class="tariff-card">
+          <h3>AI/ML Projects</h3>
+          <p>Python, NLP, Deep Learning</p>
+          <strong>₹7,999+</strong>
+        </div>
+        <div class="tariff-card">
+          <h3>Custom Dashboards</h3>
+          <p>React + Azure + API Integration</p>
+          <strong>₹5,999+</strong>
+        </div>
       </div>
     </section>
 
@@ -170,27 +434,18 @@
       <p>
         From concept to code, get production-ready Web, App, ML and AI solutions tailored to your needs.
       </p>
-      <a
-        href="https://wa.me/919945266755?text=Hi%20Mazhar%2C%20I%20need%20a%20custom%20project"
-        target="_blank"
-        class="rzp-button contact-whatsapp"
-      >
-        💬 WhatsApp Me
+      <a href="https://wa.me/919945266755?text=Hi%20Mazhar%2C%20I%20need%20a%20custom%20project"
+         target="_blank"
+         class="rzp-button contact-whatsapp">
+         💬 WhatsApp Me
       </a>
     </section>
+
   </main>
 
-  <!-- Single footer -->
   <footer class="vault-footer">
     <p>© 2021–2025 | openvault.in | All rights reserved</p>
-    <p>
-      <a href="terms.html">Terms</a> |
-      <a href="privacy.html">Privacy</a> |
-      <a href="refund.html">Refund</a> |
-      <a href="disclaimer.html">Disclaimer</a> |
-      <a href="contact.html">Contact</a>
-    </p>
-    <p><img src="assets/images/india-flag.png" alt="India Flag" class="flag-icon" /></p>
+    <p><img src="icons/india-flag.png" alt="India Flag" class="flag-icon" /></p>
   </footer>
 
   <!-- Main script: countdown + Razorpay + filters + progress -->
@@ -199,6 +454,7 @@
     const HOURS_LIMIT = 48;
     let isLateAccess = false;
 
+    // ⏳ Initialize Countdown
     function initCountdown() {
       let countdownTarget = localStorage.getItem(COUNTDOWN_KEY);
       if (!countdownTarget) {
@@ -241,15 +497,17 @@
       setInterval(updateCountdown, 1000);
     }
 
+    // 💳 Razorpay Payment Handler (client-side only)
     function launchRazorpay(amount, description, redirectUrl, themeColor = "#ff6600") {
       const options = {
-        key: "rzp_test_1DP5mmOlF5G5ag",
+        key: "rzp_test_1DP5mmOlF5G5ag", // TODO: replace with your live key in production
         amount: amount,
         currency: "INR",
         name: "OPENVAULT",
         description: description,
         theme: { color: themeColor },
         handler: function (response) {
+          // Basic success handler; for real apps you should verify payment on server. [web:32]
           console.log("Payment success", response);
           window.location.href = redirectUrl;
         },
@@ -269,17 +527,19 @@
       rzp.open();
     }
 
+    // Attach Unlock Button Handlers
     function attachUnlockHandlers() {
       document.querySelectorAll(".rzp-unlock-btn").forEach(button => {
         button.addEventListener("click", (e) => {
           e.preventDefault();
-          const amount = isLateAccess ? 29900 : 19900;
+          const amount = isLateAccess ? 29900 : 19900; // ₹299 or ₹199 in paise
           const description = isLateAccess ? "Late Access to Vault" : "Access to Software Project Bundle";
           launchRazorpay(amount, description, "vault.html", "#ff6600");
         });
       });
     }
 
+    // 🔄 Filter Logic for stacks
     function initFilters() {
       const filterButtons = document.querySelectorAll(".filter-btn");
       const courseCards = document.querySelectorAll(".course-showcase .course-card");
@@ -301,6 +561,7 @@
       });
     }
 
+    // 📈 Progress Tracking on vault course cards
     function initProgressBadges() {
       const courseCards = document.querySelectorAll("#vault-explore .course-card");
 
