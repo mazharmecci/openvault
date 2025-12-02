@@ -1035,3 +1035,106 @@ h3 {
   max-width: 900px;
   width: 100%;
 }
+
+/* Business page layout – match contact look */
+.business-page {
+  background: #f7e2c4;           /* light biscuit */
+  padding: 40px 16px 60px;
+}
+
+/* Make hero banner sit on top of biscuit without inline overrides */
+.hero-business {
+  background: linear-gradient(135deg, #0052cc, #00bfff);
+  color: #ffffff;
+  padding: 70px 20px;
+  text-align: center;
+}
+
+/* Generic section card feel (used by business sections) */
+.business-page .about-section,
+.business-page .services-section,
+.business-page .who-we-serve,
+.business-page .benefits-section,
+.business-page .how-it-works {
+  max-width: 1080px;
+  margin: 24px auto;
+  padding: 32px 20px;
+  background: #fff7ea;           /* light card on biscuit */
+  border-radius: 16px;
+  box-shadow: 0 10px 26px rgba(0,0,0,0.08);
+  color: #111827;
+}
+
+/* Headings and text */
+.business-page h1,
+.business-page h2,
+.business-page h3 {
+  color: #111827;
+}
+
+.business-page p,
+.business-page li {
+  color: #374151;
+}
+
+/* Service cards inside grids */
+.business-page .service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 18px;
+  margin-top: 18px;
+}
+
+.business-page .service-card {
+  background: #fffdf7;
+  border-radius: 14px;
+  padding: 18px 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.04);
+}
+
+/* CTA strip at bottom */
+.business-page .cta-section {
+  background: #0b1120;
+  color: #ffffff;
+  padding: 50px 20px;
+  text-align: center;
+  margin: 32px auto 0;
+}
+
+.business-page .cta-section p {
+  color: #e5e7eb;
+}
+
+/* Buttons reused on business/contact */
+.cta-button.primary-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 18px;
+  border-radius: 999px;
+  border: none;
+  background: #3b2716;           /* dark chocolate */
+  color: #ffffff;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 10px 24px rgba(55,34,16,0.35);
+  transition: transform 0.12s ease, box-shadow 0.12s ease, filter 0.12s ease;
+}
+
+.cta-button.primary-cta:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.05);
+  box-shadow: 0 14px 32px rgba(55,34,16,0.45);
+}
+
+/* Mobile spacing */
+@media (max-width: 640px) {
+  .business-page .about-section,
+  .business-page .services-section,
+  .business-page .who-we-serve,
+  .business-page .benefits-section,
+  .business-page .how-it-works {
+    padding: 24px 16px;
+    border-radius: 14px;
+  }
+}
