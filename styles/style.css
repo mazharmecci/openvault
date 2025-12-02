@@ -796,14 +796,21 @@ h3 {
     right: 0;
     width: 220px;
     padding: 16px;
+    background-color: #fff;
     border: 1px solid #eee;
-    background-color: #fff; /* ✅ White background */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
     z-index: 1000;
+
+    /* Slide-in setup */
+    transform: translateX(100%);
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
   }
 
   .nav-links.active {
     display: flex;
+    transform: translateX(0);
+    opacity: 1;
   }
 
   .nav-links li a {
