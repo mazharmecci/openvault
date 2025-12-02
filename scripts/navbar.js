@@ -7,13 +7,21 @@ document.addEventListener("DOMContentLoaded", () => {
     .then(html => {
       placeholder.innerHTML = html;
 
-      // Attach toggle logic after injection
       const toggle = document.getElementById("nav-toggle");
       const links = document.getElementById("nav-links");
 
       if (toggle && links) {
+        // Toggle menu on hamburger click
         toggle.addEventListener("click", () => {
           links.classList.toggle("active");
+        });
+
+        // Auto-collapse on link click
+        const navItems = links.querySelectorAll("a");
+        navItems.forEach(link => {
+          link.addEventListener("click", () => {
+            links.classList.remove("active");
+          });
         });
       }
     })
