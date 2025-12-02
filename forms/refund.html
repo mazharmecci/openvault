@@ -84,8 +84,8 @@
 
       <div class="terms-acknowledge">
         <label class="checkbox-label">
-          <input type="checkbox" id="privacy-checkbox" required>
-          <span>I have read and understand the OpenVault Privacy Policy.</span>
+          <input type="checkbox" id="refund-checkbox" required>
+          <span>I have read and understand the OpenVault Refund Policy.</span>
         </label>
         <button type="submit" class="primary-button">
           Continue to OpenVault
@@ -97,8 +97,8 @@
 
 <script>
   document.addEventListener("DOMContentLoaded", function () {
-    const form = document.getElementById("privacy-form");
-    const checkbox = document.getElementById("privacy-checkbox");
+    const form = document.getElementById("refund-form");
+    const checkbox = document.getElementById("refund-checkbox");
 
     if (!form || !checkbox) return;
 
@@ -106,7 +106,9 @@
       e.preventDefault();
 
       if (!checkbox.checked) {
-        checkbox.reportValidity && checkbox.reportValidity();
+        if (checkbox.reportValidity) {
+          checkbox.reportValidity();
+        }
         return;
       }
 
