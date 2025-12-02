@@ -699,26 +699,61 @@ h3 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #fff;
+  background: #fff;
   padding: 12px 24px;
   border-bottom: 1px solid #eee;
   font-family: 'Inter', sans-serif;
+  position: relative;
 }
+
 .nav-logo img {
   height: 40px;
 }
+
 .nav-links {
   list-style: none;
   display: flex;
   gap: 20px;
 }
+
 .nav-links li a {
   text-decoration: none;
   color: #333;
   font-weight: 600;
 }
+
 .nav-links li a:hover {
   color: #ff6600;
+}
+
+/* Hamburger icon hidden on desktop */
+.nav-toggle {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #fff;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    border: 1px solid #eee;
+    padding: 10px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
 }
 
 .page-container {
