@@ -695,6 +695,57 @@ h3 {
   color: #28a745;
 }
 
+.nav-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+}
+
+.nav-brand-rest {
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: lowercase;
+  color: #3a2614;
+}
+
+.nav-logo-wrap {
+  width: 24px;       /* fingertip size */
+  height: 24px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 20%, #fff7ea, #f1c27d);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow:
+    0 3px 8px rgba(0, 0, 0, 0.22),
+    0 0 0 1px rgba(255, 255, 255, 0.7);
+  overflow: hidden;
+}
+
+.nav-logo-spin {
+  width: 70%;
+  height: 70%;
+  object-fit: contain;
+  animation: ov-spin 9s linear infinite;
+  transform-origin: 50% 50%;
+}
+
+/* pause / play on hover (optional) */
+.nav-logo-spin {
+  animation-play-state: paused;
+}
+.nav-brand:hover .nav-logo-spin {
+  animation-play-state: running;
+}
+
+/* shared keyframes (put once in your CSS) */
+@keyframes ov-spin {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
 /* Navbar */
 .vault-navbar {
   display: flex;
