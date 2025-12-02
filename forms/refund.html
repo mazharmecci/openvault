@@ -84,15 +84,35 @@
 
       <div class="terms-acknowledge">
         <label class="checkbox-label">
-          <input type="checkbox" required>
-          <span>I have read and understand the Refund &amp; Cancellation Policy.</span>
+          <input type="checkbox" id="privacy-checkbox" required>
+          <span>I have read and understand the OpenVault Privacy Policy.</span>
         </label>
         <button type="submit" class="primary-button">
-          Continue to Payment
+          Continue to OpenVault
         </button>
       </div>
     </form>
   </div>
-</section>  
+</section>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("privacy-form");
+    const checkbox = document.getElementById("privacy-checkbox");
+
+    if (!form || !checkbox) return;
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      if (!checkbox.checked) {
+        checkbox.reportValidity && checkbox.reportValidity();
+        return;
+      }
+
+      window.location.href = "https://openvault.in/";
+    });
+  });
+</script>
 </body>
 </html>
