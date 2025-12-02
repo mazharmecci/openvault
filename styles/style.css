@@ -1021,3 +1021,14 @@ h3 {
   max-width: 900px;
   width: 100%;
 }
+
+.disclaimer-section {
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.form-card.disclaimer-card {
+  max-width: 900px;
+  width: 100%;
+}
