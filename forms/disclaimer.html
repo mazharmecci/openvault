@@ -90,38 +90,38 @@
       </div>
 
       <div class="terms-acknowledge">
-        <label class="checkbox-label">
-          <input type="checkbox" id="disclaimer-checkbox" required>
-          <span>I have read and understand the OpenVault Disclaimer.</span>
-        </label>
-        <button type="submit" class="primary-button">
-          Continue to OpenVault
-        </button>
-      </div>
-    </form>
-  </div>
-</section>
-
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const form = document.getElementById("disclaimer-form");
-    const checkbox = document.getElementById("disclaimer-checkbox");
-
-    if (!form || !checkbox) return;
-
-    form.addEventListener("submit", function (e) {
-      e.preventDefault();
-
-      if (!checkbox.checked) {
-        // native required will usually handle this, but this is a safety net
-        checkbox.reportValidity && checkbox.reportValidity();
-        return;
-      }
-
-      // Redirect to main OpenVault landing
-      window.location.href = "https://openvault.in/";
-    });
-  });
-</script>
+              <label class="checkbox-label">
+                <input type="checkbox" id="disclaimer-checkbox" required>
+                <span>I have read and understand the OpenVault Disclaimer.</span>
+              </label>
+              <button type="submit" class="primary-button">
+                Continue to OpenVault
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
+      
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const form = document.getElementById("disclaimer-form");
+          const checkbox = document.getElementById("disclaimer-checkbox");
+      
+          if (!form || !checkbox) return;
+      
+          form.addEventListener("submit", function (e) {
+            e.preventDefault();
+      
+            if (!checkbox.checked) {
+              if (checkbox.reportValidity) {
+                checkbox.reportValidity();
+              }
+              return;
+            }
+      
+            window.location.href = "https://openvault.in/";
+          });
+        });
+      </script>
 </body>
 </html>
