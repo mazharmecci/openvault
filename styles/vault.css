@@ -479,3 +479,45 @@ h1 {
     font-size: 1.4rem;
   }
 }
+
+.ov-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 2.1rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  color: #3a2614;
+}
+
+.ov-logo-wrap {
+  width: 26px;              /* was 42px */
+  height: 26px;             /* was 42px */
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 20%, #fff7ea, #f1c27d);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow:
+    0 4px 10px rgba(0, 0, 0, 0.22),
+    0 0 0 1px rgba(255, 255, 255, 0.7);
+  overflow: hidden;
+}
+
+.ov-logo-spin {
+  width: 70%;               /* still scales nicely inside */
+  height: 70%;
+  object-fit: contain;
+  animation: ov-spin 9s linear infinite;
+  transform-origin: 50% 50%;
+}
+
+.ov-brand-rest {
+  text-transform: lowercase;
+}
+
+/* spin animation */
+@keyframes ov-spin {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
