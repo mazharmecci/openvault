@@ -13,8 +13,7 @@
   <meta property="og:type" content="website">
   <link rel="canonical" href="https://openvault.in/" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../styles/style.css" />  
-  <!-- Razorpay Checkout -->
+  <link rel="stylesheet" href="../styles/style.css" />
   <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 
   <!-- Google tag (gtag.js) -->
@@ -37,8 +36,13 @@
       </p>
     </header>
 
-    <form class="disclaimer-form" aria-label="OpenVault Disclaimer">
+    <form
+      id="disclaimer-form"
+      class="disclaimer-form"
+      aria-label="OpenVault Disclaimer"
+    >
       <div class="terms-scrollable">
+        <!-- existing disclaimer content unchanged -->
         <h2>1. General Information Only</h2>
         <p>
           All content, resources, examples, and project materials made available on OpenVault are provided on an “as is” basis for general guidance.
@@ -87,7 +91,7 @@
 
       <div class="terms-acknowledge">
         <label class="checkbox-label">
-          <input type="checkbox" required>
+          <input type="checkbox" id="disclaimer-checkbox" required>
           <span>I have read and understand the OpenVault Disclaimer.</span>
         </label>
         <button type="submit" class="primary-button">
@@ -97,5 +101,27 @@
     </form>
   </div>
 </section>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("disclaimer-form");
+    const checkbox = document.getElementById("disclaimer-checkbox");
+
+    if (!form || !checkbox) return;
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      if (!checkbox.checked) {
+        // native required will usually handle this, but this is a safety net
+        checkbox.reportValidity && checkbox.reportValidity();
+        return;
+      }
+
+      // Redirect to main OpenVault landing
+      window.location.href = "https://openvault.in/";
+    });
+  });
+</script>
 </body>
 </html>
