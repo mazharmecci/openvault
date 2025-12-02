@@ -37,7 +37,11 @@
       </p>
     </header>
 
-    <form class="privacy-form" aria-label="OpenVault Privacy Policy">
+    <form
+      id="privacy-form"
+      class="privacy-form"
+      aria-label="OpenVault Privacy Policy"
+    >
       <div class="terms-scrollable">
         <h2>1. Information We Collect</h2>
         <p>
@@ -104,8 +108,8 @@
 
       <div class="terms-acknowledge">
         <label class="checkbox-label">
-          <input type="checkbox" required>
-          <span>I have read and understand the Privacy Policy.</span>
+          <input type="checkbox" id="privacy-checkbox" required>
+          <span>I have read and understand the OpenVault Privacy Policy.</span>
         </label>
         <button type="submit" class="primary-button">
           Continue to OpenVault
@@ -114,5 +118,25 @@
     </form>
   </div>
 </section>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("privacy-form");
+    const checkbox = document.getElementById("privacy-checkbox");
+
+    if (!form || !checkbox) return;
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      if (!checkbox.checked) {
+        checkbox.reportValidity && checkbox.reportValidity();
+        return;
+      }
+
+      window.location.href = "https://openvault.in/";
+    });
+  });
+</script>
 </body>
 </html>
