@@ -4,12 +4,14 @@ const courseCards = document.querySelectorAll(".course-card");
 
 filterButtons.forEach(btn => {
   btn.addEventListener("click", () => {
-    document.querySelector(".filter-btn.active").classList.remove("active");
+    const activeBtn = document.querySelector(".filter-btn.active");
+    if (activeBtn) activeBtn.classList.remove("active");
     btn.classList.add("active");
-    const filter = btn.dataset.filter;
+
+    const filter = btn.dataset.filter || "all";
 
     courseCards.forEach(card => {
-      const category = card.dataset.category;
+      const category = card.dataset.category || "other";
       card.style.display = (filter === "all" || category === filter) ? "block" : "none";
     });
   });
@@ -17,30 +19,22 @@ filterButtons.forEach(btn => {
 
 // 📈 Progress Tracking
 courseCards.forEach(card => {
-  const title = card.querySelector("h3").textContent;
+  const titleElement = card.querySelector("h3");
+  if (!titleElement) return;
+
+  const title = titleElement.textContent.trim().toLowerCase();
+  const key = `viewed-${title}`;
+
   const badge = document.createElement("div");
   badge.className = "progress-badge";
 
-  const isViewed = localStorage.getItem(`viewed-${title}`);
+  const isViewed = localStorage.getItem(key);
   badge.textContent = isViewed ? "✅ Viewed" : "🔓 Not Viewed";
   card.appendChild(badge);
 
   card.addEventListener("click", () => {
-    localStorage.setItem(`viewed-${title}`, "true");
+    localStorage.setItem(key, "true");
     badge.textContent = "✅ Viewed";
+    badge.classList.add("unlocked");
   });
 });
-
-// unlock badges
-
-@keyframes unlockBadge {
-  0% { transform: scale(0.5); opacity: 0; }
-  100% { transform: scale(1); opacity: 1; }
-}
-
-.badge.unlocked {
-  animation: unlockBadge 0.4s ease-out forwards;
-  background-color: #28a745;
-  color: white;
-}
-
