@@ -1010,3 +1010,14 @@ h3 {
   max-width: 900px;
   width: 100%;
 }
+
+.privacy-section {
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.form-card.privacy-card {
+  max-width: 900px;
+  width: 100%;
+}
