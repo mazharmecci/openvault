@@ -76,8 +76,8 @@
 
       <div class="terms-acknowledge">
         <label class="checkbox-label">
-          <input type="checkbox" id="privacy-checkbox" required>
-          <span>I have read and understand the OpenVault Privacy Policy.</span>
+          <input type="checkbox" id="terms-checkbox" required>
+          <span>I have read and agree to the OpenVault Terms &amp; Conditions.</span>
         </label>
         <button type="submit" class="primary-button">
           Continue to OpenVault
@@ -89,8 +89,8 @@
 
 <script>
   document.addEventListener("DOMContentLoaded", function () {
-    const form = document.getElementById("privacy-form");
-    const checkbox = document.getElementById("privacy-checkbox");
+    const form = document.getElementById("terms-form");
+    const checkbox = document.getElementById("terms-checkbox");
 
     if (!form || !checkbox) return;
 
@@ -98,7 +98,9 @@
       e.preventDefault();
 
       if (!checkbox.checked) {
-        checkbox.reportValidity && checkbox.reportValidity();
+        if (checkbox.reportValidity) {
+          checkbox.reportValidity();
+        }
         return;
       }
 
