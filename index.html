@@ -12,12 +12,10 @@
   <meta property="og:url" content="https://openvault.in/">
   <meta property="og:type" content="website">
   <link rel="canonical" href="https://openvault.in/" />
-  <link rel="icon" type="image/png" href="..assets/images/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/png" href="assets/images/favicon-96x96.png" sizes="96x96" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles/style.css" />
-  <link rel="shortcut icon" href="..assets/images/favicon.ico" />
-  <!-- Razorpay Checkout -->
-  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+  <link rel="shortcut icon" href="assets/images/favicon.ico" />
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-TH2GX1JSLY"></script>
@@ -41,18 +39,28 @@
   <div id="navbar-placeholder"></div>
   <script src="scripts/navbar.js" defer></script>
 
-  <section class="hero-text">    
+  <!-- HERO SECTION -->
+  <section class="hero-text">
     <h2 class="hero-subtitle">1000+ Final Year Software Projects. Submit in 24 Hours.</h2>
     <h2 class="price-flash">@Just ₹<strong>199</strong>/-</h2>
     <h3 class="offer-title">⚡ Limited-Time Offer Ends In</h3>
     <div id="countdown-timer">00:00:00</div>
     <p class="note">*Price increases to ₹299 after timer ends</p>
-    <button class="rzp-unlock-btn primary-cta">🔓 Unlock All Projects for ₹199</button>
+
+    <!-- Razorpay Payment Button (Hero) -->
+    <form>
+      <script
+        src="https://checkout.razorpay.com/v1/payment-button.js"
+        data-payment_button_id="pl_Rl6KLugG0eY23l"
+        async>
+      </script>
+    </form>
+
     <p class="trust-note">Secure UPI / Card payments via Razorpay. Instant access, no login.</p>
   </section>
 
   <main>
-    <!-- Key benefits right under hero -->
+    <!-- Key benefits -->
     <section class="features">
       <h2>Why Opencode Vault?</h2>
       <ul class="feature-list">
@@ -65,9 +73,9 @@
 
     <!-- Sample project preview -->
     <section class="preview-section">
-         <h2 style="color: #fff; font-weight: 600; margin: 10px 0;">
-      🎁 Sample Project
-        </h2>
+      <h2 style="color: #fff; font-weight: 600; margin: 10px 0;">
+        🎁 Sample Project
+      </h2>
       <div class="preview-card">
         <div class="preview-info">
           <h3>🧠 How To Detect Fake News</h3>
@@ -106,11 +114,19 @@
         </div>
       </div>
 
-      <button class="rzp-unlock-btn">🔓 Unlock Projects for ₹199</button>
+      <!-- Razorpay Payment Button (Testimonials section) -->
+      <form>
+        <script
+          src="https://checkout.razorpay.com/v1/payment-button.js"
+          data-payment_button_id="pl_Rl6KLugG0eY23l"
+          async>
+        </script>
+      </form>
+
       <p class="note">*Secure payment via Razorpay or UPI</p>
     </section>
 
-    <!-- Explore inside the Vault (with filters + progress badges) -->
+    <!-- Explore inside the Vault -->
     <section class="course-showcase" id="vault-explore">
       <h2 class="course-heading">📚 Explore Inside the Vault</h2>
 
@@ -124,7 +140,7 @@
         <button class="filter-btn" data-filter="other">Other Stacks</button>
       </div>
 
-      <!-- Cards (each must have data-category and one h3 for progress tracking) -->
+      <!-- Cards -->
       <div class="course-grid">
         <div class="course-card" data-category="web">
           <h3>React JS</h3>
@@ -216,7 +232,15 @@
         </div>
       </div>
 
-      <button class="rzp-unlock-btn">🔓 Unlock Projects for ₹199</button>
+      <!-- Razorpay Payment Button (Vault explore section) -->
+      <form>
+        <script
+          src="https://checkout.razorpay.com/v1/payment-button.js"
+          data-payment_button_id="pl_Rl6KLugG0eY23l"
+          async>
+        </script>
+      </form>
+
       <p class="note">*Secure payment via Razorpay or UPI</p>
     </section>
 
@@ -334,7 +358,15 @@
         </p>
       </div>
 
-      <button class="rzp-unlock-btn">🔓 Unlock Projects for ₹199</button>
+      <!-- Razorpay Payment Button (final CTA) -->
+      <form>
+        <script
+          src="https://checkout.razorpay.com/v1/payment-button.js"
+          data-payment_button_id="pl_Rl6KLugG0eY23l"
+          async>
+        </script>
+      </form>
+
       <p class="note">*Secure payment via Razorpay or UPI</p>
     </section>
 
@@ -383,16 +415,13 @@
           <span>JS & analytics</span>
         </div>
       </div>
-
-      <button class="rzp-unlock-btn">🔓 Unlock Projects for ₹199</button>
-      <p class="note">*Secure payment via Razorpay or UPI</p>
     </section>
 
     <!-- Freelance + contact -->
     <section id="tariff-card" class="tariff-section">
-         <h2 style="color: #000; font-weight: 600; margin: 10px 0;">
-      📋 Freelance Tariff Card
-        </h2>
+      <h2 style="color: #000; font-weight: 600; margin: 10px 0;">
+        📋 Freelance Tariff Card
+      </h2>
       <div class="tariff-grid">
         <div class="tariff-card">
           <h3>Frontend Essentials</h3>
@@ -431,10 +460,10 @@
 
   </main>
 
-    <!-- Single footer -->    
+  <!-- Single footer -->
   <footer class="vault-footer">
     <p>© 2021–2025 | openvault.in | All rights reserved</p>
-     <p>
+    <p>
       <a href="forms/terms.html">Terms</a> |
       <a href="forms/privacy.html">Privacy</a> |
       <a href="forms/refund.html">Refund</a> |
@@ -444,11 +473,10 @@
     <p><img src="icons/india-flag.png" alt="India Flag" class="flag-icon" /></p>
   </footer>
 
-  <!-- Main script: countdown + Razorpay + filters + progress -->
+  <!-- Main script: countdown + filters + progress (Razorpay logic removed) -->
   <script>
     const COUNTDOWN_KEY = "vaultCountdownTarget";
     const HOURS_LIMIT = 48;
-    let isLateAccess = false;
 
     // ⏳ Initialize Countdown
     function initCountdown() {
@@ -473,7 +501,6 @@
             flash.innerHTML = "@Now ₹<strong>299</strong>/-";
             flash.classList.add("expired");
           }
-          isLateAccess = true;
           return;
         }
 
@@ -491,48 +518,6 @@
 
       updateCountdown();
       setInterval(updateCountdown, 1000);
-    }
-
-    // 💳 Razorpay Payment Handler (client-side only)
-    function launchRazorpay(amount, description, redirectUrl, themeColor = "#ff6600") {
-      const options = {
-        key: "rzp_test_1DP5mmOlF5G5ag", // TODO: replace with your live key in production
-        amount: amount,
-        currency: "INR",
-        name: "OPENVAULT",
-        description: description,
-        theme: { color: themeColor },
-        handler: function (response) {
-          // Basic success handler; for real apps you should verify payment on server. [web:32]
-          console.log("Payment success", response);
-          window.location.href = redirectUrl;
-        },
-        modal: {
-          ondismiss: function () {
-            console.log("Checkout form closed");
-          }
-        },
-        prefill: {
-          name: "",
-          email: "",
-          contact: ""
-        }
-      };
-
-      const rzp = new Razorpay(options);
-      rzp.open();
-    }
-
-    // Attach Unlock Button Handlers
-    function attachUnlockHandlers() {
-      document.querySelectorAll(".rzp-unlock-btn").forEach(button => {
-        button.addEventListener("click", (e) => {
-          e.preventDefault();
-          const amount = isLateAccess ? 29900 : 19900; // ₹299 or ₹199 in paise
-          const description = isLateAccess ? "Late Access to Vault" : "Access to Software Project Bundle";
-          launchRazorpay(amount, description, "vault.html", "#ff6600");
-        });
-      });
     }
 
     // 🔄 Filter Logic for stacks
@@ -585,7 +570,6 @@
 
     document.addEventListener("DOMContentLoaded", () => {
       initCountdown();
-      attachUnlockHandlers();
       initFilters();
       initProgressBadges();
     });
