@@ -13,9 +13,9 @@
   <meta property="og:type" content="website">
   <link rel="canonical" href="https://openvault.in/" />
   <link rel="icon" type="image/png" href="assets/images/favicon-96x96.png" sizes="96x96" />
+  <link rel="shortcut icon" href="assets/images/favicon.ico" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles/style.css" />
-  <link rel="shortcut icon" href="assets/images/favicon.ico" />
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-TH2GX1JSLY"></script>
@@ -28,12 +28,13 @@
 </head>
 <body>
 
-<h1 class="ov-brand">
-  <span class="ov-logo-wrap">
-    <img src="assets/images/user-icon.png" alt="Openvault logo O" class="ov-logo-spin">
-  </span>
-  <span class="ov-brand-rest">penvault</span>
-</h1>
+  <!-- Brand -->
+  <h1 class="ov-brand">
+    <span class="ov-logo-wrap">
+      <img src="assets/images/user-icon.png" alt="OpenVault logo O" class="ov-logo-spin">
+    </span>
+    <span class="ov-brand-rest">penvault</span>
+  </h1>
 
   <!-- Injected Navbar -->
   <div id="navbar-placeholder"></div>
@@ -47,17 +48,17 @@
     <div id="countdown-timer">00:00:00</div>
     <p class="note">*Price increases to ₹299 after timer ends</p>
 
-  <!-- Razorpay Payment Button (Hero) -->
-      <form>
-        <script
-          src="https://checkout.razorpay.com/v1/payment-button.js"
-          data-payment_button_id="pl_Rl6KLugG0eY23l"
-          async>
-        </script>
-      </form>
+    <!-- Razorpay Payment Button (Hero – OPTIONAL) -->
+    <form>
+      <script
+        src="https://checkout.razorpay.com/v1/payment-button.js"
+        data-payment_button_id="pl_Rl6KLugG0eY23l"
+        async>
+      </script>
+    </form>
 
-      <p class="note">*Secure payment via Razorpay or UPI</p>
-    </section>    
+    <p class="note">*Secure payment via Razorpay or UPI</p>
+  </section>
 
   <main>
     <!-- Key benefits -->
@@ -66,14 +67,13 @@
       <ul class="feature-list">
         <li>Full source code with README for every project.</li>
         <li>Deployment-ready projects for final-year submissions.</li>
-        <li>Covers Web, App, ML, AI, IoT, Cloud & more.</li>
+        <li>Covers Web, App, ML, AI, IoT, Cloud &amp; more.</li>
         <li>Perfect for B.Tech, BE, MCA, BSc (CS/IT) and Diploma students.</li>
       </ul>
     </section>
 
-    <!-- Sample project preview -->
-
-  <section class="ov-hero">
+    <!-- Sample project preview (BBQ hero) -->
+    <section class="ov-hero">
       <div class="ov-hero-inner">
         <div class="ov-copy">
           <h1>Build Premium Web Projects Without Starting From Scratch</h1>
@@ -87,19 +87,25 @@
             <li>Modern, premium UI components and layouts</li>
             <li>Ideal for students in Web, App, ML &amp; AI</li>
           </ul>
-          <a
-            href="https://openvault.in"
-            class="ov-cta"
-            target="_blank"
-            rel="noopener"
-          >
+
+          <!-- Custom CTA that triggers Razorpay -->
+          <a href="#" class="ov-cta" id="unlock-btn">
             🔓 Unlock the Project Code
           </a>
+
+          <!-- Hidden Razorpay payment form (for this CTA) -->
+          <form id="rzp-payment-form" style="display: none;">
+            <script
+              src="https://checkout.razorpay.com/v1/payment-button.js"
+              data-payment_button_id="pl_Rl6KLugG0eY23l"
+              async>
+            </script>
+          </form>
         </div>
-  
+
         <div class="ov-preview-card">
           <img
-            src="openvault/assets/BBQ.png"
+            src="assets/images/BBQ.png"
             alt="BBQ Chicken Recipe UI Preview"
             class="ov-preview-img"
           />
@@ -110,6 +116,7 @@
       </div>
     </section>
 
+    <!-- Another sample project -->
     <section class="preview-section">
       <h2 style="color: #fff; font-weight: 600; margin: 10px 0;">
         🎁 Sample Project
@@ -117,18 +124,45 @@
       <div class="preview-card">
         <div class="preview-info">
           <h3>🧠 How To Detect Fake News</h3>
-          <p>This project uses Machine Learning and Deep Learning to classify news articles as real or fake. Ideal for final-year students exploring NLP and AI.</p>
+          <p>
+            This project uses Machine Learning and Deep Learning to classify news
+            articles as real or fake. Ideal for final-year students exploring NLP
+            and AI.
+          </p>
           <ul>
             <li>✅ Full source code</li>
             <li>✅ README with setup steps</li>
           </ul>
-          <a href="https://youtu.be/DQRZHOpU9bU?si=561xPypbVjJyHHIK" target="_blank" class="preview-button">🔍 View Sample</a>
+          <a href="https://youtu.be/DQRZHOpU9bU?si=561xPypbVjJyHHIK"
+             target="_blank"
+             rel="noopener"
+             class="preview-button">
+            🔍 View Sample
+          </a>
         </div>
         <div class="preview-image">
-          <img src="icons/MLDL.png" alt="Machine & Deep Learning sample" />
+          <img src="icons/MLDL.png" alt="Machine &amp; Deep Learning sample" />
         </div>
       </div>
     </section>
+  </main>
+
+  <!-- Script to wire custom CTA to Razorpay button -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const heroBtn = document.getElementById("unlock-btn");
+
+      heroBtn.addEventListener("click", function (e) {
+        e.preventDefault();
+        const rzpBtn = document.querySelector("#rzp-payment-form button");
+        if (rzpBtn) {
+          rzpBtn.click();
+        } else {
+          console.warn("Razorpay button not loaded yet.");
+        }
+      });
+    });
+  </script>
 
     <!-- Testimonials -->
     <section class="testimonials-brolly">
