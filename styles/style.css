@@ -10,6 +10,11 @@
   padding: 2rem 1rem;
 }
 
+.payment-button-wrapper {
+  margin-top: 24px; /* Adjust spacing as needed */
+  text-align: center;
+}
+
 .tariff-button-wrapper {
   display: flex;
   justify-content: center;
