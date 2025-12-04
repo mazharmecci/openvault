@@ -87,35 +87,34 @@
             <li>Modern, premium UI components and layouts</li>
             <li>Ideal for students in Web, App, ML &amp; AI</li>
           </ul>
-
+    
           <!-- Custom CTA that triggers Razorpay -->
-          <a href="#" class="ov-cta" id="unlock-btn">
-            🔓 Unlock the Project Code
-          </a>
-
-          <!-- Hidden Razorpay payment form (for this CTA) -->
-          <form id="rzp-payment-form" style="display: none;">
-            <script
-          src="https://checkout.razorpay.com/v1/payment-button.js"
-          data-payment_button_id="pl_Rl6KLugG0eY23l"
-              async>
-            </script>
-          </form>
-        </div>
-
-        <div class="ov-preview-card">
-          <img
-            src="assets/images/BBQ.png"
-            alt="BBQ Chicken Recipe UI Preview"
-            class="ov-preview-img"
-          />
-          <h2>BBQ Recipe Shopping List UI</h2>
-          <p>Dynamic servings, auto-updating ingredients, beautiful card layout.</p>
-          <div class="ov-preview-tag">Sample from the Vault</div>
+          <div class="cta-wrapper">
+            <form>
+              <script
+                src="https://checkout.razorpay.com/v1/payment-button.js"
+                data-payment_button_id="pl_Rl6KLugG0eY23l"
+                async>
+              </script>
+            </form>
+            <p class="note">*Unlock stunning project from OpenVault</p>
+          </div>
+    
+          <!-- Preview Card -->
+          <div class="ov-preview-card">
+            <img
+              src="assets/images/BBQ.png"
+              alt="BBQ Chicken Recipe UI Preview"
+              class="ov-preview-img"
+            />
+            <h2>BBQ Recipe Shopping List UI</h2>
+            <p>Dynamic servings, auto-updating ingredients, beautiful card layout.</p>
+            <div class="ov-preview-tag">Sample from the Vault</div>
+          </div>
         </div>
       </div>
     </section>
-
+    
     <!-- Another sample project -->
     <section class="preview-section">
       <h2 style="color: #fff; font-weight: 600; margin: 10px 0;">
@@ -145,24 +144,6 @@
         </div>
       </div>
     </section>
-  </main>
-
-  <!-- Script to wire custom CTA to Razorpay button -->
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const heroBtn = document.getElementById("unlock-btn");
-
-      heroBtn.addEventListener("click", function (e) {
-        e.preventDefault();
-        const rzpBtn = document.querySelector("#rzp-payment-form button");
-        if (rzpBtn) {
-          rzpBtn.click();
-        } else {
-          console.warn("Razorpay button not loaded yet.");
-        }
-      });
-    });
-  </script>
 
     <!-- Testimonials -->
     <section class="testimonials-brolly">
