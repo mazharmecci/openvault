@@ -15,6 +15,41 @@
   text-align: center;
 }
 
+.support-section {
+  background-color: #f9fafb;
+  padding: 24px;
+  margin-top: 48px;
+  text-align: center;
+  border-top: 1px solid #e5e7eb;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.support-section h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #1f2937;
+}
+
+.support-section p {
+  font-size: 16px;
+  color: #4b5563;
+  margin-bottom: 8px;
+}
+
+.support-link {
+  display: inline-block;
+  font-weight: 600;
+  color: #2563eb;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.3s ease;
+}
+
+.support-link:hover {
+  border-color: #2563eb;
+}
+
 .tariff-button-wrapper {
   display: flex;
   justify-content: center;
