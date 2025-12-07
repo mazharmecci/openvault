@@ -1605,3 +1605,105 @@ h3 {
   color: #ccc;
   margin-top: 0.5rem;
 }
+
+/* SEO Article Section */
+.seo-article {
+  background: #0a1f44; /* deep blue background */
+  color: #fff;
+  padding: 3rem 2rem;
+  border-radius: 12px;
+  margin: 2rem auto;
+  max-width: 900px;
+}
+
+.seo-article .section-heading {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #4a90e2; /* brand blue accent */
+}
+
+.seo-article .sub-heading {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  color: #ffd700; /* gold accent */
+}
+
+.seo-article .feature-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0.5rem 0 1rem;
+}
+
+.seo-article .feature-list li {
+  margin: 0.4rem 0;
+  font-size: 1.05rem;
+}
+
+.seo-article .note {
+  font-size: 0.95rem;
+  color: #ddd;
+  margin-top: 0.5rem;
+}
+
+.seo-article .workflow-box {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  background: #eef4ff;
+  border-left: 4px solid #4a90e2;
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 8px;
+  color: #000;
+}
+
+.seo-article .workflow-text {
+  flex: 1 1 60%;
+  padding-right: 1rem;
+}
+
+.seo-article .workflow-image {
+  flex: 1 1 40%;
+  text-align: center;
+}
+
+.seo-article .workflow-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.seo-article .cta-link {
+  color: #ffd700;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.seo-article .cta-link:hover {
+  text-decoration: underline;
+}
+
+.seo-article .payment-button-wrapper {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.seo-article .trust-note {
+  font-size: 0.9rem;
+  color: #ccc;
+  margin-top: 0.5rem;
+}
+
+/* Responsive tweak for mobile */
+@media (max-width: 768px) {
+  .seo-article .workflow-box {
+    flex-direction: column;
+  }
+  .seo-article .workflow-text {
+    padding-right: 0;
+    margin-bottom: 1rem;
+  }
+}
