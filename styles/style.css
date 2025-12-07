@@ -1552,12 +1552,32 @@ h3 {
 }
 
 .learn-it-section .workflow-box {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   background: #eef4ff;
   border-left: 4px solid #4a90e2;
   padding: 1rem;
   margin: 1rem 0;
   border-radius: 8px;
   color: #000;
+}
+
+.learn-it-section .workflow-text {
+  flex: 1 1 60%;
+  padding-right: 1rem;
+}
+
+.learn-it-section .workflow-image {
+  flex: 1 1 40%;
+  text-align: center;
+}
+
+.learn-it-section .workflow-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
 .learn-it-section .cta {
