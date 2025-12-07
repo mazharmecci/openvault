@@ -1509,3 +1509,79 @@ h3 {
         order: -1;
       }
     }
+
+/* LinkedIn post format */
+.learn-it-section {
+  background: #0a1f44; /* deep blue background */
+  color: #fff;
+  padding: 3rem 2rem;
+  border-radius: 12px;
+  margin: 2rem auto;
+  max-width: 900px;
+}
+
+.learn-it-section .section-heading {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #4a90e2; /* brand blue */
+}
+
+.learn-it-section .sub-heading {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  color: #ffd700; /* gold accent */
+}
+
+.learn-it-section .feature-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0.5rem 0 1rem;
+}
+
+.learn-it-section .feature-list li {
+  margin: 0.4rem 0;
+  font-size: 1.05rem;
+}
+
+.learn-it-section .note {
+  font-size: 0.95rem;
+  color: #ddd;
+  margin-top: 0.5rem;
+}
+
+.learn-it-section .workflow-box {
+  background: #eef4ff;
+  border-left: 4px solid #4a90e2;
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 8px;
+  color: #000;
+}
+
+.learn-it-section .cta {
+  margin-top: 1.5rem;
+  font-weight: bold;
+}
+
+.learn-it-section .cta-link {
+  color: #ffd700;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.learn-it-section .cta-link:hover {
+  text-decoration: underline;
+}
+
+.learn-it-section .payment-button-wrapper {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.learn-it-section .trust-note {
+  font-size: 0.9rem;
+  color: #ccc;
+  margin-top: 0.5rem;
+}
