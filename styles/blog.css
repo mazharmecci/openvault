@@ -413,3 +413,41 @@ body {
         order: -1;
       }
     }
+
+    .system-table {
+      width: 100%;
+      max-width: 800px;
+      margin: 30px auto;
+      border-collapse: collapse;
+      font-family: 'Inter', sans-serif;
+      background-color: #ecf9fd; /* bright blue background */
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    
+    .system-table thead {
+      background-color: #0077b6; /* deep blue header */
+      color: #fff;
+    }
+    
+    .system-table th,
+    .system-table td {
+      padding: 16px 20px;
+      text-align: left;
+      font-size: 0.95em;
+      border-bottom: 1px solid #ccc;
+    }
+    
+    .system-table th {
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+    
+    .system-table tbody tr:last-child td {
+      border-bottom: none;
+    }
+    
+    .system-table tbody tr:hover {
+      background-color: #d6f0ff; /* subtle hover effect */
+    }
