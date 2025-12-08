@@ -35,6 +35,11 @@
       color: gold;
     }
 
+    .blog-header p {
+      margin: 8px 0 0;
+      color: #ccc;
+    }
+
     .blog-grid {
       display: flex;
       flex-wrap: wrap;
@@ -44,26 +49,21 @@
     }
 
     .blog-card {
-      background: #f3fbfd; /* brighter blue for stronger contrast */
+      background: #f3fbfd;
       border-radius: 12px;
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
       overflow: hidden;
       max-width: 400px;
       animation: fadeInUp 0.8s ease forwards;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
     }
-    
+
     .blog-card:hover {
       transform: translateY(-8px);
       box-shadow: 0 8px 30px rgba(0, 150, 255, 0.4);
     }
-    
-    .counter {
-      font-size: 0.9em;
-      margin-left: 5px;
-      color: #000; /* black for visibility */
-    }
-    
+
     .card-image {
       width: 100%;
       height: 200px;
@@ -78,18 +78,18 @@
       font-family: 'Playfair Display', serif;
       font-size: 1.5em;
       margin-bottom: 10px;
-      color: #333333; /* dark gray for main title */
+      color: #333333;
     }
-    
+
     .card-excerpt {
       font-size: 1em;
       margin-bottom: 10px;
-      color: #111111; /* subtle black, readable */
+      color: #111111;
     }
 
     .card-meta {
       font-size: 0.9em;
-      color: #111111; /* slightly lighter black for metadata */
+      color: #111111;
       margin-bottom: 15px;
     }
 
@@ -98,18 +98,22 @@
       gap: 15px;
       font-size: 1.2em;
       align-items: center;
-      color: #111111; /* subtle black for icons/counters */
+      color: #111111;
     }
 
     .icon {
       cursor: pointer;
       transition: transform 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
     }
 
     .icon:hover {
       transform: scale(1.2);
     }
 
+    .icon.like,
     .icon.share,
     .icon.whatsapp,
     .icon.facebook,
@@ -121,14 +125,22 @@
       border-radius: 4px;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
-    
+
+    .icon.like:hover,
+    .icon.share:hover,
     .icon.whatsapp:hover,
     .icon.facebook:hover,
     .icon.instagram:hover {
       transform: scale(1.2);
       box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
     }
-    
+
+    .counter {
+      font-size: 0.9em;
+      margin-left: 5px;
+      color: #000;
+    }
+
     .blog-footer {
       text-align: center;
       padding: 20px;
@@ -140,7 +152,7 @@
 
     @keyframes fadeInUp {
       from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
+      to   { opacity: 1; transform: translateY(0); }
     }
 
     /* Confetti canvas */
@@ -152,6 +164,15 @@
       height: 100%;
       pointer-events: none;
       z-index: 9999;
+    }
+
+    @media (max-width: 600px) {
+      .blog-header h1 {
+        font-size: 2rem;
+      }
+      .card-image {
+        height: 180px;
+      }
     }
   </style>
 </head>
@@ -170,7 +191,7 @@
         <p class="card-excerpt">Discover strategies to grow your brand online with proven marketing techniques.</p>
         <div class="card-meta">By Mazhar Mecci · Dec 12, 2025</div>
         <div class="card-actions">
-          <img src="../assets/images/like.png" alt="likes" class="icon like" />  
+          <span class="icon heart" data-count="128"></span>
           <img src="../assets/images/share.png" alt="Share on social media" class="icon share" />
           <img src="../assets/images/Whatsapp.png" alt="Share on WhatsApp" class="icon whatsapp" />
           <img src="../assets/images/FB.png" alt="Share on Facebook" class="icon facebook" />
@@ -205,7 +226,7 @@
         <div class="card-meta">By Alex Carter · Oct 10, 2025</div>
         <div class="card-actions">
           <span class="icon heart" data-count="308"></span>
-         <img src="../assets/images/share.png" alt="Share on social media" class="icon share" />
+          <img src="../assets/images/share.png" alt="Share on social media" class="icon share" />
           <img src="../assets/images/Whatsapp.png" alt="Share on WhatsApp" class="icon whatsapp" />
           <img src="../assets/images/FB.png" alt="Share on Facebook" class="icon facebook" />
           <img src="../assets/images/Instagram.png" alt="Share on Instagram" class="icon instagram" />
@@ -235,17 +256,16 @@
     <p>&copy; 2025 OpenVault.in — All rights reserved</p>
   </footer>
 
-    <!-- Correct canvas tag -->
- <canvas class="confetti"></canvas>
+  <canvas class="confetti"></canvas>
 
   <script>
     // Confetti burst
     function launchConfetti() {
       const canvas = document.querySelector('.confetti');
-      if (!canvas) return; // safety guard
+      if (!canvas) return;
 
       const ctx = canvas.getContext('2d');
-      if (!ctx) return; // extra guard if context can't be created
+      if (!ctx) return;
 
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
@@ -272,7 +292,6 @@
 
       const intervalId = setInterval(draw, 20);
 
-      // Stop and clear after 2 seconds
       setTimeout(() => {
         clearInterval(intervalId);
         ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -302,17 +321,10 @@
           gtag('event', 'like', { event_category: 'engagement', event_label: url });
         });
 
-        // Share counter logic
+        // Share click tracking (no visible counter to keep icons clean)
         const share = card.querySelector(".share");
-        const shareKey = `shares-${index}`;
-        let shares = Number(localStorage.getItem(shareKey)) || 0;
-        share.innerHTML = `🔗 <span class="counter">${shares}</span>`;
-
         share.addEventListener("click", (e) => {
           e.stopPropagation();
-          shares++;
-          localStorage.setItem(shareKey, shares);
-          share.innerHTML = `🔗 <span class="counter">${shares}</span>`;
           gtag('event', 'share', { event_category: 'engagement', event_label: url });
         });
 
