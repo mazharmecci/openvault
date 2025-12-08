@@ -57,11 +57,25 @@
       animation: pulse 1.2s ease infinite;
     }
 
+  .icon-box {
+  transition: all 0.4s ease;
+  }
+
     @keyframes pulse {
       0%   { box-shadow: 0 0 10px rgba(0, 123, 255, 0.4); }
       50%  { box-shadow: 0 0 20px rgba(0, 123, 255, 0.8); }
       100% { box-shadow: 0 0 10px rgba(0, 123, 255, 0.4); }
     }
+
+   .icon-box.active {
+    box-shadow:
+      0 0 10px rgba(0, 123, 255, 0.4),
+      0 0 20px rgba(0, 123, 255, 0.6),
+      0 0 30px rgba(0, 123, 255, 0.8);
+    background: linear-gradient(135deg, #e0f7ff, #ffffff);
+    transform: scale(1.05);
+  }
+
   </style>
 
   <!-- Google tag (gtag.js) -->
@@ -873,6 +887,17 @@
     });
   </script>
 
+  <script>
+const icons = document.querySelectorAll(".icon-box");
+setInterval(() => {
+  icons.forEach(icon => icon.classList.remove("active"));
+  const random = Math.floor(Math.random() * icons.length);
+  icons[random].classList.add("active");
+}, 2000);
+    
+</script>
+
+  
   <!-- Optional external script if you still need it -->
   <script src="scripts/script.js"></script>
 </body>
