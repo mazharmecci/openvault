@@ -128,7 +128,7 @@ body {
 .post-hero {
   text-align: center;
   padding: 40px 20px 24px;
-  background-color: #010c0e;
+  background-color: #f3fbfd;
   border-bottom: 1px solid #333333;
 }
 
@@ -162,7 +162,7 @@ body {
 .post-body h3 {
   font-family: 'Playfair Display', Georgia, serif;
   margin: 24px 0 12px;
-  color: #021B1D;
+  color: #f3fbfd;
 }
 
 /* Footer */
