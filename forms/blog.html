@@ -207,9 +207,9 @@
     <p>&copy; 2025 OpenVault.in — All rights reserved</p>
   </footer>
 
-  <canvas class="confetti"></canvas>
+    anvas class="confetti"></canvas>
 
-  <script defer>
+  <script>
     // Confetti burst
     function launchConfetti() {
       const canvas = document.querySelector('.confetti');
@@ -217,7 +217,7 @@
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
 
-      const pieces = Array.from({length: 100}, () => ({
+      const pieces = Array.from({ length: 100 }, () => ({
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
         r: Math.random() * 6 + 2,
@@ -229,18 +229,21 @@
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         pieces.forEach(p => {
           ctx.beginPath();
-          ctx.arc(p.x, p.y, p.r, 0, Math.PI*2);
+          ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
           ctx.fillStyle = p.color;
           ctx.fill();
           p.y += p.d;
           if (p.y > canvas.height) p.y = 0;
+        });
       }
-      setTimeout(() => ctx.clearRect(0,0,canvas.width,canvas.height), 2000);
+
+      setTimeout(() => ctx.clearRect(0, 0, canvas.width, canvas.height), 2000);
       setInterval(draw, 20);
     }
 
     document.addEventListener("DOMContentLoaded", () => {
       const cards = document.querySelectorAll(".blog-card");
+
       cards.forEach((card, index) => {
         card.style.animationDelay = `${index * 0.2}s`;
 
@@ -249,7 +252,7 @@
         // Like counter logic
         const heart = card.querySelector(".heart");
         const likeKey = `likes-${index}`;
-        let likes = localStorage.getItem(likeKey) || heart.dataset.count;
+        let likes = Number(localStorage.getItem(likeKey)) || Number(heart.dataset.count) || 0;
         heart.innerHTML = `❤️ <span class="counter">${likes}</span>`;
 
         heart.addEventListener("click", () => {
@@ -257,35 +260,45 @@
           localStorage.setItem(likeKey, likes);
           heart.innerHTML = `❤️ <span class="counter">${likes}</span>`;
           launchConfetti();
-          gtag('event', 'like', { 'event_category': 'engagement', 'event_label': url });
+          gtag('event', 'like', { event_category: 'engagement', event_label: url });
         });
 
         // Share counter logic
         const share = card.querySelector(".share");
         const shareKey = `shares-${index}`;
-        let shares = localStorage.getItem(shareKey) || 0;
+        let shares = Number(localStorage.getItem(shareKey)) || 0;
         share.innerHTML = `🔗 <span class="counter">${shares}</span>`;
 
         share.addEventListener("click", () => {
           shares++;
           localStorage.setItem(shareKey, shares);
           share.innerHTML = `🔗 <span class="counter">${shares}</span>`;
-          gtag('event', 'share', { 'event_category': 'engagement', 'event_label': url });
+          gtag('event', 'share', { event_category: 'engagement', event_label: url });
         });
 
         // Social share links
-        card.querySelector(".whatsapp").addEventListener("click", () => {
+        card.querySelector(".whatsapp").addEventListener("click", (e) => {
+          e.stopPropagation();
           window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(url)}`, "_blank");
-          gtag('event', 'share_whatsapp', { 'event_category': 'social', 'event_label': url });
+          gtag('event', 'share_whatsapp', { event_category: 'social', event_label: url });
         });
-        card.querySelector(".facebook").addEventListener("click", () => {
+
+        card.querySelector(".facebook").addEventListener("click", (e) => {
+          e.stopPropagation();
           window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`, "_blank");
-          gtag('event', 'share_facebook', { 'event_category': 'social', 'event_label': url });
+          gtag('event', 'share_facebook', { event_category: 'social', event_label: url });
         });
-        card.querySelector(".instagram").addEventListener("click", () => {
+
+        card.querySelector(".instagram").addEventListener("click", (e) => {
+          e.stopPropagation();
           alert("Instagram doesn’t support direct web sharing. Link copied!");
           navigator.clipboard.writeText(url);
-          gtag('event', 'share_instagram', { 'event_category': 'social', 'event_label': url });
+          gtag('event', 'share_instagram', { event_category: 'social', event_label: url });
+        });
+
+        // Make whole card clickable to open the post
+        card.addEventListener("click", () => {
+          window.location.href = url;
         });
       });
     });
