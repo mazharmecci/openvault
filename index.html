@@ -41,6 +41,43 @@
     gtag('config', 'G-TH2GX1JSLY');
   </script>
 </head>
+
+<script>
+  
+ .icon-grid {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin: 60px auto;
+}
+
+.icon-box {
+  text-align: center;
+  padding: 20px;
+  border-radius: 12px;
+  background: #f0f8ff;
+  box-shadow: 0 0 0 transparent;
+  transition: box-shadow 0.3s ease;
+}
+
+.icon-box img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 10px;
+}
+
+.icon-box.active {
+  box-shadow: 0 0 20px rgba(0, 123, 255, 0.6);
+  animation: pulse 1.2s ease infinite;
+}
+
+@keyframes pulse {
+  0%   { box-shadow: 0 0 10px rgba(0, 123, 255, 0.4); }
+  50%  { box-shadow: 0 0 20px rgba(0, 123, 255, 0.8); }
+  100% { box-shadow: 0 0 10px rgba(0, 123, 255, 0.4); }
+}
+</script>
+  
 <body>
 
   <!-- Brand -->
@@ -97,6 +134,24 @@
         </div>
       </div>
     </section>
+
+  
+  <!-- Interactive Icon Grid with Highlight Pulses -->
+    <div class="icon-grid">
+      <div class="icon-box active" id="payments">
+        <img src="../assets/images/payments.png" alt="Payments" />
+        <span>Payments</span>
+      </div>
+      <div class="icon-box" id="tax">
+        <img src="../assets/images/tax.png" alt="Tax" />
+        <span>Tax</span>
+      </div>
+      <div class="icon-box" id="radar">
+        <img src="../assets/images/radar.png" alt="Radar" />
+        <span>Radar</span>
+      </div>
+    </div>
+
 
   <!-- HERO SECTION -->
     <section class="seo-article">
