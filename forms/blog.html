@@ -291,123 +291,122 @@
 
   <canvas class="confetti"></canvas>
 
-  <script>
-    // Confetti burst
-    function launchConfetti() {
-      const canvas = document.querySelector('.confetti');
-      if (!canvas) return;
+<script>
+  // Confetti burst
+  function launchConfetti() {
+    const canvas = document.querySelector('.confetti');
+    if (!canvas) return;
 
-      const ctx = canvas.getContext('2d');
-      if (!ctx) return;
+    const ctx = canvas.getContext('2d');
+    if (!ctx) return;
 
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
 
-      const pieces = Array.from({ length: 100 }, () => ({
-        x: Math.random() * canvas.width,
-        y: Math.random() * canvas.height,
-        r: Math.random() * 6 + 2,
-        d: Math.random() * 0.5 + 0.5,
-        color: `hsl(${Math.random() * 360}, 100%, 50%)`
-      }));
+    const pieces = Array.from({ length: 100 }, () => ({
+      x: Math.random() * canvas.width,
+      y: Math.random() * canvas.height,
+      r: Math.random() * 6 + 2,
+      d: Math.random() * 0.5 + 0.5,
+      color: `hsl(${Math.random() * 360}, 100%, 50%)`
+    }));
 
-      function draw() {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        pieces.forEach(p => {
-          ctx.beginPath();
-          ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-          ctx.fillStyle = p.color;
-          ctx.fill();
-          p.y += p.d;
-          if (p.y > canvas.height) p.y = 0;
+    function draw() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      pieces.forEach(p => {
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+        ctx.fillStyle = p.color;
+        ctx.fill();
+        p.y += p.d;
+        if (p.y > canvas.height) p.y = 0;
+      });
+    }
+
+    const intervalId = setInterval(draw, 20);
+
+    setTimeout(() => {
+      clearInterval(intervalId);
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+    }, 2000);
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const cards = document.querySelectorAll(".blog-card");
+
+    cards.forEach((card, index) => {
+      card.style.animationDelay = `${index * 0.2}s`;
+
+      const url = card.dataset.url;
+
+      // Like counter logic (preserve image + add pulse)
+      const heart = card.querySelector(".heart");
+      if (heart) {
+        const counter = heart.querySelector(".counter");
+        const likeKey = `likes-${index}`;
+        let likes = Number(localStorage.getItem(likeKey)) || Number(heart.dataset.count) || 0;
+        counter.textContent = likes;
+
+        heart.addEventListener("click", (e) => {
+          e.stopPropagation();
+          likes++;
+          localStorage.setItem(likeKey, likes);
+          counter.textContent = likes;
+
+          // pulse animation
+          heart.classList.add("pulse");
+          setTimeout(() => heart.classList.remove("pulse"), 400);
+
+          launchConfetti();
+          gtag('event', 'like', { event_category: 'engagement', event_label: url });
         });
       }
 
-      const intervalId = setInterval(draw, 20);
-
-      setTimeout(() => {
-        clearInterval(intervalId);
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-      }, 2000);
-    }
-
-    document.addEventListener("DOMContentLoaded", () => {
-      const cards = document.querySelectorAll(".blog-card");
-    
-      cards.forEach((card, index) => {
-        card.style.animationDelay = `${index * 0.2}s`;
-    
-        const url = card.dataset.url;
-    
-        // Like counter logic (preserve image + add pulse)
-        const heart = card.querySelector(".heart");
-        if (heart) {
-          const counter = heart.querySelector(".counter");
-          const likeKey = `likes-${index}`;
-          let likes = Number(localStorage.getItem(likeKey)) || Number(heart.dataset.count) || 0;
-          counter.textContent = likes;
-    
-          heart.addEventListener("click", (e) => {
-            e.stopPropagation();
-            likes++;
-            localStorage.setItem(likeKey, likes);
-            counter.textContent = likes;
-    
-            // pulse animation
-            heart.classList.add("pulse");
-            setTimeout(() => heart.classList.remove("pulse"), 400);
-    
-            launchConfetti();
-            gtag('event', 'like', { event_category: 'engagement', event_label: url });
-          });
-        }
-      });
-    });
-
-        // Share click tracking
-        const share = card.querySelector(".share");
-        if (share) {
-          share.addEventListener("click", (e) => {
-            e.stopPropagation();
-            gtag('event', 'share', { event_category: 'engagement', event_label: url });
-          });
-        }
-
-        // Social share links
-        const whatsapp = card.querySelector(".whatsapp");
-        if (whatsapp) {
-          whatsapp.addEventListener("click", (e) => {
-            e.stopPropagation();
-            window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(url)}`, "_blank");
-            gtag('event', 'share_whatsapp', { event_category: 'social', event_label: url });
-          });
-        }
-
-        const facebook = card.querySelector(".facebook");
-        if (facebook) {
-          facebook.addEventListener("click", (e) => {
-            e.stopPropagation();
-            window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`, "_blank");
-            gtag('event', 'share_facebook', { event_category: 'social', event_label: url });
-          });
-        }
-
-        const instagram = card.querySelector(".instagram");
-        if (instagram) {
-          instagram.addEventListener("click", (e) => {
-            e.stopPropagation();
-            alert("Instagram doesn’t support direct web sharing. Link copied!");
-            navigator.clipboard.writeText(url);
-            gtag('event', 'share_instagram', { event_category: 'social', event_label: url });
-          });
-        }
-
-        // Make whole card clickable to open the post
-        card.addEventListener("click", () => {
-          window.location.href = url;
+      // Share click tracking
+      const share = card.querySelector(".share");
+      if (share) {
+        share.addEventListener("click", (e) => {
+          e.stopPropagation();
+          gtag('event', 'share', { event_category: 'engagement', event_label: url });
         });
+      }
+
+      // Social share links
+      const whatsapp = card.querySelector(".whatsapp");
+      if (whatsapp) {
+        whatsapp.addEventListener("click", (e) => {
+          e.stopPropagation();
+          window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(url)}`, "_blank");
+          gtag('event', 'share_whatsapp', { event_category: 'social', event_label: url });
+        });
+      }
+
+      const facebook = card.querySelector(".facebook");
+      if (facebook) {
+        facebook.addEventListener("click", (e) => {
+          e.stopPropagation();
+          window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`, "_blank");
+          gtag('event', 'share_facebook', { event_category: 'social', event_label: url });
+        });
+      }
+
+      const instagram = card.querySelector(".instagram");
+      if (instagram) {
+        instagram.addEventListener("click", (e) => {
+          e.stopPropagation();
+          alert("Instagram doesn’t support direct web sharing. Link copied!");
+          navigator.clipboard.writeText(url);
+          gtag('event', 'share_instagram', { event_category: 'social', event_label: url });
+        });
+      }
+
+      // Make whole card clickable to open the post
+      card.addEventListener("click", () => {
+        window.location.href = url;
       });
     });
-  </script>
+  });
+</script>
+
 </body>
 </html>
