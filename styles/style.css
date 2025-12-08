@@ -1707,3 +1707,103 @@ h3 {
     margin-bottom: 1rem;
   }
 }
+
+/* blog */
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(to bottom, #121212, #000);
+  color: #fff;
+}
+
+.blog-header {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #1c1c1c;
+  border-bottom: 1px solid #333;
+}
+
+.blog-header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5em;
+  color: gold;
+}
+
+.blog-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 40px 20px;
+}
+
+.blog-card {
+  background: #1c1c1c;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(255, 215, 0, 0.2);
+  overflow: hidden;
+  max-width: 400px;
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.card-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.card-excerpt {
+  font-size: 1em;
+  margin-bottom: 10px;
+}
+
+.card-meta {
+  font-size: 0.9em;
+  color: gold;
+  margin-bottom: 15px;
+}
+
+.card-actions {
+  display: flex;
+  gap: 10px;
+  font-size: 1.2em;
+}
+
+.icon {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.icon:hover {
+  transform: scale(1.2);
+}
+
+.blog-footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #1c1c1c;
+  border-top: 1px solid #333;
+  font-size: 0.9em;
+  color: #aaa;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
