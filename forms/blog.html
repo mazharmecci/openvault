@@ -4,8 +4,158 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>OpenVault Blog</title>
-  <link rel="stylesheet" href="../styles/blog.css" />
-  <script defer src="../scripts/blog.js"></script>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(to bottom, #121212, #000);
+      color: #fff;
+    }
+
+    .blog-header {
+      text-align: center;
+      padding: 40px 20px;
+      background-color: #1c1c1c;
+      border-bottom: 1px solid #333;
+    }
+
+    .blog-header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5em;
+      color: gold;
+    }
+
+    .blog-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      padding: 40px 20px;
+    }
+
+    .blog-card {
+      background: #1c1c1c;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(255, 215, 0, 0.2);
+      overflow: hidden;
+      max-width: 400px;
+      animation: fadeInUp 0.8s ease forwards;
+    }
+
+    .card-image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 20px;
+    }
+
+    .card-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5em;
+      margin-bottom: 10px;
+    }
+
+    .card-excerpt {
+      font-size: 1em;
+      margin-bottom: 10px;
+    }
+
+    .card-meta {
+      font-size: 0.9em;
+      color: gold;
+      margin-bottom: 15px;
+    }
+
+    .card-actions {
+      display: flex;
+      gap: 15px;
+      font-size: 1.2em;
+      align-items: center;
+    }
+
+    .icon {
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .icon:hover {
+      transform: scale(1.2);
+    }
+
+    .counter {
+      font-size: 0.9em;
+      margin-left: 5px;
+      color: gold;
+    }
+
+    .blog-footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #1c1c1c;
+      border-top: 1px solid #333;
+      font-size: 0.9em;
+      color: #aaa;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      const cards = document.querySelectorAll(".blog-card");
+      cards.forEach((card, index) => {
+        card.style.animationDelay = `${index * 0.2}s`;
+
+        // Like counter logic
+        const heart = card.querySelector(".heart");
+        const likeKey = `likes-${index}`;
+        let likes = localStorage.getItem(likeKey) || heart.dataset.count;
+        heart.innerHTML = `❤️ <span class="counter">${likes}</span>`;
+
+        heart.addEventListener("click", () => {
+          likes++;
+          localStorage.setItem(likeKey, likes);
+          heart.innerHTML = `❤️ <span class="counter">${likes}</span>`;
+        });
+
+        // Share counter logic
+        const share = card.querySelector(".share");
+        const shareKey = `shares-${index}`;
+        let shares = localStorage.getItem(shareKey) || 0;
+        share.innerHTML = `🔗 <span class="counter">${shares}</span>`;
+
+        share.addEventListener("click", () => {
+          shares++;
+          localStorage.setItem(shareKey, shares);
+          share.innerHTML = `🔗 <span class="counter">${shares}</span>`;
+        });
+
+        // Social share links
+        const url = window.location.href; // current page URL
+        card.querySelector(".whatsapp").addEventListener("click", () => {
+          window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(url)}`, "_blank");
+        });
+        card.querySelector(".facebook").addEventListener("click", () => {
+          window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`, "_blank");
+        });
+        card.querySelector(".instagram").addEventListener("click", () => {
+          alert("Instagram doesn’t support direct web sharing. Copy the link to share in your feed!");
+          navigator.clipboard.writeText(url);
+        });
+      });
+    });
+  </script>
 </head>
 <body>
   <header class="blog-header">
@@ -14,7 +164,7 @@
   </header>
 
   <main class="blog-grid">
-    <!-- Blog Card -->
+    <!-- Blog Card 1 -->
     <div class="blog-card">
       <img src="../assets/images/blog1.jpg" alt="Digital Marketing" class="card-image" />
       <div class="card-content">
@@ -22,15 +172,65 @@
         <p class="card-excerpt">Discover strategies to grow your brand online with proven marketing techniques.</p>
         <div class="card-meta">By Mazhar Mecci · Dec 12, 2025</div>
         <div class="card-actions">
-          <span class="icon heart">❤️ 128</span>
-          <span class="icon share">🔗</span>
+          <span class="icon heart" data-count="128"></span>
+          <span class="icon share"></span>
           <span class="icon whatsapp">📱</span>
           <span class="icon facebook">📘</span>
           <span class="icon instagram">📸</span>
         </div>
       </div>
     </div>
-    <!-- Duplicate .blog-card for more posts -->
+
+    <!-- Blog Card 2 -->
+    <div class="blog-card">
+      <img src="../assets/images/blog2.jpg" alt="AI Trends" class="card-image" />
+      <div class="card-content">
+        <h3 class="card-title">Top AI Trends Shaping 2025</h3>
+        <p class="card-excerpt">Explore how artificial intelligence is transforming industries and daily life this year.</p>
+        <div class="card-meta">By Sarah Lee · Nov 28, 2025</div>
+        <div class="card-actions">
+          <span class="icon heart" data-count="256"></span>
+          <span class="icon share"></span>
+          <span class="icon whatsapp">📱</span>
+          <span class="icon facebook">📘</span>
+          <span class="icon instagram">📸</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Blog Card 3 -->
+    <div class="blog-card">
+      <img src="../assets/images/blog3.jpg" alt="Startup Growth" class="card-image" />
+      <div class="card-content">
+        <h3 class="card-title">Secrets to Scaling Your Startup</h3>
+        <p class="card-excerpt">Learn the proven strategies that help startups grow sustainably and attract investors.</p>
+        <div class="card-meta">By Alex Carter · Oct 10, 2025</div>
+        <div class="card-actions">
+          <span class="icon heart" data-count="342"></span>
+          <span class="icon share"></span>
+          <span class="icon whatsapp">📱</span>
+          <span class="icon facebook">📘</span>
+          <span class="icon instagram">📸</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Blog Card 4 -->
+    <div class="blog-card">
+      <img src="../assets/images/blog4.jpg" alt="Future of Work" class="card-image" />
+      <div class="card-content">
+        <h3 class="card-title">The Future of Remote Work</h3>
+        <p class="card-excerpt">Remote work is evolving — discover the tools, culture, and strategies that define 2025.</p>
+        <div class="card-meta">By Priya Sharma · Sep 5, 2025</div>
+        <div class="card-actions">
+          <span class="icon heart" data-count="415"></span>
+          <span class="icon share"></span>
+          <span class="icon whatsapp">📱</span>
+          <span class="icon facebook">📘</span>
+          <span class="icon instagram">📸</span>
+        </div>
+      </div>
+    </div>
   </main>
 
   <footer class="blog-footer">
