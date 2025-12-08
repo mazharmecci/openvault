@@ -1,90 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>Contact Us – OpenVault</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../styles/style.css">
-  <link rel="stylesheet" href="../styles/vault.css">
   <link rel="icon" type="image/png" href="../assets/images/favicon-96x96.png">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: #000; /* black background */
+      color: #fff;
+    }
+
+    /* Navbar */
+    .navbar {
+      background: #1c1c1c;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .navbar a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: 600;
+    }
+    .navbar a:hover {
+      color: gold;
+    }
+
+    /* Contact Card */
+    .contact-card {
+      background: #cce5ff; /* bright blue */
+      border-radius: 12px;
+      padding: 40px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+      max-width: 900px;
+      margin: 40px auto;
+      text-align: center;
+    }
+
+    .contact-title {
+      font-size: 2em;
+      color: #333; /* dark gray */
+      margin-bottom: 10px;
+    }
+
+    .contact-subtitle {
+      font-size: 1.1em;
+      color: #111; /* subtle black */
+      margin-bottom: 20px;
+    }
+
+    .ov-brand {
+      font-size: 1.5em;
+      margin: 20px 0;
+      color: #111;
+    }
+    .ov-logo-spin {
+      width: 32px;
+      height: 32px;
+      animation: spin 4s linear infinite;
+    }
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    .form-container {
+      margin-top: 20px;
+      text-align: left;
+    }
+
+    /* Footer */
+    .page-footer {
+      text-align: center;
+      padding: 20px;
+      background: #1c1c1c;
+      color: #aaa;
+      font-size: 0.9em;
+    }
+  </style>
 </head>
 <body>
-  <div id="navbar-placeholder"></div>
-  <script src="../scripts/navbar.js" defer></script>
-  
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">
+      <img src="../assets/images/favicon-96x96.png" alt="OpenVault Logo" style="height:32px; vertical-align:middle;">
+      <span style="color:gold; font-weight:700; margin-left:8px;">OpenVault</span>
+    </div>
+    <div class="nav-links">
+      <a href="../index.html">Home</a>
+      <a href="../forms/blog.html">Blog</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Contact Section -->
   <main class="page-container contact-page">
-    
     <section class="contact-card">
       <h1 class="contact-title">📩 Contact Us</h1>
       <p class="contact-subtitle">
         Have a question about projects, payments, or custom work? Drop a note and we’ll respond within 24 hours.
       </p>
-    
-  <h1 class="ov-brand">
-    <span class="ov-logo-wrap">
-      <img src="../assets/images/favicon-96x96.png" alt="Openvault logo O" class="ov-logo-spin">
-    </span>
-    <span class="ov-brand-rest">penvault</span>
-  </h1>
 
-      <form    
-        action="mailto:rabbanimecci@gmail.com"
-        method="post"
-        enctype="text/plain"
-        class="contact-form"
-      >
-        <div class="form-row">
-          <label for="name">Name</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            placeholder="Enter your full name"
-            required
-          >
-        </div>
+      <!-- Brand -->
+      <h1 class="ov-brand">
+        <span class="ov-logo-wrap">
+          <img src="../assets/images/favicon-96x96.png" alt="OpenVault logo O" class="ov-logo-spin">
+        </span>
+        <span class="ov-brand-rest">penvault</span>
+      </h1>
 
-        <div class="form-row">
-          <label for="email">Email</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            placeholder="you@example.com"
-            required
-          >
-        </div>
-
-        <div class="form-row">
-          <label for="subject">Subject</label>
-          <input
-            type="text"
-            id="subject"
-            name="subject"
-            placeholder="eg. Need help choosing a project"
-          >
-        </div>
-
-        <div class="form-row">
-          <label for="message">Message</label>
-          <textarea
-            id="message"
-            name="message"
-            rows="5"
-            placeholder="Tell us what you’re looking for..."
-            required
-          ></textarea>
-        </div>
-
-        <button type="submit" class="contact-btn">
-          ✉️ Send Message
-        </button>
-
-      </form>      
+      <!-- Jotform Embed -->
+      <div class="form-container">
+        <script type="text/javascript" src="https://form.jotform.com/jsform/253411646079459"></script>
+      </div>
     </section>
   </main>
 
-  <footer class="vault-footer">
-    <p>© 2021–2025 | openvault.in | All rights reserved</p>
+  <!-- Footer -->
+  <footer class="page-footer">
+    <p>&copy; 2025 OpenVault.in — All rights reserved</p>
   </footer>
 </body>
 </html>
