@@ -812,17 +812,6 @@
       initProgressBadges();
     });
   </script>
-
-  <script>
-const icons = document.querySelectorAll(".icon-box");
-setInterval(() => {
-  icons.forEach(icon => icon.classList.remove("active"));
-  const random = Math.floor(Math.random() * icons.length);
-  icons[random].classList.add("active");
-}, 2000);
-    
-</script>
-
   
   <!-- Optional external script if you still need it -->
   <script src="scripts/script.js"></script>
