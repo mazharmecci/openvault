@@ -101,6 +101,33 @@
       color: #111111;
     }
 
+     .icon.heart {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.9em;
+      color: #000;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+    
+    .heart-icon {
+      width: 20px;
+      height: 20px;
+      object-fit: contain;
+      transition: transform 0.3s ease;
+    }
+    
+    .icon.heart.pulse .heart-icon {
+      animation: pulse 0.4s ease;
+    }
+    
+    @keyframes pulse {
+      0%   { transform: scale(1); }
+      50%  { transform: scale(1.4); }
+      100% { transform: scale(1); }
+    }
+
     .icon {
       cursor: pointer;
       transition: transform 0.3s ease;
@@ -131,16 +158,6 @@
     .icon.instagram:hover {
       transform: scale(1.2);
       box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
-    }
-
-    .icon.heart.pulse .heart-icon {
-      animation: pulse 0.4s ease;
-    }
-    
-    @keyframes pulse {
-      0%   { transform: scale(1); }
-      50%  { transform: scale(1.4); }
-      100% { transform: scale(1); }
     }
 
     .counter {
