@@ -44,7 +44,7 @@
     }
 
     .blog-card {
-      background: #e6f0ff; /* light blue card background */
+      background: #cce5ff; /* brighter blue for stronger contrast */
       border-radius: 12px;
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
       overflow: hidden;
@@ -52,10 +52,16 @@
       animation: fadeInUp 0.8s ease forwards;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
-
-     .blog-card:hover {
-      transform: translateY(-8px); /* gentle lift */
-      box-shadow: 0 8px 30px rgba(0, 150, 255, 0.4); /* subtle blue glow */
+    
+    .blog-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 30px rgba(0, 150, 255, 0.4);
+    }
+    
+    .counter {
+      font-size: 0.9em;
+      margin-left: 5px;
+      color: #000; /* black for visibility */
     }
     
     .card-image {
@@ -104,11 +110,6 @@
       transform: scale(1.2);
     }
 
-    .counter {
-      font-size: 0.9em;
-      margin-left: 5px;
-      color: gold;
-    }
 
     .icon.whatsapp,
     .icon.facebook,
