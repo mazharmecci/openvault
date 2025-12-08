@@ -1,0 +1,213 @@
+/* Base layout */
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background: linear-gradient(to bottom, #121212, #000000);
+  color: #ffffff;
+}
+
+/* Blog list header */
+.blog-header {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #181818;
+  border-bottom: 1px solid #333333;
+}
+
+.blog-header h1 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 2.4rem;
+  color: #ffd700;
+  margin: 0 0 10px;
+}
+
+.blog-header p {
+  margin: 0;
+  color: #bbbbbb;
+  font-size: 0.98rem;
+}
+
+/* Blog grid */
+.blog-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 28px;
+  padding: 40px 20px 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Blog cards */
+.blog-card {
+  background: #181818;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(255, 215, 0, 0.18);
+  overflow: hidden;
+  max-width: 380px;
+  width: 100%;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  animation: fadeInUp 0.7s ease forwards;
+}
+
+.blog-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 30px rgba(255, 215, 0, 0.28);
+}
+
+.card-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.card-content {
+  padding: 18px 20px 16px;
+}
+
+.card-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.4rem;
+  margin: 0 0 8px;
+  color: #ffffff;
+}
+
+.card-excerpt {
+  font-size: 0.98rem;
+  color: #dddddd;
+  margin: 0 0 10px;
+  line-height: 1.5;
+}
+
+.card-meta {
+  font-size: 0.85rem;
+  color: #ffd700;
+  margin-bottom: 14px;
+}
+
+/* Actions / icons */
+.card-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 1.15rem;
+}
+
+.icon {
+  cursor: pointer;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+  opacity: 0.9;
+}
+
+.icon:hover {
+  transform: scale(1.18);
+  opacity: 1;
+}
+
+.icon.heart::before {
+  content: "♥";
+  color: #ff4d6a;
+  margin-right: 4px;
+}
+
+.icon.share::before {
+  content: "⇪";
+  margin-right: 4px;
+}
+
+/* Optional like counter if you add it */
+.counter {
+  font-size: 0.85rem;
+  margin-left: 4px;
+  color: #ffd700;
+}
+
+/* Single post layout */
+.post-hero {
+  text-align: center;
+  padding: 40px 20px 24px;
+  background-color: #181818;
+  border-bottom: 1px solid #333333;
+}
+
+.post-hero h1 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 2.1rem;
+  color: #ffd700;
+  margin: 0 0 12px;
+}
+
+.post-meta {
+  font-size: 0.9rem;
+  color: #bbbbbb;
+  margin: 0;
+}
+
+.post-container {
+  max-width: 800px;
+  margin: 32px auto 60px;
+  padding: 0 20px;
+}
+
+.post-body p {
+  line-height: 1.7;
+  font-size: 1rem;
+  color: #eeeeee;
+  margin: 0 0 16px;
+}
+
+.post-body h2,
+.post-body h3 {
+  font-family: 'Playfair Display', Georgia, serif;
+  margin: 24px 0 12px;
+  color: #ffd700;
+}
+
+/* Footer */
+.blog-footer {
+  text-align: center;
+  padding: 18px 20px;
+  background-color: #181818;
+  border-top: 1px solid #333333;
+  font-size: 0.85rem;
+  color: #aaaaaa;
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Confetti canvas (if you use it) */
+.confetti {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  .blog-header h1 {
+    font-size: 2rem;
+  }
+
+  .card-image {
+    height: 180px;
+  }
+
+  .post-hero h1 {
+    font-size: 1.8rem;
+  }
+}
