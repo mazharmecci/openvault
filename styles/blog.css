@@ -51,28 +51,6 @@ body {
   animation: fadeInUp 0.7s ease forwards;
 }
 
-.icon.like,
-.icon.share,
-.icon.whatsapp,
-.icon.facebook,
-.icon.instagram {
-  width: 24px;
-  height: 24px;
-  object-fit: contain;
-  padding: 2px;
-  border-radius: 4px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.icon.like:hover,
-.icon.share:hover,
-.icon.whatsapp:hover,
-.icon.facebook:hover,
-.icon.instagram:hover {
-  transform: scale(1.2);
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
-}
-
 .blog-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 10px 30px rgba(255, 215, 0, 0.28);
