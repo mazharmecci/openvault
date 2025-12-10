@@ -420,7 +420,7 @@ body {
       margin: 30px auto;
       border-collapse: collapse;
       font-family: 'Inter', sans-serif;
-      background-color: white; /* bright blue background */
+      background-color: #ecf9fd; /* bright blue background */
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
       border-radius: 12px;
       overflow: hidden;
