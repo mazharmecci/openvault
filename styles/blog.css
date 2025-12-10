@@ -65,8 +65,8 @@ body {
 
 .card-content {
   padding: 18px 20px 16px;
+  background-color: white; /* ✅ Explicit white background */
 }
-
 .card-title {
   font-family: 'Playfair Display', Georgia, serif;
   font-size: 1.4rem;
