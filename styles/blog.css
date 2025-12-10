@@ -2,7 +2,7 @@
 body {
   margin: 0;
   font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-  background: #ecf9fd; /* bright blue background */
+  background: white; /* bright blue background */
   color: #111111;      /* switch to subtle black text for readability */
 }
 
@@ -40,7 +40,7 @@ body {
 
 /* Blog cards */
 .blog-card {
-  background: #181818;
+  background: white;
   border-radius: 12px;
   box-shadow: 0 4px 20px rgba(255, 215, 0, 0.18);
   overflow: hidden;
