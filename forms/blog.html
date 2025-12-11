@@ -87,16 +87,17 @@ body {
   color: #ffffff;
 }
 
+/* Editor's Pick badge in black */
 .editor-badge {
-  background: #facc15;
-  color: #ffffff;
+  background: #000;
+  color: #fff;
   font-size: 0.75rem;
   font-weight: 600;
   padding: 4px 10px;
   border-radius: 999px;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  box-shadow: 0 2px 6px rgba(255, 255, 255, 0.2);
+  box-shadow: 0 2px 6px rgba(255,255,255,0.2);
 }
 
 /* Blog intro */
@@ -199,6 +200,50 @@ body {
   color: #ffffff;
 }
 
+/* Trending tag container */
+.trending-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: linear-gradient(to right, #8e2de2, #4a00e0);
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.9rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  transition: transform 0.2s ease;
+}
+.trending-tag:hover {
+  transform: scale(1.05);
+}
+
+/* Icon inside trending tag */
+.trending-tag i {
+  font-size: 1.1rem;
+}
+
+.trending-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 6px 12px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+.fire-icon {
+  font-size: 1rem;
+}
 
      .icon.heart {
       display: inline-flex;
@@ -401,7 +446,9 @@ body {
   <div class="blog-header-inner">
     <!-- Author + LinkedIn -->
     <div class="author-profile">
-      <a href="https://www.linkedin.com/in/mazhar-rabbani-mecci-0695a327/" target="_blank" class="linkedin-btn">Follow on LinkedIn</a>
+      <a href="https://www.linkedin.com/in/mazhar-rabbani-mecci-0695a327/" 
+         target="_blank" 
+         class="linkedin-btn">Follow on LinkedIn</a>
       <span class="author-name">Mazhar Mecci</span>
       <span class="editor-badge">Editor’s Picks</span>
     </div>
@@ -410,10 +457,21 @@ body {
     <div class="blog-intro">
       <h1>Openvault Blog</h1>
       <p class="lede">Premium insights on Tech Stack, stories, and strategies for 2025</p>
+
       <div class="hot-links">
-        <a href="https://openvault.in/posts/frontend-backend-journey.html">🚀 Front & Backend code journey</a>
-        <a href="https://openvault.in/posts/ai-trends.html">🧠 AI Trends You Can’t Ignore</a>
-        <a href="https://openvault.in/posts/mobile-reads-my-mind.html">📱 Do mobile really read your mind</a>
+        <a href="https://openvault.in/posts/frontend-backend-journey.html">
+          🚀 Front & Backend code journey
+        </a>
+        <a href="https://openvault.in/posts/ai-trends.html">
+          🧠 AI Trends You Can’t Ignore
+        </a>
+        <a href="https://openvault.in/posts/mobile-reads-my-mind.html">
+          📱 Do mobile really read your mind
+        </a>
+      </div>
+
+      <div class="trending-label">
+        <span class="fire-icon">🔥</span> Trending on X
       </div>
     </div>
   </div>
