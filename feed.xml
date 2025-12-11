@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>OpenVault Blog</title>
+    <link>https://openvault.in/</link>
+    <description>OpenVault articles on AI, digital marketing, startups, future of work and histopathology equipment.</description>
+    <language>en</language>
+    <lastBuildDate>Thu, 11 Dec 2025 10:40:00 +0530</lastBuildDate>
+
+    <!-- Blog index as feed home -->
+    <item>
+      <title>OpenVault Blog Index</title>
+      <link>https://openvault.in/forms/blog.html</link>
+      <guid>https://openvault.in/forms/blog.html</guid>
+      <pubDate>Thu, 11 Dec 2025 10:40:00 +0530</pubDate>
+      <description>Browse all OpenVault articles on AI, marketing, startups and more.</description>
+    </item>
+
+    <!-- Blog posts -->
+    <item>
+      <title>Digital Marketing Playbook</title>
+      <link>https://openvault.in/posts/digital-marketing.html</link>
+      <guid>https://openvault.in/posts/digital-marketing.html</guid>
+      <pubDate>Thu, 11 Dec 2025 10:00:00 +0530</pubDate>
+      <description>Digital marketing strategies for founders and creators looking to grow efficiently online.</description>
+    </item>
+
+    <item>
+      <title>AI Trends</title>
+      <link>https://openvault.in/posts/ai-trends.html</link>
+      <guid>https://openvault.in/posts/ai-trends.html</guid>
+      <pubDate>Thu, 11 Dec 2025 09:30:00 +0530</pubDate>
+      <description>Key AI trends shaping products, content and automation in 2025.</description>
+    </item>
+
+    <item>
+      <title>Startup Growth</title>
+      <link>https://openvault.in/posts/startup-growth.html</link>
+      <guid>https://openvault.in/posts/startup-growth.html</guid>
+      <pubDate>Fri, 10 Oct 2025 10:00:00 +0530</pubDate>
+      <description>Practical ideas for taking your startup from early traction to sustainable growth.</description>
+    </item>
+
+    <item>
+      <title>The Future of Work</title>
+      <link>https://openvault.in/posts/future-of-work.html</link>
+      <guid>https://openvault.in/posts/future-of-work.html</guid>
+      <pubDate>Thu, 11 Dec 2025 08:30:00 +0530</pubDate>
+      <description>How AI, remote work and automation are reshaping careers, teams and organisations.</description>
+    </item>
+
+    <item>
+      <title>IndiGo Case Study</title>
+      <link>https://openvault.in/posts/indigo.html</link>
+      <guid>https://openvault.in/posts/indigo.html</guid>
+      <pubDate>Mon, 08 Dec 2025 09:00:00 +0530</pubDate>
+      <description>Insights and lessons from IndiGo’s growth, operations and customer experience.</description>
+    </item>
+
+    <item>
+      <title>Does My Mobile Read My Mind?</title>
+      <link>https://openvault.in/posts/mobile-reads-my-mind.html</link>
+      <guid>https://openvault.in/posts/mobile-reads-my-mind.html</guid>
+      <pubDate>Wed, 10 Dec 2025 09:00:00 +0530</pubDate>
+      <description>A deep dive into ad tracking, recommendation systems and why your phone feels psychic.</description>
+    </item>
+
+    <item>
+      <title>Top Histopathology Equipments</title>
+      <link>https://openvault.in/posts/top-histopathology-equipments.html</link>
+      <guid>https://openvault.in/posts/top-histopathology-equipments.html</guid>
+      <pubDate>Thu, 11 Dec 2025 09:15:00 +0530</pubDate>
+      <description>A comprehensive guide to key histopathology instruments and lab setup considerations.</description>
+    </item>
+
+    <item>
+      <title>Grossing Station Guide</title>
+      <link>https://openvault.in/posts/grossing-station.html</link>
+      <guid>https://openvault.in/posts/grossing-station.html</guid>
+      <pubDate>Thu, 11 Dec 2025 09:20:00 +0530</pubDate>
+      <description>How to design and choose grossing stations, boards and tools for safer workflows.</description>
+    </item>
+
+    <item>
+      <title>Specimen Storage Cabinet &amp; Formalin Neutralization</title>
+      <link>https://openvault.in/posts/specimen-storage-cabinet.html</link>
+      <guid>https://openvault.in/posts/specimen-storage-cabinet.html</guid>
+      <pubDate>Thu, 11 Dec 2025 09:25:00 +0530</pubDate>
+      <description>Best practices for histology specimen storage and formalin neutralization in modern labs.</description>
+    </item>
+
+    <!-- Forms / business pages (optional in feed; included here as updates) -->
+    <item>
+      <title>Business Solutions</title>
+      <link>https://openvault.in/forms/business.html</link>
+      <guid>https://openvault.in/forms/business.html</guid>
+      <pubDate>Wed, 03 Dec 2025 10:00:00 +0530</pubDate>
+      <description>Information for businesses and institutions partnering with OpenVault.</description>
+    </item>
+
+    <item>
+      <title>Terms &amp; Conditions</title>
+      <link>https://openvault.in/forms/terms.html</link>
+      <guid>https://openvault.in/forms/terms.html</guid>
+      <pubDate>Wed, 03 Dec 2025 10:00:00 +0530</pubDate>
+      <description>Legal terms and usage conditions for OpenVault services.</description>
+    </item>
+
+    <item>
+      <title>Privacy Policy</title>
+      <link>https://openvault.in/forms/privacy.html</link>
+      <guid>https://openvault.in/forms/privacy.html</guid>
+      <pubDate>Wed, 03 Dec 2025 10:00:00 +0530</pubDate>
+      <description>How OpenVault collects, stores and uses your data.</description>
+    </item>
+
+    <item>
+      <title>Refund Policy</title>
+      <link>https://openvault.in/forms/refund.html</link>
+      <guid>https://openvault.in/forms/refund.html</guid>
+      <pubDate>Wed, 03 Dec 2025 10:00:00 +0530</pubDate>
+      <description>Refund and cancellation terms for purchases on OpenVault.</description>
+    </item>
+
+    <item>
+      <title>Disclaimer</title>
+      <link>https://openvault.in/forms/disclaimer.html</link>
+      <guid>https://openvault.in/forms/disclaimer.html</guid>
+      <pubDate>Wed, 03 Dec 2025 10:00:00 +0530</pubDate>
+      <description>Disclaimer about content, projects and third-party resources on OpenVault.</description>
+    </item>
+
+    <item>
+      <title>Contact OpenVault</title>
+      <link>https://openvault.in/forms/contact.html</link>
+      <guid>https://openvault.in/forms/contact.html</guid>
+      <pubDate>Thu, 11 Dec 2025 09:35:00 +0530</pubDate>
+      <description>Contact information and form to reach the OpenVault team.</description>
+    </item>
+
+  </channel>
+</rss>
