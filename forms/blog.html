@@ -27,7 +27,6 @@ body {
   background: linear-gradient(to right, #8e2de2, #4a00e0);
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   padding: 40px 20px;
-  color: #ffffff;
 }
 
 .blog-header-inner {
@@ -38,15 +37,14 @@ body {
   gap: 20px;
 }
 
-/* Author profile */
+/* Author section */
 .author-profile {
   display: flex;
-  flex-direction: column; /* stack button + name */
+  flex-direction: column;
   align-items: flex-start;
   gap: 8px;
   font-size: 0.95rem;
   font-weight: 500;
-  color: #ffffff;
 }
 
 .author-info {
@@ -57,11 +55,10 @@ body {
 
 .author-name {
   font-weight: 600;
-  color: #ffffff;
 }
 
 .author-icon-small {
-  width: 20px;   /* fingertip size */
+  width: 20px;
   height: 20px;
   border-radius: 50%;
   object-fit: cover;
@@ -83,7 +80,7 @@ body {
   transform: translateY(-1px);
 }
 
-/* Editor's Pick badge in black */
+/* Editor badge */
 .editor-badge {
   background: #000;
   color: #fff;
@@ -106,13 +103,11 @@ body {
   font-family: 'Playfair Display', Georgia, serif;
   font-size: 2.4rem;
   margin: 0 0 10px;
-  color: #ffffff;
 }
 
 .blog-intro p.lede {
   font-size: 1rem;
   margin: 6px 0;
-  color: #ffffff;
 }
 
 /* Trending row */
@@ -124,7 +119,7 @@ body {
   flex-wrap: wrap;
 }
 
-/* Trending label with X branding */
+/* Trending label */
 .trending-label {
   display: inline-flex;
   align-items: center;
@@ -147,7 +142,6 @@ body {
 
 .trending-text {
   font-size: 0.85rem;
-  color: #000;
 }
 
 /* Pulse animation */
@@ -157,22 +151,25 @@ body {
   100% { transform: scale(1); opacity: 1; }
 }
 
-/* Dark background for trending links */
+/* Trending links */
 .trending-tag {
   display: inline-block;
   font-size: 0.95rem;
   font-weight: 500;
   color: #ffffff;
   text-decoration: none;
-  background: #1f2937; /* dark slate */
+  background: #1f2937;
   padding: 8px 14px;
   border-radius: 8px;
   transition: background 0.2s ease, transform 0.2s ease;
   box-shadow: 0 2px 8px rgba(0,0,0,0.4);
 }
 .trending-tag:hover {
-  background: #374151; /* lighter slate */
-  transform: translateY(-2px);
+  background: #374151;
+  transform: scale(1.05);
+}
+.trending-tag i {
+  font-size: 1.1rem;
 }
 
 /* Hot posts */
@@ -210,6 +207,7 @@ body {
   gap: 30px;
   padding: 40px 20px;
 }
+
 .blog-card {
   background: linear-gradient(to bottom right, #3a0ca3, #000);
   border-radius: 12px;
@@ -224,86 +222,45 @@ body {
   transform: translateY(-8px);
   box-shadow: 0 8px 30px rgba(255, 255, 255, 0.4);
 }
+
 .card-image {
   width: 100%;
   height: 200px;
   object-fit: cover;
 }
+
 .card-content {
   padding: 20px;
 }
+
+.card-title,
+.card-excerpt,
+.card-meta,
+.card-actions {
+  color: #ffffff;
+}
+
 .card-title {
   font-family: 'Playfair Display', serif;
   font-size: 1.5em;
   margin-bottom: 10px;
-  color: #ffffff;
 }
+
 .card-excerpt {
   font-size: 1em;
   margin-bottom: 10px;
-  color: #ffffff;
 }
+
 .card-meta {
   font-size: 0.9em;
-  color: #ffffff;
   margin-bottom: 15px;
 }
+
 .card-actions {
   display: flex;
   gap: 15px;
   font-size: 1.2em;
   align-items: center;
-  color: #ffffff;
-}
-
-.fire-icon {
- font-size: 1rem;
-}
-    
-.trending-text {
-  font-size: 0.85rem;
-}
-.trending-tag:hover {
-  transform: scale(1.05);
-}
-
-/* Dark background for trending links */
-.trending-tag {
-  display: inline-block;
-  font-size: 0.95rem;
-  font-weight: 500;
-  color: #ffffff;
-  text-decoration: none;
-  background: Black; /* Tailwind slate-800 */
-  padding: 8px 14px;
-  border-radius: 8px;
-  transition: background 0.2s ease, transform 0.2s ease;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.4);
-}
-    
-.trending-tag:hover {
-  background: #374151; /* Tailwind slate-700 */
-  transform: translateY(-2px);
-}
-    
-.trending-tag i {
-  font-size: 1.1rem;
-}
-
-.trending-label {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: white;
-  background: rgba(255, 255, 255, 0.08);
-  padding: 6px 12px;
-  border-radius: 999px;
-  margin-bottom: 12px;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
 }
 
 
