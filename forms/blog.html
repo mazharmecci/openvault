@@ -200,50 +200,56 @@ body {
   color: #ffffff;
 }
 
-/* Trending tag container */
-.trending-tag {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 8px 14px;
-  border-radius: 999px;
-  background: linear-gradient(to right, #8e2de2, #4a00e0);
-  color: #fff;
-  font-weight: 600;
-  font-size: 0.9rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  transition: transform 0.2s ease;
+.fire-icon {
+ font-size: 1rem;
+}
+    
+.trending-text {
+  font-size: 0.85rem;
 }
 .trending-tag:hover {
   transform: scale(1.05);
 }
 
-/* Icon inside trending tag */
+/* Dark background for trending links */
+.trending-tag {
+  display: inline-block;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #ffffff;
+  text-decoration: none;
+  background: #1f2937; /* Tailwind slate-800 */
+  padding: 8px 14px;
+  border-radius: 8px;
+  transition: background 0.2s ease, transform 0.2s ease;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+    
+.trending-tag:hover {
+  background: #374151; /* Tailwind slate-700 */
+  transform: translateY(-2px);
+}
+    
 .trending-tag i {
   font-size: 1.1rem;
 }
 
 .trending-label {
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: #ffffff;
-  background: rgba(255, 255, 255, 0.1);
-  padding: 6px 12px;
-  border-radius: 999px;
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  margin-bottom: 10px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 6px 12px;
+  border-radius: 999px;
+  margin-bottom: 12px;
   text-transform: uppercase;
   letter-spacing: 0.04em;
   box-shadow: 0 2px 6px rgba(0,0,0,0.3);
 }
 
-.fire-icon {
-  font-size: 1rem;
-}
 
      .icon.heart {
       display: inline-flex;
@@ -444,6 +450,7 @@ body {
   
 <header class="blog-header">
   <div class="blog-header-inner">
+    
     <!-- Author + LinkedIn -->
     <div class="author-profile">
       <a href="https://www.linkedin.com/in/mazhar-rabbani-mecci-0695a327/" 
@@ -453,29 +460,28 @@ body {
       <span class="editor-badge">Editor’s Picks</span>
     </div>
 
-    <!-- Blog intro + trending links -->
-    <div class="blog-intro">
-      <h1>Openvault Blog</h1>
-      <p class="lede">Premium insights on Tech Stack, stories, and strategies for 2025</p>
-
-      <div class="hot-links">
-        <a href="https://openvault.in/posts/frontend-backend-journey.html">
-          🚀 Front & Backend code journey
-        </a>
-        <a href="https://openvault.in/posts/ai-trends.html">
-          🧠 AI Trends You Can’t Ignore
-        </a>
-        <a href="https://openvault.in/posts/mobile-reads-my-mind.html">
-          📱 Do mobile really read your mind
-        </a>
-      </div>
-
-      <div class="trending-label">
-        <span class="fire-icon">🔥</span> Trending on X
-      </div>
+    <!-- Trending Label -->
+    <div class="trending-label">
+      <span class="fire-icon">🔥</span>
+      <span class="trending-text">Trending on X</span>
     </div>
+
+    <!-- Trending Links -->
+    <div class="hot-links">
+      <a href="https://openvault.in/posts/frontend-backend-journey.html" class="trending-tag">
+        🚀 Front & Backend code journey
+      </a>
+      <a href="https://openvault.in/posts/ai-trends.html" class="trending-tag">
+        🧠 AI Trends You Can’t Ignore
+      </a>
+      <a href="https://openvault.in/posts/mobile-reads-my-mind.html" class="trending-tag">
+        📱 Do mobile really read your mind
+      </a>
+    </div>
+
   </div>
 </header>
+
 
   <main class="blog-grid">
     <!-- Blog Card 1 -->
