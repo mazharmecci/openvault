@@ -28,19 +28,33 @@
 
   <!-- Open Graph Social Preview -->
   <meta property="og:type" content="article">
-  <meta property="og:title" content="Comprehensive Guide — Histopathology Instruments & Lab Setup | ISTOS Medical">
-  <meta property="og:description" content="Complete guide to histopathology instruments: grossing stations, microtomes, tissue processors, cryostats, stainers, digital pathology and more.">
-  <meta property="og:image" content="/assets/images/Grossing-Station.png">
-  <meta property="og:url" content="https://istosmedical.com/instruments/top-histopathology-equipment-guide-2025">
-  <meta property="og:site_name" content="ISTOS Medical Pvt Ltd">
+  <meta property="og:title" content="Frontend-Backend Journey| openvault">
+  <meta property="og:description" content="All about digital marketing, Tech Stack, A.I, Software building, CRM & ERP concepts">
+  <meta property="og:image" content="/assets/images/front-back.png">
+  <meta property="og:url" content="">
+  <meta property="og:site_name" content="openvault">
+
+<body>
+  <!-- Brand -->
+  <h1 class="ov-brand">
+    <span class="ov-logo-wrap">
+      <img src="../assets/images/user-icon.png" alt="OpenVault logo O" class="ov-logo-spin">
+    </span>
+    <span class="ov-brand-rest">penvault</span>
+  </h1>
+
+  <header class="post-hero">
+    <h1>"Frontend-Backend Journey”</h1>
+    <p class="post-meta">By Mazhar Mecci · Dec 11, 2025</p>
+  </header>
 
   <main class="post-container">
     <article class="post-body">
-      <header class="post-hero">
-        <h1>Planning Your Frontend &amp; Backend on GitHub: A Practical Roadmap 🚀</h1>
-        <p class="post-meta">By Mazhar Mecci · Dec 11, 2025</p>
+      <header>
+        <h1>Frontend-Backend Journey</h1>
+        <p><strong>It isn't too late to understand and begin the journey</strong></p>
       </header>
-
+    
       <p class="lede">
         Before the first line of code, a good GitHub plan can decide whether your project feels like a clean lab or a messy store room. This guide walks through how to plan your frontend and backend on GitHub, choose your tech stack and get from scaffolding to a production‑ready deployment.
       </p>
