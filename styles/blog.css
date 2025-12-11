@@ -514,3 +514,36 @@ p.lede {
       border-color: #38bdf8;
     }
 
+    .blog-featured-strip {
+      background: #020617;
+      border-top: 1px solid #333;
+      border-bottom: 1px solid #333;
+      padding: 14px 20px;
+      text-align: center;
+    }
+    
+    .blog-featured-strip h2 {
+      margin: 0 0 8px;
+      font-size: 1.1rem;
+      color: #facc15;
+    }
+    
+    .blog-featured-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px 18px;
+    }
+    
+    .blog-featured-links a {
+      color: #e5e7eb;
+      font-size: 0.9rem;
+      text-decoration: none;
+      border-bottom: 1px dashed rgba(148,163,184,0.7);
+    }
+    
+    .blog-featured-links a:hover {
+      color: #38bdf8;
+      border-bottom-color: #38bdf8;
+    }
+
