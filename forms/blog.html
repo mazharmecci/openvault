@@ -38,32 +38,33 @@ body {
   gap: 20px;
 }
 
+/* Author profile */
 .author-profile {
   display: flex;
-  align-items: center;
-  gap: 12px;
+  flex-direction: column; /* stack button + name */
+  align-items: flex-start;
+  gap: 8px;
   font-size: 0.95rem;
   font-weight: 500;
   color: #ffffff;
 }
 
-.author-icon {
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  object-fit: cover;
-  box-shadow: 0 2px 6px rgba(255, 255, 255, 0.2);
+.author-info {
+  display: flex;
+  align-items: center;
+  gap: 6px;
 }
 
-.author-link {
+.author-name {
   font-weight: 600;
   color: #ffffff;
-  text-decoration: none;
-  font-size: 0.95rem;
-  transition: color 0.2s ease;
 }
-.author-link:hover {
-  color: #c3bfff;
+
+.author-icon-small {
+  width: 20px;   /* fingertip size */
+  height: 20px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 /* LinkedIn button */
@@ -80,11 +81,6 @@ body {
 .linkedin-btn:hover {
   background: #005582;
   transform: translateY(-1px);
-}
-
-.author-name {
-  font-weight: 600;
-  color: #ffffff;
 }
 
 /* Editor's Pick badge in black */
@@ -117,6 +113,66 @@ body {
   font-size: 1rem;
   margin: 6px 0;
   color: #ffffff;
+}
+
+/* Trending row */
+.trending-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+/* Trending label with X branding */
+.trending-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #000;
+  background: #fff;
+  padding: 6px 12px;
+  border-radius: 999px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.fire-icon {
+  font-size: 1rem;
+  animation: pulse 1.5s infinite;
+}
+
+.trending-text {
+  font-size: 0.85rem;
+  color: #000;
+}
+
+/* Pulse animation */
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.2); opacity: 0.7; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* Dark background for trending links */
+.trending-tag {
+  display: inline-block;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #ffffff;
+  text-decoration: none;
+  background: #1f2937; /* dark slate */
+  padding: 8px 14px;
+  border-radius: 8px;
+  transition: background 0.2s ease, transform 0.2s ease;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+.trending-tag:hover {
+  background: #374151; /* lighter slate */
+  transform: translateY(-2px);
 }
 
 /* Hot posts */
@@ -447,6 +503,7 @@ body {
   </style>
 </head>
 <body>
+  
   
 <header class="blog-header">
   <div class="blog-header-inner">
