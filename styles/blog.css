@@ -455,3 +455,62 @@ p.lede {
     .system-table tbody tr:hover {
       background-color: #d6f0ff; /* subtle hover effect */
     }
+
+/* featured blog cards */
+
+    .featured-blog {
+      padding: 40px 20px 20px;
+      background: #020617;
+    }
+    
+    .featured-blog .section-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+    }
+    
+    .featured-grid {
+      display: grid;
+      gap: 18px;
+      margin-top: 16px;
+    }
+    
+    @media (min-width: 780px) {
+      .featured-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+    }
+    
+    .featured-card {
+      display: block;
+      padding: 14px 16px;
+      border-radius: 12px;
+      background: rgba(15,23,42,0.9);
+      color: #e5e7eb;
+      text-decoration: none;
+      border: 1px solid rgba(148,163,184,0.4);
+      transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+    }
+    
+    .featured-card h3 {
+      margin: 0 0 6px;
+      font-size: 1.02rem;
+      color: #f9fafb;
+    }
+    
+    .featured-card p {
+      margin: 0 0 8px;
+      font-size: 0.92rem;
+      color: #cbd5f5;
+    }
+    
+    .featured-tag {
+      font-size: 0.8rem;
+      color: #a5b4fc;
+    }
+    
+    .featured-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 18px 40px rgba(15,23,42,0.6);
+      border-color: #38bdf8;
+    }
+
