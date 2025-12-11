@@ -4,7 +4,7 @@
   <!-- Homepage -->
   <url>
     <loc>https://openvault.in/</loc>
-    <lastmod>2025-12-11</lastmod>
+    <lastmod>2025-12-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -12,7 +12,7 @@
   <!-- Blog index -->
   <url>
     <loc>https://openvault.in/forms/blog.html</loc>
-    <lastmod>2025-12-11</lastmod>
+    <lastmod>2025-12-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -20,42 +20,42 @@
   <!-- Blog posts -->
   <url>
     <loc>https://openvault.in/posts/digital-marketing.html</loc>
-    <lastmod>2025-12-11</lastmod>
+    <lastmod>2025-12-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://openvault.in/posts/ai-trends.html</loc>
-    <lastmod>2025-12-11</lastmod>
+    <lastmod>2025-12-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://openvault.in/posts/startup-growth.html</loc>
-    <lastmod>2025-12-11</lastmod>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://openvault.in/posts/future-of-work.html</loc>
-    <lastmod>2025-12-11</lastmod>
+    <lastmod>2025-12-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://openvault.in/posts/indigo.html</loc>
-    <lastmod>2025-12-11</lastmod>
+    <lastmod>2025-12-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://openvault.in/posts/mobile-reads-my-mind.html</loc>
-    <lastmod>2025-12-11</lastmod>
+    <lastmod>2025-12-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -84,35 +84,35 @@
   <!-- Forms / Business pages -->
   <url>
     <loc>https://openvault.in/forms/business.html</loc>
-    <lastmod>2025-12-11</lastmod>
+    <lastmod>2025-12-03</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
     <loc>https://openvault.in/forms/terms.html</loc>
-    <lastmod>2025-12-11</lastmod>
+    <lastmod>2025-12-03</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
 
   <url>
     <loc>https://openvault.in/forms/privacy.html</loc>
-    <lastmod>2025-12-11</lastmod>
+    <lastmod>2025-12-03</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
 
   <url>
     <loc>https://openvault.in/forms/refund.html</loc>
-    <lastmod>2025-12-11</lastmod>
+    <lastmod>2025-12-03</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
 
   <url>
     <loc>https://openvault.in/forms/disclaimer.html</loc>
-    <lastmod>2025-12-11</lastmod>
+    <lastmod>2025-12-03</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
