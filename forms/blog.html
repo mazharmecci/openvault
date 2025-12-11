@@ -22,77 +22,85 @@
       color: #ffffff;
     }
 
-    .blog-header {
-      background: #ffffff;
-      border-bottom: 1px solid #e2e8f0;
-      padding: 40px 20px;
-      color: #111827;
-    }
-    
-    .blog-header-inner {
-      max-width: 1100px;
-      margin: 0 auto;
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-    }
-    
-    .author-profile {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-    
-    .author-icon {
-      width: 36px;
-      height: 36px;
-      border-radius: 50%;
-      object-fit: cover;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
-    
-    .author-link {
-      font-weight: 600;
-      color: #2563eb;
-      text-decoration: none;
-      font-size: 0.95rem;
-      transition: color 0.2s ease;
-    }
-    .author-link:hover {
-      color: #1d4ed8;
-    }
-    
-    .blog-intro {
-      flex: 1;
-      text-align: left;
-    }
-    
-    .blog-intro h1 {
-      font-family: 'Playfair Display', Georgia, serif;
-      font-size: 2.4rem;
-      margin: 0 0 10px;
-      color: #111827;
-    }
-    
-    .blog-intro p.lede {
-      font-size: 1rem;
-      margin: 6px 0;
-      color: #374151;
-    }
-    
-    .hot-posts {
-      list-style: none;
-      padding: 0;
-      margin: 12px 0 0;
-    }
-    .hot-posts li {
-      font-size: 0.95rem;
-      margin: 4px 0;
-      color: #ef4444;
-      font-weight: 500;
-    }
+.blog-header {
+  background: #ffffff;
+  border-bottom: 1px solid #e2e8f0;
+  padding: 40px 20px;
+  color: #111827;
+}
+
+.blog-header-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.author-profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.author-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.author-link {
+  font-weight: 600;
+  color: #2563eb;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+}
+.author-link:hover {
+  color: #1d4ed8;
+}
+
+.blog-intro {
+  flex: 1;
+  text-align: left;
+}
+
+.blog-intro h1 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 2.4rem;
+  margin: 0 0 10px;
+  color: #111827;
+}
+
+.blog-intro p.lede {
+  font-size: 1rem;
+  margin: 6px 0;
+  color: #374151;
+}
+
+.hot-posts {
+  list-style: none;
+  padding: 0;
+  margin: 12px 0 0;
+}
+.hot-posts li {
+  font-size: 0.95rem;
+  margin: 4px 0;
+  color: #ef4444;
+  font-weight: 500;
+}
+.hot-posts a {
+  color: #111827;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+.hot-posts a:hover {
+  color: #2563eb;
+}
 
     .blog-header p {
       margin: 8px 0 0;
@@ -359,18 +367,21 @@
   
 <header class="blog-header">
   <div class="blog-header-inner">
+    <!-- Author profile -->
     <div class="author-profile">
       <img src="../assets/images/user-icon.png" alt="Mazhar Mecci" class="author-icon">
-      <a href="https://www.linkedin.com/in/mazhar-mecci" target="_blank" class="author-link">Mazhar Mecci</a>
+      <a href="https://www.linkedin.com/in/mazhar-rabbani-mecci-0695a327/" target="_blank" class="author-link">Mazhar Mecci</a>
     </div>
+
+    <!-- Blog intro -->
     <div class="blog-intro">
       <h1>Openvault Blog</h1>
       <p class="lede">Premium insights on Tech Stack, stories, and strategies for 2025</p>
       <p class="lede">Below posts on social media are on 🔥</p>
       <ul class="hot-posts">
-        <li>🔥 Front & Backend code journey</li>
-        <li>🔥 AI Trends You Can’t Ignore in 2025</li>
-        <li>🔥 Do mobile really read your mind</li>
+        <li>🔥 <a href="https://openvault.in/posts/frontend-backend-journey.html">Front & Backend code journey</a></li>
+        <li>🔥 <a href="https://openvault.in/posts/ai-trends.html">AI Trends You Can’t Ignore in 2025</a></li>
+        <li>🔥 <a href="https://openvault.in/posts/mobile-reads-my-mind.html">Do mobile really read your mind</a></li>
       </ul>
     </div>
   </div>
