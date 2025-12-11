@@ -24,19 +24,17 @@ body {
 
 /* Blog header */
 .blog-header {
-  background: #ffffff;
+  background: linear-gradient(to right, #fdf2ff, #eff6ff);
   border-bottom: 1px solid #e2e8f0;
   padding: 40px 20px;
-  color: #111827;
+  color: #0f172a;
 }
 
 .blog-header-inner {
   max-width: 1100px;
   margin: 0 auto;
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: column;
   gap: 20px;
 }
 
@@ -44,6 +42,9 @@ body {
   display: flex;
   align-items: center;
   gap: 12px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #1e293b;
 }
 
 .author-icon {
@@ -69,7 +70,7 @@ body {
 .linkedin-btn {
   padding: 6px 12px;
   border-radius: 6px;
-  background: #0077b5; /* LinkedIn blue */
+  background: #0077b5;
   color: #fff;
   font-size: 0.85rem;
   font-weight: 600;
@@ -80,44 +81,72 @@ body {
   background: #005582;
   transform: translateY(-1px);
 }
+    
+.author-name {
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.editor-badge {
+  background: #facc15;
+  color: #111827;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 999px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
 
 /* Blog intro */
 .blog-intro {
   flex: 1;
   text-align: left;
 }
+    
 .blog-intro h1 {
   font-family: 'Playfair Display', Georgia, serif;
   font-size: 2.4rem;
   margin: 0 0 10px;
-  color: #111827;
+  color: #0f172a;
 }
+
 .blog-intro p.lede {
   font-size: 1rem;
   margin: 6px 0;
   color: #374151;
 }
 
+
 /* Hot posts */
+    
 .hot-posts {
   list-style: none;
   padding: 0;
   margin: 12px 0 0;
 }
-.hot-posts li {
+    
+.hot-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 12px;
+}
+.hot-links a {
   font-size: 0.95rem;
-  margin: 4px 0;
-  color: #ef4444;
   font-weight: 500;
-}
-.hot-posts a {
-  color: #111827;
-  text-decoration: none;
-  transition: color 0.2s ease;
-}
-.hot-posts a:hover {
   color: #2563eb;
+  text-decoration: none;
+  background: rgba(37, 99, 235, 0.06);
+  padding: 6px 10px;
+  border-radius: 6px;
+  transition: background 0.2s ease;
 }
+.hot-links a:hover {
+  background: rgba(37, 99, 235, 0.12);
+}
+
 
 /* Blog grid + cards */
 .blog-grid {
@@ -372,23 +401,22 @@ body {
   
 <header class="blog-header">
   <div class="blog-header-inner">
-    <!-- Author profile -->
+    <!-- Author + LinkedIn -->
     <div class="author-profile">
-      <img src="../assets/images/user-icon.png" alt="Mazhar Mecci" class="author-icon">
-      <a href="https://www.linkedin.com/in/mazhar-rabbani-mecci-0695a327/" target="_blank" class="author-link">Mazhar Mecci</a>
       <a href="https://www.linkedin.com/in/mazhar-rabbani-mecci-0695a327/" target="_blank" class="linkedin-btn">Follow on LinkedIn</a>
+      <span class="author-name">Mazhar Mecci</span>
+      <span class="editor-badge">Editor’s Picks</span>
     </div>
 
-    <!-- Blog intro -->
+    <!-- Blog intro + trending links -->
     <div class="blog-intro">
       <h1>Openvault Blog</h1>
       <p class="lede">Premium insights on Tech Stack, stories, and strategies for 2025</p>
-      <p class="lede">Below posts on social media are on 🔥</p>
-      <ul class="hot-posts">
-        <li>🔥 <a href="https://openvault.in/posts/frontend-backend-journey.html">Front & Backend code journey</a></li>
-        <li>🔥 <a href="https://openvault.in/posts/ai-trends.html">AI Trends You Can’t Ignore in 2025</a></li>
-        <li>🔥 <a href="https://openvault.in/posts/mobile-reads-my-mind.html">Do mobile really read your mind</a></li>
-      </ul>
+      <div class="hot-links">
+        <a href="https://openvault.in/posts/frontend-backend-journey.html">🚀 Front & Backend code journey</a>
+        <a href="https://openvault.in/posts/ai-trends.html">🧠 AI Trends You Can’t Ignore</a>
+        <a href="https://openvault.in/posts/mobile-reads-my-mind.html">📱 Do mobile really read your mind</a>
+      </div>
     </div>
   </div>
 </header>
