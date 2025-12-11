@@ -34,6 +34,64 @@
   <meta property="og:url" content="https://openvault.in/posts/frontend-backend-journey.html" />
   <meta property="og:site_name" content="Openvault" />
 </head>
+  
+<script>  
+  /* Header container */
+header.post-hero {
+  margin-top: 14px;
+  padding: 18px 0 20px;
+  border-bottom: 1px solid #e2e8f0;
+  background: linear-gradient(135deg, #eff6ff 0%, #fdf2ff 35%, #ffffff 100%);
+  border-radius: 16px 16px 0 0;
+}
+
+/* Main heading */
+header.post-hero h1 {
+  font-size: clamp(2.1rem, 3vw, 2.6rem);
+  margin: 0 0 8px;
+  line-height: 1.15;
+  color: #0b1120;
+  letter-spacing: -0.03em;
+}
+
+/* Subtitle */
+.post-subtitle {
+  margin: 0 0 8px;
+  font-size: 1.02rem;
+  color: #1e293b;
+}
+
+/* Metadata row */
+.post-meta {
+  color: #64748b;
+  margin-top: 6px;
+  font-size: 0.9rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+/* Badge styling */
+.post-meta-badge {
+  padding: 2px 10px;
+  border-radius: 999px;
+  background: rgba(37, 99, 235, 0.06);
+  color: #1d4ed8;
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+  @media (max-width: 880px) {
+  header.post-hero {
+    padding: 16px 0 18px;
+    border-radius: 14px 14px 0 0;
+  }
+}
+</script>    
+  
 <body>
   <!-- Brand -->
   <h1 class="ov-brand">
@@ -44,17 +102,14 @@
   </h1>
 
   <header class="post-hero">
-    <h1>Frontend–Backend Journey 💻🛠️</h1>
-    <p class="post-meta">By Mazhar Mecci · Dec 11, 2025</p>
+    <h1>Frontend–Backend Journey 🚀</h1>
+    <p class="post-subtitle">From openvault</p>
+    <div class="post-meta">
+      <span>By Mazhar Mecci · Dec 11, 2025</span>
+      <span class="post-meta-badge">It is never too late to start your full‑stack journey 🚀</span>
+    </div>
   </header>
-
-  <main class="post-container">
-    <article class="post-body">
-      <header>
-        <h2>It is never too late to start your full‑stack journey 🚀</h2>
-        <p><strong>Whether you are coming from digital marketing, CRM/ERP, or pure coding, you can still learn how real frontend–backend projects are planned and shipped.</strong></p>
-      </header>
-
+  
       <p class="lede">
         Before the first line of code, a good GitHub plan can decide whether your project feels like a clean, well‑labelled repository or a messy “final‑final‑v3” folder. This guide walks through how to plan your frontend and backend on GitHub, choose your tech stack, and move from project scaffolding to a production‑ready deployment with PM2 and PostgreSQL. 🙂
       </p>
@@ -64,7 +119,7 @@
         Most web apps start with a simple choice: keep frontend and backend in a single repository, or split them into separate repos. A <strong>single repo</strong> with <code>/frontend</code> and <code>/backend</code> folders keeps things simple for solo developers and small teams, and makes it easier to track cross‑cutting changes. 
       </p>
       <ul>
-        <li>📂 <strong>Monorepo</strong> – one GitHub repo, separate top‑level folders (<code>/frontend</code>, <code>/backend</code>, maybe <code>/shared</code> utilities).</li>
+        <li>📂 <strong>Monorepo</strong> – one GitHub repo, separate top‑level folders (<code>/frontend</code>, <code>/backend</code>, maybe <code>/shared</code> utilities).</li><BR>
         <li>🧩 <strong>Multi‑repo</strong> – one repo per service (e.g., <code>my‑app‑frontend</code>, <code>my‑app‑api</code>), useful for bigger teams and independent deployments.</li>
       </ul>
       <p>
@@ -76,11 +131,11 @@
         A clean backend layout makes every future change easier. A common pattern with Node.js and Express is to use a dedicated entry file and split responsibilities across routes, controllers and models. 
       </p>
       <ul>
-        <li>🟢 <code>server.js</code> – app bootstrapping, middleware, logging and database connection.</li>
-        <li>🧭 <code>/routes</code> – defines endpoints and HTTP verbs, but no business logic.</li>
-        <li>🧠 <code>/controllers</code> – contains request handling and business rules.</li>
-        <li>🗃️ <code>/models</code> – data access layer and database models (e.g., PostgreSQL).</li>
-        <li>⚙️ <code>/config</code> – configuration files, environment handling and secrets management.</li>
+        <li>🟢 <code>server.js</code> – app bootstrapping, middleware, logging and database connection.</li><BR>
+        <li>🧭 <code>/routes</code> – defines endpoints and HTTP verbs, but no business logic.</li><BR>
+        <li>🧠 <code>/controllers</code> – contains request handling and business rules.</li><BR>
+        <li>🗃️ <code>/models</code> – data access layer and database models (e.g., PostgreSQL).</li><BR>
+        <li>⚙️ <code>/config</code> – configuration files, environment handling and secrets management.</li><BR>
       </ul>
       <p>
         A very practical milestone is to get <strong>CRUD routes</strong> working with in‑memory data first. Once you have all endpoints tested and working, you can connect the same controllers to a real database such as PostgreSQL, which you have already installed on the server. This keeps your early debugging focused on logic, not database drivers.
@@ -91,9 +146,9 @@
         On the frontend side, your options range from a light static site to full single‑page applications. Popular choices include React, Next.js, Vue and Nuxt for component‑driven UIs, or plain HTML/CSS/JS for leaner projects. Your choice can follow the kind of projects you see on Openvault – from simple CRM flows to more complex analytics dashboards. 
       </p>
       <ul>
-        <li>⚛️ <strong>React / Next.js</strong> – great for dashboards, portals, and SEO‑friendly content.</li>
-        <li>💚 <strong>Vue / Nuxt</strong> – friendly learning curve with a strong ecosystem.</li>
-        <li>🧱 <strong>HTML/CSS/JS</strong> – perfect for landing pages, forms and early prototypes.</li>
+        <li>⚛️ <strong>React / Next.js</strong> – great for dashboards, portals, and SEO‑friendly content.</li><BR>
+        <li>💚 <strong>Vue / Nuxt</strong> – friendly learning curve with a strong ecosystem.</li><BR>
+        <li>🧱 <strong>HTML/CSS/JS</strong> – perfect for landing pages, forms and early prototypes.</li><BR>
       </ul>
       <p>
         Whatever you pick, centre the design around a clear <strong>API contract</strong>. Document backend routes, methods and payloads so frontend and backend development can move in parallel without guesswork. This is similar to how a good CRM or ERP flow is mapped end‑to‑end before any screen is designed.
@@ -104,9 +159,9 @@
         Once the backend is deployed to a server, process management becomes critical. PM2 is a widely used Node.js process manager that keeps your app alive, restarts it on failure and provides logs and basic monitoring. 
       </p>
       <ul>
-        <li>🔄 Restarts your Node process automatically if it crashes.</li>
-        <li>📊 Offers basic metrics and logs via the CLI and optional dashboards.</li>
-        <li>🧰 Provides simple commands to scale instances or reload without downtime.</li>
+        <li>🔄 Restarts your Node process automatically if it crashes.</li><BR>
+        <li>📊 Offers basic metrics and logs via the CLI and optional dashboards.</li><BR>
+        <li>🧰 Provides simple commands to scale instances or reload without downtime.</li><BR>
       </ul>
       <p>
         After confirming that your CRUD routes work and PostgreSQL connections are stable, start the app with PM2, name the process, and save the configuration so that it restarts automatically after a reboot. For production‑like student projects, this is a big step up from running <code>node server.js</code> manually.
@@ -117,9 +172,9 @@
         With scaffolding in place, treat GitHub as the single source of truth. Commit your <code>server.js</code>, routes, controllers and models, then pull the repository onto the server so that your runtime matches your versioned code. This is the same mindset behind Openvault’s real‑world project flows, where every step from lead to invoice is traceable. 
       </p>
       <ul>
-        <li>📝 Commit small and often: scaffolding, CRUD, database integration, PM2 configs.</li>
-        <li>🌿 Use branches for features like <code>feature/auth</code> or <code>feature/dashboard-ui</code>.</li>
-        <li>📥 Use <code>git pull</code> or a basic CI script to keep your server in sync with GitHub.</li>
+        <li>📝 Commit small and often: scaffolding, CRUD, database integration, PM2 configs.</li><BR>
+        <li>🌿 Use branches for features like <code>feature/auth</code> or <code>feature/dashboard-ui</code>.</li><BR>
+        <li>📥 Use <code>git pull</code> or a basic CI script to keep your server in sync with GitHub.</li><BR>
       </ul>
       <p>
         Over time, this creates a narrative of how the project evolved, which is great for interviews, portfolios and team collaboration.
@@ -130,9 +185,9 @@
         Many Openvault projects are not just “todo apps”; they model real business flows like <strong>Lead → Opportunity → Customer → Project</strong> or <strong>Enquiry → Quotation → Order → Invoice</strong>. When planning your frontend–backend journey, think in the same way: start from a real workflow and then map it to routes, screens and database tables.
       </p>
       <ul>
-        <li>🧩 Map real steps (lead, quote, ticket, invoice) into API endpoints.</li>
-        <li>📊 Design frontend views that show these flows clearly to the user.</li>
-        <li>🤝 Keep your GitHub issues and commits aligned to those flows, not just to “random features”.</li>
+        <li>🧩 Map real steps (lead, quote, ticket, invoice) into API endpoints.</li><BR>
+        <li>📊 Design frontend views that show these flows clearly to the user.</li><BR>
+        <li>🤝 Keep your GitHub issues and commits aligned to those flows, not just to “random features”.</li><BR>
       </ul>
       <p>
         This is how a student prototype begins to look and behave like software used by real teams in sales, support, finance or operations.
