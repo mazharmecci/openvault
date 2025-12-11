@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Planning Your Frontend & Backend on GitHub: A Practical Roadmap | Openvault</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="canonical" href="https://openvault.in/posts/planning-frontend-backend-github.html" />
+  <link rel="stylesheet" href="../styles/blog.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="ov-brand">
+      <span class="ov-logo-wrap">
+        <img src="../assets/images/user-icon.png" alt="OpenVault logo O" class="ov-logo-spin" />
+      </span>
+      <span class="ov-brand-rest">penvault</span>
+    </div>
+  </header>
+
+  <main class="post-container">
+    <article class="post-body">
+      <header class="post-hero">
+        <h1>Planning Your Frontend &amp; Backend on GitHub: A Practical Roadmap 🚀</h1>
+        <p class="post-meta">By Mazhar Mecci · Dec 11, 2025</p>
+      </header>
+
+      <p class="lede">
+        Before the first line of code, a good GitHub plan can decide whether your project feels like a clean lab or a messy store room. This guide walks through how to plan your frontend and backend on GitHub, choose your tech stack and get from scaffolding to a production‑ready deployment.
+      </p>
+
+      <h2>1. Choose your GitHub strategy</h2>
+      <p>
+        Most web apps start with a simple choice: keep frontend and backend in a single repository, or split them into separate repos. A <strong>single repo</strong> with <code>/frontend</code> and <code>/backend</code> folders keeps things simple for solo developers and small teams, and makes it easier to track cross‑cutting changes. [web:46]
+      </p>
+      <p>
+        <strong>Separate repos</strong> make sense when the frontend and backend are deployed independently, owned by different teams or versioned separately. In that case, treat the backend as a clearly documented API dependency for the frontend. [web:41][web:42]
+      </p>
+
+      <h2>2. Backend scaffolding that scales</h2>
+      <p>
+        A clean backend layout makes every future change easier. A common pattern with Node.js and Express is to use a dedicated entry file and split responsibilities across routes, controllers and models. [web:45][web:48]
+      </p>
+      <ul>
+        <li><code>server.js</code> for app bootstrapping, middleware and database connection.</li>
+        <li><code>/routes</code> for route definitions only.</li>
+        <li><code>/controllers</code> for request handling and business logic.</li>
+        <li><code>/models</code> for data access and database models.</li>
+      </ul>
+      <p>
+        Start by wiring up <strong>CRUD routes</strong> with in‑memory data. Once you have all endpoints tested and working, you can connect the same controllers to a real database such as PostgreSQL, which you have already installed on the server.
+      </p>
+
+      <h2>3. Frontend choices and API contracts</h2>
+      <p>
+        On the frontend side, your options range from a light static site to full single‑page applications. Popular choices include React, Next.js, Vue and Nuxt for component‑driven UIs, or plain HTML/CSS/JS for leaner projects.
+      </p>
+      <p>
+        Whatever you pick, centre the design around a clear API contract. Document your backend routes, methods and payloads so that frontend development and backend development can move in parallel without guesswork.
+      </p>
+
+      <h2>4. PM2 and process management</h2>
+      <p>
+        Once the backend is deployed to a server, process management becomes critical. PM2 is a widely used Node.js process manager that keeps your app alive, restarts it on failure and provides logs and basic monitoring. [web:44][web:47]
+      </p>
+      <p>
+        After confirming that your CRUD routes work and PostgreSQL connections are stable, start the app with PM2, name the process, and save the configuration so that it restarts automatically after a reboot.
+      </p>
+
+      <h2>5. GitHub workflow and sync</h2>
+      <p>
+        With scaffolding in place, treat GitHub as the single source of truth. Commit your <code>server.js</code>, routes, controllers and models, then pull the repository onto the server so that your runtime matches your versioned code.
+      </p>
+      <p>
+        Use branches for new features, descriptive commit messages and pull requests even if you are working alone. Over time this creates a readable history of changes across the frontend and backend.
+      </p>
+
+      <h2>Related articles on Openvault</h2>
+      <ul>
+        <li><a href="https://openvault.in/posts/grossing-station.html">Grossing Stations, Boards &amp; Tools: Building a Safer First Step in Histopathology</a></li>
+        <li><a href="https://openvault.in/posts/specimen-storage-formalin-neutralization.html">Specimen Storage &amp; Formalin Neutralization: Protecting People, Samples &amp; the Planet</a></li>
+      </ul>
+
+      <p>
+        Whether you are architecting a lab workflow or a web app, the same principle holds: clear structure, tested flows and good tooling turn complexity into something manageable and repeatable.
+      </p>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2025 Openvault. All rights reserved.</p>
+  </footer>
+</body>
+</html>
