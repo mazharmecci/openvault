@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Your Guide to API Keys 🔑 | Openvault</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://openvault.in/posts/api-keys-guide.html" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="../styles/blog.css" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="../assets/images/favicon-96x96.png" sizes="96x96" />
+  <link rel="shortcut icon" href="../assets/images/favicon.ico" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TH2GX1JSLY"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-TH2GX1JSLY');
+  </script>
+</head>
+
+<style>
+  /* Reuse Openvault structure (same as prompt) */
+  body {
+    font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    color: #0f172a;
+    margin: 0;
+    background: #f5f7fb;
+  }
+
+  .wrap {
+    max-width: 1080px;
+    margin: 32px auto 40px;
+    padding: 0 20px 32px;
+    background: #ffffff;
+    border-radius: 18px;
+    box-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
+  }
+
+  .workflow-image {
+    max-width: 700px;
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 18px 0 10px;
+    border-bottom: 1px solid rgba(148, 163, 184, 0.3);
+  }
+
+  .brand img {
+    height: 44px;
+    border-radius: 999px;
+  }
+
+  .brand span {
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    font-size: 0.82rem;
+    color: #64748b;
+  }
+
+  header.post-hero {
+    margin-top: 14px;
+    padding: 18px 0 20px;
+    border-bottom: 1px solid #e2e8f0;
+    background: linear-gradient(135deg, #eff6ff 0%, #fdf2ff 35%, #ffffff 100%);
+    border-radius: 16px 16px 0 0;
+  }
+
+  header.post-hero h1 {
+    font-size: clamp(2.1rem, 3vw, 2.6rem);
+    margin: 0 0 8px;
+    line-height: 1.15;
+    color: #0b1120;
+    letter-spacing: -0.03em;
+  }
+
+  .post-subtitle {
+    margin: 0 0 8px;
+    font-size: 1.02rem;
+    color: #1e293b;
+  }
+
+  .post-meta {
+    color: #64748b;
+    margin-top: 6px;
+    font-size: 0.9rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .post-meta-badge {
+    padding: 2px 10px;
+    border-radius: 999px;
+    background: rgba(37, 99, 235, 0.06);
+    color: #1d4ed8;
+    font-size: 0.78rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  .toc {
+    background: #f8fafc;
+    border-left: 4px solid #2563eb;
+    padding: 12px 14px;
+    border-radius: 10px;
+    margin: 20px 0;
+    font-size: 0.96rem;
+  }
+
+  .toc strong {
+    display: block;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 0.75rem;
+    color: #64748b;
+  }
+
+  .toc ol {
+    margin: 6px 0 0 1rem;
+    padding: 0;
+  }
+
+  .toc li {
+    margin: 2px 0;
+  }
+
+  h2 {
+    color: #0f172a;
+    margin-top: 26px;
+    font-size: 1.4rem;
+    letter-spacing: -0.02em;
+    position: relative;
+  }
+
+  h2::before {
+    content: "";
+    position: absolute;
+    left: -12px;
+    top: 50%;
+    width: 4px;
+    height: 18px;
+    border-radius: 999px;
+    background: linear-gradient(to bottom, #3b82f6, #22c55e);
+    transform: translateY(-50%);
+  }
+
+  h3 {
+    margin-top: 18px;
+    font-size: 1.1rem;
+    color: #1f2937;
+    font-weight: 600;
+  }
+
+  p {
+    line-height: 1.75;
+    margin: 10px 0;
+    color: #1f2933;
+    font-size: 1rem;
+  }
+
+  p.lede {
+    font-size: 1.05rem;
+    color: #0f172a;
+  }
+
+  a {
+    color: #2563eb;
+    text-decoration: none;
+    position: relative;
+  }
+
+  a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 0;
+    height: 1.5px;
+    background: #2563eb;
+    transition: width 0.2s ease;
+  }
+
+  a:hover::after {
+    width: 100%;
+  }
+
+  ul {
+    margin-left: 1.1rem;
+    padding-left: 0;
+  }
+
+  ul li {
+    margin: 6px 0;
+    color: #1f2937;
+  }
+
+  .cta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 22px 0 18px;
+  }
+
+  .btn {
+    background: linear-gradient(135deg, #2563eb, #0ea5e9);
+    color: #fff;
+    padding: 10px 16px;
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    box-shadow: 0 10px 25px rgba(37, 99, 235, 0.35);
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: transform 0.1s ease, box-shadow 0.1s.ease;
+    cursor: pointer;
+  }
+
+  .btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 16px 35px rgba(37, 99, 235, 0.4);
+  }
+
+  .btn--outline {
+    background: transparent;
+    border: 1.5px solid #2563eb;
+    color: #1d4ed8;
+    box-shadow: none;
+  }
+
+  .product-specs {
+    background: #f1f5f9;
+    padding: 12px 14px;
+    border-radius: 10px;
+    margin: 14px 0;
+    border: 1px dashed rgba(148, 163, 184, 0.7);
+    font-size: 0.96rem;
+  }
+
+  .note {
+    border-left: 4px solid #2563eb;
+    background: #eff6ff;
+    padding: 10px 12px;
+    border-radius: 8px;
+    margin: 14px 0;
+    color: #0f172a;
+    font-size: 0.95rem;
+  }
+
+  .pullquote {
+    margin: 18px 0;
+    padding: 14px 16px;
+    border-radius: 10px;
+    background: #0f172a;
+    color: #e5e7eb;
+    font-style: italic;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .pullquote::before {
+    content: "“";
+    position: absolute;
+    font-size: 3rem;
+    color: rgba(148, 163, 184, 0.18);
+    top: -12px;
+    left: 8px;
+  }
+
+  .grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+    margin: 18px 0;
+  }
+
+  .card {
+    border: 1px solid #e2e8f0;
+    padding: 12px 13px;
+    border-radius: 10px;
+    background: #ffffff;
+    position: relative;
+    overflow: hidden;
+    font-size: 0.96rem;
+  }
+
+  .card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(56, 189, 248, 0.07), rgba(59, 130, 246, 0.04));
+    opacity: 0;
+    transition: opacity 0.15s.ease;
+  }
+
+  .card:hover::before {
+    opacity: 1;
+  }
+
+  .card strong {
+    display: block;
+    margin-bottom: 4px;
+    color: #0f172a;
+  }
+
+  footer {
+    margin-top: 28px;
+    padding-top: 16px;
+    border-top: 1px solid #e2e8f0;
+    color: #6b7280;
+    font-size: 0.9rem;
+  }
+
+  .author-icon {
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    margin-right: 8px;
+    object-fit: cover;
+    vertical-align: middle;
+  }
+</style>
+
+<body>
+  <div class="wrap">
+
+    <!-- Brand -->
+    <h1 class="ov-brand">
+      <span class="ov-logo-wrap">
+        <img src="../assets/images/user-icon.png" alt="OpenVault logo O" class="ov-logo-spin">
+      </span>
+      <span class="ov-brand-rest">penvault</span>
+    </h1>
+
+    <!-- Intro / Hero -->
+    <header class="post-hero">
+      <h1>API Keys Demystified: From Public to Secret 🔑🚀 | Openvault</h1>
+      <p class="post-meta">
+        A friendly, practical guide to different types of API keys, where they fit in modern products, and how to use them safely without leaking your whole backend. 😎
+      </p>
+      <div class="post-meta">
+        <img src="../assets/images/user-icon.png" alt="Author icon" class="author-icon">
+        <span><strong>Mazhar Mecci</strong> · Dec 13, 2025</span>
+        <span class="post-meta-badge">APIs & DevTools</span>
+      </div>
+    </header>
+
+    <!-- Main content -->
+    <main class="post-container">
+      <article class="post-body">
+
+        <p class="lede">
+          If you’re building products, automations, or AI workflows in 2025, API keys are basically your passport to the internet’s best capabilities — but also one of the easiest ways to shoot yourself in the foot if you misuse them. 🤕
+        </p>
+
+        <div class="toc">
+          <strong>In this guide</strong>
+          <ol>
+            <li><a href="#what-are-api-keys">What are API keys (really)?</a></li>
+            <li><a href="#types-of-api-keys">Types of API keys you’ll meet</a></li>
+            <li><a href="#api-keys-vs-tokens">API keys vs tokens vs OAuth</a></li>
+            <li><a href="#using-keys-in-projects">How to use keys in real projects</a></li>
+            <li><a href="#staying-secure">Staying secure: best practices</a></li>
+            <li><a href="#building-with-openvault">Designing API-first workflows with Openvault</a></li>
+          </ol>
+        </div>
+
+        <div class="cta">
+          <a href="https://openvault.in" class="btn">
+            Start exploring API workflows ⚙️
+          </a>
+          <a href="/posts/top-ai-trends-2025.html" class="btn btn--outline">
+            Read AI workflows next 🤖
+          </a>
+        </div>
+
+        <h2 id="what-are-api-keys">What are API keys (really)? 🤔</h2>
+        <p>
+          An API key is a unique string (like a long password) that an application sends with each request to tell an API “Hey, this is who I am — please let me in (with these permissions).”It is usually tied to a specific project or account, so the provider can track usage, billing, and abuse. 🔍 
+        </p>
+        <p>
+          Think of it as a badge at a tech conference: it identifies you, decides which rooms you can enter, and lets organizers see which talks you attended — but if someone steals it, they can walk around as you. 😬
+        </p>
+
+        <h2 id="types-of-api-keys">Types of API keys you’ll meet 🧩</h2>
+        <p>
+          Different platforms name things differently (Supabase, Stripe, OpenAI, Google Cloud, etc.), but the patterns are surprisingly similar under the hood. ✨
+        </p>
+
+        <div class="grid-3">
+          <div class="card">
+            <strong>Public / Publishable keys 🌐</strong>
+            <p>
+              Used in front-end or client-side contexts like web, mobile, and desktop apps where the key will be visible in the code anyway.
+            </p>
+            <p>
+              Typically restricted to “safe” operations like creating payment intents, loading config, or accessing public data; they rely on backend checks or tokens for anything sensitive.
+            </p>
+          </div>
+
+          <div class="card">
+            <strong>Secret / Private keys 🔒</strong>
+            <p>
+              Intended for server-to-server communication where the key never leaves your backend, cron jobs, or secure infrastructure.
+            </p>
+            <p>
+              These keys can usually perform powerful actions (read, write, delete, manage users), so leaking them can expose your entire system or database. 🧨
+            </p>
+          </div>
+
+          <div class="card">
+            <strong>Service / Admin keys 🛠️</strong>
+            <p>
+              Some platforms expose “service role” or “admin” keys that bypass row-level rules and can access everything in a project (for example, Supabase’s <code>service_role</code> key).
+            </p>
+            <p>
+              These should live only in hardened environments like CI/CD, secure backend services, or secret managers — never in browser bundles or mobile apps.🚫
+            </p>
+          </div>
+        </div>
+
+        <div class="product-specs">
+          <strong>Pro tip for founders & indie hackers 💡</strong>
+          <p>
+            When designing your own API, expose at least two key types: a limited “publishable” key for client apps and a stronger “secret” key for backend integrations, with clear scopes per key type.
+          </p>
+        </div>
+
+        <h2 id="api-keys-vs-tokens">API keys vs tokens vs OAuth 🆚</h2>
+        <p>
+          API keys, access tokens, and OAuth flows all solve a similar problem — proving who is calling your API — but they do it in slightly different ways and are suited to different scenarios. 🔁
+        </p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Concept</th>
+              <th>What it is</th>
+              <th>Best for</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>API key 🔑</td>
+              <td>Static string tied to a project or application; sent on every request for simple authentication.  </td>
+              <td>Server-to-server APIs, internal tools, dashboards, low-friction integrations.  </td>
+            </tr>
+            <tr>
+              <td>Bearer / access token 🎟️</td>
+              <td>Short-lived token (often JWT) representing a user or app session, issued after a login or OAuth flow.  </td>
+              <td>User-facing apps, fine-grained permissions, revocable sessions.  </td>
+            </tr>
+            <tr>
+              <td>OAuth 2.0 🔐</td>
+              <td>Framework where users grant limited access to their data without sharing passwords (e.g., “Login with Google”).  </td>
+              <td>Third-party apps needing access to user accounts on platforms like Google, GitHub, or Slack.  </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>
+          In many modern stacks, an API key authenticates your backend to a provider, while tokens authenticate individual users to your backend — you often end up with both in the same architecture. 🧱  
+        </p>
+
+        <h2 id="using-keys-in-projects">How to use keys in real projects 🧪</h2>
+        <p>
+          A typical modern workflow looks like this: your backend stores a secret key, your frontend uses a restricted public key or a user token, and you glue it together with environment variables and config. 🧬   
+        </p>
+
+        <h3>1. Local development setup 💻</h3>
+        <ul>
+          <li>Create API keys in the provider dashboard (Stripe, Supabase, OpenAI, etc.), ideally a separate set for development and production.  </li>
+          <li>Store them in <code>.env</code> files or your local secrets store; never hardcode them directly into source files that go to Git.  </li>
+          <li>Load them via your framework’s config (for example, <code>process.env.MY_API_KEY</code> in Node). 🚀 </li>
+        </ul>
+
+        <h3>2. Backend usage (safe zone) 🧱</h3>
+        <ul>
+          <li>Use secret or service keys only in backend code or serverless functions where the code isn’t exposed to users.  </li>
+          <li>Apply principle of least privilege: give each key only the minimal scopes or roles it needs to do its job. </li>
+          <li>Log usage in a structured way (no full keys in logs!) so you can track errors and unusual spikes. 📈 </li>
+        </ul>
+
+        <h3>3. Frontend usage (danger zone) 📱</h3>
+        <ul>
+          <li>Only use publishable / public keys or signed, time-limited tokens on the client side; assume anything in JS bundles can be read by users.  </li>
+          <li>Offload sensitive operations (like database writes or admin actions) to your backend, not directly from the browser. </li>
+          <li>Restrict public keys by domain, IP, or app ID in the provider dashboard whenever possible. </li>
+        </ul>
+
+        <div class="note">
+          <strong>Quick mental model 🧠</strong>
+          <p>
+            If a key can perform operations that would scare you if a random stranger had it, that key must never ship to the browser or a mobile binary. Full stop. 😅  
+          </p>
+        </div>
+
+        <h2 id="staying-secure">Staying secure: best practices 🛡️</h2>
+        <p>
+          Most real-world API incidents are not due to exotic exploits — they’re caused by leaked keys in GitHub, logs, or front-end bundles. 🕵️‍♂️  
+        </p>
+
+        <ul>
+          <li><strong>Store keys outside code:</strong> use environment variables, secret managers, or vaults instead of hardcoding strings in source files.  </li>
+          <li><strong>Rotate regularly:</strong> regenerate keys on a schedule or after team changes; update configs and deploy. </li>
+          <li><strong>Restrict usage:</strong> lock keys to specific IPs, referrer URLs, or apps where the provider allows. </li>
+          <li><strong>Limit scopes:</strong> divide keys by feature (billing, analytics, AI, etc.) and give each the minimal permissions needed. </li>
+          <li><strong>Monitor and alert:</strong> watch for unusual traffic patterns, new geolocations, or sudden cost spikes tied to a key. </li>
+          <li><strong>Clean up:</strong> delete unused keys so they can’t be revived in some forgotten script. 🧹 </li>
+        </ul>
+
+        <div class="pullquote">
+          Treat API keys like live production data: protect them, log them carefully, and assume that anything pushed to a public repo will eventually be read by someone you don’t know. 🔍  
+        </div>
+
+        <h2 id="building-with-openvault">Designing API-first workflows with Openvault ⚙️</h2>
+        <p>
+          API keys are the connective tissue that let you plug AI models, payment rails, and SaaS tools into a single workflow — exactly the kind of composable systems Openvault loves to explore. ❤️  
+        </p>
+
+        <ul>
+          <li>
+            As a <strong>founder</strong>, you can create internal “platform” projects where each microservice has its own scoped key, making it safer to experiment and iterate.<br />
+          </li>
+          <li>
+            As a <strong>student or developer</strong>, you can use multiple keys (one per side-project, client, or environment) to keep your learning playgrounds isolated from production systems. 🎓  
+          </li>
+          <li>
+            As a <strong>builder of AI agents</strong>, you can give each agent its own narrow key (for example, “read-only Notion”, “send emails but not delete them”) so one compromised component doesn’t sink the whole ship.  
+          </li>
+        </ul>
+
+        <p>
+          Once you internalise how different API keys work — and how to treat them with respect — composing APIs starts to feel like LEGO: snap in a payment block, an AI block, a database block, and let your product ideas flow without leaking secrets along the way. 🧩🚀   
+        </p>
+
+        <footer>
+          <p>
+            Want more deep-dives like this? Check out:
+            <a href="/posts/digital-marketing.html">The Ultimate Guide to Digital Marketing</a> and
+            <a href="/posts/top-ai-trends-2025.html">Top AI Trends Shaping 2025</a> for how APIs, data, and AI workflows intersect across growth and product. ✨
+          </p>
+        </footer>
+
+      </article>
+    </main>
+  </div>
+</body>
+</html>
