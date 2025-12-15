@@ -26,7 +26,7 @@ if index_name not in pc.list_indexes().names():
         dimension=1536,  # dimension for OpenAI embeddings
         metric="cosine", # or "euclidean"
         spec=ServerlessSpec(
-            cloud="aws",   # or "gcp"
+            cloud="aws",        # or "gcp"
             region="us-east-1"  # pick region closest to you
         )
     )
