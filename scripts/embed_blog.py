@@ -6,7 +6,7 @@ import pinecone
 
 # --- Setup ---
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
-PINECONE_API_KEY = os.getenv("PINECONE_API_KEY")
+PINECONE_API_KEY = os.getenv("pcsk_7YJkNK_UqfmzDWdmLzGRDmAXR4T2RLkugnYhKujU91taEvcbFJXhqkSHZuTYRZPdBfmSrJ")
 PINECONE_ENV = "us-east1-gcp"   # adjust to your Pinecone environment
 
 client = OpenAI(api_key=OPENAI_API_KEY)
