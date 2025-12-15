@@ -860,6 +860,21 @@
       initProgressBadges();
     });
   </script>
+
+  <script>
+  const track = document.querySelector('.ov-carousel-container');
+  let scrollAmount = 0;
+  
+  setInterval(() => {
+    if (!track) return;
+    scrollAmount += 300;
+    if (scrollAmount >= track.scrollWidth) scrollAmount = 0;
+    track.scrollTo({
+      left: scrollAmount,
+      behavior: 'smooth'
+    });
+  }, 5000);
+  </script>
   
   <!-- Optional external script if you still need it -->
   <script src="scripts/script.js"></script>
