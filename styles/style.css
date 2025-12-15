@@ -1708,3 +1708,67 @@ h3 {
   }
 }
 
+/* carousel settings for blog */
+.ov-blog-carousel-section {
+  padding: 40px 20px;
+  background: #f8f9fb;
+}
+
+.ov-carousel-heading {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.ov-carousel-container {
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.ov-carousel-track {
+  display: flex;
+  gap: 20px;
+  padding-bottom: 10px;
+}
+
+.ov-carousel-card {
+  min-width: 280px;
+  max-width: 320px;
+  background: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  text-decoration: none;
+  color: #000;
+  scroll-snap-align: start;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ov-carousel-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+}
+
+.ov-carousel-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.ov-card-content {
+  padding: 16px;
+}
+
+.ov-card-content h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+
+.ov-card-content p {
+  font-size: 14px;
+  color: #555;
+}
+
