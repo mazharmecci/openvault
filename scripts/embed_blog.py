@@ -2,7 +2,7 @@ import os
 import requests
 from bs4 import BeautifulSoup
 from openai import OpenAI
-import pinecone
+from pinecone import Pinecone, ServerlessSpec
 from dotenv import load_dotenv
 
 # --- Load environment variables ---
@@ -10,19 +10,28 @@ load_dotenv()
 
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 PINECONE_API_KEY = os.getenv("PINECONE_API_KEY")
-PINECONE_ENV = os.getenv("PINECONE_ENV", "us-east1-gcp")  # default if not set
 
 # --- Init OpenAI client ---
 client = OpenAI(api_key=OPENAI_API_KEY)
 
-# --- Init Pinecone ---
-pinecone.init(api_key=PINECONE_API_KEY, environment=PINECONE_ENV)
+# --- Init Pinecone client ---
+pc = Pinecone(api_key=PINECONE_API_KEY)
+
 index_name = "openvault-blog"
 
-if index_name not in pinecone.list_indexes():
-    pinecone.create_index(index_name, dimension=1536)  # dimension for OpenAI embeddings
+# Create index if it doesn't exist
+if index_name not in pc.list_indexes().names():
+    pc.create_index(
+        name=index_name,
+        dimension=1536,  # dimension for OpenAI embeddings
+        metric="cosine", # or "euclidean"
+        spec=ServerlessSpec(
+            cloud="aws",   # or "gcp"
+            region="us-east-1"  # pick region closest to you
+        )
+    )
 
-index = pinecone.Index(index_name)
+index = pc.Index(index_name)
 
 # --- Crawl Blog ---
 url = "https://openvault.in/forms/blog.html"
@@ -44,8 +53,12 @@ for i, post in enumerate(posts):
         input=text
     ).data[0].embedding
 
-    index.upsert([
-        (f"post-{i}", embedding, {"title": post['title'], "url": url})
+    index.upsert(vectors=[
+        {
+            "id": f"post-{i}",
+            "values": embedding,
+            "metadata": {"title": post['title'], "url": url}
+        }
     ])
 
 print("✅ Blog posts embedded into Pinecone!")
