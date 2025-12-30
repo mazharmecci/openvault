@@ -39,8 +39,8 @@
     gtag('config', 'G-TH2GX1JSLY');
   </script>
 
-  <style>
-    .workflow-hero {
+<style>
+.workflow-hero {
   padding: 3rem 1.5rem;
 }
 
@@ -114,12 +114,138 @@
 .slider-btn:hover {
   background: rgba(37, 99, 235, 0.95);
 }
-  
+
+/* -------------------------------
+   Premium Workflow Services Section
+-------------------------------- */
+.workflow-services {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  padding: 4rem 2rem;
+  border-radius: 16px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+  margin-top: 3rem;
+}
+
+.section-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.section-heading {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #f9fafb;
+  margin-bottom: 1rem;
+  display: inline-block;
+  position: relative;
+}
+
+.section-heading::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: #FFD966; /* Mango gold accent */
+  margin: 0.5rem auto 0;
+  border-radius: 2px;
+}
+
+.section-note {
+  font-size: 1rem;
+  color: #cbd5e1;
+  margin-bottom: 2.5rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.service-card {
+  background: #1e293b;
+  border-radius: 14px;
+  padding: 2rem;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+  transition: all 0.3s ease;
+  text-align: left;
+  position: relative;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.6);
+}
+
+.service-card h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #f9fafb;
+  margin-bottom: 0.75rem;
+}
+
+.service-card p {
+  font-size: 0.95rem;
+  color: #cbd5e1;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.service-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.service-card ul li {
+  font-size: 0.9rem;
+  color: #e2e8f0;
+  padding-left: 1.4rem;
+  margin-bottom: 0.5rem;
+  position: relative;
+}
+
+.service-card ul li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #FFD966; /* Mango gold checkmark */
+  font-size: 0.9rem;
+}
+
+.services-cta .cta-secondary {
+  display: inline-block;
+  background: #FFD966;
+  color: #1e293b;
+  font-weight: 600;
+  padding: 0.9rem 1.6rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 20px rgba(255, 217, 102, 0.4);
+}
+
+.services-cta .cta-secondary:hover {
+  background: #ffcc33;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(255, 217, 102, 0.5);
+}
+
 @media (max-width: 768px) {
   .workflow-hero .ov-hero-inner {
     grid-template-columns: 1fr;
   }
+  .workflow-services {
+    padding: 3rem 1.25rem;
+  }
 }
+
 </style>
 </head>
 <body>
@@ -184,11 +310,11 @@
               </div>
               <div class="workflow-slide">
                 <img src="assets/images/4.webp" alt="Hospital CRM" />
-                <p class="slide-caption">Hospital CRM: enquiry → quote → installation</p>
+                <p class="slide-caption">Service visit form with photos & history</p>
               </div>
               <div class="workflow-slide">
                 <img src="assets/images/6.webp" alt="Hospital CRM" />
-                <p class="slide-caption">Hospital CRM: enquiry → quote → installation</p>
+                <p class="slide-caption">Inventory & stock dashboard for lab equipment</p>
               </div>
               <div class="workflow-slide">
                 <img src="assets/images/7.webp" alt="Hospital CRM" />
