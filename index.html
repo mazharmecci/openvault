@@ -284,6 +284,59 @@
   color: #cbd5e1;
 }
 
+.service-impact {
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  padding: 3rem 2rem;
+  border-radius: 16px;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.4);
+  color: #f9fafb;
+}
+
+.impact-heading {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.impact-table-wrapper {
+  overflow-x: auto;
+}
+
+.impact-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+  min-width: 720px;
+}
+
+.impact-table thead {
+  background-color: #FFD966;
+  color: #1e293b;
+}
+
+.impact-table th,
+.impact-table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.impact-table tbody tr:hover {
+  background-color: rgba(255, 217, 102, 0.08);
+  transition: background 0.3s ease;
+}
+
+.impact-table td {
+  color: #e2e8f0;
+}
+
+.impact-table td:last-child {
+  font-weight: 600;
+  color: #FFD966;
+}
+
+
 @media (max-width: 768px) {
   .workflow-hero .ov-hero-inner {
     grid-template-columns: 1fr;
@@ -489,6 +542,84 @@
       <span>— Dr. Khan, Procurement Head</span>
     </div>
 
+  </div>
+</section>
+
+<section class="service-impact">
+  <h2 class="impact-heading">🚀 Real Workflow Wins</h2>
+  <div class="impact-table-wrapper">
+    <table class="impact-table">
+      <thead>
+        <tr>
+          <th>Service</th>
+          <th>What I Built</th>
+          <th>Business Impact</th>
+          <th>Project Delivered In</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>QMS Dashboards</td>
+          <td>Firebase quoting + inventory workflows</td>
+          <td>80% faster quote turnaround</td>
+          <td>QMS</td>
+        </tr>
+        <tr>
+          <td>Service Tracking</td>
+          <td>Engineer visit logs with photo uploads</td>
+          <td>Zero paper trails, full traceability</td>
+          <td>QMS</td>
+        </tr>
+        <tr>
+          <td>Workflow Automation</td>
+          <td>Lead → Quote → Order → Invoice pipeline</td>
+          <td>3× team efficiency</td>
+          <td>Zamport</td>
+        </tr>
+        <tr>
+          <td>Custom Integrations</td>
+          <td>Supabase/Firestore + modular UI</td>
+          <td>Real-time sync across teams</td>
+          <td>XPAY</td>
+        </tr>
+        <tr>
+          <td>Approval Systems</td>
+          <td>Role-based dashboards with branded status flows</td>
+          <td>Instant visibility for managers</td>
+          <td>Xchange</td>
+        </tr>
+        <tr>
+          <td>Home Service Scheduling</td>
+          <td>Technician routing + visit logs with photos</td>
+          <td>2× faster dispatch and resolution</td>
+          <td>Drophome</td>
+        </tr>
+        <tr>
+          <td>Quote Builder</td>
+          <td>PDF-ready quote layouts with dynamic pricing</td>
+          <td>Professional client-facing output</td>
+          <td>Zamport</td>
+        </tr>
+        <tr>
+          <td>Inventory Alerts</td>
+          <td>Stock tracking with low-supply notifications</td>
+          <td>Reduced stockouts and delays</td>
+          <td>XPAY</td>
+        </tr>
+        <tr>
+          <td>Equipment History Viewer</td>
+          <td>Serial-number based service timeline with gallery</td>
+          <td>ISO-ready audit trail</td>
+          <td>QMS</td>
+        </tr>
+        <tr>
+          <td>Admin Panel</td>
+          <td>Unified dashboard for leads, orders, tickets, revenue</td>
+          <td>Centralized control</td>
+          <td>Xchange</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </section>
 
