@@ -38,63 +38,241 @@
     gtag('js', new Date());
     gtag('config', 'G-TH2GX1JSLY');
   </script>
+
+  <style>
+    .workflow-hero {
+  padding: 3rem 1.5rem;
+}
+
+.workflow-hero .ov-hero-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+  gap: 2rem;
+  align-items: center;
+}
+
+.ov-hero-visual {
+  display: flex;
+  justify-content: center;
+}
+
+.workflow-slider {
+  position: relative;
+  max-width: 420px;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #020617;
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.5);
+}
+
+.workflow-slider-track {
+  position: relative;
+}
+
+.workflow-slide {
+  display: none;
+  padding: 1rem;
+  background: radial-gradient(circle at top, #1e293b, #020617);
+}
+
+.workflow-slide.active {
+  display: block;
+}
+
+.workflow-slide img {
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  display: block;
+}
+
+.slide-caption {
+  margin-top: 0.75rem;
+  font-size: 0.85rem;
+  color: #e5e7eb;
+}
+
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  border: none;
+  background: rgba(15, 23, 42, 0.85);
+  color: #e5e7eb;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider-btn-prev { left: 8px; }
+.slider-btn-next { right: 8px; }
+
+.slider-btn:hover {
+  background: rgba(37, 99, 235, 0.95);
+}
+  
+@media (max-width: 768px) {
+  .workflow-hero .ov-hero-inner {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
 </head>
 <body>
 
-  <!-- Brand -->
-  <h1 class="ov-brand">
-    <span class="ov-logo-wrap">
-      <img src="assets/images/user-icon.png" alt="OpenVault logo O" class="ov-logo-spin">
-    </span>
-    <span class="ov-brand-rest">penvault</span>
-  </h1>
-
-  <!-- Injected Navbar -->
-  <div id="navbar-placeholder"></div>
-  <script src="scripts/navbar.js" defer></script>
-
-  <!-- Sample project preview (BBQ hero) -->
-  <section class="ov-hero">
-    <div class="ov-hero-inner">
-      <div class="ov-copy">
-        <h1>Build Premium Web Projects Without Starting From Scratch</h1>
-        <p>
-          Create stunning shopping carts, recipe pages, and high-end frontends
-          using ready-to-use source code from OpenVault. Perfect for college
-          submissions, portfolio projects, and hackathons.
-        </p>
-        <ul class="ov-points">
-          <li>Deployment-ready HTML, CSS, JS projects</li>
-          <li>Modern, premium UI components and layouts</li>
-          <li>Ideal for students in Web, App, ML &amp; AI</li>
-        </ul>
-
-        <!-- Custom CTA that triggers Razorpay -->
-        <div class="cta-wrapper">
-          <form>
-            <script
-              src="https://checkout.razorpay.com/v1/payment-button.js"
-              data-payment_button_id="pl_Rl6KLugG0eY23l"
-              async>
-            </script>
-          </form>
-          <p class="note">*Unlock stunning project from OpenVault</p>
+    <!-- Brand -->
+    <h1 class="ov-brand">
+      <span class="ov-logo-wrap">
+        <img src="assets/images/user-icon.png" alt="OpenVault logo O" class="ov-logo-spin">
+      </span>
+      <span class="ov-brand-rest">penvault</span>
+    </h1>
+  
+    <!-- Injected Navbar -->
+    <div id="navbar-placeholder"></div>
+    <script src="scripts/navbar.js" defer></script>
+  
+    <!-- Sample project preview (BBQ hero) -->
+    <section class="ov-hero workflow-hero">
+      <div class="ov-hero-inner">
+        <div class="ov-copy">
+          <h1>Get Your Business Workflows Out of Excel and Into a Real System</h1>
+          <p>
+            I design and build custom web apps for hospitals and small businesses:
+            quoting, inventory, service visits, and dashboards – all automated on
+            top of Firebase.
+          </p>
+    
+          <ul class="ov-points">
+            <li>Service visit logging with photos and history</li>
+            <li>Quote, inventory and ticket workflows tailored to your team</li>
+            <li>Fast prototypes in days, not months – production‑ready UI</li>
+          </ul>
+    
+          <div class="cta-wrapper">
+            <a
+              href="https://wa.me/919945266755?text=Hi%20Mazhar%2C%20I%20need%20help%20with%20my%20business%20workflow"
+              class="cta-primary"
+            >
+              💬 Book a 15‑min Workflow Call
+            </a>
+            <p class="note">No obligation – walk through your current process on a call.</p>
+          </div>
         </div>
-
-        <!-- Preview Card -->
-        <div class="ov-preview-card">
-          <img
-            src="assets/images/BBQ.png"
-            alt="BBQ Chicken Recipe UI Preview"
-            class="ov-preview-img"
-          />
-          <h2>BBQ Recipe Shopping List UI</h2>
-          <p>Dynamic servings, auto-updating ingredients, beautiful card layout.</p>
-          <div class="ov-preview-tag">Sample from the Vault</div>
+    
+        <!-- Right side: slider with your screenshots (see next section) -->
+        <div class="ov-hero-visual">
+          <div class="workflow-slider">
+            <button class="slider-btn slider-btn-prev">‹</button>
+            <div class="workflow-slider-track">
+              <!-- Slides: replace src with your 5–10 images -->
+              <div class="workflow-slide active">
+                <img src="assets/1.webp" alt="Inventory dashboard" />
+                <p class="slide-caption">Inventory & stock dashboard for lab equipment</p>
+              </div>
+              <div class="workflow-slide">
+                <img src="assets/2.webp" alt="Service visit form" />
+                <p class="slide-caption">Service visit form with photos & history</p>
+              </div>
+              <div class="workflow-slide">
+                <img src="assets/3.webp" alt="Hospital CRM" />
+                <p class="slide-caption">Hospital CRM: enquiry → quote → installation</p>
+              </div>
+              <!-- add 2–7 more slides -->
+            </div>
+            <button class="slider-btn slider-btn-next">›</button>
+          </div>
         </div>
+      </div>
+    </section>
+  
+    <section class="workflow-services">
+    <div class="section-inner">
+      <h2 class="section-heading">🛠 What You Can Hire Me For</h2>
+      <p class="section-note">
+        I help hospitals and SMEs turn messy spreadsheets and WhatsApp chats into
+        clean, trackable web apps.
+      </p>
+  
+      <div class="services-grid">
+        <div class="service-card">
+          <h3>Hospital Service & Maintenance Portals</h3>
+          <p>Log engineer visits, attach photos, track history per serial number.</p>
+          <ul>
+            <li>Service forms with photo upload</li>
+            <li>Searchable visit history by hospital + equipment</li>
+            <li>Exports for audits and ISO documentation</li>
+          </ul>
+        </div>
+  
+        <div class="service-card">
+          <h3>Quoting & Inventory Workflows</h3>
+          <p>Custom quote builder + stock tracking for instruments and reagents.</p>
+          <ul>
+            <li>Quote → PO → Delivery workflows</li>
+            <li>Inventory alerts and dashboards</li>
+            <li>PDF/print‑ready quote layouts</li>
+          </ul>
+        </div>
+  
+        <div class="service-card">
+          <h3>Custom Dashboards & Admin Apps</h3>
+          <p>Single admin panel to see leads, orders, tickets and revenue.</p>
+          <ul>
+            <li>Firebase / Supabase backend</li>
+            <li>Modern React / JS UI with filters & search</li>
+            <li>Role‑based access for teams</li>
+          </ul>
+        </div>
+      </div>
+  
+      <div class="services-cta">
+        <a
+          href="https://wa.me/919945266755?text=Hi%20Mazhar%2C%20I%20want%20a%20custom%20workflow%20project"
+          class="cta-secondary"
+        >
+          📋 Send Me Your Current Process (Photo / PDF / Excel)
+        </a>
       </div>
     </div>
   </section>
+
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const slides = Array.from(document.querySelectorAll(".workflow-slide"));
+    const prevBtn = document.querySelector(".slider-btn-prev");
+    const nextBtn = document.querySelector(".slider-btn-next");
+    if (!slides.length || !prevBtn || !nextBtn) return;
+
+    let current = 0;
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.classList.toggle("active", i === index);
+      });
+    }
+
+    prevBtn.addEventListener("click", () => {
+      current = (current - 1 + slides.length) % slides.length;
+      showSlide(current);
+    });
+
+    nextBtn.addEventListener("click", () => {
+      current = (current + 1) % slides.length;
+      showSlide(current);
+    });
+
+    // Optional autoplay (can be removed if you want manual only)
+    setInterval(() => {
+      current = (current + 1) % slides.length;
+      showSlide(current);
+    }, 6000);
+  });
+</script>
 
   <section class="ov-blog-carousel-section">
     <h3 class="ov-carousel-heading">✨Featured Blog✨</h3>
