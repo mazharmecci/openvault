@@ -163,6 +163,28 @@
     font-size: 0.95rem;
   }
 
+.course-showcase .section-heading,
+.course-showcase .course-heading,
+.project-themes .section-heading,
+.project-themes .themes-heading {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 2rem;
+  color: #1e3a8a; /* solid dark blue text */
+  background: none;
+  -webkit-background-clip: initial;
+  -webkit-text-fill-color: initial;
+}
+
+.section-heading .emoji,
+.course-heading .emoji {
+  -webkit-text-fill-color: initial; /* restore default color */
+  color: inherit;                  /* let system render emoji normally */
+  background: none;
+}
+
+
   /* -------------------------------
      Services Grid
   -------------------------------- */
@@ -806,7 +828,7 @@
   <!-- Explore inside the Vault --> 
   <section class="section-block course-showcase" id="vault-explore"> 
     <div class="section-inner"> 
-      <h2 class="section-heading">📚 Explore Inside the Vault</h2> 
+      <h2 class="section-heading"><span class="emoji">📚</span> Explore Inside the Vault</h2> 
       <div class="filter-buttons">  
         <button class="filter-btn active" data-filter="all">All</button>
         <button class="filter-btn" data-filter="web">Web / Frontend</button>
@@ -912,7 +934,7 @@
   <!-- Real-world project themes --> 
   <section class="section-block project-themes"> 
     <div class="section-inner"> 
-      <h2 class="section-heading">🎯 Real-World Projects</h2> 
+      <h2 class="section-heading"><span class="emoji">🎯</span> Real-World Projects</h2> 
       <div class="themes-table"> 
       <div class="theme-row">  
         <span><strong>👗 Fashion</strong></span>
@@ -959,7 +981,7 @@
 
   <!-- COMPANIES SECTION -->
   <section class="course-showcase">
-    <h2 class="course-heading">🏢 Companies that use these kinds of Tech Stack</h2>
+    <h2 class="course-heading"><span class="emoji">🏢</span> Companies that use these kinds of Tech Stack</h2>
     <div class="course-grid">
       <div class="course-card">
         <img src="icons/Microsoft.png" alt="Microsoft" class="company-logo" />
