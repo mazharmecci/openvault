@@ -2,22 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Final Year IT Projects for Students – Resume‑Ready ERP &amp; CRM Workflows (₹199)</title>
+  <title>Workflow Automation & SaaS Dashboards for Hospitals & SMEs</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="alternate" type="application/rss+xml" title="OpenVault Blog RSS" href="https://openvault.in/feed.xml" />
-
   <!-- SEO Meta -->
-  <meta name="description" content="Unlock 1000+ deployment‑ready final year projects for B.Tech, BE, MCA &amp; BSc (CS/IT) students. Learn ERP &amp; CRM workflows, dashboards, and automation with full source code. Submit in 24 hours and impress evaluators – all for just ₹199.">
-  <meta name="keywords" content="final year projects, B.Tech projects, MCA projects, BE IT projects, student projects, resume-ready IT projects, ERP CRM workflows, SaaS apps, dashboards, automation, openvault.in">
+  <meta name="description" content="Custom web apps for hospitals and SMEs: quoting, inventory, service visits, and dashboards – all automated on top of Firebase / Supabase.">
   <meta name="author" content="OpenVault by Mazhar Mecci">
-
-  <!-- Open Graph / Social Sharing -->
-  <meta property="og:title" content="OpenVault – 1000+ Final Year Projects for ₹199" />
-  <meta property="og:description" content="Unlock deployment-ready projects with ERP &amp; CRM workflows. Submit in 24 hours. Just ₹199." />
-  <meta property="og:url" content="https://openvault.in/" />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://openvault.in/assets/images/DHFlow.PNG" />
 
   <!-- Canonical -->
   <link rel="canonical" href="https://openvault.in/" />
@@ -26,11 +16,11 @@
   <link rel="icon" type="image/png" href="assets/images/favicon-96x96.png" sizes="96x96" />
   <link rel="shortcut icon" href="assets/images/favicon.ico" />
 
-  <!-- Fonts & Styles -->
+  <!-- Fonts & Base Styles -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles/style.css" />
 
-   <!-- Google tag (gtag.js) -->
+  <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-TH2GX1JSLY"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -39,500 +29,551 @@
     gtag('config', 'G-TH2GX1JSLY');
   </script>
 
-<style>
-/* -------------------------------
-   Hero Section
--------------------------------- */
-.workflow-hero {
-  padding: 3rem 1.5rem;
-}
+  <style>
+  /* -------------------------------
+     Hero Section
+  -------------------------------- */
+  .workflow-hero {
+    padding: 3rem 1.5rem;
+  }
 
-.workflow-hero .ov-hero-inner {
-  display: grid;
-  grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
-  gap: 2rem;
-  align-items: center;
-}
+  .workflow-hero .ov-hero-inner {
+    display: grid;
+    grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+    gap: 2rem;
+    align-items: center;
+  }
 
-.ov-hero-visual {
-  display: flex;
-  justify-content: center;
-}
+  .ov-hero-visual {
+    display: flex;
+    justify-content: center;
+  }
 
-.workflow-slider {
-  position: relative;
-  max-width: 420px;
-  border-radius: 16px;
-  overflow: hidden;
-  background: #020617;
-  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.5);
-}
+  .workflow-slider {
+    position: relative;
+    max-width: 420px;
+    border-radius: 16px;
+    overflow: hidden;
+    background: #020617;
+    box-shadow: 0 18px 45px rgba(15, 23, 42, 0.5);
+  }
 
-.workflow-slide {
-  display: none;
-  padding: 1rem;
-  background: radial-gradient(circle at top, #1e293b, #020617);
-}
+  .workflow-slider-track {
+    position: relative;
+  }
 
-.workflow-slide.active {
-  display: block;
-}
+  .workflow-slide {
+    display: none;
+    padding: 1rem;
+    background: radial-gradient(circle at top, #1e293b, #020617);
+  }
 
-.workflow-slide img {
-  width: 100%;
-  border-radius: 10px;
-  border: 1px solid rgba(148, 163, 184, 0.4);
-  display: block;
-}
+  .workflow-slide.active {
+    display: block;
+  }
 
-.slide-caption {
-  margin-top: 0.75rem;
-  font-size: 0.85rem;
-  color: #e5e7eb;
-}
+  .workflow-slide img {
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid rgba(148, 163, 184, 0.4);
+    display: block;
+  }
 
-.slider-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 32px;
-  height: 32px;
-  border-radius: 999px;
-  border: none;
-  background: rgba(15, 23, 42, 0.85);
-  color: #e5e7eb;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+  .slide-caption {
+    margin-top: 0.75rem;
+    font-size: 0.85rem;
+    color: #e5e7eb;
+  }
 
-.slider-btn-prev { left: 8px; }
-.slider-btn-next { right: 8px; }
+  .slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 32px;
+    height: 32px;
+    border-radius: 999px;
+    border: none;
+    background: rgba(15, 23, 42, 0.85);
+    color: #e5e7eb;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
-.slider-btn:hover {
-  background: rgba(37, 99, 235, 0.95);
-}
+  .slider-btn-prev { left: 8px; }
+  .slider-btn-next { right: 8px; }
 
-/* -------------------------------
-   Shared Section Styling
--------------------------------- */
-.section-block {
-  background: linear-gradient(135deg, #0f172a, #1e293b);
-  padding: 3rem 2rem;
-  border-radius: 16px;
-  box-shadow: 0 12px 40px rgba(0,0,0,0.4);
-  margin: 3rem auto;
-  max-width: 1200px;
-}
+  .slider-btn:hover {
+    background: rgba(37, 99, 235, 0.95);
+  }
 
-.section-inner {
-  max-width: 1100px;
-  margin: 0 auto;
-}
+  @media (max-width: 768px) {
+    .workflow-hero .ov-hero-inner {
+      grid-template-columns: 1fr;
+    }
+  }
 
-.section-heading {
-  font-size: 2rem;
-  font-weight: 700;
-  color: #f9fafb;
-  text-align: center;
-  margin-bottom: 2rem;
-  position: relative;
-}
+  /* -------------------------------
+     Shared Section Styling
+  -------------------------------- */
+  .section-block {
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    padding: 3rem 2rem;
+    border-radius: 16px;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.4);
+    margin: 3rem auto;
+    max-width: 1200px;
+    opacity: 0;
+    animation: fadeInUp 0.8s ease forwards;
+  }
 
-.section-heading::after {
-  content: "";
-  display: block;
-  width: 60px;
-  height: 4px;
-  background: #FFD966; /* Mango gold accent */
-  margin: 0.5rem auto 0;
-  border-radius: 2px;
-}
+  .section-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
 
-/* -------------------------------
-   Testimonials
--------------------------------- */
-.testimonial-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1.5rem;
-}
+  .section-heading {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #f9fafb;
+    text-align: center;
+    margin-bottom: 2rem;
+    position: relative;
+    opacity: 0;
+    animation: fadeInUp 0.8s ease forwards;
+    animation-delay: 0.2s;
+  }
 
-.testimonial-card {
-  background: #1e293b;
-  border-radius: 12px;
-  padding: 1.5rem;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+  .section-heading::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: #FFD966;
+    margin: 0.5rem auto 0;
+    border-radius: 2px;
+  }
 
-.testimonial-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 32px rgba(0,0,0,0.5);
-}
+  .section-note {
+    text-align: center;
+    color: #e5e7eb;
+    max-width: 720px;
+    margin: 0 auto 2rem;
+    font-size: 0.95rem;
+  }
 
-.testimonial-card p {
-  color: #e2e8f0;
-  font-size: 0.95rem;
-  line-height: 1.5;
-  margin-bottom: 0.75rem;
-}
+  /* -------------------------------
+     Services Grid
+  -------------------------------- */
+  .workflow-services .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
 
-.testimonial-card span {
-  font-size: 0.85rem;
-  color: #FFD966;
-  font-weight: 600;
-}
+  .workflow-services .service-card {
+    background: #1e293b;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+    color: #e2e8f0;
+  }
 
-/* -------------------------------
-   Explore Vault (Courses)
--------------------------------- */
-.filter-buttons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-  justify-content: center;
-  margin-bottom: 2rem;
-}
+  .workflow-services .service-card h3 {
+    color: #f9fafb;
+    margin-bottom: 0.75rem;
+    font-size: 1.1rem;
+  }
 
-.filter-btn {
-  background: #1e293b;
-  color: #f9fafb;
-  border: 1px solid rgba(255,255,255,0.2);
-  padding: 0.6rem 1.2rem;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
+  .workflow-services .service-card p {
+    font-size: 0.95rem;
+    margin-bottom: 0.75rem;
+  }
 
-.filter-btn.active,
-.filter-btn:hover {
-  background: #FFD966;
-  color: #1e293b;
-  font-weight: 600;
-}
+  .workflow-services .service-card ul {
+    padding-left: 1.2rem;
+    margin: 0;
+    font-size: 0.9rem;
+  }
 
-.course-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1.5rem;
-}
-
-.course-card {
-  background: #1e293b;
-  border-radius: 12px;
-  padding: 1.5rem;
-  text-align: center;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.course-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 32px rgba(0,0,0,0.5);
-}
-
-.course-card h3 {
-  color: #f9fafb;
-  font-size: 1.1rem;
-  margin-bottom: 0.5rem;
-}
-
-.course-card span {
-  color: #FFD966;
-  font-size: 0.9rem;
-}
-
-/* -------------------------------
-   Real-World Projects (Themes)
--------------------------------- */
-.themes-table {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1rem;
-}
-
-.theme-row {
-  display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
-  background: #1e293b;
-  padding: 1rem;
-  border-radius: 10px;
-  color: #e2e8f0;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
-}
-
-.theme-row strong {
-  color: #FFD966;
-}
-
-@media (max-width: 768px) {
-  .theme-row {
-    grid-template-columns: 1fr;
+  .services-cta {
     text-align: center;
   }
-}
 
-/* -------------------------------
-   Companies Section
--------------------------------- */
-.company-logo {
-  width: 48px;
-  height: 48px;
-  object-fit: contain;
-  margin-bottom: 0.5rem;
-}
+  .cta-primary,
+  .cta-secondary {
+    display: inline-block;
+    padding: 0.9rem 1.6rem;
+    border-radius: 999px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s ease;
+  }
 
-/* -------------------------------
-   Animation Keyframes
--------------------------------- */
-@keyframes fadeInUp {
-  from {
+  .cta-primary {
+    background: #FFD966;
+    color: #1e293b;
+  }
+
+  .cta-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.4);
+  }
+
+  .cta-secondary {
+    border: 1px solid #FFD966;
+    color: #FFD966;
+    background: transparent;
+  }
+
+  .cta-secondary:hover {
+    background: #FFD966;
+    color: #1e293b;
+  }
+
+  /* -------------------------------
+     Impact Table
+  -------------------------------- */
+  .service-impact {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 2rem;
+  }
+
+  .impact-heading {
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .impact-table-wrapper {
+    overflow-x: auto;
+  }
+
+  .impact-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+  }
+
+  .impact-table th,
+  .impact-table td {
+    border: 1px solid #e5e7eb;
+    padding: 0.75rem 0.9rem;
+    text-align: left;
+  }
+
+  .impact-table thead {
+    background: #0f172a;
+    color: #f9fafb;
+  }
+
+  /* -------------------------------
+     Testimonials
+  -------------------------------- */
+  .testimonials-brolly {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 2rem;
+  }
+
+  .testimonials-brolly > h2 {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .testimonial-card {
+    background: #1e293b;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     opacity: 0;
-    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease forwards;
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 
-@keyframes fadeInScale {
-  from {
+  .testimonial-card:nth-child(1) { animation-delay: 0.2s; }
+  .testimonial-card:nth-child(2) { animation-delay: 0.4s; }
+  .testimonial-card:nth-child(3) { animation-delay: 0.6s; }
+  .testimonial-card:nth-child(4) { animation-delay: 0.8s; }
+  .testimonial-card:nth-child(5) { animation-delay: 1s; }
+
+  .testimonial-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 32px rgba(0,0,0,0.5);
+  }
+
+  .testimonial-card p {
+    color: #e2e8f0;
+    font-size: 0.95rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .testimonial-card span {
+    font-size: 0.85rem;
+    color: #FFD966;
+    font-weight: 600;
+  }
+
+  /* -------------------------------
+     Vault / Courses (single unified block)
+  -------------------------------- */
+  .course-showcase {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 2rem;
+  }
+
+  .course-heading {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
+
+  .filter-btn {
+    background: #1e293b;
+    color: #f9fafb;
+    border: 1px solid rgba(255,255,255,0.2);
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .filter-btn.active,
+  .filter-btn:hover {
+    background: #FFD966;
+    color: #1e293b;
+    font-weight: 600;
+  }
+
+  .course-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .course-card {
+    background: #1e293b;
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     opacity: 0;
-    transform: scale(0.95);
+    animation: fadeInScale 0.8s ease forwards;
   }
-  to {
-    opacity: 1;
-    transform: scale(1);
+
+  .course-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 32px rgba(0,0,0,0.5);
   }
-}
 
-/* -------------------------------
-   Shared Section Styling
--------------------------------- */
-.section-block {
-  background: linear-gradient(135deg, #0f172a, #1e293b);
-  padding: 3rem 2rem;
-  border-radius: 16px;
-  box-shadow: 0 12px 40px rgba(0,0,0,0.4);
-  margin: 3rem auto;
-  max-width: 1200px;
-  opacity: 0; /* start hidden */
-  animation: fadeInUp 0.8s ease forwards;
-}
+  .course-card h3 {
+    color: #f9fafb;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
 
-.section-inner {
-  max-width: 1100px;
-  margin: 0 auto;
-}
+  .course-card span {
+    color: #FFD966;
+    font-size: 0.9rem;
+  }
 
-.section-heading {
-  font-size: 2rem;
-  font-weight: 700;
-  color: #f9fafb;
-  text-align: center;
-  margin-bottom: 2rem;
-  position: relative;
-  opacity: 0;
-  animation: fadeInUp 0.8s ease forwards;
-  animation-delay: 0.2s;
-}
+  .course-card img.company-logo {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    margin-bottom: 0.5rem;
+  }
 
-.section-heading::after {
-  content: "";
-  display: block;
-  width: 60px;
-  height: 4px;
-  background: #FFD966;
-  margin: 0.5rem auto 0;
-  border-radius: 2px;
-}
+  /* -------------------------------
+     Real-World Project Themes
+  -------------------------------- */
+  .project-themes {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 2rem;
+  }
 
-/* -------------------------------
-   Testimonials
--------------------------------- */
-.testimonial-card {
-  background: #1e293b;
-  border-radius: 12px;
-  padding: 1.5rem;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  opacity: 0;
-  animation: fadeInUp 0.8s ease forwards;
-}
+  .themes-heading {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
 
-.testimonial-card:nth-child(1) { animation-delay: 0.2s; }
-.testimonial-card:nth-child(2) { animation-delay: 0.4s; }
-.testimonial-card:nth-child(3) { animation-delay: 0.6s; }
-.testimonial-card:nth-child(4) { animation-delay: 0.8s; }
-.testimonial-card:nth-child(5) { animation-delay: 1s; }
+  .themes-table {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
 
-.testimonial-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 32px rgba(0,0,0,0.5);
-}
+  .theme-row {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    background: #1e293b;
+    padding: 1rem;
+    border-radius: 10px;
+    color: #e2e8f0;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+    opacity: 0;
+    animation: fadeInUp 0.8s ease forwards;
+  }
 
-/* -------------------------------
-   Explore Vault (Courses)
--------------------------------- */
-.course-card {
-  background: #1e293b;
-  border-radius: 12px;
-  padding: 1.5rem;
-  text-align: center;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  opacity: 0;
-  animation: fadeInScale 0.8s ease forwards;
-}
+  .theme-row strong {
+    color: #FFD966;
+  }
 
-.course-card:nth-child(1) { animation-delay: 0.2s; }
-.course-card:nth-child(2) { animation-delay: 0.3s; }
-.course-card:nth-child(3) { animation-delay: 0.4s; }
-.course-card:nth-child(4) { animation-delay: 0.5s; }
-.course-card:nth-child(5) { animation-delay: 0.6s; }
-/* continue staggering delays for all cards... */
+  @media (max-width: 768px) {
+    .theme-row {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+  }
 
-.course-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 32px rgba(0,0,0,0.5);
-}
+  /* -------------------------------
+     Footer
+  -------------------------------- */
+  .vault-footer {
+    padding: 2rem 1.5rem;
+    text-align: center;
+    font-size: 0.9rem;
+    background: #020617;
+    color: #e5e7eb;
+    margin-top: 3rem;
+  }
 
-/* -------------------------------
-   Real-World Projects (Themes)
--------------------------------- */
-.theme-row {
-  display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
-  background: #1e293b;
-  padding: 1rem;
-  border-radius: 10px;
-  color: #e2e8f0;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
-  opacity: 0;
-  animation: fadeInUp 0.8s ease forwards;
-}
+  .vault-footer a {
+    color: #FFD966;
+    text-decoration: none;
+  }
 
-.theme-row:nth-child(1) { animation-delay: 0.2s; }
-.theme-row:nth-child(2) { animation-delay: 0.4s; }
-.theme-row:nth-child(3) { animation-delay: 0.6s; }
-.theme-row:nth-child(4) { animation-delay: 0.8s; }
-.theme-row:nth-child(5) { animation-delay: 1s; }
-.theme-row:nth-child(6) { animation-delay: 1.2s; }
-.theme-row:nth-child(7) { animation-delay: 1.4s; }
-.theme-row:nth-child(8) { animation-delay: 1.6s; }
+  .vault-footer a:hover {
+    text-decoration: underline;
+  }
 
-.theme-row strong {
-  color: #FFD966;
-}
+  .flag-icon {
+    width: 24px;
+    height: auto;
+  }
 
-/* -------------------------------
-   Companies Section
--------------------------------- */
-.course-card img.company-logo {
-  width: 48px;
-  height: 48px;
-  object-fit: contain;
-  margin-bottom: 0.5rem;
-}
+  /* -------------------------------
+     Animations
+  -------------------------------- */
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
 
-.course-card span {
-  color: #FFD966;
-  font-size: 0.9rem;
-}
-
-</style>
+  @keyframes fadeInScale {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+  }
+  </style>
 </head>
 <body>
 
-    <!-- Brand -->
-    <h1 class="ov-brand">
-      <span class="ov-logo-wrap">
-        <img src="assets/images/user-icon.png" alt="OpenVault logo O" class="ov-logo-spin">
-      </span>
-      <span class="ov-brand-rest">penvault</span>
-    </h1>
-  
-    <!-- Injected Navbar -->
-    <div id="navbar-placeholder"></div>
-    <script src="scripts/navbar.js" defer></script>
-  
-    <!-- Sample project preview (BBQ hero) -->
-    <section class="ov-hero workflow-hero">
-      <div class="ov-hero-inner">
-        <div class="ov-copy">
-          <h1>Get Your Business Workflows Out of Excel and Into a Real System</h1>
-          <p>
-            I design and build custom web apps for hospitals and small businesses:
-            quoting, inventory, service visits, and dashboards – all automated on
-            top of Firebase.
-          </p>
-    
-          <ul class="ov-points">
-            <li>Service visit logging with photos and history</li>
-            <li>Quote, inventory and ticket workflows tailored to your team</li>
-            <li>Fast prototypes in days, not months – production‑ready UI</li>
-          </ul>
-    
-          <div class="cta-wrapper">
-            <a
-              href="https://wa.me/919945266755?text=Hi%20Mazhar%2C%20I%20need%20help%20with%20my%20business%20workflow"
-              class="cta-primary"
-            >
-              💬 Book a 15‑min Workflow Call
-            </a>
-            <p class="note">No obligation – walk through your current process on a call.</p>
-          </div>
-        </div>
-    
-        <!-- Right side: slider with your screenshots (see next section) -->
-        <div class="ov-hero-visual">
-          <div class="workflow-slider">
-            <button class="slider-btn slider-btn-prev">‹</button>
-            <div class="workflow-slider-track">
-              <!-- Slides: replace src with your 5–10 images -->
-              <div class="workflow-slide active">
-                <img src="assets/images/1.webp" alt="Inventory dashboard" />
-                <p class="slide-caption">Inventory & stock dashboard for lab equipment</p>
-              </div>
-              <div class="workflow-slide">
-                <img src="assets/images/2.webp" alt="Service visit form" />
-                <p class="slide-caption">Service visit form with photos & history</p>
-              </div>
-              <div class="workflow-slide">
-                <img src="assets/images/3.webp" alt="Hospital CRM" />
-                <p class="slide-caption">Hospital CRM: enquiry → quote → installation</p>
-              </div>
-              <div class="workflow-slide">
-                <img src="assets/images/4.webp" alt="Hospital CRM" />
-                <p class="slide-caption">Service visit form with photos & history</p>
-              </div>
-              <div class="workflow-slide">
-                <img src="assets/images/6.webp" alt="Hospital CRM" />
-                <p class="slide-caption">Inventory & stock dashboard for lab equipment</p>
-              </div>
-              <div class="workflow-slide">
-                <img src="assets/images/7.webp" alt="Hospital CRM" />
-                <p class="slide-caption">Hospital CRM: enquiry → quote → installation</p>
-              </div>
-              <!-- add 2–7 more slides -->
-            </div>
-            <button class="slider-btn slider-btn-next">›</button>
-          </div>
+  <!-- Brand -->
+  <h1 class="ov-brand">
+    <span class="ov-logo-wrap">
+      <img src="assets/images/user-icon.png" alt="OpenVault logo O" class="ov-logo-spin">
+    </span>
+    <span class="ov-brand-rest">penvault</span>
+  </h1>
+
+  <!-- Injected Navbar -->
+  <div id="navbar-placeholder"></div>
+  <script src="scripts/navbar.js" defer></script>
+
+  <!-- HERO: Workflows + Slider -->
+  <section class="ov-hero workflow-hero">
+    <div class="ov-hero-inner">
+      <div class="ov-copy">
+        <h1>Get Your Business Workflows Out of Excel and Into a Real System</h1>
+        <p>
+          I design and build custom web apps for hospitals and small businesses:
+          quoting, inventory, service visits, and dashboards – all automated on
+          top of Firebase.
+        </p>
+
+        <ul class="ov-points">
+          <li>Service visit logging with photos and history</li>
+          <li>Quote, inventory and ticket workflows tailored to your team</li>
+          <li>Fast prototypes in days, not months – production‑ready UI</li>
+        </ul>
+
+        <div class="cta-wrapper">
+          <a
+            href="https://wa.me/919945266755?text=Hi%20Mazhar%2C%20I%20need%20help%20with%20my%20business%20workflow"
+            class="cta-primary"
+          >
+            💬 Book a 15‑min Workflow Call
+          </a>
+          <p class="note">No obligation – walk through your current process on a call.</p>
         </div>
       </div>
-    </section>
-  
-    <section class="workflow-services">
+
+      <div class="ov-hero-visual">
+        <div class="workflow-slider">
+          <button class="slider-btn slider-btn-prev">‹</button>
+          <div class="workflow-slider-track">
+            <div class="workflow-slide active">
+              <img src="assets/images/1.webp" alt="Inventory dashboard" />
+              <p class="slide-caption">Inventory & stock dashboard for lab equipment</p>
+            </div>
+            <div class="workflow-slide">
+              <img src="assets/images/2.webp" alt="Service visit form" />
+              <p class="slide-caption">Service visit form with photos & history</p>
+            </div>
+            <div class="workflow-slide">
+              <img src="assets/images/3.webp" alt="Hospital CRM" />
+              <p class="slide-caption">Hospital CRM: enquiry → quote → installation</p>
+            </div>
+            <div class="workflow-slide">
+              <img src="assets/images/4.webp" alt="Service visit" />
+              <p class="slide-caption">Engineer workflow with visit logs and attachments</p>
+            </div>
+            <div class="workflow-slide">
+              <img src="assets/images/6.webp" alt="Inventory view" />
+              <p class="slide-caption">Stock levels & alerts for consumables</p>
+            </div>
+            <div class="workflow-slide">
+              <img src="assets/images/7.webp" alt="Admin panel" />
+              <p class="slide-caption">Admin panel: leads, orders, tickets, revenue</p>
+            </div>
+          </div>
+          <button class="slider-btn slider-btn-next">›</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="section-block workflow-services">
     <div class="section-inner">
       <h2 class="section-heading">🛠 What You Can Hire Me For</h2>
       <p class="section-note">
         I help hospitals and SMEs turn messy spreadsheets and WhatsApp chats into
         clean, trackable web apps.
       </p>
-  
+
       <div class="services-grid">
         <div class="service-card">
           <h3>Hospital Service & Maintenance Portals</h3>
@@ -543,7 +584,7 @@
             <li>Exports for audits and ISO documentation</li>
           </ul>
         </div>
-  
+
         <div class="service-card">
           <h3>Quoting & Inventory Workflows</h3>
           <p>Custom quote builder + stock tracking for instruments and reagents.</p>
@@ -553,18 +594,18 @@
             <li>PDF/print‑ready quote layouts</li>
           </ul>
         </div>
-  
+
         <div class="service-card">
           <h3>Custom Dashboards & Admin Apps</h3>
           <p>Single admin panel to see leads, orders, tickets and revenue.</p>
           <ul>
             <li>Firebase / Supabase backend</li>
-            <li>Modern React / JS UI with filters & search</li>
+            <li>Modern JS UI with filters & search</li>
             <li>Role‑based access for teams</li>
           </ul>
         </div>
       </div>
-  
+
       <div class="services-cta">
         <a
           href="https://wa.me/919945266755?text=Hi%20Mazhar%2C%20I%20want%20a%20custom%20workflow%20project"
@@ -576,154 +617,117 @@
     </div>
   </section>
 
-  <script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const slides = Array.from(document.querySelectorAll(".workflow-slide"));
-    const prevBtn = document.querySelector(".slider-btn-prev");
-    const nextBtn = document.querySelector(".slider-btn-next");
-    if (!slides.length || !prevBtn || !nextBtn) return;
-
-    let current = 0;
-
-    function showSlide(index) {
-      slides.forEach((slide, i) => {
-        slide.classList.toggle("active", i === index);
-      });
-    }
-
-    prevBtn.addEventListener("click", () => {
-      current = (current - 1 + slides.length) % slides.length;
-      showSlide(current);
-    });
-
-    nextBtn.addEventListener("click", () => {
-      current = (current + 1) % slides.length;
-      showSlide(current);
-    });
-
-    // Optional autoplay (can be removed if you want manual only)
-    setInterval(() => {
-      current = (current + 1) % slides.length;
-      showSlide(current);
-    }, 6000);
-  });
-</script>
-
-<section class="service-impact">
-  <h2 class="impact-heading">🚀 Real Workflow Wins</h2>
-  <div class="impact-table-wrapper">
-    <table class="impact-table">
-      <thead>
-        <tr>
-          <th>Service</th>
-          <th>What I Built</th>
-          <th>Business Impact</th>
-          <th>Project Delivered In</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>QMS Dashboards</td>
-          <td>Firebase quoting + inventory workflows</td>
-          <td>80% faster quote turnaround</td>
-          <td>QMS</td>
-        </tr>
-        <tr>
-          <td>Service Tracking</td>
-          <td>Engineer visit logs with photo uploads</td>
-          <td>Zero paper trails, full traceability</td>
-          <td>QMS</td>
-        </tr>
-        <tr>
-          <td>Workflow Automation</td>
-          <td>Lead → Quote → Order → Invoice pipeline</td>
-          <td>3× team efficiency</td>
-          <td>Zamport</td>
-        </tr>
-        <tr>
-          <td>Custom Integrations</td>
-          <td>Supabase/Firestore + modular UI</td>
-          <td>Real-time sync across teams</td>
-          <td>XPAY</td>
-        </tr>
-        <tr>
-          <td>Approval Systems</td>
-          <td>Role-based dashboards with branded status flows</td>
-          <td>Instant visibility for managers</td>
-          <td>Xchange</td>
-        </tr>
-        <tr>
-          <td>Home Service Scheduling</td>
-          <td>Technician routing + visit logs with photos</td>
-          <td>2× faster dispatch and resolution</td>
-          <td>Drophome</td>
-        </tr>
-        <tr>
-          <td>Quote Builder</td>
-          <td>PDF-ready quote layouts with dynamic pricing</td>
-          <td>Professional client-facing output</td>
-          <td>Zamport</td>
-        </tr>
-        <tr>
-          <td>Inventory Alerts</td>
-          <td>Stock tracking with low-supply notifications</td>
-          <td>Reduced stockouts and delays</td>
-          <td>XPAY</td>
-        </tr>
-        <tr>
-          <td>Equipment History Viewer</td>
-          <td>Serial-number based service timeline with gallery</td>
-          <td>ISO-ready audit trail</td>
-          <td>QMS</td>
-        </tr>
-        <tr>
-          <td>Admin Panel</td>
-          <td>Unified dashboard for leads, orders, tickets, revenue</td>
-          <td>Centralized control</td>
-          <td>Xchange</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</section>
-
-<section class="testimonials-brolly">
-  <h2>💬 What Clients Say</h2>
-  <div class="testimonial-grid">
-    
-    <div class="testimonial-card">
-      <p>Our hospital now logs every service visit with photos. Audits are smoother and ISO compliance is easy.</p>
-      <span>— Dr. Meera, Hospital Administrator</span>
+  <!-- IMPACT TABLE -->
+  <section class="service-impact">
+    <h2 class="impact-heading">🚀 Real Workflow Wins</h2>
+    <div class="impact-table-wrapper">
+      <table class="impact-table">
+        <thead>
+          <tr>
+            <th>Service</th>
+            <th>What I Built</th>
+            <th>Business Impact</th>
+            <th>Project Delivered In</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>QMS Dashboards</td>
+            <td>Firebase quoting + inventory workflows</td>
+            <td>80% faster quote turnaround</td>
+            <td>QMS</td>
+          </tr>
+          <tr>
+            <td>Service Tracking</td>
+            <td>Engineer visit logs with photo uploads</td>
+            <td>Zero paper trails, full traceability</td>
+            <td>QMS</td>
+          </tr>
+          <tr>
+            <td>Workflow Automation</td>
+            <td>Lead → Quote → Order → Invoice pipeline</td>
+            <td>3× team efficiency</td>
+            <td>Zamport</td>
+          </tr>
+          <tr>
+            <td>Custom Integrations</td>
+            <td>Supabase/Firestore + modular UI</td>
+            <td>Real-time sync across teams</td>
+            <td>XPAY</td>
+          </tr>
+          <tr>
+            <td>Approval Systems</td>
+            <td>Role-based dashboards with status flows</td>
+            <td>Instant visibility for managers</td>
+            <td>Xchange</td>
+          </tr>
+          <tr>
+            <td>Home Service Scheduling</td>
+            <td>Technician routing + visit logs with photos</td>
+            <td>2× faster dispatch and resolution</td>
+            <td>Drophome</td>
+          </tr>
+          <tr>
+            <td>Quote Builder</td>
+            <td>PDF-ready quote layouts with dynamic pricing</td>
+            <td>Professional client-facing output</td>
+            <td>Zamport</td>
+          </tr>
+          <tr>
+            <td>Inventory Alerts</td>
+            <td>Stock tracking with low-supply notifications</td>
+            <td>Reduced stockouts and delays</td>
+            <td>XPAY</td>
+          </tr>
+          <tr>
+            <td>Equipment History Viewer</td>
+            <td>Serial-number based service timeline with gallery</td>
+            <td>ISO-ready audit trail</td>
+            <td>QMS</td>
+          </tr>
+          <tr>
+            <td>Admin Panel</td>
+            <td>Unified dashboard for leads, orders, tickets, revenue</td>
+            <td>Centralized control</td>
+            <td>Xchange</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
+  </section>
 
-    <div class="testimonial-card">
-      <p>The school inventory system tracks lab equipment and books. No more lost items or manual registers.</p>
-      <span>— Mr. Sharma, School Principal</span>
+  <!-- TESTIMONIALS -->
+  <section class="testimonials-brolly">
+    <h2>💬 What Clients Say</h2>
+    <div class="testimonial-grid">
+      <div class="testimonial-card">
+        <p>Our hospital now logs every service visit with photos. Audits are smoother and ISO compliance is easy.</p>
+        <span>— Dr. Meera, Hospital Administrator</span>
+      </div>
+      <div class="testimonial-card">
+        <p>The school inventory system tracks lab equipment and books. No more lost items or manual registers.</p>
+        <span>— Mr. Sharma, School Principal</span>
+      </div>
+      <div class="testimonial-card">
+        <p>Engineers submit maintenance reports instantly. We can trace equipment history by serial number in seconds.</p>
+        <span>— Rajesh, Biomedical Engineer</span>
+      </div>
+      <div class="testimonial-card">
+        <p>Our teachers use a dashboard to manage student projects. It replaced messy spreadsheets with clean workflows.</p>
+        <span>— Mrs. Fernandes, Academic Coordinator</span>
+      </div>
+      <div class="testimonial-card">
+        <p>Quoting and procurement for hospital supplies is automated. Saves us hours every week and reduces errors.</p>
+        <span>— Dr. Khan, Procurement Head</span>
+      </div>
     </div>
+  </section>
 
-    <div class="testimonial-card">
-      <p>Engineers submit maintenance reports instantly. We can trace equipment history by serial number in seconds.</p>
-      <span>— Rajesh, Biomedical Engineer</span>
-    </div>
+  <!-- EXPLORE VAULT -->
+  <section class="section-block course-showcase" id="vault-explore">
+    <div class="section-inner">
+      <h2 class="section-heading">📚 Explore Inside the Vault</h2>
 
-    <div class="testimonial-card">
-      <p>Our teachers use a dashboard to manage student projects. It replaced messy spreadsheets with clean workflows.</p>
-      <span>— Mrs. Fernandes, Academic Coordinator</span>
-    </div>
-
-    <div class="testimonial-card">
-      <p>Quoting and procurement for hospital supplies is automated. Saves us hours every week and reduces errors.</p>
-      <span>— Dr. Khan, Procurement Head</span>
-    </div>
-
-  </div>
-</section>
-
-<!-- Explore inside the Vault -->
-    <section class="course-showcase" id="vault-explore">
-      <h2 class="course-heading">📚 Explore Inside the Vault</h2>
-
-      <!-- Filter buttons -->
       <div class="filter-buttons">
         <button class="filter-btn active" data-filter="all">All</button>
         <button class="filter-btn" data-filter="web">Web / Frontend</button>
@@ -733,7 +737,6 @@
         <button class="filter-btn" data-filter="other">Other Stacks</button>
       </div>
 
-      <!-- Cards -->
       <div class="course-grid">
         <div class="course-card" data-category="web">
           <h3>React JS</h3>
@@ -824,206 +827,104 @@
           <span>Google Cloud mastery</span>
         </div>
       </div>
+    </div>
+  </section>
 
-    <!-- Real-world project themes -->
-    <section class="project-themes">
-      <h2 class="themes-heading">🎯 Real-World Projects</h2>
-      <div class="themes-table">
-        <div class="theme-row">
-          <span><strong>👗 Fashion</strong></span>
-          <span>Outfit recommender, virtual try-on</span>
-          <span>Style meets AI</span>
-        </div>
-        <div class="theme-row">
-          <span><strong>🏠 Home &amp; Living</strong></span>
-          <span>Smart home automation, IoT control</span>
-          <span>Perfect for IoT majors</span>
-        </div>
-        <div class="theme-row">
-          <span><strong>💸 Deals &amp; Offers</strong></span>
-          <span>Coupon engine, cashback logic</span>
-          <span>E-commerce meets data</span>
-        </div>
-        <div class="theme-row">
-          <span><strong>✈️ Travel</strong></span>
-          <span>Trip planner, route optimizer</span>
-          <span>Real-world UX</span>
-        </div>
-        <div class="theme-row">
-          <span><strong>🎬 Entertainment</strong></span>
-          <span>OTT dashboard, movie aggregator</span>
-          <span>React + ML combo</span>
-        </div>
-        <div class="theme-row">
-          <span><strong>🛒 Shopping</strong></span>
-          <span>Cart system, wishlist animations</span>
-          <span>Frontend mastery</span>
-        </div>
-        <div class="theme-row">
-          <span><strong>📱 Mobile Apps</strong></span>
-          <span>QR scanner, student task app</span>
-          <span>Android dev skills</span>
-        </div>
-        <div class="theme-row">
-          <span><strong>🤖 AI &amp; ML</strong></span>
-          <span>Chatbot, sentiment analysis</span>
-          <span>Final-year impact</span>
-        </div>
+  <!-- REAL-WORLD THEMES -->
+  <section class="project-themes">
+    <h2 class="themes-heading">🎯 Real-World Projects</h2>
+    <div class="themes-table">
+      <div class="theme-row">
+        <span><strong>👗 Fashion</strong></span>
+        <span>Outfit recommender, virtual try-on</span>
+        <span>Style meets AI</span>
       </div>
-    </section>
-
-   <!-- Companies section -->
-    <section class="course-showcase">
-      <h2 class="course-heading">🏢 Companies that use these kinds of Tech Stack</h2>
-      <div class="course-grid">
-        <div class="course-card">
-          <img src="icons/Microsoft.png" alt="Microsoft" class="company-logo" />
-          <span>React &amp; Azure</span>
-        </div>
-        <div class="course-card">
-          <img src="icons/Infosys.png" alt="Infosys" class="company-logo" />
-          <span>React &amp; Node.js</span>
-        </div>
-        <div class="course-card">
-          <img src="icons/IBM.png" alt="IBM" class="company-logo" />
-          <span>Full-stack JS</span>
-        </div>
-        <div class="course-card">
-          <img src="icons/tcs.jpg" alt="TCS" class="company-logo" />
-          <span>React &amp; DevOps</span>
-        </div>
-        <div class="course-card">
-          <img src="icons/wipro.jpg" alt="Wipro" class="company-logo" />
-          <span>React &amp; Node.js</span>
-        </div>
-        <div class="course-card">
-          <img src="icons/HCLTech.png" alt="HCLTech" class="company-logo" />
-          <span>React &amp; Tailwind</span>
-        </div>
-        <div class="course-card">
-          <img src="icons/Deloitte.png" alt="Deloitte" class="company-logo" />
-          <span>JS frameworks</span>
-        </div>
-        <div class="course-card">
-          <img src="icons/capgemini.png" alt="Capgemini" class="company-logo" />
-          <span>React &amp; GitHub workflows</span>
-        </div>
-        <div class="course-card">
-          <img src="icons/Cognizant.jpeg" alt="Cognizant" class="company-logo" />
-          <span>React &amp; UI optimization</span>
-        </div>
-        <div class="course-card">
-          <img src="icons/genpact.jpg" alt="Genpact" class="company-logo" />
-          <span>JS &amp; analytics</span>
-        </div>
+      <div class="theme-row">
+        <span><strong>🏠 Home &amp; Living</strong></span>
+        <span>Smart home automation, IoT control</span>
+        <span>Perfect for IoT majors</span>
       </div>
-    </section>
-
-<section class="section-block course-showcase" id="vault-explore"> 
-    <div class="section-inner"> 
-    <h2 class="section-heading">📚 Explore Inside the Vault</h2> 
-    <div class="filter-buttons">
-        <button class="filter-btn active" data-filter="all">All</button>
-        <button class="filter-btn" data-filter="web">Web / Frontend</button>
-        <button class="filter-btn" data-filter="backend">Backend</button>
-        <button class="filter-btn" data-filter="ml">AI / ML / Data</button>
-        <button class="filter-btn" data-filter="cloud">Cloud / DevOps</button>
-        <button class="filter-btn" data-filter="other">Other Stacks</button>
+      <div class="theme-row">
+        <span><strong>💸 Deals &amp; Offers</strong></span>
+        <span>Coupon engine, cashback logic</span>
+        <span>E-commerce meets data</span>
       </div>
-
-      <!-- Cards -->
-      <div class="course-grid">
-        <div class="course-card" data-category="web">
-          <h3>React JS</h3>
-          <span>Front-end mastery</span>
-        </div>
-        <div class="course-card" data-category="web">
-          <h3>Front-End Dev</h3>
-          <span>HTML, CSS, JS, UI/UX</span>
-        </div>
-        <div class="course-card" data-category="backend">
-          <h3>Node.js</h3>
-          <span>Backend with JavaScript</span>
-        </div>
-        <div class="course-card" data-category="backend">
-          <h3>SQL</h3>
-          <span>Database management</span>
-        </div>
-        <div class="course-card" data-category="cloud">
-          <h3>Azure DevOps</h3>
-          <span>CI/CD pipelines</span>
-        </div>
-        <div class="course-card" data-category="cloud">
-          <h3>Azure Admin</h3>
-          <span>Cloud infrastructure</span>
-        </div>
-        <div class="course-card" data-category="cloud">
-          <h3>Azure Data Factory</h3>
-          <span>ETL workflows</span>
-        </div>
-        <div class="course-card" data-category="backend">
-          <h3>J2EE</h3>
-          <span>Enterprise Java apps</span>
-        </div>
-        <div class="course-card" data-category="other">
-          <h3>PMP</h3>
-          <span>Project management</span>
-        </div>
-        <div class="course-card" data-category="other">
-          <h3>Scrum</h3>
-          <span>Agile workflows</span>
-        </div>
-        <div class="course-card" data-category="other">
-          <h3>Business Analyst</h3>
-          <span>Stakeholder insights</span>
-        </div>
-        <div class="course-card" data-category="backend">
-          <h3>Mulesoft</h3>
-          <span>API integration</span>
-        </div>
-        <div class="course-card" data-category="backend">
-          <h3>Tosca</h3>
-          <span>Automated testing</span>
-        </div>
-        <div class="course-card" data-category="backend">
-          <h3>DBT</h3>
-          <span>Analytics pipelines</span>
-        </div>
-        <div class="course-card" data-category="backend">
-          <h3>Dell Boomi</h3>
-          <span>Cloud integrations</span>
-        </div>
-        <div class="course-card" data-category="other">
-          <h3>Digital Marketing</h3>
-          <span>SEO, SEM, campaigns</span>
-        </div>
-        <div class="course-card" data-category="ml">
-          <h3>Snowflake</h3>
-          <span>Cloud data warehousing</span>
-        </div>
-        <div class="course-card" data-category="ml">
-          <h3>Generative AI</h3>
-          <span>AI model training</span>
-        </div>
-        <div class="course-card" data-category="ml">
-          <h3>Prompt Engineering</h3>
-          <span>Optimized AI prompts</span>
-        </div>
-        <div class="course-card" data-category="backend">
-          <h3>Embedded Systems</h3>
-          <span>Hardware-software fusion</span>
-        </div>
-        <div class="course-card" data-category="ml">
-          <h3>Python for AI</h3>
-          <span>ML-ready Python</span>
-        </div>
-        <div class="course-card" data-category="cloud">
-          <h3>GCP</h3>
-          <span>Google Cloud mastery</span>
-        </div>
+      <div class="theme-row">
+        <span><strong>✈️ Travel</strong></span>
+        <span>Trip planner, route optimizer</span>
+        <span>Real-world UX</span>
       </div>
+      <div class="theme-row">
+        <span><strong>🎬 Entertainment</strong></span>
+        <span>OTT dashboard, movie aggregator</span>
+        <span>React + ML combo</span>
+      </div>
+      <div class="theme-row">
+        <span><strong>🛒 Shopping</strong></span>
+        <span>Cart system, wishlist animations</span>
+        <span>Frontend mastery</span>
+      </div>
+      <div class="theme-row">
+        <span><strong>📱 Mobile Apps</strong></span>
+        <span>QR scanner, student task app</span>
+        <span>Android dev skills</span>
+      </div>
+      <div class="theme-row">
+        <span><strong>🤖 AI &amp; ML</strong></span>
+        <span>Chatbot, sentiment analysis</span>
+        <span>Final-year impact</span>
+      </div>
+    </div>
+  </section>
 
-  <!-- Single footer -->
+  <!-- COMPANIES SECTION -->
+  <section class="course-showcase">
+    <h2 class="course-heading">🏢 Companies that use these kinds of Tech Stack</h2>
+    <div class="course-grid">
+      <div class="course-card">
+        <img src="icons/Microsoft.png" alt="Microsoft" class="company-logo" />
+        <span>React &amp; Azure</span>
+      </div>
+      <div class="course-card">
+        <img src="icons/Infosys.png" alt="Infosys" class="company-logo" />
+        <span>React &amp; Node.js</span>
+      </div>
+      <div class="course-card">
+        <img src="icons/IBM.png" alt="IBM" class="company-logo" />
+        <span>Full-stack JS</span>
+      </div>
+      <div class="course-card">
+        <img src="icons/tcs.jpg" alt="TCS" class="company-logo" />
+        <span>React &amp; DevOps</span>
+      </div>
+      <div class="course-card">
+        <img src="icons/wipro.jpg" alt="Wipro" class="company-logo" />
+        <span>React &amp; Node.js</span>
+      </div>
+      <div class="course-card">
+        <img src="icons/HCLTech.png" alt="HCLTech" class="company-logo" />
+        <span>React &amp; Tailwind</span>
+      </div>
+      <div class="course-card">
+        <img src="icons/Deloitte.png" alt="Deloitte" class="company-logo" />
+        <span>JS frameworks</span>
+      </div>
+      <div class="course-card">
+        <img src="icons/capgemini.png" alt="Capgemini" class="company-logo" />
+        <span>React &amp; GitHub workflows</span>
+      </div>
+      <div class="course-card">
+        <img src="icons/Cognizant.jpeg" alt="Cognizant" class="company-logo" />
+        <span>React &amp; UI optimization</span>
+      </div>
+      <div class="course-card">
+        <img src="icons/genpact.jpg" alt="Genpact" class="company-logo" />
+        <span>JS &amp; analytics</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
   <footer class="vault-footer">
     <p>© 2021–2025 | openvault.in | All rights reserved</p>
     <p>
@@ -1036,124 +937,40 @@
     <p><img src="icons/india-flag.png" alt="India Flag" class="flag-icon" /></p>
   </footer>
 
-  <!-- Main script: countdown + filters + progress -->
+  <!-- Workflow Slider Script -->
   <script>
-    const COUNTDOWN_KEY = "vaultCountdownTarget";
-    const HOURS_LIMIT = 48;
+    document.addEventListener("DOMContentLoaded", () => {
+      const slides = Array.from(document.querySelectorAll(".workflow-slide"));
+      const prevBtn = document.querySelector(".slider-btn-prev");
+      const nextBtn = document.querySelector(".slider-btn-next");
+      if (!slides.length || !prevBtn || !nextBtn) return;
 
-    // ⏳ Initialize Countdown
-    function initCountdown() {
-      let countdownTarget = localStorage.getItem(COUNTDOWN_KEY);
-      if (!countdownTarget) {
-        countdownTarget = Date.now() + HOURS_LIMIT * 60 * 60 * 1000;
-        localStorage.setItem(COUNTDOWN_KEY, countdownTarget);
-      } else {
-        countdownTarget = parseInt(countdownTarget, 10);
+      let current = 0;
+
+      function showSlide(index) {
+        slides.forEach((slide, i) => {
+          slide.classList.toggle("active", i === index);
+        });
       }
 
-      const updateCountdown = () => {
-        const now = Date.now();
-        const distance = countdownTarget - now;
-
-        const countdownEl = document.getElementById("countdown-timer");
-        const flash = document.querySelector(".price-flash");
-
-        if (distance <= 0) {
-          if (countdownEl) countdownEl.textContent = "Offer Expired";
-          if (flash) {
-            flash.innerHTML = "@Now ₹<strong>299</strong>/-";
-            flash.classList.add("expired");
-          }
-          return;
-        }
-
-        const hours = Math.floor(distance / (1000 * 60 * 60));
-        const minutes = Math.floor((distance / (1000 * 60)) % 60);
-        const seconds = Math.floor((distance / 1000) % 60);
-
-        if (countdownEl) {
-          countdownEl.textContent =
-            String(hours).padStart(2, "0") + ":" +
-            String(minutes).padStart(2, "0") + ":" +
-            String(seconds).padStart(2, "0");
-        }
-      };
-
-      updateCountdown();
-      setInterval(updateCountdown, 1000);
-    }
-
-    // 🔄 Filter Logic for stacks
-    function initFilters() {
-      const filterButtons = document.querySelectorAll(".filter-btn");
-      const courseCards = document.querySelectorAll(".course-showcase .course-card");
-
-      filterButtons.forEach(btn => {
-        btn.addEventListener("click", () => {
-          const currentActive = document.querySelector(".filter-btn.active");
-          if (currentActive) currentActive.classList.remove("active");
-          btn.classList.add("active");
-
-          const filter = btn.dataset.filter;
-
-          courseCards.forEach(card => {
-            const category = card.dataset.category || "other";
-            card.style.display =
-              (filter === "all" || category === filter) ? "block" : "none";
-          });
-        });
+      prevBtn.addEventListener("click", () => {
+        current = (current - 1 + slides.length) % slides.length;
+        showSlide(current);
       });
-    }
 
-    // 📈 Progress Tracking on vault course cards
-    function initProgressBadges() {
-      const courseCards = document.querySelectorAll("#vault-explore .course-card");
-
-      courseCards.forEach(card => {
-        const titleElement = card.querySelector("h3");
-        if (!titleElement) return;
-
-        const title = titleElement.textContent.trim().toLowerCase();
-        const key = "viewed-" + title;
-
-        const badge = document.createElement("div");
-        badge.className = "progress-badge";
-
-        const isViewed = localStorage.getItem(key);
-        badge.textContent = isViewed ? "✅ Viewed" : "🔓 Not Viewed";
-        card.appendChild(badge);
-
-        card.addEventListener("click", () => {
-          localStorage.setItem(key, "true");
-          badge.textContent = "✅ Viewed";
-          badge.classList.add("unlocked");
-        });
+      nextBtn.addEventListener("click", () => {
+        current = (current + 1) % slides.length;
+        showSlide(current);
       });
-    }
 
-    document.addEventListener("DOMContentLoaded", () => {
-      initCountdown();
-      initFilters();
-      initProgressBadges();
+      setInterval(() => {
+        current = (current + 1) % slides.length;
+        showSlide(current);
+      }, 6000);
     });
   </script>
 
-  <script>
-  const track = document.querySelector('.ov-carousel-container');
-  let scrollAmount = 0;
-  
-  setInterval(() => {
-    if (!track) return;
-    scrollAmount += 300;
-    if (scrollAmount >= track.scrollWidth) scrollAmount = 0;
-    track.scrollTo({
-      left: scrollAmount,
-      behavior: 'smooth'
-    });
-  }, 5000);
-  </script>
-  
-  <!-- Optional external script if you still need it -->
+  <!-- Existing scripts (countdown/filters/progress) if still needed -->
   <script src="scripts/script.js"></script>
 </body>
 </html>
