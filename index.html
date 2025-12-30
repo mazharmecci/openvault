@@ -417,49 +417,77 @@
 }
 
 
-  /* -------------------------------
-     Real-World Project Themes
-  -------------------------------- */
-  .project-themes {
-    max-width: 1200px;
-    margin: 3rem auto;
-    padding: 2rem;
-  }
+/* -------------------------------
+   Real-World Project Themes
+-------------------------------- */
+.project-themes {
+  max-width: 1200px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background: #0f172a; /* dark background */
+  border-radius: 16px;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.4);
+}
 
-  .themes-heading {
-    text-align: center;
-    font-size: 1.8rem;
-    margin-bottom: 1.5rem;
-  }
+.themes-heading {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #FFD966; /* mango gold heading */
+  margin-bottom: 2rem;
+  position: relative;
+}
 
-  .themes-table {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
+.themes-heading::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: #FFD966;
+  margin: 0.5rem auto 0;
+  border-radius: 2px;
+}
 
+.themes-table {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.theme-row {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  align-items: center;
+  background: #1e293b;
+  padding: 1rem 1.25rem;
+  border-radius: 10px;
+  color: #f9fafb;
+  font-size: 0.95rem;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.theme-row:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 28px rgba(0,0,0,0.5);
+}
+
+.theme-row strong {
+  color: #FFD966; /* mango gold for category label */
+  font-weight: 700;
+}
+
+.theme-row span {
+  line-height: 1.4;
+}
+
+@media (max-width: 768px) {
   .theme-row {
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-    background: #1e293b;
-    padding: 1rem;
-    border-radius: 10px;
-    color: #e2e8f0;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
-    opacity: 1; /* Temporarily force visible */
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 0.5rem;
   }
-  
-  .theme-row strong {
-    color: #FFD966;
-  }
-  
-  @media (max-width: 768px) {
-    .theme-row {
-      grid-template-columns: 1fr;
-      text-align: center;
-    }
-  }
-
+}
 
   /* -------------------------------
      Footer
