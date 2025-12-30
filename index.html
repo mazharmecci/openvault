@@ -575,102 +575,68 @@
     height: auto;
   }
 
-  .vault-pricing {
-  max-width: 1200px;
-  margin: 2rem auto 3rem;
-  padding: 1.75rem 2rem;
-  background: linear-gradient(135deg, #f8f9ff, #e0e7ff);
+.vault-pricing {
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  padding: 3rem 2rem;
   border-radius: 16px;
-  box-shadow: 0 12px 32px rgba(15, 23, 42, 0.18);
-  border: 1px solid rgba(30, 64, 175, 0.18);
-}
-
-.vault-pricing-inner {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-/* Top strip: discovery call */
-.vault-pricing-header {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  align-items: center;
-  justify-content: space-between;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.4);
+  margin: 3rem auto;
+  max-width: 900px;
+  text-align: center;
 }
 
 .vault-pricing-label {
+  display: block;
+  font-size: 1.2rem;
   font-weight: 600;
-  color: #111827;
-  font-size: 0.98rem;
+  color: #FFD966; /* mango gold accent */
+  margin-bottom: 1.5rem;
 }
 
-.vault-pricing-cta {
+.cta-wrapper {
+  margin-top: 1rem;
+}
+
+.cta-primary {
   display: inline-block;
-  padding: 0.6rem 1.4rem;
-  border-radius: 999px;
-  background: #1e3a8a;
-  color: #ffffff;
-  font-weight: 600;
-  font-size: 0.92rem;
-  text-decoration: none;
-  box-shadow: 0 8px 20px rgba(30, 64, 175, 0.35);
-  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
-}
-
-.vault-pricing-cta:hover {
-  background: #1d4ed8;
-  transform: translateY(-2px);
-  box-shadow: 0 12px 28px rgba(30, 64, 175, 0.45);
-}
-
-/* Tier cards */
-.vault-pricing-tiers {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-  gap: 1.25rem;
-}
-
-.vault-tier-card {
-  background: #ffffff;
-  border-radius: 14px;
-  padding: 1.2rem 1.4rem;
-  border: 1px solid rgba(30, 64, 175, 0.14);
-  box-shadow: 0 8px 22px rgba(15, 23, 42, 0.12);
-  text-align: left;
-  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
-}
-
-.vault-tier-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 14px 32px rgba(15, 23, 42, 0.22);
-  border-color: #1e3a8a;
-}
-
-.vault-tier-featured {
-  border-width: 2px;
-  border-color: #1e3a8a;
-  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.28);
-}
-
-.vault-tier-card h3 {
-  font-size: 1rem;
+  background: linear-gradient(135deg, #FFD966, #ffcc33);
+  color: #1e293b;
   font-weight: 700;
-  color: #111827;
-  margin-bottom: 0.4rem;
-}
-
-.vault-tier-price {
   font-size: 1.1rem;
-  font-weight: 700;
-  color: #1e3a8a;
-  margin-bottom: 0.2rem;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  text-decoration: none;
+  box-shadow: 0 8px 24px rgba(255, 217, 102, 0.5);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
 }
 
-.vault-tier-note {
+.cta-primary::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: skewX(-20deg);
+  transition: left 0.6s ease;
+}
+
+.cta-primary:hover::after {
+  left: 100%;
+}
+
+.cta-primary:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 12px 32px rgba(255, 217, 102, 0.6);
+}
+
+.note {
+  margin-top: 0.75rem;
   font-size: 0.9rem;
-  color: #4b5563;
+  color: #cbd5e1;
 }
 
 /* Responsive */
@@ -686,6 +652,19 @@
   .vault-pricing-cta {
     width: 100%;
     text-align: center;
+  }
+}
+
+  @media (max-width: 768px) {
+  .vault-pricing {
+    padding: 2rem 1rem;
+  }
+  .vault-pricing-label {
+    font-size: 1rem;
+  }
+  .cta-primary {
+    font-size: 1rem;
+    padding: 0.8rem 1.4rem;
   }
 }
 
@@ -782,13 +761,25 @@
   </section>
 
   <section class="vault-pricing">
-  <div class="vault-pricing-inner">
-    <div class="vault-pricing-header">
-      <span class="vault-pricing-label">Free 15-min Discovery Call → Custom Quote</span>
-      <a href="#contact" class="vault-pricing-cta">
-        Book your call
-      </a>
+    <div class="vault-pricing-inner">
+      <div class="vault-pricing-header">
+        <span class="vault-pricing-label">
+          Free 15‑min Discovery Call → Custom Quote
+        </span>
+        <div class="cta-wrapper">
+          <a
+            href="https://wa.me/919945266755?text=Hi%20Mazhar%2C%20I%20need%20help%20with%20my%20business%20workflow"
+            class="cta-primary"
+          >
+            💬 Book a 15‑min Workflow Call
+          </a>
+          <p class="note">
+           Walk through your current process on a call.
+          </p>
+        </div>
+      </div>
     </div>
+  </section>
 
     <div class="vault-pricing-tiers">
       <div class="vault-tier-card">
