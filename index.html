@@ -575,6 +575,120 @@
     height: auto;
   }
 
+  .vault-pricing {
+  max-width: 1200px;
+  margin: 2rem auto 3rem;
+  padding: 1.75rem 2rem;
+  background: linear-gradient(135deg, #f8f9ff, #e0e7ff);
+  border-radius: 16px;
+  box-shadow: 0 12px 32px rgba(15, 23, 42, 0.18);
+  border: 1px solid rgba(30, 64, 175, 0.18);
+}
+
+.vault-pricing-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Top strip: discovery call */
+.vault-pricing-header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.vault-pricing-label {
+  font-weight: 600;
+  color: #111827;
+  font-size: 0.98rem;
+}
+
+.vault-pricing-cta {
+  display: inline-block;
+  padding: 0.6rem 1.4rem;
+  border-radius: 999px;
+  background: #1e3a8a;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.92rem;
+  text-decoration: none;
+  box-shadow: 0 8px 20px rgba(30, 64, 175, 0.35);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.vault-pricing-cta:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(30, 64, 175, 0.45);
+}
+
+/* Tier cards */
+.vault-pricing-tiers {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 1.25rem;
+}
+
+.vault-tier-card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 1.2rem 1.4rem;
+  border: 1px solid rgba(30, 64, 175, 0.14);
+  box-shadow: 0 8px 22px rgba(15, 23, 42, 0.12);
+  text-align: left;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.vault-tier-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 32px rgba(15, 23, 42, 0.22);
+  border-color: #1e3a8a;
+}
+
+.vault-tier-featured {
+  border-width: 2px;
+  border-color: #1e3a8a;
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.28);
+}
+
+.vault-tier-card h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 0.4rem;
+}
+
+.vault-tier-price {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1e3a8a;
+  margin-bottom: 0.2rem;
+}
+
+.vault-tier-note {
+  font-size: 0.9rem;
+  color: #4b5563;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .vault-pricing {
+    padding: 1.5rem 1.25rem;
+  }
+
+  .vault-pricing-header {
+    align-items: flex-start;
+  }
+
+  .vault-pricing-cta {
+    width: 100%;
+    text-align: center;
+  }
+}
+
   /* -------------------------------
      Animations
   -------------------------------- */
@@ -666,6 +780,37 @@
       </div>
     </div>
   </section>
+
+  <section class="vault-pricing">
+  <div class="vault-pricing-inner">
+    <div class="vault-pricing-header">
+      <span class="vault-pricing-label">Free 15-min Discovery Call → Custom Quote</span>
+      <a href="#contact" class="vault-pricing-cta">
+        Book your call
+      </a>
+    </div>
+
+    <div class="vault-pricing-tiers">
+      <div class="vault-tier-card">
+        <h3>🛠️ Starter Workflow</h3>
+        <p class="vault-tier-price">₹15k</p>
+        <p class="vault-tier-note">1 module</p>
+      </div>
+
+      <div class="vault-tier-card vault-tier-featured">
+        <h3>⚙️ Full QMS</h3>
+        <p class="vault-tier-price">₹45k</p>
+        <p class="vault-tier-note">Quoting + service + inventory</p>
+      </div>
+
+      <div class="vault-tier-card">
+        <h3>🚀 Enterprise</h3>
+        <p class="vault-tier-price">₹99k+</p>
+        <p class="vault-tier-note">Multi-team + custom API</p>
+      </div>
+    </div>
+  </div>
+</section>
 
   <!-- SERVICES -->
   <section class="section-block workflow-services">
