@@ -29,7 +29,7 @@
     gtag('config', 'G-TH2GX1JSLY');
   </script>
 
-  <style>
+<style>
   /* -------------------------------
      Hero Section
   -------------------------------- */
@@ -324,170 +324,208 @@
     font-weight: 600;
   }
 
-/* -------------------------------
-   Explore Inside the Vault
--------------------------------- */
-.course-showcase {
-  max-width: 1200px;
-  margin: 3rem auto;
-  padding: 2rem;
-  background: #0f172a; /* dark background */
-  border-radius: 16px;
-  box-shadow: 0 12px 40px rgba(0,0,0,0.4);
-}
-
-.course-showcase .section-heading {
-  text-align: center;
-  font-size: 2rem;
-  font-weight: 700;
-  color: #FFD966; /* mango gold heading */
-  margin-bottom: 2rem;
-  position: relative;
-}
-
-.course-showcase .section-heading::after {
-  content: "";
-  display: block;
-  width: 60px;
-  height: 4px;
-  background: #FFD966;
-  margin: 0.5rem auto 0;
-  border-radius: 2px;
-}
-
-/* Filter buttons */
-.filter-buttons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-  justify-content: center;
-  margin-bottom: 2rem;
-}
-
-.filter-btn {
-  background: #1e293b;
-  color: #f9fafb;
-  border: 1px solid rgba(255,255,255,0.2);
-  padding: 0.6rem 1.2rem;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  font-weight: 500;
-}
-
-.filter-btn.active,
-.filter-btn:hover {
-  background: #FFD966;
-  color: #1e293b;
-  font-weight: 600;
-}
-
-/* Course grid */
-.course-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1.5rem;
-}
-
-.course-card {
-  background: #1e293b;
-  border-radius: 12px;
-  padding: 1.5rem;
-  text-align: center;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.course-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 32px rgba(0,0,0,0.5);
-}
-
-.course-card h3 {
-  color: #f9fafb;
-  font-size: 1.1rem;
-  margin-bottom: 0.5rem;
-  font-weight: 600;
-}
-
-.course-card span {
-  color: #FFD966;
-  font-size: 0.9rem;
-  font-weight: 500;
-}
-
-
-/* -------------------------------
-   Real-World Project Themes
--------------------------------- */
-.project-themes {
-  max-width: 1200px;
-  margin: 3rem auto;
-  padding: 2rem;
-  background: #0f172a; /* dark background */
-  border-radius: 16px;
-  box-shadow: 0 12px 40px rgba(0,0,0,0.4);
-}
-
-.themes-heading {
-  text-align: center;
-  font-size: 2rem;
-  font-weight: 700;
-  color: #FFD966; /* mango gold heading */
-  margin-bottom: 2rem;
-  position: relative;
-}
-
-.themes-heading::after {
-  content: "";
-  display: block;
-  width: 60px;
-  height: 4px;
-  background: #FFD966;
-  margin: 0.5rem auto 0;
-  border-radius: 2px;
-}
-
-.themes-table {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1rem;
-}
-
-.theme-row {
-  display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
-  align-items: center;
-  background: #1e293b;
-  padding: 1rem 1.25rem;
-  border-radius: 10px;
-  color: #f9fafb;
-  font-size: 0.95rem;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.theme-row:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 28px rgba(0,0,0,0.5);
-}
-
-.theme-row strong {
-  color: #FFD966; /* mango gold for category label */
-  font-weight: 700;
-}
-
-.theme-row span {
-  line-height: 1.4;
-}
-
-@media (max-width: 768px) {
-  .theme-row {
-    grid-template-columns: 1fr;
-    text-align: center;
-    gap: 0.5rem;
+  /* -------------------------------
+     Explore Inside the Vault + Companies
+     Bright background, black text, dark blue
+  -------------------------------- */
+  .course-showcase {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 2rem;
+    background: linear-gradient(135deg, #f8f9ff, #e0e7ff);
+    border-radius: 16px;
+    box-shadow: 0 12px 40px rgba(15, 23, 42, 0.2);
+    border: 1px solid rgba(30, 64, 175, 0.15);
   }
-}
+
+  .course-showcase .section-heading,
+  .course-showcase .course-heading {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 2rem;
+    background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    position: relative;
+  }
+
+  .course-showcase .section-heading::after,
+  .course-showcase .course-heading::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: #1e3a8a;
+    margin: 0.5rem auto 0;
+    border-radius: 2px;
+  }
+
+  /* Filter buttons (used in Explore Inside the Vault) */
+  .filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
+
+  .filter-btn {
+    background: #ffffff;
+    color: #1e3a8a;
+    border: 2px solid #1e3a8a;
+    padding: 0.6rem 1.2rem;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    box-shadow: 0 4px 14px rgba(30, 64, 175, 0.15);
+  }
+
+  .filter-btn.active,
+  .filter-btn:hover {
+    background: #1e3a8a;
+    color: #ffffff;
+  }
+
+  /* Course grid shared */
+  .course-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .course-card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 10px 28px rgba(15, 23, 42, 0.15);
+    border: 1px solid rgba(30, 64, 175, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  }
+
+  .course-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 40px rgba(15, 23, 42, 0.25);
+    border-color: #1e3a8a;
+  }
+
+  .course-card h3 {
+    color: #111827;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+  }
+
+  .course-card span {
+    color: #1e3a8a;
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+
+  /* Company logos inside course-showcase */
+  .course-card .company-logo {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+    margin-bottom: 0.75rem;
+    filter: drop-shadow(0 4px 8px rgba(15, 23, 42, 0.18));
+    transition: transform 0.3s ease, filter 0.3s ease;
+  }
+
+  .course-card:hover .company-logo {
+    transform: scale(1.05);
+    filter: drop-shadow(0 6px 14px rgba(30, 64, 175, 0.3));
+  }
+
+  /* -------------------------------
+     Real-World Project Themes
+     Bright variant
+  -------------------------------- */
+  .project-themes {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 2rem;
+    background: linear-gradient(135deg, #f3f4ff, #e0e7ff);
+    border-radius: 16px;
+    box-shadow: 0 12px 40px rgba(15, 23, 42, 0.2);
+    border: 1px solid rgba(30, 64, 175, 0.15);
+  }
+
+  .project-themes .section-heading,
+  .project-themes .themes-heading {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 2rem;
+    background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    position: relative;
+  }
+
+  .project-themes .section-heading::after,
+  .project-themes .themes-heading::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: #1e3a8a;
+    margin: 0.5rem auto 0;
+    border-radius: 2px;
+  }
+
+  .themes-table {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .theme-row {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    align-items: center;
+    background: #ffffff;
+    padding: 1rem 1.25rem;
+    border-radius: 12px;
+    color: #111827;
+    font-size: 0.95rem;
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.14);
+    border-left: 4px solid #3b82f6;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-left-color 0.3s ease;
+  }
+
+  .theme-row:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 32px rgba(15, 23, 42, 0.22);
+    border-left-color: #1e3a8a;
+  }
+
+  .theme-row strong {
+    color: #1e3a8a;
+    font-weight: 700;
+  }
+
+  .theme-row span:nth-child(2) {
+    color: #111827;
+  }
+
+  .theme-row span:last-child {
+    color: #1d4ed8;
+    font-weight: 600;
+    text-align: right;
+  }
+
+  @media (max-width: 768px) {
+    .theme-row {
+      grid-template-columns: 1fr;
+      text-align: center;
+      gap: 0.5rem;
+    }
+  }
 
   /* -------------------------------
      Footer
@@ -527,7 +565,8 @@
     from { opacity: 0; transform: scale(0.95); }
     to { opacity: 1; transform: scale(1); }
   }
-  </style>
+</style>
+
 </head>
 <body>
 
@@ -872,7 +911,8 @@
 
   <!-- Real-world project themes --> 
   <section class="section-block project-themes"> 
-    <div class="section-inner"> <h2 class="section-heading">🎯 Real-World Projects</h2> 
+    <div class="section-inner"> 
+      <h2 class="section-heading">🎯 Real-World Projects</h2> 
       <div class="themes-table"> 
       <div class="theme-row">  
         <span><strong>👗 Fashion</strong></span>
