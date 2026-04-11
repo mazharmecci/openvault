@@ -77,7 +77,6 @@
       position: relative;
       overflow: hidden;
       background:
-        /* much lighter overlay */
         linear-gradient(
           180deg,
           rgba(2, 6, 23, 0.35),
@@ -85,15 +84,19 @@
         ),
         url('assets/images/Home.png') center center / cover no-repeat;
     }
-    
     .hero-inner {
       max-width: 1120px;
       margin: 0 auto;
       padding: 3.5rem 1.5rem 4rem;
       display: grid;
-      grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.9fr);
+      grid-template-columns: minmax(0, 1fr);
       gap: 3rem;
       align-items: center;
+    }
+    @media (min-width: 1024px) {
+      .hero-inner {
+        padding-top: 4.5rem;
+      }
     }
 
     .hero-copy-eyebrow {
@@ -172,7 +175,7 @@
       color: #9ca3af;
     }
 
-    /* Hero right card (Enquiry) */
+    /* Enquiry card (reused) */
     .hero-card {
       background: radial-gradient(circle at 0% 0%, rgba(248,250,252,0.12), transparent 55%), #020617;
       border-radius: 20px;
@@ -257,6 +260,40 @@
       margin-top: 0.75rem;
       font-size: 0.75rem;
       color: #9ca3af;
+    }
+
+    /* Enquiry + trust section */
+    .enquiry-section {
+      background: #020617;
+      padding: 3rem 1.5rem 3.25rem;
+    }
+    .enquiry-section-inner {
+      max-width: 1120px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+      gap: 2rem;
+      align-items: flex-start;
+    }
+    .enquiry-section-copy h2 {
+      font-size: 1.8rem;
+      color: #f9fafb;
+      margin-bottom: 0.75rem;
+    }
+    .enquiry-section-copy p {
+      font-size: 0.98rem;
+      color: #cbd5f5;
+      margin-bottom: 1rem;
+      max-width: 32rem;
+    }
+    .enquiry-section-copy ul {
+      list-style: none;
+      padding-left: 0;
+      color: #e5e7eb;
+      font-size: 0.95rem;
+    }
+    .enquiry-section-copy li {
+      margin-bottom: 0.45rem;
     }
 
     /* IMAGE SLIDER */
@@ -528,18 +565,18 @@
 
     /* Responsive */
     @media (max-width: 900px) {
-      .hero-inner,
-      .trust-inner {
+      .trust-inner,
+      .enquiry-section-inner {
         grid-template-columns: minmax(0, 1fr);
+      }
+      .plan-grid {
+        grid-template-columns: minmax(0,1fr);
       }
       .hero-inner {
         padding-top: 2.5rem;
       }
       .hero-card {
         margin-top: 1.5rem;
-      }
-      .plan-grid {
-        grid-template-columns: minmax(0,1fr);
       }
     }
 
@@ -571,13 +608,12 @@
       <div class="nav-logo-mark"></div>
       <span>OPENVAULT</span>
     </div>
-    <a href="#contact" class="nav-cta">Talk to India Team</a>
+    <a href="#enquiry-section" class="nav-cta">Talk to India Team</a>
   </header>
 
   <!-- HERO -->
   <section class="hero">
     <div class="hero-inner">
-      <!-- Left: copy -->
       <div class="hero-copy">
         <div class="hero-copy-eyebrow">For Indians living in the US, UK, Middle East & beyond</div>
         <h1>
@@ -595,7 +631,7 @@
         </div>
 
         <div class="hero-ctas">
-          <a href="#enquiry" class="cta-primary">Book a 15‑min Consultation</a>
+          <a href="#enquiry-section" class="cta-primary">Book a 15‑min Consultation</a>
           <a href="#plans" class="cta-secondary">See plans & pricing</a>
         </div>
 
@@ -605,13 +641,30 @@
           <span>✔ Built by NRI families for NRI families</span>
         </div>
       </div>
+    </div>
+  </section>
 
-      <!-- Right: enquiry card -->
+  <!-- ENQUIRY + TRUST SECTION -->
+  <section id="enquiry-section" class="enquiry-section">
+    <div class="enquiry-section-inner">
+      <div class="enquiry-section-copy">
+        <h2>Tell us where your assets are</h2>
+        <p>
+          We’ll share a tailored care plan for your home, vehicles and other assets in India
+          within 24 hours – no brokerage, no lock‑in, just transparent monthly care.
+        </p>
+        <ul>
+          <li>✔ Structured checklists instead of vague “someone will see”</li>
+          <li>✔ Built around NRI time zones and WhatsApp habits</li>
+          <li>✔ Dedicated asset managers based in Bengaluru</li>
+        </ul>
+      </div>
+
       <aside id="enquiry" class="hero-card">
         <div class="hero-card-header">
           <div>
-            <div class="hero-card-title">Tell us where your assets are</div>
-            <div class="hero-card-sub">We’ll share a tailored care plan within 24 hours.</div>
+            <div class="hero-card-title">Share a few details</div>
+            <div class="hero-card-sub">A senior specialist will respond personally within 24 hours.</div>
           </div>
           <div class="hero-card-pill">No brokerage • No lock‑in</div>
         </div>
@@ -648,7 +701,7 @@
     </div>
   </section>
 
-  <!-- IMAGE SLIDER: home & maintenance visuals -->
+  <!-- IMAGE SLIDER -->
   <section class="slider">
     <div class="slider-inner">
       <div class="slider-track">
