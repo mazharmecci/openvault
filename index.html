@@ -77,9 +77,15 @@
       position: relative;
       overflow: hidden;
       background:
-        linear-gradient(180deg, rgba(2,6,23,0.85), rgba(2,6,23,0.96)),
+        /* much lighter overlay */
+        linear-gradient(
+          180deg,
+          rgba(2, 6, 23, 0.35),
+          rgba(2, 6, 23, 0.55)
+        ),
         url('assets/images/Home.png') center center / cover no-repeat;
     }
+    
     .hero-inner {
       max-width: 1120px;
       margin: 0 auto;
