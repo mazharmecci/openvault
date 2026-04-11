@@ -15,59 +15,100 @@
 
   <!-- Premium CSS -->
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Inter', sans-serif; background-color: #f9fafb; color: #1f2937; line-height: 1.6; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Inter', sans-serif; background-color: #f9fafb; color: #1f2937; line-height: 1.6; }
 
-    /* Hero */
-    .hero { background: linear-gradient(135deg, #0f172a, #1e3a8a); color: #fff; text-align: center; padding: 6rem 2rem; }
-    .hero h1 { font-size: 2.5rem; font-weight: 700; margin-bottom: 1rem; }
-    .hero p { font-size: 1.25rem; margin-bottom: 2rem; }
-    .cta-btn { background-color: #facc15; color: #1f2937; padding: 1rem 2rem; border-radius: 8px; font-weight: 600; text-decoration: none; transition: background 0.3s ease; }
-    .cta-btn:hover { background-color: #eab308; }
+/* Hero with background image */
+.hero {
+  background: url('assets/images/hero-nri.jpg') center/cover no-repeat;
+  position: relative;
+  color: #fff;
+  text-align: center;
+  padding: 6rem 2rem;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(15, 23, 42, 0.7); /* overlay */
+}
+.hero h1, .hero p, .cta-btn { position: relative; }
+.hero h1 { font-size: 2.8rem; font-weight: 700; margin-bottom: 1rem; }
+.hero p { font-size: 1.3rem; margin-bottom: 2rem; }
+.cta-btn {
+  background-color: #facc15; color: #1f2937;
+  padding: 1rem 2rem; border-radius: 8px;
+  font-weight: 600; text-decoration: none;
+  transition: background 0.3s ease;
+}
+.cta-btn:hover { background-color: #eab308; }
 
-    /* Problem */
-    .problem { padding: 3rem 2rem; text-align: center; font-size: 1.2rem; max-width: 800px; margin: auto; }
+/* Enquiry Form */
+.enquiry-form {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  max-width: 500px;
+  margin: -3rem auto 2rem auto;
+}
+.enquiry-form input, .enquiry-form button {
+  width: 100%; padding: 0.75rem; margin: 0.5rem 0;
+  border-radius: 6px; border: 1px solid #d1d5db;
+}
+.enquiry-form button {
+  background: #2563eb; color: #fff; font-weight: 600;
+  border: none; transition: background 0.3s ease;
+}
+.enquiry-form button:hover { background: #1d4ed8; }
 
-    /* Plans */
-    .plans { background-color: #fff; padding: 4rem 2rem; text-align: center; }
-    .plans h2 { font-size: 2rem; margin-bottom: 2rem; }
-    .plan { background: #f3f4f6; border-radius: 12px; padding: 2rem; margin: 1rem auto; max-width: 500px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); transition: transform 0.3s ease; }
-    .plan:hover { transform: translateY(-5px); }
-    .plan h3 { font-size: 1.5rem; margin-bottom: 1rem; color: #1e3a8a; }
-    .subscribe-btn { display: inline-block; margin-top: 1rem; background-color: #2563eb; color: #fff; padding: 0.75rem 1.5rem; border-radius: 6px; text-decoration: none; font-weight: 600; transition: background 0.3s ease; }
-    .subscribe-btn:hover { background-color: #1d4ed8; }
+/* Plans */
+.plans { background-color: #fff; padding: 4rem 2rem; text-align: center; }
+.plans h2 { font-size: 2rem; margin-bottom: 2rem; }
+.plan {
+  background: #f3f4f6; border-radius: 12px; padding: 2rem;
+  margin: 1rem auto; max-width: 500px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+.plan:hover { transform: translateY(-5px); }
+.plan h3 { font-size: 1.5rem; margin-bottom: 1rem; color: #1e3a8a; }
+.subscribe-btn {
+  display: inline-block; margin-top: 1rem;
+  background-color: #2563eb; color: #fff;
+  padding: 0.75rem 1.5rem; border-radius: 6px;
+  text-decoration: none; font-weight: 600;
+  transition: background 0.3s ease;
+}
+.subscribe-btn:hover { background-color: #1d4ed8; }
 
-    /* Trust */
-    .trust { background-color: #f9fafb; padding: 3rem 2rem; text-align: center; }
-    .trust h2 { font-size: 2rem; margin-bottom: 1rem; }
-    .trust ul { list-style: none; margin-bottom: 2rem; }
-    .trust li { margin: 0.5rem 0; font-weight: 500; }
-    blockquote { font-style: italic; color: #374151; max-width: 600px; margin: auto; }
+/* Trust */
+.trust { background-color: #f9fafb; padding: 3rem 2rem; text-align: center; }
+.trust h2 { font-size: 2rem; margin-bottom: 1rem; }
+.trust ul { list-style: none; margin-bottom: 2rem; }
+.trust li { margin: 0.5rem 0; font-weight: 500; }
+blockquote { font-style: italic; color: #374151; max-width: 600px; margin: auto; }
 
-    /* How It Works */
-    .how-it-works { padding: 3rem 2rem; text-align: center; }
-    .how-it-works h2 { font-size: 2rem; margin-bottom: 1rem; }
-    .how-it-works ol { list-style: decimal; margin: auto; max-width: 500px; text-align: left; font-size: 1.1rem; }
+/* Contact */
+.contact { background-color: #1f2937; color: #fff; padding: 3rem 2rem; text-align: center; }
+.contact h2 { font-size: 2rem; margin-bottom: 1rem; }
+.contact p { margin-bottom: 1rem; }
+.whatsapp-btn {
+  background-color: #25d366; color: #fff;
+  padding: 0.75rem 1.5rem; border-radius: 6px;
+  text-decoration: none; font-weight: 600;
+  transition: background 0.3s ease;
+}
+.whatsapp-btn:hover { background-color: #1ebe5d; }
 
-    /* Contact */
-    .contact { background-color: #1f2937; color: #fff; padding: 3rem 2rem; text-align: center; }
-    .contact h2 { font-size: 2rem; margin-bottom: 1rem; }
-    .contact p { margin-bottom: 1rem; }
-    .whatsapp-btn { background-color: #25d366; color: #fff; padding: 0.75rem 1.5rem; border-radius: 6px; text-decoration: none; font-weight: 600; transition: background 0.3s ease; }
-    .whatsapp-btn:hover { background-color: #1ebe5d; }
+/* Responsive */
+@media (max-width: 768px) {
+  .hero h1 { font-size: 2rem; }
+  .hero p { font-size: 1rem; }
+  .plan { max-width: 90%; }
+  .cta-btn, .subscribe-btn, .whatsapp-btn { width: 100%; display: block; margin-top: 1rem; }
+}
 
-    /* Responsive */
-    @media (max-width: 768px) {
-      .hero h1 { font-size: 2rem; }
-      .hero p { font-size: 1rem; }
-      .plan { max-width: 90%; }
-      .cta-btn, .subscribe-btn, .whatsapp-btn { width: 100%; display: block; margin-top: 1rem; }
-    }
-    @media (max-width: 480px) {
-      .hero { padding: 4rem 1rem; }
-      .hero h1 { font-size: 1.75rem; }
-      .plans h2, .trust h2, .how-it-works h2, .contact h2 { font-size: 1.5rem; }
-    }
   </style>
 </head>
 <body>
