@@ -2,174 +2,712 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>OpenVault – NRI Asset Care</title>
+  <title>OpenVault – Premium NRI Asset Care in India</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- SEO Meta -->
-  <meta name="description" content="Peace of mind for NRIs: homes, vehicles, and personal assets in India protected with transparency and care." />
+  <meta name="description" content="OpenVault gives NRIs peace of mind with premium care for homes, vehicles, and personal assets in India – with audits, photo reports, and local support." />
   <meta name="author" content="OpenVault by Mazhar Mecci" />
   <link rel="canonical" href="https://openvault.in/" />
 
   <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
   <!-- Premium CSS -->
   <style>
-* { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: 'Inter', sans-serif; background-color: #f9fafb; color: #1f2937; line-height: 1.6; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: #020617;
+      color: #e5e7eb;
+      line-height: 1.6;
+    }
 
-/* Hero with background image */
-.hero {
-  background: url('assets/images/home.PNG') center/cover no-repeat;
-  position: relative;
-  color: #fff;
-  text-align: center;
-  padding: 6rem 2rem;
-}
-.hero::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(15, 23, 42, 0.7); /* overlay */
-}
-.hero h1, .hero p, .cta-btn { position: relative; }
-.hero h1 { font-size: 2.8rem; font-weight: 700; margin-bottom: 1rem; }
-.hero p { font-size: 1.3rem; margin-bottom: 2rem; }
-.cta-btn {
-  background-color: #facc15; color: #1f2937;
-  padding: 1rem 2rem; border-radius: 8px;
-  font-weight: 600; text-decoration: none;
-  transition: background 0.3s ease;
-}
-.cta-btn:hover { background-color: #eab308; }
+    a { text-decoration: none; color: inherit; }
 
-/* Enquiry Form */
-.enquiry-form {
-  background: #fff;
-  padding: 2rem;
-  border-radius: 12px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
-  max-width: 500px;
-  margin: -3rem auto 2rem auto;
-}
-.enquiry-form input, .enquiry-form button {
-  width: 100%; padding: 0.75rem; margin: 0.5rem 0;
-  border-radius: 6px; border: 1px solid #d1d5db;
-}
-.enquiry-form button {
-  background: #2563eb; color: #fff; font-weight: 600;
-  border: none; transition: background 0.3s ease;
-}
-.enquiry-form button:hover { background: #1d4ed8; }
+    .page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
 
-/* Plans */
-.plans { background-color: #fff; padding: 4rem 2rem; text-align: center; }
-.plans h2 { font-size: 2rem; margin-bottom: 2rem; }
-.plan {
-  background: #f3f4f6; border-radius: 12px; padding: 2rem;
-  margin: 1rem auto; max-width: 500px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-  transition: transform 0.3s ease;
-}
-.plan:hover { transform: translateY(-5px); }
-.plan h3 { font-size: 1.5rem; margin-bottom: 1rem; color: #1e3a8a; }
-.subscribe-btn {
-  display: inline-block; margin-top: 1rem;
-  background-color: #2563eb; color: #fff;
-  padding: 0.75rem 1.5rem; border-radius: 6px;
-  text-decoration: none; font-weight: 600;
-  transition: background 0.3s ease;
-}
-.subscribe-btn:hover { background-color: #1d4ed8; }
+    /* Top nav / brand */
+    .nav {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 1.25rem 1.5rem 0.75rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: #e5e7eb;
+    }
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      font-size: 0.85rem;
+      color: #f9fafb;
+    }
+    .nav-logo-mark {
+      width: 28px;
+      height: 28px;
+      border-radius: 999px;
+      background: radial-gradient(circle at 20% 20%, #facc15, #f97316, #0f172a);
+      box-shadow: 0 0 0 1px rgba(148,163,184,0.5);
+    }
+    .nav-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.5rem 1rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148,163,184,0.4);
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: #e5e7eb;
+      background: rgba(15,23,42,0.7);
+    }
 
-/* Trust */
-.trust { background-color: #f9fafb; padding: 3rem 2rem; text-align: center; }
-.trust h2 { font-size: 2rem; margin-bottom: 1rem; }
-.trust ul { list-style: none; margin-bottom: 2rem; }
-.trust li { margin: 0.5rem 0; font-weight: 500; }
-blockquote { font-style: italic; color: #374151; max-width: 600px; margin: auto; }
+    /* Hero */
+    .hero {
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 0% 0%, rgba(248,250,252,0.12), transparent 55%),
+        radial-gradient(circle at 100% 0%, rgba(250,204,21,0.10), transparent 55%),
+        linear-gradient(180deg, #020617, #020617);
+    }
+    .hero-inner {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 3.5rem 1.5rem 4rem;
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.9fr);
+      gap: 3rem;
+      align-items: center;
+    }
 
-/* Contact */
-.contact { background-color: #1f2937; color: #fff; padding: 3rem 2rem; text-align: center; }
-.contact h2 { font-size: 2rem; margin-bottom: 1rem; }
-.contact p { margin-bottom: 1rem; }
-.whatsapp-btn {
-  background-color: #25d366; color: #fff;
-  padding: 0.75rem 1.5rem; border-radius: 6px;
-  text-decoration: none; font-weight: 600;
-  transition: background 0.3s ease;
-}
-.whatsapp-btn:hover { background-color: #1ebe5d; }
+    .hero-copy-eyebrow {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: #9ca3af;
+      margin-bottom: 0.85rem;
+    }
+    .hero-copy h1 {
+      font-size: 2.9rem;
+      line-height: 1.1;
+      font-weight: 700;
+      color: #f9fafb;
+      margin-bottom: 1rem;
+    }
+    .hero-copy h1 span {
+      color: #facc15;
+    }
+    .hero-sub {
+      font-size: 1.05rem;
+      color: #cbd5f5;
+      max-width: 34rem;
+      margin-bottom: 1.25rem;
+    }
+    .hero-trust-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem 1.5rem;
+      align-items: center;
+      margin-bottom: 2rem;
+      font-size: 0.9rem;
+      color: #9ca3af;
+    }
+    .hero-trust-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.35rem 0.8rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148,163,184,0.4);
+      font-size: 0.75rem;
+      background: rgba(15,23,42,0.7);
+      color: #e5e7eb;
+    }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .hero h1 { font-size: 2rem; }
-  .hero p { font-size: 1rem; }
-  .plan { max-width: 90%; }
-  .cta-btn, .subscribe-btn, .whatsapp-btn { width: 100%; display: block; margin-top: 1rem; }
-}
+    .hero-ctas {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      align-items: center;
+    }
+    .cta-primary {
+      background: linear-gradient(135deg, #facc15, #eab308);
+      color: #111827;
+      padding: 0.9rem 1.8rem;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      box-shadow: 0 18px 45px rgba(250,204,21,0.35);
+    }
+    .cta-secondary {
+      font-size: 0.9rem;
+      color: #e5e7eb;
+      text-decoration: underline;
+      text-decoration-style: dotted;
+      text-underline-offset: 3px;
+    }
 
+    .hero-badge-row {
+      margin-top: 1.2rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.1rem;
+      font-size: 0.8rem;
+      color: #9ca3af;
+    }
+
+    /* Hero right card (Enquiry) */
+    .hero-card {
+      background: radial-gradient(circle at 0% 0%, rgba(248,250,252,0.12), transparent 55%), #020617;
+      border-radius: 20px;
+      padding: 1.75rem 1.75rem 1.5rem;
+      border: 1px solid rgba(148,163,184,0.45);
+      box-shadow:
+        0 18px 60px rgba(15,23,42,0.85),
+        0 0 0 1px rgba(15,23,42,0.9);
+      backdrop-filter: blur(16px);
+    }
+    .hero-card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 1rem;
+    }
+    .hero-card-title {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: #e5e7eb;
+    }
+    .hero-card-sub {
+      font-size: 0.85rem;
+      color: #9ca3af;
+    }
+    .hero-card-pill {
+      font-size: 0.75rem;
+      padding: 0.25rem 0.7rem;
+      border-radius: 999px;
+      background: rgba(22,163,74,0.12);
+      color: #bbf7d0;
+      border: 1px solid rgba(34,197,94,0.45);
+    }
+
+    .enquiry-form {
+      margin-top: 0.75rem;
+    }
+    .enquiry-form label {
+      display: block;
+      font-size: 0.78rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.11em;
+      color: #9ca3af;
+      margin-bottom: 0.25rem;
+    }
+    .enquiry-form input,
+    .enquiry-form select {
+      width: 100%;
+      padding: 0.6rem 0.75rem;
+      border-radius: 8px;
+      border: 1px solid #4b5563;
+      background: rgba(15,23,42,0.85);
+      color: #e5e7eb;
+      font-size: 0.9rem;
+      margin-bottom: 0.6rem;
+      outline: none;
+      transition: border-color 0.15s ease, box-shadow 0.15s ease;
+    }
+    .enquiry-form input:focus,
+    .enquiry-form select:focus {
+      border-color: #facc15;
+      box-shadow: 0 0 0 1px rgba(250,204,21,0.4);
+    }
+    .enquiry-form button {
+      width: 100%;
+      margin-top: 0.4rem;
+      padding: 0.75rem 1.25rem;
+      border-radius: 999px;
+      border: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+      background: linear-gradient(135deg, #2563eb, #1d4ed8);
+      color: #f9fafb;
+      cursor: pointer;
+      box-shadow: 0 18px 40px rgba(37,99,235,0.4);
+    }
+    .enquiry-form button:hover {
+      background: linear-gradient(135deg, #1d4ed8, #1d4ed8);
+    }
+    .hero-card-foot {
+      margin-top: 0.75rem;
+      font-size: 0.75rem;
+      color: #9ca3af;
+    }
+
+    /* Problem strip */
+    .problem {
+      background: #020617;
+      border-top: 1px solid rgba(31,41,55,0.8);
+      border-bottom: 1px solid rgba(31,41,55,0.8);
+      padding: 1rem 1.5rem;
+    }
+    .problem-inner {
+      max-width: 1120px;
+      margin: 0 auto;
+      font-size: 0.92rem;
+      color: #9ca3af;
+    }
+
+    /* Plans */
+    .plans {
+      background: #020617;
+      padding: 3.25rem 1.5rem 3.75rem;
+    }
+    .plans-inner {
+      max-width: 1120px;
+      margin: 0 auto;
+    }
+    .section-eyebrow {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: #9ca3af;
+      margin-bottom: 0.5rem;
+    }
+    .plans-inner h2 {
+      font-size: 2rem;
+      color: #f9fafb;
+      margin-bottom: 0.5rem;
+    }
+    .plans-sub {
+      font-size: 0.95rem;
+      color: #9ca3af;
+      margin-bottom: 2rem;
+      max-width: 32rem;
+    }
+
+    .plan-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.5rem;
+    }
+    .plan {
+      background: linear-gradient(145deg, #020617, #020617);
+      border-radius: 18px;
+      padding: 1.5rem 1.4rem 1.6rem;
+      border: 1px solid rgba(55,65,81,0.9);
+      box-shadow: 0 18px 40px rgba(15,23,42,0.75);
+      position: relative;
+      overflow: hidden;
+    }
+    .plan.featured {
+      border-color: rgba(250,204,21,0.7);
+      box-shadow: 0 22px 55px rgba(250,204,21,0.2);
+    }
+    .plan h3 {
+      font-size: 1.15rem;
+      color: #f9fafb;
+      margin-bottom: 0.3rem;
+    }
+    .plan-price {
+      font-size: 0.95rem;
+      color: #eab308;
+      margin-bottom: 0.75rem;
+    }
+    .plan ul {
+      list-style: none;
+      margin: 0 0 0.9rem;
+      padding: 0;
+      font-size: 0.88rem;
+      color: #e5e7eb;
+    }
+    .plan ul li {
+      margin-bottom: 0.25rem;
+    }
+    .subscribe-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+      background-color: #2563eb;
+      color: #fff;
+      padding: 0.6rem 1.4rem;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+      margin-top: 0.4rem;
+    }
+    .subscribe-btn:hover {
+      background-color: #1d4ed8;
+    }
+    .plan-note {
+      font-size: 0.75rem;
+      color: #9ca3af;
+      margin-top: 0.4rem;
+    }
+
+    /* Trust / Social proof */
+    .trust {
+      background: #020617;
+      border-top: 1px solid rgba(31,41,55,0.8);
+      padding: 3rem 1.5rem 3.25rem;
+    }
+    .trust-inner {
+      max-width: 1120px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+      gap: 2rem;
+      align-items: center;
+    }
+    .trust h2 {
+      font-size: 1.8rem;
+      color: #f9fafb;
+      margin-bottom: 0.75rem;
+    }
+    .trust ul {
+      list-style: none;
+      margin-bottom: 1.5rem;
+      color: #e5e7eb;
+      font-size: 0.95rem;
+    }
+    .trust li {
+      margin: 0.4rem 0;
+    }
+    .trust-highlight {
+      font-size: 0.85rem;
+      color: #9ca3af;
+    }
+    blockquote {
+      font-style: italic;
+      color: #e5e7eb;
+      font-size: 0.95rem;
+      border-left: 2px solid rgba(148,163,184,0.5);
+      padding-left: 1rem;
+      margin-bottom: 0.6rem;
+    }
+    .quote-author {
+      font-size: 0.85rem;
+      color: #9ca3af;
+    }
+
+    /* How it works */
+    .how-it-works {
+      background: #020617;
+      padding: 0 1.5rem 3.5rem;
+    }
+    .how-inner {
+      max-width: 1120px;
+      margin: 0 auto;
+    }
+    .how-inner h2 {
+      font-size: 1.7rem;
+      color: #f9fafb;
+      margin-bottom: 0.75rem;
+    }
+    .how-inner ol {
+      margin-left: 1.2rem;
+      color: #e5e7eb;
+      font-size: 0.95rem;
+    }
+    .how-inner li {
+      margin-bottom: 0.5rem;
+    }
+
+    /* Contact */
+    .contact {
+      background: #020617;
+      border-top: 1px solid rgba(31,41,55,0.9);
+      padding: 2.5rem 1.5rem 2.75rem;
+      margin-top: auto;
+    }
+    .contact-inner {
+      max-width: 1120px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .contact h2 {
+      font-size: 1.6rem;
+      color: #f9fafb;
+      margin-bottom: 0.5rem;
+    }
+    .contact p {
+      margin-bottom: 0.75rem;
+      font-size: 0.95rem;
+      color: #9ca3af;
+    }
+    .whatsapp-btn {
+      background-color: #22c55e;
+      color: #022c22;
+      padding: 0.75rem 1.7rem;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.92rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+    }
+    .whatsapp-btn:hover {
+      background-color: #16a34a;
+    }
+    .contact-note {
+      margin-top: 0.6rem;
+      font-size: 0.78rem;
+      color: #6b7280;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .hero-inner,
+      .trust-inner {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .hero-inner {
+        padding-top: 2.5rem;
+      }
+      .hero-card {
+        margin-top: 1.5rem;
+      }
+      .plan-grid {
+        grid-template-columns: minmax(0,1fr);
+      }
+    }
+
+    @media (max-width: 640px) {
+      .hero-copy h1 {
+        font-size: 2.1rem;
+      }
+      .hero-sub {
+        font-size: 0.95rem;
+      }
+      .hero-ctas {
+        flex-direction: column;
+        align-items: stretch;
+      }
+      .cta-primary,
+      .cta-secondary {
+        width: 100%;
+        text-align: center;
+      }
+    }
   </style>
 </head>
 <body>
-  <!-- Hero -->
+<div class="page">
+
+  <!-- NAV / BRAND -->
+  <header class="nav">
+    <div class="nav-logo">
+      <div class="nav-logo-mark"></div>
+      <span>OPENVAULT</span>
+    </div>
+    <a href="#contact" class="nav-cta">Talk to India Team</a>
+  </header>
+
+  <!-- HERO -->
   <section class="hero">
-    <h1>Your Home in India, Protected While You’re Away</h1>
-    <p>Trusted asset care for NRIs — homes, vehicles, and personal belongings managed with transparency.</p>
-    <a href="#plans" class="cta-btn">Get Started — Protect My Assets</a>
+    <div class="hero-inner">
+      <!-- Left: copy -->
+      <div class="hero-copy">
+        <div class="hero-copy-eyebrow">For Indians living in the US, UK, Middle East & beyond</div>
+        <h1>
+          Your home in India,<br/>
+          <span>professionally cared for</span> while you’re abroad.
+        </h1>
+        <p class="hero-sub">
+          OpenVault is your trusted local partner for homes, vehicles and personal assets in India –
+          with scheduled inspections, photo reports and emergency support you can rely on.
+        </p>
+
+        <div class="hero-trust-row">
+          <div class="hero-trust-pill">Located in Bengaluru • Serving major Indian metros</div>
+          <div>Dedicated asset managers • NRI-first processes</div>
+        </div>
+
+        <div class="hero-ctas">
+          <a href="#enquiry" class="cta-primary">Book a 15‑min Consultation</a>
+          <a href="#plans" class="cta-secondary">See plans & pricing</a>
+        </div>
+
+        <div class="hero-badge-row">
+          <span>✔ Transparent monthly reporting</span>
+          <span>✔ No broker-style hassles</span>
+          <span>✔ Built by NRI families for NRI families</span>
+        </div>
+      </div>
+
+      <!-- Right: enquiry card -->
+      <aside id="enquiry" class="hero-card">
+        <div class="hero-card-header">
+          <div>
+            <div class="hero-card-title">Tell us where your assets are</div>
+            <div class="hero-card-sub">We’ll share a tailored care plan within 24 hours.</div>
+          </div>
+          <div class="hero-card-pill">No brokerage • No lock‑in</div>
+        </div>
+
+        <form class="enquiry-form">
+          <label for="name">Name</label>
+          <input id="name" type="text" placeholder="Your full name" />
+
+          <label for="country">Country of residence</label>
+          <input id="country" type="text" placeholder="e.g., USA, UAE, UK, Singapore" />
+
+          <label for="city">City in India</label>
+          <input id="city" type="text" placeholder="e.g., Bengaluru, Mumbai, Chennai" />
+
+          <label for="assets">Primary asset to protect</label>
+          <select id="assets">
+            <option value="">Select an option</option>
+            <option>Residential home / apartment</option>
+            <option>Multiple homes</option>
+            <option>Home + vehicles</option>
+            <option>Parents’ home</option>
+            <option>Other combination</option>
+          </select>
+
+          <label for="whatsapp">WhatsApp number</label>
+          <input id="whatsapp" type="tel" placeholder="+1 / +44 / +971 / +65…" />
+
+          <button type="submit">Request my custom asset plan</button>
+        </form>
+
+        <div class="hero-card-foot">
+          We never share your details. A senior OpenVault specialist will respond personally –
+          not a call‑center agent.
+        </div>
+      </aside>
+    </div>
   </section>
 
-  <!-- Problem -->
+  <!-- PROBLEM STRIP -->
   <section class="problem">
-    <p>Thousands of Indians abroad worry about their empty homes, idle vehicles, and unattended bills. OpenVault ensures your assets are safe, maintained, and ready whenever you return.</p>
+    <div class="problem-inner">
+      While you build your life abroad, your flat in Bengaluru or family home in Chennai is often
+      lying empty, keys with a neighbour, and “someone” checking once in a while. OpenVault replaces
+      that uncertainty with structured, accountable asset care.
+    </div>
   </section>
 
-  <!-- Plans -->
+  <!-- PLANS -->
   <section id="plans" class="plans">
-    <h2>Choose Your Plan</h2>
-    <div class="plan bronze">
-      <h3>Bronze – ₹7,999/month</h3>
-      <p>Home checks, utility bill monitoring.</p>
-      <a href="payment/bronze" class="subscribe-btn">Subscribe Now</a>
-    </div>
-    <div class="plan silver">
-      <h3>Silver – ₹11,999/month</h3>
-      <p>Home + vehicle care (parking, servicing).</p>
-      <a href="payment/silver" class="subscribe-btn">Subscribe Now</a>
-    </div>
-    <div class="plan gold">
-      <h3>Gold – ₹17,999/month</h3>
-      <p>Full asset care (home, vehicle, tenant management, emergency response).</p>
-      <a href="payment/gold" class="subscribe-btn">Subscribe Now</a>
+    <div class="plans-inner">
+      <div class="section-eyebrow">Plans for different stages of your NRI journey</div>
+      <h2>Simple, transparent monthly plans</h2>
+      <p class="plans-sub">
+        Pricing is per primary home. Add‑ons for vehicles, parents’ homes, and additional properties are available.
+      </p>
+
+      <div class="plan-grid">
+        <div class="plan">
+          <h3>Bronze</h3>
+          <div class="plan-price">Starting ₹7,999 / month</div>
+          <ul>
+            <li>✔ Monthly home walkthrough with checklist</li>
+            <li>✔ Doors, windows & utility checks</li>
+            <li>✔ Photos & summary report via WhatsApp / email</li>
+            <li>✔ Utility bill reminders</li>
+          </ul>
+          <a href="payment/bronze" class="subscribe-btn">Explore Bronze</a>
+          <div class="plan-note">Ideal if your home is mostly locked and rarely used.</div>
+        </div>
+
+        <div class="plan featured">
+          <h3>Silver</h3>
+          <div class="plan-price">Starting ₹11,999 / month</div>
+          <ul>
+            <li>✔ Everything in Bronze</li>
+            <li>✔ Vehicle parking & basic upkeep</li>
+            <li>✔ Service schedule reminders & coordination</li>
+            <li>✔ Periodic engine start & battery check</li>
+          </ul>
+          <a href="payment/silver" class="subscribe-btn">Most popular – Silver</a>
+          <div class="plan-note">For NRIs who want both home and vehicles taken care of.</div>
+        </div>
+
+        <div class="plan">
+          <h3>Gold</h3>
+          <div class="plan-price">Starting ₹17,999 / month</div>
+          <ul>
+            <li>✔ Everything in Silver</li>
+            <li>✔ Tenant coordination & handovers (if rented)</li>
+            <li>✔ Priority emergency response (water leaks, break‑ins, etc.)</li>
+            <li>✔ Annual maintenance planning support</li>
+          </ul>
+          <a href="payment/gold" class="subscribe-btn">Talk to us about Gold</a>
+          <div class="plan-note">Best suited for high‑value or multi‑city portfolios.</div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- Trust -->
+  <!-- TRUST / SOCIAL PROOF -->
   <section class="trust">
-    <h2>Why Choose OpenVault?</h2>
-    <ul>
-      <li>✔ Verified staff with ID badges</li>
-      <li>✔ Photo & video reporting</li>
-      <li>✔ Insurance coverage included</li>
-    </ul>
-    <blockquote>“OpenVault gave me peace of mind while I was in the U.S. My home was maintained and bills paid on time.”</blockquote>
+    <div class="trust-inner">
+      <div>
+        <h2>Why NRIs trust OpenVault over “someone will take care”</h2>
+        <ul>
+          <li>✔ Verified staff with background checks & ID badges</li>
+          <li>✔ Photo & short video reporting after each visit</li>
+          <li>✔ Clear SLAs on visit frequency & response times</li>
+          <li>✔ Built around NRI time zones and communication habits</li>
+        </ul>
+        <p class="trust-highlight">
+          We start with a detailed onboarding walkthrough of your home and priorities, then design a care checklist that fits your family’s expectations.
+        </p>
+      </div>
+      <div>
+        <blockquote>
+          “We live in California and our Bengaluru apartment was always at the back of our minds.
+          With OpenVault, we get photos, updates and proactive suggestions. It finally feels
+          like someone responsible is ‘there’ for us.”
+        </blockquote>
+        <div class="quote-author">— NRI family from San Jose, originally from Jayanagar</div>
+      </div>
+    </div>
   </section>
 
-  <!-- How It Works -->
+  <!-- HOW IT WORKS -->
   <section class="how-it-works">
-    <h2>How It Works</h2>
-    <ol>
-      <li>Sign up online</li>
-      <li>Choose your plan</li>
-      <li>Get monthly reports + emergency support</li>
-    </ol>
+    <div class="how-inner">
+      <h2>How OpenVault works for you</h2>
+      <ol>
+        <li>Share your city, home type and what you’re worried about most.</li>
+        <li>We propose a plan and visit schedule, along with pricing.</li>
+        <li>Onboard with a detailed first visit, documentation and key management.</li>
+        <li>Receive structured reports, photos and alerts every month.</li>
+        <li>Use our emergency line for urgent issues at the property.</li>
+      </ol>
+    </div>
   </section>
 
-  <!-- Contact -->
-  <section class="contact">
-    <h2>Contact Us</h2>
-    <p>Email: support@openvault.in | Phone: +91-9945266755</p>
-    <a href="https://wa.me/91-9945266755" class="whatsapp-btn">Chat on WhatsApp</a>
+  <!-- CONTACT -->
+  <section id="contact" class="contact">
+    <div class="contact-inner">
+      <h2>Speak to a real person in India</h2>
+      <p>Email: support@openvault.in &nbsp;|&nbsp; Phone: +91‑99452‑66755 (WhatsApp available)</p>
+      <a href="https://wa.me/919945266755" class="whatsapp-btn">
+        Chat on WhatsApp
+      </a>
+      <div class="contact-note">
+        Prefer a scheduled call? Leave your details above – we’ll arrange a slot that works for your time zone.
+      </div>
+    </div>
   </section>
+
+</div>
 </body>
 </html>
