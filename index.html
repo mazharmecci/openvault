@@ -2,903 +2,1287 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>OpenVault – Premium NRI Asset Care in India</title>
+  <title>Workflow Automation & SaaS Dashboards for Hospitals & SMEs</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- SEO Meta -->
-  <meta name="description" content="OpenVault gives NRIs peace of mind with premium care for homes, vehicles, and personal assets in India – with audits, photo reports, and local support." />
-  <meta name="author" content="OpenVault by Mazhar Mecci" />
+  <meta name="description" content="Custom web apps for hospitals and SMEs: quoting, inventory, service visits, and dashboards – all automated on top of Firebase / Supabase.">
+  <meta name="author" content="OpenVault by Mazhar Mecci">
+
+  <!-- Canonical -->
   <link rel="canonical" href="https://openvault.in/" />
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/images/favicon-96x96.png" sizes="96x96" />
+  <link rel="shortcut icon" href="assets/images/favicon.ico" />
 
-  <!-- Premium CSS -->
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-      background-color: #020617;
-      color: #e5e7eb;
-      line-height: 1.6;
-    }
+  <!-- Fonts & Base Styles -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/style.css" />
 
-    a { text-decoration: none; color: inherit; }
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TH2GX1JSLY"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-TH2GX1JSLY');
+  </script>
 
-    .page {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-    }
+<style>
+  /* -------------------------------
+     Hero Section
+  -------------------------------- */
+  .workflow-hero {
+    padding: 3rem 1.5rem;
+  }
 
-    /* Top nav / brand */
-    .nav {
-      max-width: 1120px;
-      margin: 0 auto;
-      padding: 1.25rem 1.5rem 0.75rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      color: #e5e7eb;
-    }
-    .nav-logo {
-      display: flex;
-      align-items: center;
-      gap: 0.4rem;
-      font-weight: 600;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      font-size: 0.85rem;
-      color: #f9fafb;
-    }
-    .nav-logo-mark {
-      width: 28px;
-      height: 28px;
-      border-radius: 999px;
-      background: radial-gradient(circle at 20% 20%, #facc15, #f97316, #0f172a);
-      box-shadow: 0 0 0 1px rgba(148,163,184,0.5);
-    }
-    .nav-cta {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-      padding: 0.5rem 1rem;
-      border-radius: 999px;
-      border: 1px solid rgba(148,163,184,0.4);
-      font-size: 0.8rem;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      color: #e5e7eb;
-      background: rgba(15,23,42,0.7);
-    }
+  .workflow-hero .ov-hero-inner {
+    display: grid;
+    grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+    gap: 2rem;
+    align-items: center;
+  }
 
-    /* Hero */
-    .hero {
-      position: relative;
-      overflow: hidden;
-      background:
-        linear-gradient(
-          180deg,
-          rgba(2, 6, 23, 0.35),
-          rgba(2, 6, 23, 0.55)
-        ),
-        url('assets/images/Home.png') center center / cover no-repeat;
-    }
-    .hero-inner {
-      max-width: 1120px;
-      margin: 0 auto;
-      padding: 3.5rem 1.5rem 4rem;
-      display: grid;
-      grid-template-columns: minmax(0, 1fr);
-      gap: 3rem;
-      align-items: center;
-    }
-    @media (min-width: 1024px) {
-      .hero-inner {
-        padding-top: 4.5rem;
-      }
-    }
+  .ov-hero-visual {
+    display: flex;
+    justify-content: center;
+  }
 
-    .hero-copy-eyebrow {
-      font-size: 0.85rem;
-      text-transform: uppercase;
-      letter-spacing: 0.2em;
-      color: #9ca3af;
-      margin-bottom: 0.85rem;
-    }
-    .hero-copy h1 {
-      font-size: 2.9rem;
-      line-height: 1.1;
-      font-weight: 700;
-      color: #f9fafb;
-      margin-bottom: 1rem;
-    }
-    .hero-copy h1 span {
-      color: #facc15;
-    }
-    .hero-sub {
-      font-size: 1.05rem;
-      color: #cbd5f5;
-      max-width: 34rem;
-      margin-bottom: 1.25rem;
-    }
-    .hero-trust-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.75rem 1.5rem;
-      align-items: center;
-      margin-bottom: 2rem;
-      font-size: 0.9rem;
-      color: #9ca3af;
-    }
-    .hero-trust-pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-      padding: 0.35rem 0.8rem;
-      border-radius: 999px;
-      border: 1px solid rgba(148,163,184,0.4);
-      font-size: 0.75rem;
-      background: rgba(15,23,42,0.7);
-      color: #e5e7eb;
-    }
+  .workflow-slider {
+    position: relative;
+    max-width: 420px;
+    border-radius: 16px;
+    overflow: hidden;
+    background: #020617;
+    box-shadow: 0 18px 45px rgba(15, 23, 42, 0.5);
+  }
 
-    .hero-ctas {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.75rem;
-      align-items: center;
-    }
-    .cta-primary {
-      background: linear-gradient(135deg, #facc15, #eab308);
-      color: #111827;
-      padding: 0.9rem 1.8rem;
-      border-radius: 999px;
-      font-weight: 600;
-      font-size: 0.95rem;
-      box-shadow: 0 18px 45px rgba(250,204,21,0.35);
-    }
-    .cta-secondary {
-      font-size: 0.9rem;
-      color: #e5e7eb;
-      text-decoration: underline;
-      text-decoration-style: dotted;
-      text-underline-offset: 3px;
-    }
+  .workflow-slider-track {
+    position: relative;
+  }
 
-    .hero-badge-row {
-      margin-top: 1.2rem;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1.1rem;
-      font-size: 0.8rem;
-      color: #9ca3af;
-    }
+  .workflow-slide {
+    display: none;
+    padding: 1rem;
+    background: radial-gradient(circle at top, #1e293b, #020617);
+  }
 
-    /* Enquiry card (reused) */
-    .hero-card {
-      background: radial-gradient(circle at 0% 0%, rgba(248,250,252,0.12), transparent 55%), #020617;
-      border-radius: 20px;
-      padding: 1.75rem 1.75rem 1.5rem;
-      border: 1px solid rgba(148,163,184,0.45);
-      box-shadow:
-        0 18px 60px rgba(15,23,42,0.85),
-        0 0 0 1px rgba(15,23,42,0.9);
-      backdrop-filter: blur(16px);
-    }
-    .hero-card-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      margin-bottom: 1rem;
-    }
-    .hero-card-title {
-      font-size: 1.05rem;
-      font-weight: 600;
-      color: #e5e7eb;
-    }
-    .hero-card-sub {
-      font-size: 0.85rem;
-      color: #9ca3af;
-    }
-    .hero-card-pill {
-      font-size: 0.75rem;
-      padding: 0.25rem 0.7rem;
-      border-radius: 999px;
-      background: rgba(22,163,74,0.12);
-      color: #bbf7d0;
-      border: 1px solid rgba(34,197,94,0.45);
-    }
+  .workflow-slide.active {
+    display: block;
+  }
 
-    .enquiry-form {
-      margin-top: 0.75rem;
-    }
-    .enquiry-form label {
-      display: block;
-      font-size: 0.78rem;
-      font-weight: 500;
-      text-transform: uppercase;
-      letter-spacing: 0.11em;
-      color: #9ca3af;
-      margin-bottom: 0.25rem;
-    }
-    .enquiry-form input,
-    .enquiry-form select {
-      width: 100%;
-      padding: 0.6rem 0.75rem;
-      border-radius: 8px;
-      border: 1px solid #4b5563;
-      background: rgba(15,23,42,0.85);
-      color: #e5e7eb;
-      font-size: 0.9rem;
-      margin-bottom: 0.6rem;
-      outline: none;
-      transition: border-color 0.15s ease, box-shadow 0.15s ease;
-    }
-    .enquiry-form input:focus,
-    .enquiry-form select:focus {
-      border-color: #facc15;
-      box-shadow: 0 0 0 1px rgba(250,204,21,0.4);
-    }
-    .enquiry-form button {
-      width: 100%;
-      margin-top: 0.4rem;
-      padding: 0.75rem 1.25rem;
-      border-radius: 999px;
-      border: none;
-      font-weight: 600;
-      font-size: 0.9rem;
-      background: linear-gradient(135deg, #2563eb, #1d4ed8);
-      color: #f9fafb;
-      cursor: pointer;
-      box-shadow: 0 18px 40px rgba(37,99,235,0.4);
-    }
-    .enquiry-form button:hover {
-      background: linear-gradient(135deg, #1d4ed8, #1d4ed8);
-    }
-    .hero-card-foot {
-      margin-top: 0.75rem;
-      font-size: 0.75rem;
-      color: #9ca3af;
-    }
+  .workflow-slide img {
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid rgba(148, 163, 184, 0.4);
+    display: block;
+  }
 
-    /* Enquiry + trust section */
-    .enquiry-section {
-      background: #020617;
-      padding: 3rem 1.5rem 3.25rem;
-    }
-    .enquiry-section-inner {
-      max-width: 1120px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
-      gap: 2rem;
-      align-items: flex-start;
-    }
-    .enquiry-section-copy h2 {
-      font-size: 1.8rem;
-      color: #f9fafb;
-      margin-bottom: 0.75rem;
-    }
-    .enquiry-section-copy p {
-      font-size: 0.98rem;
-      color: #cbd5f5;
-      margin-bottom: 1rem;
-      max-width: 32rem;
-    }
-    .enquiry-section-copy ul {
-      list-style: none;
-      padding-left: 0;
-      color: #e5e7eb;
-      font-size: 0.95rem;
-    }
-    .enquiry-section-copy li {
-      margin-bottom: 0.45rem;
-    }
+  .slide-caption {
+    margin-top: 0.75rem;
+    font-size: 0.85rem;
+    color: #e5e7eb;
+  }
 
-    /* IMAGE SLIDER */
-    .slider {
-      background: #020617;
-      border-top: 1px solid rgba(31,41,55,0.8);
-      border-bottom: 1px solid rgba(31,41,55,0.8);
-      padding: 2rem 1.5rem 2.5rem;
-    }
-    .slider-inner {
-      max-width: 1120px;
-      margin: 0 auto;
-    }
-    .slider-track {
-      position: relative;
-      width: 100%;
-      overflow: hidden;
-      border-radius: 16px;
-    }
-    .slide {
-      position: absolute;
-      inset: 0;
-      opacity: 0;
-      transition: opacity 0.6s ease;
-    }
-    .slide.active {
-      opacity: 1;
-    }
-    .slide img {
-      display: block;
-      width: 100%;
-      height: auto;
-      object-fit: cover;
-    }
-    .slider-dots {
-      margin-top: 1rem;
-      display: flex;
-      justify-content: center;
-      gap: 0.6rem;
-    }
-    .dot {
-      width: 10px;
-      height: 10px;
-      border-radius: 999px;
-      border: 1px solid rgba(148,163,184,0.8);
-      background: transparent;
-      padding: 0;
-      cursor: pointer;
-    }
-    .dot.active {
-      background: #facc15;
-      border-color: #facc15;
-    }
+  .slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 32px;
+    height: 32px;
+    border-radius: 999px;
+    border: none;
+    background: rgba(15, 23, 42, 0.85);
+    color: #e5e7eb;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
-    /* Problem strip */
-    .problem {
-      background: #020617;
-      border-top: 1px solid rgba(31,41,55,0.8);
-      border-bottom: 1px solid rgba(31,41,55,0.8);
-      padding: 1rem 1.5rem;
-    }
-    .problem-inner {
-      max-width: 1120px;
-      margin: 0 auto;
-      font-size: 0.92rem;
-      color: #9ca3af;
-    }
+  .slider-btn-prev { left: 8px; }
+  .slider-btn-next { right: 8px; }
 
-    /* Plans */
-    .plans {
-      background: #020617;
-      padding: 3.25rem 1.5rem 3.75rem;
-    }
-    .plans-inner {
-      max-width: 1120px;
-      margin: 0 auto;
-    }
-    .section-eyebrow {
-      font-size: 0.8rem;
-      text-transform: uppercase;
-      letter-spacing: 0.18em;
-      color: #9ca3af;
-      margin-bottom: 0.5rem;
-    }
-    .plans-inner h2 {
-      font-size: 2rem;
-      color: #f9fafb;
-      margin-bottom: 0.5rem;
-    }
-    .plans-sub {
-      font-size: 0.95rem;
-      color: #9ca3af;
-      margin-bottom: 2rem;
-      max-width: 32rem;
-    }
+  .slider-btn:hover {
+    background: rgba(37, 99, 235, 0.95);
+  }
 
-    .plan-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 1.5rem;
+  @media (max-width: 768px) {
+    .workflow-hero .ov-hero-inner {
+      grid-template-columns: 1fr;
     }
-    .plan {
-      background: linear-gradient(145deg, #020617, #020617);
-      border-radius: 18px;
-      padding: 1.5rem 1.4rem 1.6rem;
-      border: 1px solid rgba(55,65,81,0.9);
-      box-shadow: 0 18px 40px rgba(15,23,42,0.75);
-      position: relative;
-      overflow: hidden;
-    }
-    .plan.featured {
-      border-color: rgba(250,204,21,0.7);
-      box-shadow: 0 22px 55px rgba(250,204,21,0.2);
-    }
-    .plan h3 {
-      font-size: 1.15rem;
-      color: #f9fafb;
-      margin-bottom: 0.3rem;
-    }
-    .plan-price {
-      font-size: 0.95rem;
-      color: #eab308;
-      margin-bottom: 0.75rem;
-    }
-    .plan ul {
-      list-style: none;
-      margin: 0 0 0.9rem;
-      padding: 0;
-      font-size: 0.88rem;
-      color: #e5e7eb;
-    }
-    .plan ul li {
-      margin-bottom: 0.25rem;
-    }
-    .subscribe-btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.4rem;
-      background-color: #2563eb;
-      color: #fff;
-      padding: 0.6rem 1.4rem;
-      border-radius: 999px;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 0.9rem;
-      margin-top: 0.4rem;
-    }
-    .subscribe-btn:hover {
-      background-color: #1d4ed8;
-    }
-    .plan-note {
-      font-size: 0.75rem;
-      color: #9ca3af;
-      margin-top: 0.4rem;
-    }
+  }
 
-    /* Trust / Social proof */
-    .trust {
-      background: #020617;
-      border-top: 1px solid rgba(31,41,55,0.8);
-      padding: 3rem 1.5rem 3.25rem;
-    }
-    .trust-inner {
-      max-width: 1120px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
-      gap: 2rem;
-      align-items: center;
-    }
-    .trust h2 {
-      font-size: 1.8rem;
-      color: #f9fafb;
-      margin-bottom: 0.75rem;
-    }
-    .trust ul {
-      list-style: none;
-      margin-bottom: 1.5rem;
-      color: #e5e7eb;
-      font-size: 0.95rem;
-    }
-    .trust li {
-      margin: 0.4rem 0;
-    }
-    .trust-highlight {
-      font-size: 0.85rem;
-      color: #9ca3af;
-    }
-    blockquote {
-      font-style: italic;
-      color: #e5e7eb;
-      font-size: 0.95rem;
-      border-left: 2px solid rgba(148,163,184,0.5);
-      padding-left: 1rem;
-      margin-bottom: 0.6rem;
-    }
-    .quote-author {
-      font-size: 0.85rem;
-      color: #9ca3af;
-    }
+  /* -------------------------------
+     Shared Section Styling
+  -------------------------------- */
+  .section-block {
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    padding: 3rem 2rem;
+    border-radius: 16px;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.4);
+    margin: 3rem auto;
+    max-width: 1200px;
+    opacity: 0;
+    animation: fadeInUp 0.8s ease forwards;
+  }
 
-    /* How it works */
-    .how-it-works {
-      background: #020617;
-      padding: 0 1.5rem 3.5rem;
-    }
-    .how-inner {
-      max-width: 1120px;
-      margin: 0 auto;
-    }
-    .how-inner h2 {
-      font-size: 1.7rem;
-      color: #f9fafb;
-      margin-bottom: 0.75rem;
-    }
-    .how-inner ol {
-      margin-left: 1.2rem;
-      color: #e5e7eb;
-      font-size: 0.95rem;
-    }
-    .how-inner li {
-      margin-bottom: 0.5rem;
-    }
+  .section-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
 
-    /* Contact */
-    .contact {
-      background: #020617;
-      border-top: 1px solid rgba(31,41,55,0.9);
-      padding: 2.5rem 1.5rem 2.75rem;
-      margin-top: auto;
-    }
-    .contact-inner {
-      max-width: 1120px;
-      margin: 0 auto;
+  .section-heading {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #f9fafb;
+    text-align: center;
+    margin-bottom: 2rem;
+    position: relative;
+    opacity: 0;
+    animation: fadeInUp 0.8s ease forwards;
+    animation-delay: 0.2s;
+  }
+
+  .section-heading::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: #FFD966;
+    margin: 0.5rem auto 0;
+    border-radius: 2px;
+  }
+
+  .section-note {
+    text-align: center;
+    color: #e5e7eb;
+    max-width: 720px;
+    margin: 0 auto 2rem;
+    font-size: 0.95rem;
+  }
+
+.course-showcase .section-heading,
+.course-showcase .course-heading,
+.project-themes .section-heading,
+.project-themes .themes-heading {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 2rem;
+  color: #1e3a8a; /* solid dark blue text */
+  background: none;
+  -webkit-background-clip: initial;
+  -webkit-text-fill-color: initial;
+}
+
+.section-heading .emoji,
+.course-heading .emoji {
+  -webkit-text-fill-color: initial; /* restore default color */
+  color: inherit;                  /* let system render emoji normally */
+  background: none;
+}
+
+
+  /* -------------------------------
+     Services Grid
+  -------------------------------- */
+  .workflow-services .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* was 260px */
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .workflow-services .service-card {
+    background: #1e293b;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+    color: #e2e8f0;
+  }
+
+  .workflow-services .service-card h3 {
+    color: #f9fafb;
+    margin-bottom: 0.75rem;
+    font-size: 1.1rem;
+  }
+
+  .workflow-services .service-card p {
+    font-size: 0.95rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .workflow-services .service-card ul {
+    padding-left: 1.2rem;
+    margin: 0;
+    font-size: 0.9rem;
+  }
+
+  .services-cta {
+    text-align: center;
+  }
+
+  .cta-primary,
+  .cta-secondary {
+    display: inline-block;
+    padding: 0.9rem 1.6rem;
+    border-radius: 999px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s ease;
+  }
+
+  .cta-primary {
+    background: #FFD966;
+    color: #1e293b;
+  }
+
+  .cta-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.4);
+  }
+
+  .cta-secondary {
+    border: 1px solid #FFD966;
+    color: #FFD966;
+    background: transparent;
+  }
+
+  .cta-secondary:hover {
+    background: #FFD966;
+    color: #1e293b;
+  }
+
+  /* -------------------------------
+     Impact Table
+  -------------------------------- */
+  .service-impact {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 2rem;
+  }
+
+  .impact-heading {
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .impact-table-wrapper {
+    overflow-x: auto;
+  }
+
+  .impact-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+  }
+
+  .impact-table th,
+  .impact-table td {
+    border: 1px solid #e5e7eb;
+    padding: 0.75rem 0.9rem;
+    text-align: left;
+  }
+
+  .impact-table thead {
+    background: #0f172a;
+    color: #f9fafb;
+  }
+
+  /* -------------------------------
+     Testimonials
+  -------------------------------- */
+  .testimonials-brolly {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 2rem;
+  }
+
+  .testimonials-brolly > h2 {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .testimonial-card {
+    background: #1e293b;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    animation: fadeInUp 0.8s ease forwards;
+  }
+
+  .testimonial-card:nth-child(1) { animation-delay: 0.2s; }
+  .testimonial-card:nth-child(2) { animation-delay: 0.4s; }
+  .testimonial-card:nth-child(3) { animation-delay: 0.6s; }
+  .testimonial-card:nth-child(4) { animation-delay: 0.8s; }
+  .testimonial-card:nth-child(5) { animation-delay: 1s; }
+
+  .testimonial-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 32px rgba(0,0,0,0.5);
+  }
+
+  .testimonial-card p {
+    color: #e2e8f0;
+    font-size: 0.95rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .testimonial-card span {
+    font-size: 0.85rem;
+    color: #FFD966;
+    font-weight: 600;
+  }
+
+  /* -------------------------------
+     Explore Inside the Vault + Companies
+     Bright background, black text, dark blue
+  -------------------------------- */
+  .course-showcase {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 2rem;
+    background: linear-gradient(135deg, #f8f9ff, #e0e7ff);
+    border-radius: 16px;
+    box-shadow: 0 12px 40px rgba(15, 23, 42, 0.2);
+    border: 1px solid rgba(30, 64, 175, 0.15);
+  }
+
+  .course-showcase .section-heading,
+  .course-showcase .course-heading {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 2rem;
+    background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    position: relative;
+  }
+
+  .course-showcase .section-heading::after,
+  .course-showcase .course-heading::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: #1e3a8a;
+    margin: 0.5rem auto 0;
+    border-radius: 2px;
+  }
+
+  /* Filter buttons (used in Explore Inside the Vault) */
+  .filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
+
+  .filter-btn {
+    background: #ffffff;
+    color: #1e3a8a;
+    border: 2px solid #1e3a8a;
+    padding: 0.6rem 1.2rem;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    box-shadow: 0 4px 14px rgba(30, 64, 175, 0.15);
+  }
+
+  .filter-btn.active,
+  .filter-btn:hover {
+    background: #1e3a8a;
+    color: #ffffff;
+  }
+
+  /* Course grid shared */
+  .course-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .course-card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 10px 28px rgba(15, 23, 42, 0.15);
+    border: 1px solid rgba(30, 64, 175, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  }
+
+  .course-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 40px rgba(15, 23, 42, 0.25);
+    border-color: #1e3a8a;
+  }
+
+  .course-card h3 {
+    color: #111827;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+  }
+
+  .course-card span {
+    color: #1e3a8a;
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+
+  /* Company logos inside course-showcase */
+  .course-card .company-logo {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+    margin-bottom: 0.75rem;
+    filter: drop-shadow(0 4px 8px rgba(15, 23, 42, 0.18));
+    transition: transform 0.3s ease, filter 0.3s ease;
+  }
+
+  .course-card:hover .company-logo {
+    transform: scale(1.05);
+    filter: drop-shadow(0 6px 14px rgba(30, 64, 175, 0.3));
+  }
+
+  /* -------------------------------
+     Real-World Project Themes
+     Bright variant
+  -------------------------------- */
+  .project-themes {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 2rem;
+    background: linear-gradient(135deg, #f3f4ff, #e0e7ff);
+    border-radius: 16px;
+    box-shadow: 0 12px 40px rgba(15, 23, 42, 0.2);
+    border: 1px solid rgba(30, 64, 175, 0.15);
+  }
+
+  .project-themes .section-heading,
+  .project-themes .themes-heading {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 2rem;
+    background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    position: relative;
+  }
+
+  .project-themes .section-heading::after,
+  .project-themes .themes-heading::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: #1e3a8a;
+    margin: 0.5rem auto 0;
+    border-radius: 2px;
+  }
+
+  .themes-table {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .theme-row {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    align-items: center;
+    background: #ffffff;
+    padding: 1rem 1.25rem;
+    border-radius: 12px;
+    color: #111827;
+    font-size: 0.95rem;
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.14);
+    border-left: 4px solid #3b82f6;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-left-color 0.3s ease;
+  }
+
+  .theme-row:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 32px rgba(15, 23, 42, 0.22);
+    border-left-color: #1e3a8a;
+  }
+
+  .theme-row strong {
+    color: #1e3a8a;
+    font-weight: 700;
+  }
+
+  .theme-row span:nth-child(2) {
+    color: #111827;
+  }
+
+  .theme-row span:last-child {
+    color: #1d4ed8;
+    font-weight: 600;
+    text-align: right;
+  }
+
+  @media (max-width: 768px) {
+    .theme-row {
+      grid-template-columns: 1fr;
       text-align: center;
+      gap: 0.5rem;
     }
-    .contact h2 {
-      font-size: 1.6rem;
-      color: #f9fafb;
-      margin-bottom: 0.5rem;
-    }
-    .contact p {
-      margin-bottom: 0.75rem;
-      font-size: 0.95rem;
-      color: #9ca3af;
-    }
-    .whatsapp-btn {
-      background-color: #22c55e;
-      color: #022c22;
-      padding: 0.75rem 1.7rem;
-      border-radius: 999px;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 0.92rem;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.4rem;
-    }
-    .whatsapp-btn:hover {
-      background-color: #16a34a;
-    }
-    .contact-note {
-      margin-top: 0.6rem;
-      font-size: 0.78rem;
-      color: #6b7280;
-    }
+  }
 
-    /* Responsive */
-    @media (max-width: 900px) {
-      .trust-inner,
-      .enquiry-section-inner {
-        grid-template-columns: minmax(0, 1fr);
-      }
-      .plan-grid {
-        grid-template-columns: minmax(0,1fr);
-      }
-      .hero-inner {
-        padding-top: 2.5rem;
-      }
-      .hero-card {
-        margin-top: 1.5rem;
-      }
-    }
+  /* -------------------------------
+     Footer
+  -------------------------------- */
+  .vault-footer {
+    padding: 2rem 1.5rem;
+    text-align: center;
+    font-size: 0.9rem;
+    background: #020617;
+    color: #e5e7eb;
+    margin-top: 3rem;
+  }
 
-    @media (max-width: 640px) {
-      .hero-copy h1 {
-        font-size: 2.1rem;
-      }
-      .hero-sub {
-        font-size: 0.95rem;
-      }
-      .hero-ctas {
-        flex-direction: column;
-        align-items: stretch;
-      }
-      .cta-primary,
-      .cta-secondary {
-        width: 100%;
-        text-align: center;
-      }
-    }
-  </style>
+  .vault-footer a {
+    color: #FFD966;
+    text-decoration: none;
+  }
+
+  .vault-footer a:hover {
+    text-decoration: underline;
+  }
+
+  .flag-icon {
+    width: 24px;
+    height: auto;
+  }
+
+.vault-pricing {
+  background: radial-gradient(circle at top, #1e293b, #020617);
+  padding: 2.5rem 2rem;
+  border-radius: 16px;
+  box-shadow: 0 18px 45px rgba(0,0,0,0.6);
+  margin: 3rem auto;
+  max-width: 960px;
+  color: #e5e7eb;
+}
+
+.vault-pricing-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Header row */
+.vault-pricing-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem;
+}
+
+.vault-pricing-label {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #f9fafb;
+}
+
+.vault-pricing-label::before {
+  content: "📞 ";
+}
+
+/* CTA block */
+.cta-wrapper {
+  text-align: right;
+}
+
+.cta-primary {
+  display: inline-block;
+  background: linear-gradient(135deg, #ffd966, #ffcc33);
+  color: #111827;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 0.85rem 1.7rem;
+  border-radius: 999px;
+  text-decoration: none;
+  box-shadow: 0 10px 28px rgba(255, 217, 102, 0.55);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.cta-primary::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  left: -120%;
+  background: linear-gradient(
+    120deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.7) 50%,
+    transparent 100%
+  );
+  transform: skewX(-20deg);
+  transition: left 0.6s ease;
+}
+
+.cta-primary:hover::after {
+  left: 130%;
+}
+
+.cta-primary:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 14px 36px rgba(255, 217, 102, 0.7);
+}
+
+.note {
+  margin-top: 0.4rem;
+  font-size: 0.85rem;
+  color: #cbd5e1;
+}
+
+/* Tiers */
+.vault-pricing-tiers {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1.25rem;
+}
+
+.vault-tier-card {
+  background: #0f172a;
+  border-radius: 12px;
+  padding: 1.3rem 1.4rem;
+  border: 1px solid rgba(148, 163, 184, 0.5);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.45);
+  text-align: left;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.vault-tier-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.7);
+  border-color: #ffd966;
+}
+
+.vault-tier-featured {
+  border-width: 2px;
+  border-color: #ffd966;
+  box-shadow: 0 18px 48px rgba(0,0,0,0.85);
+}
+
+.vault-tier-card h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #f9fafb;
+  margin-bottom: 0.35rem;
+}
+
+.vault-tier-price {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #ffd966;
+  margin-bottom: 0.25rem;
+}
+
+.vault-tier-note {
+  font-size: 0.9rem;
+  color: #e2e8f0;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .vault-pricing {
+    padding: 2rem 1.25rem;
+  }
+
+  .vault-pricing-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .cta-wrapper {
+    text-align: left;
+    width: 100%;
+  }
+
+  .cta-primary {
+    width: 100%;
+    text-align: center;
+    white-space: normal;
+  }
+}
+
+@media (max-width: 480px) {
+  .vault-pricing-label {
+    font-size: 1rem;
+  }
+
+  .vault-tier-card {
+    padding: 1.1rem 1.2rem;
+  }
+}
+
+
+  /* -------------------------------
+     Animations
+  -------------------------------- */
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes fadeInScale {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+  }
+</style>
+
 </head>
 <body>
-<div class="page">
 
-  <!-- NAV / BRAND -->
-  <header class="nav">
-    <div class="nav-logo">
-      <div class="nav-logo-mark"></div>
-      <span>OPENVAULT</span>
-    </div>
-    <a href="#enquiry-section" class="nav-cta">Talk to India Team</a>
-  </header>
+  <!-- Brand -->
+  <h1 class="ov-brand">
+    <span class="ov-logo-wrap">
+      <img src="assets/images/user-icon.png" alt="OpenVault logo O" class="ov-logo-spin">
+    </span>
+    <span class="ov-brand-rest">penvault</span>
+  </h1>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero-inner">
-      <div class="hero-copy">
-        <div class="hero-copy-eyebrow">For Indians living in the US, UK, Middle East & beyond</div>
-        <h1>
-          Your home in India,<br/>
-          <span>professionally cared for</span> while you’re abroad.
-        </h1>
-        <p class="hero-sub">
-          OpenVault is your trusted local partner for homes, vehicles and personal assets in India –
-          with scheduled inspections, photo reports and emergency support you can rely on.
-        </p>
+  <!-- Injected Navbar -->
+  <div id="navbar-placeholder"></div>
+  <script src="scripts/navbar.js" defer></script>
 
-        <div class="hero-trust-row">
-          <div class="hero-trust-pill">Located in Bengaluru • Serving major Indian metros</div>
-          <div>Dedicated asset managers • NRI-first processes</div>
-        </div>
-
-        <div class="hero-ctas">
-          <a href="#enquiry-section" class="cta-primary">Book a 15‑min Consultation</a>
-          <a href="#plans" class="cta-secondary">See plans & pricing</a>
-        </div>
-
-        <div class="hero-badge-row">
-          <span>✔ Transparent monthly reporting</span>
-          <span>✔ No broker-style hassles</span>
-          <span>✔ Built by NRI families for NRI families</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ENQUIRY + TRUST SECTION -->
-  <section id="enquiry-section" class="enquiry-section">
-    <div class="enquiry-section-inner">
-      <div class="enquiry-section-copy">
-        <h2>Tell us where your assets are</h2>
-        <p>
-          We’ll share a tailored care plan for your home, vehicles and other assets in India
-          within 24 hours – no brokerage, no lock‑in, just transparent monthly care.
-        </p>
-        <ul>
-          <li>✔ Structured checklists instead of vague “someone will see”</li>
-          <li>✔ Built around NRI time zones and WhatsApp habits</li>
-          <li>✔ Dedicated asset managers based in Bengaluru</li>
-        </ul>
-      </div>
-
-      <aside id="enquiry" class="hero-card">
-        <div class="hero-card-header">
-          <div>
-            <div class="hero-card-title">Share a few details</div>
-            <div class="hero-card-sub">A senior specialist will respond personally within 24 hours.</div>
-          </div>
-          <div class="hero-card-pill">No brokerage • No lock‑in</div>
-        </div>
-
-        <form class="enquiry-form">
-          <label for="name">Name</label>
-          <input id="name" type="text" placeholder="Your full name" />
-
-          <label for="country">Country of residence</label>
-          <input id="country" type="text" placeholder="e.g., USA, UAE, UK, Singapore" />
-
-          <label for="city">City in India</label>
-          <input id="city" type="text" placeholder="e.g., Bengaluru, Mumbai, Chennai" />
-
-          <label for="assets">Primary asset to protect</label>
-          <select id="assets">
-            <option value="">Select an option</option>
-            <option>Residential home / apartment</option>
-            <option>Multiple homes</option>
-            <option>Home + vehicles</option>
-          </select>
-
-          <label for="whatsapp">WhatsApp number</label>
-          <input id="whatsapp" type="tel" placeholder="+1 / +44 / +971 / +65…" />
-
-          <button type="submit">Request my custom asset plan</button>
-        </form>
-
-        <div class="hero-card-foot">
-          We never share your details. A senior OpenVault specialist will respond personally –
-          not a call‑center agent.
-        </div>
-      </aside>
-    </div>
-  </section>
-
-  <!-- IMAGE SLIDER -->
-  <section class="slider">
-    <div class="slider-inner">
-      <div class="slider-track">
-        <div class="slide active">
-          <img src="assets/images/home1.jpg" alt="Clean, well-maintained living room in India">
-        </div>
-        <div class="slide">
-          <img src="assets/images/home2.jpg" alt="Apartment building exterior maintained">
-        </div>
-        <div class="slide">
-          <img src="assets/images/home3.jpg" alt="Balcony cared for while owner is abroad">
-        </div>
-        <div class="slide">
-          <img src="assets/images/home4.jpg" alt="Vehicle parked and cared for in basement parking">
-        </div>
-      </div>
-
-      <div class="slider-dots">
-        <button class="dot active" data-index="0" aria-label="Slide 1"></button>
-        <button class="dot" data-index="1" aria-label="Slide 2"></button>
-        <button class="dot" data-index="2" aria-label="Slide 3"></button>
-        <button class="dot" data-index="3" aria-label="Slide 4"></button>
-      </div>
-    </div>
-  </section>
-
-  <!-- PROBLEM STRIP -->
-  <section class="problem">
-    <div class="problem-inner">
-      While you build your life abroad, your flat in Bengaluru or family home in Chennai is often
-      lying empty, keys with a neighbour, and “someone” checking once in a while. OpenVault replaces
-      that uncertainty with structured, accountable asset care.
-    </div>
-  </section>
-
-  <!-- PLANS -->
-  <section id="plans" class="plans">
-    <div class="plans-inner">
-      <div class="section-eyebrow">Plans for different stages of your NRI journey</div>
-      <h2>Simple, transparent monthly plans</h2>
-      <p class="plans-sub">
-        Pricing is per primary home. Add‑ons for vehicles, parents’ homes, and additional properties are available.
-      </p>
-
-      <div class="plan-grid">
-        <div class="plan">
-          <h3>Bronze</h3>
-          <div class="plan-price">Starting ₹11,999 / month</div>
-          <ul>
-            <li>✔ Monthly home walkthrough with checklist</li>
-            <li>✔ Doors, windows & utility checks</li>
-            <li>✔ Photos & summary report via WhatsApp / email</li>
-            <li>✔ Utility bill reminders</li>
-          </ul>
-          <a href="payment/bronze" class="subscribe-btn">Explore Bronze</a>
-          <div class="plan-note">Ideal if your home is mostly locked and rarely used.</div>
-        </div>
-
-        <div class="plan featured">
-          <h3>Silver</h3>
-          <div class="plan-price">Starting ₹19,999 / month</div>
-          <ul>
-            <li>✔ Everything in Bronze</li>
-            <li>✔ Vehicle parking & basic upkeep</li>
-            <li>✔ Service schedule reminders & coordination</li>
-            <li>✔ Periodic engine start & battery check</li>
-          </ul>
-          <a href="payment/silver" class="subscribe-btn">Most popular – Silver</a>
-          <div class="plan-note">For NRIs who want both home and vehicles taken care of.</div>
-        </div>
-
-        <div class="plan">
-          <h3>Gold</h3>
-          <div class="plan-price">Starting ₹29,999 / month</div>
-          <ul>
-            <li>✔ Everything in Silver</li>
-            <li>✔ Tenant coordination & handovers (if rented)</li>
-            <li>✔ Priority emergency response (water leaks, break‑ins, etc.)</li>
-            <li>✔ Annual maintenance planning support</li>
-          </ul>
-          <a href="payment/gold" class="subscribe-btn">Talk to us about Gold</a>
-          <div class="plan-note">Best suited for high‑value or multi‑city portfolios.</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- TRUST / SOCIAL PROOF -->
-  <section class="trust">
-    <div class="trust-inner">
-      <div>
-        <h2>Why NRIs trust OpenVault over “someone will take care”</h2>
-        <ul>
-          <li>✔ Verified staff with background checks & ID badges</li>
-          <li>✔ Photo & short video reporting after each visit</li>
-          <li>✔ Clear SLAs on visit frequency & response times</li>
-          <li>✔ Built around NRI time zones and communication habits</li>
-        </ul>
-        <p class="trust-highlight">
-          We start with a detailed onboarding walkthrough of your home and priorities, then design a care checklist that fits your family’s expectations.
-        </p>
-      </div>
-      <div>
-        <blockquote>
-          “We live in California and our Bengaluru apartment was always at the back of our minds.
-          With OpenVault, we get photos, updates and proactive suggestions. It finally feels
-          like someone responsible is ‘there’ for us.”
-        </blockquote>
-        <div class="quote-author">— NRI family from San Jose, originally from Jayanagar</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- HOW IT WORKS -->
-  <section class="how-it-works">
-    <div class="how-inner">
-      <h2>How OpenVault works for you</h2>
-      <ol>
-        <li>Share your city, home type and what you’re worried about most.</li>
-        <li>We propose a plan and visit schedule, along with pricing.</li>
-        <li>Onboard with a detailed first visit, documentation and key management.</li>
-        <li>Receive structured reports, photos and alerts every month.</li>
-        <li>Use our emergency line for urgent issues at the property.</li>
-      </ol>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact" class="contact">
-    <div class="contact-inner">
-      <h2>Speak to a real person in India</h2>
+<!-- HERO: Workflows + Slider -->
+<section class="ov-hero workflow-hero">
+  <div class="ov-hero-inner">
+    <div class="ov-copy">
+      <h1>Get Your Business Workflows Out of Excel and Into a Real System</h1>
       <p>
-        Email:
-        <a href="mailto:support@openvault.in">support@openvault.in</a>
-        &nbsp;|&nbsp;
-        Phone: +91‑9606405629 (WhatsApp available)
+        I design and build custom web apps for hospitals and small businesses:
+        quoting, inventory, service visits, and dashboards – all automated on
+        top of Firebase.
       </p>
-      <a href="https://wa.me/9606405629" class="whatsapp-btn">
-        Chat on WhatsApp
-      </a>
-      <div class="contact-note">
-        Prefer a scheduled call? Leave your details above – we’ll arrange a slot that works for your time zone.
+
+      <ul class="ov-points">
+        <li>Service visit logging with photos and history</li>
+        <li>Quote, inventory and ticket workflows tailored to your team</li>
+        <li>Fast prototypes in days, not months – production‑ready UI</li>
+      </ul>
+
+      <div class="cta-wrapper">
+        <a
+          href="https://wa.me/919945266755?text=Hi%20Mazhar%2C%20I%20need%20help%20with%20my%20business%20workflow"
+          class="cta-primary"
+        >
+          💬 Book a 15‑min Workflow Call
+        </a>
+        <p class="note">No obligation – walk through your current process on a call.</p>
+      </div>
+    </div> <!-- /.ov-copy -->
+
+    <div class="ov-hero-visual">
+      <div class="workflow-slider">
+        <button class="slider-btn slider-btn-prev">‹</button>
+        <div class="workflow-slider-track">
+          <div class="workflow-slide active">
+            <img src="assets/images/2.webp" alt="Inventory dashboard" />
+            <p class="slide-caption">Doctor's consultation and record maintenance</p>
+          </div>
+          <div class="workflow-slide">
+            <img src="assets/images/3.webp" alt="Service visit form" />
+            <p class="slide-caption">Inventory and live dashboards</p>
+          </div>
+          <div class="workflow-slide">
+            <img src="assets/images/4.webp" alt="Hospital CRM" />
+            <p class="slide-caption">Hospital CRM: enquiry → quote → installation</p>
+          </div>
+          <div class="workflow-slide">
+            <img src="assets/images/5.webp" alt="Service visit" />
+            <p class="slide-caption">Service visit form with photos &amp; history</p>
+          </div>
+          <div class="workflow-slide">
+            <img src="assets/images/6.webp" alt="Inventory view" />
+            <p class="slide-caption">Stock levels &amp; alerts for consumables</p>
+          </div>
+          <div class="workflow-slide">
+            <img src="assets/images/7.webp" alt="Admin panel" />
+            <p class="slide-caption">Admin panel: leads, orders, tickets, revenue</p>
+          </div>
+          <div class="workflow-slide">
+            <img src="assets/images/8.webp" alt="Engineer workflow" />
+            <p class="slide-caption">Engineer workflow with visit logs and attachments</p>
+          </div>
+        </div>
+        <button class="slider-btn slider-btn-next">›</button>
+      </div>
+    </div> <!-- /.ov-hero-visual -->
+
+  </div> <!-- /.ov-hero-inner -->
+</section>
+
+  <!-- SERVICES -->
+  <section class="section-block workflow-services">
+    <div class="section-inner">
+      <h2 class="section-heading">🛠 What You Can Hire Me For</h2>
+      <p class="section-note">
+        I help hospitals and SMEs turn messy spreadsheets and WhatsApp chats into
+        clean, trackable web apps.
+      </p>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <h3>Hospital Service & Maintenance Portals</h3>
+          <p>Log engineer visits, attach photos, track history per serial number.</p>
+          <ul>
+            <li>Service forms with photo upload</li>
+            <li>Searchable visit history by hospital + equipment</li>
+            <li>Exports for audits and ISO documentation</li>
+          </ul>
+        </div>
+
+        <div class="service-card">
+          <h3>Quoting & Inventory Workflows</h3>
+          <p>Custom quote builder + stock tracking for instruments and reagents.</p>
+          <ul>
+            <li>Quote → PO → Delivery workflows</li>
+            <li>Inventory alerts and dashboards</li>
+            <li>PDF/print‑ready quote layouts</li>
+          </ul>
+        </div>
+
+        <div class="service-card">
+          <h3>Custom Dashboards & Admin Apps</h3>
+          <p>Single admin panel to see leads, orders, tickets and revenue.</p>
+          <ul>
+            <li>Firebase / Supabase backend</li>
+            <li>Modern JS UI with filters & search</li>
+            <li>Role‑based access for teams</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="services-cta">
+        <a
+          href="https://wa.me/919945266755?text=Hi%20Mazhar%2C%20I%20want%20a%20custom%20workflow%20project"
+          class="cta-secondary"
+        >
+          📋 Send Me Your Current Process (Photo / PDF / Excel)
+        </a>
       </div>
     </div>
   </section>
 
-</div>
+  <!-- IMPACT TABLE -->
+  <section class="service-impact">
+    <h2 class="impact-heading">🚀 Real Workflow Wins</h2>
+    <div class="impact-table-wrapper">
+      <table class="impact-table">
+        <thead>
+          <tr>
+            <th>Service</th>
+            <th>What I Built</th>
+            <th>Business Impact</th>
+            <th>Project Delivered In</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>QMS Dashboards</td>
+            <td>Firebase quoting + inventory workflows</td>
+            <td>80% faster quote turnaround</td>
+            <td>QMS</td>
+          </tr>
+          <tr>
+            <td>Service Tracking</td>
+            <td>Engineer visit logs with photo uploads</td>
+            <td>Zero paper trails, full traceability</td>
+            <td>QMS</td>
+          </tr>
+          <tr>
+            <td>Workflow Automation</td>
+            <td>Lead → Quote → Order → Invoice pipeline</td>
+            <td>3× team efficiency</td>
+            <td>Zamport</td>
+          </tr>
+          <tr>
+            <td>Custom Integrations</td>
+            <td>Supabase/Firestore + modular UI</td>
+            <td>Real-time sync across teams</td>
+            <td>XPAY</td>
+          </tr>
+          <tr>
+            <td>Approval Systems</td>
+            <td>Role-based dashboards with status flows</td>
+            <td>Instant visibility for managers</td>
+            <td>Xchange</td>
+          </tr>
+          <tr>
+            <td>Home Service Scheduling</td>
+            <td>Technician routing + visit logs with photos</td>
+            <td>2× faster dispatch and resolution</td>
+            <td>Drophome</td>
+          </tr>
+          <tr>
+            <td>Quote Builder</td>
+            <td>PDF-ready quote layouts with dynamic pricing</td>
+            <td>Professional client-facing output</td>
+            <td>Zamport</td>
+          </tr>
+          <tr>
+            <td>Inventory Alerts</td>
+            <td>Stock tracking with low-supply notifications</td>
+            <td>Reduced stockouts and delays</td>
+            <td>XPAY</td>
+          </tr>
+          <tr>
+            <td>Equipment History Viewer</td>
+            <td>Serial-number based service timeline with gallery</td>
+            <td>ISO-ready audit trail</td>
+            <td>QMS</td>
+          </tr>
+          <tr>
+            <td>Admin Panel</td>
+            <td>Unified dashboard for leads, orders, tickets, revenue</td>
+            <td>Centralized control</td>
+            <td>Xchange</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
 
-<!-- Minimal slider JS -->
-<script>
-  (function () {
-    var slides = Array.prototype.slice.call(document.querySelectorAll('.slide'));
-    var dots = Array.prototype.slice.call(document.querySelectorAll('.dot'));
-    if (!slides.length || !dots.length) return;
+    <section class="vault-pricing">
+    <div class="vault-pricing-inner">
+      <div class="vault-pricing-header">
+        <span class="vault-pricing-label">
+          Free 15‑min Discovery Call → Now
+        </span>
+        <div class="cta-wrapper">
+          <a
+            href="https://wa.me/919945266755?text=Hi%20Mazhar%2C%20I%20need%20help%20with%20my%20business%20workflow"
+            class="cta-primary"
+          >
+            💬 Book a 15‑min Workflow Call
+          </a>
+          <p class="note">
+            Walk through your current process on a call.
+          </p>
+        </div>
+      </div>
+  
+      <div class="vault-pricing-tiers">
+        <div class="vault-tier-card">
+          <h3>🛠️ Starter Workflow</h3>
+          <p class="vault-tier-price">₹15k</p>
+          <p class="vault-tier-note">1 module</p>
+        </div>
+  
+        <div class="vault-tier-card vault-tier-featured">
+          <h3>⚙️ Full QMS</h3>
+          <p class="vault-tier-price">₹45k</p>
+          <p class="vault-tier-note">Quoting + service + inventory</p>
+        </div>
+  
+        <div class="vault-tier-card">
+          <h3>🚀 Enterprise</h3>
+          <p class="vault-tier-price">₹99k+</p>
+          <p class="vault-tier-note">Multi-team + custom API</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    var current = 0;
-    var intervalMs = 5000;
-    var timer = null;
+  <!-- TESTIMONIALS -->
+  <section class="testimonials-brolly">
+    <h2>💬 What Clients Say</h2>
+    <div class="testimonial-grid">
+      <div class="testimonial-card">
+        <p>Our hospital now logs every service visit with photos. Audits are smoother and ISO compliance is easy.</p>
+        <span>— Dr. Meera, Hospital Administrator</span>
+      </div>
+      <div class="testimonial-card">
+        <p>The school inventory system tracks lab equipment and books. No more lost items or manual registers.</p>
+        <span>— Mr. Sharma, School Principal</span>
+      </div>
+      <div class="testimonial-card">
+        <p>Engineers submit maintenance reports instantly. We can trace equipment history by serial number in seconds.</p>
+        <span>— Rajesh, Biomedical Engineer</span>
+      </div>
+      <div class="testimonial-card">
+        <p>Quoting and procurement for hospital supplies is automated. Saves us hours every week and reduces errors.</p>
+        <span>— Dr. Khan, Procurement Head</span>
+      </div>
+    </div>
+  </section>
 
-    function goTo(index) {
-      slides[current].classList.remove('active');
-      dots[current].classList.remove('active');
+  <!-- Explore inside the Vault --> 
+  <section class="section-block course-showcase" id="vault-explore"> 
+    <div class="section-inner"> 
+      <h2 class="section-heading"><span class="emoji">📚</span> Explore Inside the Vault</h2> 
+      <div class="filter-buttons">  
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="web">Web / Frontend</button>
+        <button class="filter-btn" data-filter="backend">Backend</button>
+        <button class="filter-btn" data-filter="ml">AI / ML / Data</button>
+        <button class="filter-btn" data-filter="cloud">Cloud / DevOps</button>
+        <button class="filter-btn" data-filter="other">Other Stacks</button>
+      </div>
 
-      current = index;
+      <div class="course-grid">
+        <div class="course-card" data-category="web">
+          <h3>React JS</h3>
+          <span>Front-end mastery</span>
+        </div>
+        <div class="course-card" data-category="web">
+          <h3>Front-End Dev</h3>
+          <span>HTML, CSS, JS, UI/UX</span>
+        </div>
+        <div class="course-card" data-category="backend">
+          <h3>Node.js</h3>
+          <span>Backend with JavaScript</span>
+        </div>
+        <div class="course-card" data-category="backend">
+          <h3>SQL</h3>
+          <span>Database management</span>
+        </div>
+        <div class="course-card" data-category="cloud">
+          <h3>Azure DevOps</h3>
+          <span>CI/CD pipelines</span>
+        </div>
+        <div class="course-card" data-category="cloud">
+          <h3>Azure Admin</h3>
+          <span>Cloud infrastructure</span>
+        </div>
+        <div class="course-card" data-category="cloud">
+          <h3>Azure Data Factory</h3>
+          <span>ETL workflows</span>
+        </div>
+        <div class="course-card" data-category="backend">
+          <h3>J2EE</h3>
+          <span>Enterprise Java apps</span>
+        </div>
+        <div class="course-card" data-category="other">
+          <h3>PMP</h3>
+          <span>Project management</span>
+        </div>
+        <div class="course-card" data-category="other">
+          <h3>Scrum</h3>
+          <span>Agile workflows</span>
+        </div>
+        <div class="course-card" data-category="other">
+          <h3>Business Analyst</h3>
+          <span>Stakeholder insights</span>
+        </div>
+        <div class="course-card" data-category="backend">
+          <h3>Mulesoft</h3>
+          <span>API integration</span>
+        </div>
+        <div class="course-card" data-category="backend">
+          <h3>Tosca</h3>
+          <span>Automated testing</span>
+        </div>
+        <div class="course-card" data-category="backend">
+          <h3>DBT</h3>
+          <span>Analytics pipelines</span>
+        </div>
+        <div class="course-card" data-category="backend">
+          <h3>Dell Boomi</h3>
+          <span>Cloud integrations</span>
+        </div>
+        <div class="course-card" data-category="other">
+          <h3>Digital Marketing</h3>
+          <span>SEO, SEM, campaigns</span>
+        </div>
+        <div class="course-card" data-category="ml">
+          <h3>Snowflake</h3>
+          <span>Cloud data warehousing</span>
+        </div>
+        <div class="course-card" data-category="ml">
+          <h3>Generative AI</h3>
+          <span>AI model training</span>
+        </div>
+        <div class="course-card" data-category="ml">
+          <h3>Prompt Engineering</h3>
+          <span>Optimized AI prompts</span>
+        </div>
+        <div class="course-card" data-category="backend">
+          <h3>Embedded Systems</h3>
+          <span>Hardware-software fusion</span>
+        </div>
+        <div class="course-card" data-category="ml">
+          <h3>Python for AI</h3>
+          <span>ML-ready Python</span>
+        </div>
+        <div class="course-card" data-category="cloud">
+          <h3>GCP</h3>
+          <span>Google Cloud mastery</span>
+        </div>
+      </div>
+    </div>
+  </section>
 
-      slides[current].classList.add('active');
-      dots[current].classList.add('active');
-    }
+  <!-- Real-world project themes --> 
+  <section class="section-block project-themes"> 
+    <div class="section-inner"> 
+      <h2 class="section-heading"><span class="emoji">🎯</span> Real-World Projects</h2> 
+      <div class="themes-table"> 
+      <div class="theme-row">  
+        <span><strong>👗 Fashion</strong></span>
+        <span>Outfit recommender, virtual try-on</span>
+        <span>Style meets AI</span>
+      </div>
+      <div class="theme-row">
+        <span><strong>🏠 Home &amp; Living</strong></span>
+        <span>Smart home automation, IoT control</span>
+        <span>Perfect for IoT majors</span>
+      </div>
+      <div class="theme-row">
+        <span><strong>💸 Deals &amp; Offers</strong></span>
+        <span>Coupon engine, cashback logic</span>
+        <span>E-commerce meets data</span>
+      </div>
+      <div class="theme-row">
+        <span><strong>✈️ Travel</strong></span>
+        <span>Trip planner, route optimizer</span>
+        <span>Real-world UX</span>
+      </div>
+      <div class="theme-row">
+        <span><strong>🎬 Entertainment</strong></span>
+        <span>OTT dashboard, movie aggregator</span>
+        <span>React + ML combo</span>
+      </div>
+      <div class="theme-row">
+        <span><strong>🛒 Shopping</strong></span>
+        <span>Cart system, wishlist animations</span>
+        <span>Frontend mastery</span>
+      </div>
+      <div class="theme-row">
+        <span><strong>📱 Mobile Apps</strong></span>
+        <span>QR scanner, student task app</span>
+        <span>Android dev skills</span>
+      </div>
+      <div class="theme-row">
+        <span><strong>🤖 AI &amp; ML</strong></span>
+        <span>Chatbot, sentiment analysis</span>
+        <span>Final-year impact</span>
+      </div>
+    </div>
+  </section>
 
-    function next() {
-      var nextIndex = (current + 1) % slides.length;
-      goTo(nextIndex);
-    }
+  <!-- COMPANIES SECTION -->
+  <section class="course-showcase">
+    <h2 class="course-heading"><span class="emoji">🏢</span> Companies that use these kinds of Tech Stack</h2>
+    <div class="course-grid">
+      <div class="course-card">
+        <img src="icons/Microsoft.png" alt="Microsoft" class="company-logo" />
+        <span>React &amp; Azure</span>
+      </div>
+      <div class="course-card">
+        <img src="icons/Infosys.png" alt="Infosys" class="company-logo" />
+        <span>React &amp; Node.js</span>
+      </div>
+      <div class="course-card">
+        <img src="icons/IBM.png" alt="IBM" class="company-logo" />
+        <span>Full-stack JS</span>
+      </div>
+      <div class="course-card">
+        <img src="icons/tcs.jpg" alt="TCS" class="company-logo" />
+        <span>React &amp; DevOps</span>
+      </div>
+      <div class="course-card">
+        <img src="icons/wipro.jpg" alt="Wipro" class="company-logo" />
+        <span>React &amp; Node.js</span>
+      </div>
+      <div class="course-card">
+        <img src="icons/HCLTech.png" alt="HCLTech" class="company-logo" />
+        <span>React &amp; Tailwind</span>
+      </div>
+      <div class="course-card">
+        <img src="icons/Deloitte.png" alt="Deloitte" class="company-logo" />
+        <span>JS frameworks</span>
+      </div>
+      <div class="course-card">
+        <img src="icons/capgemini.png" alt="Capgemini" class="company-logo" />
+        <span>React &amp; GitHub workflows</span>
+      </div>
+      <div class="course-card">
+        <img src="icons/Cognizant.jpeg" alt="Cognizant" class="company-logo" />
+        <span>React &amp; UI optimization</span>
+      </div>
+      <div class="course-card">
+        <img src="icons/genpact.jpg" alt="Genpact" class="company-logo" />
+        <span>JS &amp; analytics</span>
+      </div>
+    </div>
+  </section>
 
-    function startAuto() {
-      stopAuto();
-      timer = setInterval(next, intervalMs);
-    }
+  <!-- FOOTER -->
+  <footer class="vault-footer">
+    <p>© 2021–2025 | openvault.in | All rights reserved</p>
+    <p>
+      <a href="forms/terms.html">Terms</a> |
+      <a href="forms/privacy.html">Privacy</a> |
+      <a href="forms/refund.html">Refund</a> |
+      <a href="forms/disclaimer.html">Disclaimer</a> |
+      <a href="forms/contact.html">Contact</a>
+    </p>
+    <p><img src="icons/india-flag.png" alt="India Flag" class="flag-icon" /></p>
+  </footer>
 
-    function stopAuto() {
-      if (timer) {
-        clearInterval(timer);
-        timer = null;
+  <!-- Workflow Slider Script -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const slides = Array.from(document.querySelectorAll(".workflow-slide"));
+      const prevBtn = document.querySelector(".slider-btn-prev");
+      const nextBtn = document.querySelector(".slider-btn-next");
+      if (!slides.length || !prevBtn || !nextBtn) return;
+
+      let current = 0;
+
+      function showSlide(index) {
+        slides.forEach((slide, i) => {
+          slide.classList.toggle("active", i === index);
+        });
       }
-    }
 
-    dots.forEach(function (dot, i) {
-      dot.addEventListener('click', function () {
-        stopAuto();
-        goTo(i);
-        startAuto();
+      prevBtn.addEventListener("click", () => {
+        current = (current - 1 + slides.length) % slides.length;
+        showSlide(current);
       });
+
+      nextBtn.addEventListener("click", () => {
+        current = (current + 1) % slides.length;
+        showSlide(current);
+      });
+
+      setInterval(() => {
+        current = (current + 1) % slides.length;
+        showSlide(current);
+      }, 6000);
     });
+  </script>
 
-    startAuto();
-  })();
-</script>
-
+  <!-- Existing scripts (countdown/filters/progress) if still needed -->
+  <script src="scripts/script.js"></script>
 </body>
 </html>
