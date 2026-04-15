@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>AI-Powered Workflow Automation & Dashboards for Hospitals & SMEs</title>
+  <title>Workflow Automation & SaaS Dashboards for Hospitals & SMEs</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- SEO Meta -->
-  <meta name="description" content="AI-powered workflow automation for hospitals and SMEs: quoting, inventory, service visits, and dashboards – all automated on top of Firebase / Supabase.">
+  <meta name="description" content="Custom web apps for hospitals and SMEs: quoting, inventory, service visits, and dashboards – all automated on top of Firebase / Supabase.">
   <meta name="author" content="OpenVault by Mazhar Mecci">
 
   <!-- Canonical -->
@@ -171,7 +171,7 @@
   font-size: 2rem;
   font-weight: 800;
   margin-bottom: 2rem;
-  color: #1e3a8a;
+  color: #1e3a8a; /* solid dark blue text */
   background: none;
   -webkit-background-clip: initial;
   -webkit-text-fill-color: initial;
@@ -179,17 +179,18 @@
 
 .section-heading .emoji,
 .course-heading .emoji {
-  -webkit-text-fill-color: initial;
-  color: inherit;
+  -webkit-text-fill-color: initial; /* restore default color */
+  color: inherit;                  /* let system render emoji normally */
   background: none;
 }
+
 
   /* -------------------------------
      Services Grid
   -------------------------------- */
   .workflow-services .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* was 260px */
     gap: 1.5rem;
     margin-bottom: 2rem;
   }
@@ -347,6 +348,7 @@
 
   /* -------------------------------
      Explore Inside the Vault + Companies
+     Bright background, black text, dark blue
   -------------------------------- */
   .course-showcase {
     max-width: 1200px;
@@ -462,6 +464,7 @@
 
   /* -------------------------------
      Real-World Project Themes
+     Bright variant
   -------------------------------- */
   .project-themes {
     max-width: 1200px;
@@ -706,34 +709,6 @@
   color: #e2e8f0;
 }
 
-/* Onboarding form */
-.ov-intake-form {
-  max-width: 640px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.ov-form-row label {
-  display: block;
-  font-size: 0.9rem;
-  color: #e5e7eb;
-  margin-bottom: 0.25rem;
-}
-
-.ov-intake-form input,
-.ov-intake-form select,
-.ov-intake-form textarea {
-  width: 100%;
-  border-radius: 8px;
-  border: 1px solid rgba(148, 163, 184, 0.6);
-  padding: 0.6rem 0.75rem;
-  background: #020617;
-  color: #f9fafb;
-  font-size: 0.9rem;
-}
-
 /* Responsive tweaks */
 @media (max-width: 768px) {
   .vault-pricing {
@@ -766,6 +741,7 @@
     padding: 1.1rem 1.2rem;
   }
 }
+
 
   /* -------------------------------
      Animations
@@ -800,29 +776,29 @@
 <section class="ov-hero workflow-hero">
   <div class="ov-hero-inner">
     <div class="ov-copy">
-      <h1>Grow Your Hospital or SME with AI‑Powered Workflows</h1>
+      <h1>Get Your Business Workflows Out of Excel and Into a Real System</h1>
       <p>
-        I design and build AI‑assisted web apps for hospitals and small businesses:
+        I design and build custom web apps for hospitals and small businesses:
         quoting, inventory, service visits, and dashboards – all automated on
-        top of Firebase / Supabase.
+        top of Firebase.
       </p>
 
       <ul class="ov-points">
-        <li>AI‑assisted service visit logging with photos and history</li>
-        <li>Quote, inventory and ticket workflows tuned to your team</li>
-        <li>Dashboards that surface bottlenecks, revenue and SLA risks</li>
+        <li>Service visit logging with photos and history</li>
+        <li>Quote, inventory and ticket workflows tailored to your team</li>
+        <li>Fast prototypes in days, not months – production‑ready UI</li>
       </ul>
 
       <div class="cta-wrapper">
         <a
-          href="#workflow-packages"
+          href="https://wa.me/919945266755?text=Hi%20Mazhar%2C%20I%20need%20help%20with%20my%20business%20workflow"
           class="cta-primary"
         >
-          🚀 Start My Workflow Plan
+          💬 Book a 15‑min Workflow Call
         </a>
-        <p class="note">See plans, then book a quick call or WhatsApp.</p>
+        <p class="note">No obligation – walk through your current process on a call.</p>
       </div>
-    </div>
+    </div> <!-- /.ov-copy -->
 
     <div class="ov-hero-visual">
       <div class="workflow-slider">
@@ -859,9 +835,9 @@
         </div>
         <button class="slider-btn slider-btn-next">›</button>
       </div>
-    </div>
+    </div> <!-- /.ov-hero-visual -->
 
-  </div>
+  </div> <!-- /.ov-hero-inner -->
 </section>
 
   <!-- SERVICES -->
@@ -870,13 +846,13 @@
       <h2 class="section-heading">🛠 What You Can Hire Me For</h2>
       <p class="section-note">
         I help hospitals and SMEs turn messy spreadsheets and WhatsApp chats into
-        clean, trackable AI‑assisted web apps.
+        clean, trackable web apps.
       </p>
 
       <div class="services-grid">
         <div class="service-card">
-          <h3>Hospital Service & Maintenance Portals (AI‑ready)</h3>
-          <p>Log engineer visits, attach photos, track history per serial number, and feed useful data into dashboards.</p>
+          <h3>Hospital Service & Maintenance Portals</h3>
+          <p>Log engineer visits, attach photos, track history per serial number.</p>
           <ul>
             <li>Service forms with photo upload</li>
             <li>Searchable visit history by hospital + equipment</li>
@@ -885,18 +861,18 @@
         </div>
 
         <div class="service-card">
-          <h3>Quoting & Inventory Workflows (AI‑assisted)</h3>
-          <p>Custom quote builder + stock tracking with smart alerts and summaries.</p>
+          <h3>Quoting & Inventory Workflows</h3>
+          <p>Custom quote builder + stock tracking for instruments and reagents.</p>
           <ul>
             <li>Quote → PO → Delivery workflows</li>
-            <li>AI‑based low‑stock and delay alerts</li>
+            <li>Inventory alerts and dashboards</li>
             <li>PDF/print‑ready quote layouts</li>
           </ul>
         </div>
 
         <div class="service-card">
           <h3>Custom Dashboards & Admin Apps</h3>
-          <p>Single admin panel to see leads, orders, tickets and revenue, tuned for AI‑powered insights.</p>
+          <p>Single admin panel to see leads, orders, tickets and revenue.</p>
           <ul>
             <li>Firebase / Supabase backend</li>
             <li>Modern JS UI with filters & search</li>
@@ -907,10 +883,10 @@
 
       <div class="services-cta">
         <a
-          href="#workflow-intake"
+          href="https://wa.me/919945266755?text=Hi%20Mazhar%2C%20I%20want%20a%20custom%20workflow%20project"
           class="cta-secondary"
         >
-          📋 Share My Current Workflow
+          📋 Send Me Your Current Process (Photo / PDF / Excel)
         </a>
       </div>
     </div>
@@ -995,108 +971,44 @@
     </div>
   </section>
 
-  <!-- PRICING / PLANS (Bronze / Silver / Gold) -->
-  <section class="vault-pricing" id="workflow-packages">
+    <section class="vault-pricing">
     <div class="vault-pricing-inner">
       <div class="vault-pricing-header">
         <span class="vault-pricing-label">
-          Pick your AI‑powered workflow plan
+          Free 15‑min Discovery Call → Now
         </span>
         <div class="cta-wrapper">
           <a
-            href="https://wa.me/919945266755?text=Hi%20Mazhar%2C%20I%20want%20to%20pick%20a%20workflow%20plan"
+            href="https://wa.me/919945266755?text=Hi%20Mazhar%2C%20I%20need%20help%20with%20my%20business%20workflow"
             class="cta-primary"
           >
-            💬 Help Me Pick a Plan
+            💬 Book a 15‑min Workflow Call
           </a>
           <p class="note">
-            Share your current Excel / process, I’ll suggest the right tier.
+            Walk through your current process on a call.
           </p>
         </div>
       </div>
-
+  
       <div class="vault-pricing-tiers">
         <div class="vault-tier-card">
-          <h3>🥉 Bronze – Starter Workflow</h3>
+          <h3>🛠️ Starter Workflow</h3>
           <p class="vault-tier-price">₹15k</p>
-          <p class="vault-tier-note">
-            1 core workflow (e.g. quotes or service visits) with AI‑assisted forms and basic dashboards.
-          </p>
-          <a
-            href="https://wa.me/919945266755?text=Hi%20Mazhar%2C%20I%20want%20the%20Bronze%20workflow%20plan"
-            class="cta-secondary"
-          >
-            Start My Growth Plan
-          </a>
+          <p class="vault-tier-note">1 module</p>
         </div>
-
+  
         <div class="vault-tier-card vault-tier-featured">
-          <h3>🥈 Silver – Ops Dashboard</h3>
+          <h3>⚙️ Full QMS</h3>
           <p class="vault-tier-price">₹45k</p>
-          <p class="vault-tier-note">
-            Quote + service + inventory tied into one AI‑assisted dashboard with reports.
-          </p>
-          <a
-            href="https://wa.me/919945266755?text=Hi%20Mazhar%2C%20I%20want%20the%20Silver%20workflow%20plan"
-            class="cta-secondary"
-          >
-            Start My Growth Plan
-          </a>
+          <p class="vault-tier-note">Quoting + service + inventory</p>
         </div>
-
+  
         <div class="vault-tier-card">
-          <h3>🥇 Gold – Full Managed Workflow</h3>
+          <h3>🚀 Enterprise</h3>
           <p class="vault-tier-price">₹99k+</p>
-          <p class="vault-tier-note">
-            Multi‑team workflows, custom APIs, monthly AI‑generated reports, and priority support.
-          </p>
-          <a
-            href="https://wa.me/919945266755?text=Hi%20Mazhar%2C%20I%20want%20the%20Gold%20workflow%20plan"
-            class="cta-secondary"
-          >
-            Start My Growth Plan
-          </a>
+          <p class="vault-tier-note">Multi-team + custom API</p>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- Onboarding / Discovery Form -->
-  <section class="section-block" id="workflow-intake">
-    <div class="section-inner">
-      <h2 class="section-heading">📋 Tell Me About Your Current Workflow</h2>
-      <p class="section-note">
-        Share a few details so I can map an AI‑powered workflow that fits your hospital or SME.
-      </p>
-
-      <form class="ov-intake-form" action="https://formspree.io/f/your-id" method="POST">
-        <div class="ov-form-row">
-          <label>Business name</label>
-          <input type="text" name="business_name" required>
-        </div>
-        <div class="ov-form-row">
-          <label>Industry</label>
-          <input type="text" name="industry" placeholder="Hospital, lab, school, SME…">
-        </div>
-        <div class="ov-form-row">
-          <label>What do you want to fix first?</label>
-          <select name="goal">
-            <option value="quotes">Quotes & approvals</option>
-            <option value="service">Service visits & maintenance</option>
-            <option value="inventory">Inventory & stock alerts</option>
-            <option value="dashboards">Management dashboards</option>
-            <option value="other">Other (describe below)</option>
-          </select>
-        </div>
-        <div class="ov-form-row">
-          <label>Links / notes (optional)</label>
-          <textarea name="notes" rows="3" placeholder="Share any Excel / Google Sheet / process notes."></textarea>
-        </div>
-        <button type="submit" class="cta-primary">
-          🚀 Send My Workflow Details
-        </button>
-        <p class="note">I’ll reply with a short Loom / WhatsApp summary of what we can automate.</p>
-      </form>
     </div>
   </section>
 
@@ -1123,11 +1035,11 @@
     </div>
   </section>
 
-  <!-- Explore inside the Vault -->
-  <section class="section-block course-showcase" id="vault-explore">
-    <div class="section-inner">
-      <h2 class="section-heading"><span class="emoji">📚</span> Explore Inside the Vault</h2>
-      <div class="filter-buttons">
+  <!-- Explore inside the Vault --> 
+  <section class="section-block course-showcase" id="vault-explore"> 
+    <div class="section-inner"> 
+      <h2 class="section-heading"><span class="emoji">📚</span> Explore Inside the Vault</h2> 
+      <div class="filter-buttons">  
         <button class="filter-btn active" data-filter="all">All</button>
         <button class="filter-btn" data-filter="web">Web / Frontend</button>
         <button class="filter-btn" data-filter="backend">Backend</button>
@@ -1229,12 +1141,12 @@
     </div>
   </section>
 
-  <!-- Real-world project themes -->
-  <section class="section-block project-themes">
-    <div class="section-inner">
-      <h2 class="section-heading"><span class="emoji">🎯</span> Real-World Projects</h2>
-      <div class="themes-table">
-      <div class="theme-row">
+  <!-- Real-world project themes --> 
+  <section class="section-block project-themes"> 
+    <div class="section-inner"> 
+      <h2 class="section-heading"><span class="emoji">🎯</span> Real-World Projects</h2> 
+      <div class="themes-table"> 
+      <div class="theme-row">  
         <span><strong>👗 Fashion</strong></span>
         <span>Outfit recommender, virtual try-on</span>
         <span>Style meets AI</span>
